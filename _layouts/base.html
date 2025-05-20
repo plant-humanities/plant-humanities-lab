@@ -75,7 +75,7 @@
               {% assign parts = item | split: '||' %}
               {% assign url = parts[0] | strip %}
               {% assign title = parts[1] | strip %}
-              {% if url and title %}
+              {% if url and title != empty %}
                 <a class="nav-item" href="{{ url | relative_url }}">{{ title | escape }}</a>
               {% endif %}
             {% endfor %}
