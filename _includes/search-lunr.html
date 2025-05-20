@@ -1,0 +1,478 @@
+<style>
+    /* --- Search Component Customization Points --- */
+    :root {
+        --search-accent-color: #007bff;
+        --search-input-bg-color: #fff;
+        --search-input-text-color: #333;
+        --search-icon-char: "🔍";
+        --close-icon-char: "×";
+        --dropdown-bg-color: #fff;
+        --dropdown-text-color: #333;
+        --dropdown-hover-bg-color: #f0f0f0;
+        --highlight-bg-color: yellow;
+        --highlight-text-color: #000;
+        --search-transition-speed: 0.3s;
+        --search-toolbar-text-color: var(--toolbar-text-color, #333);
+    }
+
+    /* --- Main Component Wrapper --- */
+    .search-component-wrapper {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+
+    /* --- Search Container Styling --- */
+    .search-component-wrapper .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 2.5em;
+    }
+
+    .search-component-wrapper .search-icon {
+        position: static !important;
+        background: none;
+        border: none;
+        color: var(--search-toolbar-text-color);
+        font-size: 1.5em;
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity var(--search-transition-speed) ease;
+        min-width: auto;
+        min-height: auto;
+    }
+    .search-component-wrapper .search-icon::before {
+        content: var(--search-icon-char);
+    }
+
+    .search-component-wrapper .search-input-wrapper {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        background-color: var(--search-input-bg-color);
+        border-radius: 4px;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: width var(--search-transition-speed) ease, opacity var(--search-transition-speed) ease, visibility var(--search-transition-speed) ease step-start 0s; /* Make visibility change instant at start of transition */
+        overflow: hidden;
+        z-index: 101;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .search-component-wrapper .search-input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        padding: 10px 40px 10px 15px;
+        font-size: 1em;
+        color: var(--search-input-text-color);
+        background-color: transparent;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-component-wrapper .search-input::-webkit-search-decoration,
+    .search-component-wrapper .search-input::-webkit-search-cancel-button,
+    .search-component-wrapper .search-input::-webkit-search-results-button,
+    .search-component-wrapper .search-input::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+    }
+    .search-component-wrapper .search-input::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .search-component-wrapper .search-close-btn {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        color: #888;
+        cursor: pointer;
+        padding: 0 10px;
+        line-height: 1;
+    }
+    .search-component-wrapper .search-close-btn::before {
+        content: var(--close-icon-char);
+    }
+    .search-component-wrapper .search-close-btn:hover {
+        color: var(--search-input-text-color);
+    }
+
+    /* Active state for search */
+    .search-component-wrapper .search-container.search-active .search-input-wrapper {
+        width: 250px;
+        opacity: 1;
+        visibility: visible;
+        transition: width var(--search-transition-speed) ease, opacity var(--search-transition-speed) ease, visibility var(--search-transition-speed) ease step-end 0s; /* Make visibility change instant at end of transition for hiding */
+    }
+    .search-component-wrapper .search-container.search-active .search-icon {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* --- Search Results Dropdown Styling --- */
+    .search-component-wrapper .search-results-dropdown {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: -65px;
+        width: 350px;
+        background-color: var(--dropdown-bg-color);
+        border: 1px solid #ddd;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-height: 350px;
+        overflow-y: auto;
+        z-index: 102;
+        display: none;
+        box-sizing: border-box;
+    }
+
+    .search-component-wrapper .search-results-dropdown li {
+        padding: 0;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+    }
+    .search-component-wrapper .search-results-dropdown li:last-child {
+        border-bottom: none;
+    }
+    .search-component-wrapper .search-results-dropdown li a {
+        display: block;
+        padding: 0 0.5em;
+        text-decoration: none;
+        color: var(--search-accent-color);
+        font-weight: bold;
+    }
+    .search-component-wrapper .search-results-dropdown li:hover,
+    .search-component-wrapper .search-results-dropdown li a:hover {
+        background-color: var(--dropdown-hover-bg-color);
+    }
+    .search-component-wrapper .search-results-dropdown li .snippet {
+        font-size: 0.85em;
+        color: var(--dropdown-text-color);
+        line-height: 1.4;
+        padding: 0 15px 10px 15px;
+        margin: 0;
+    }
+    .search-component-wrapper .search-results-dropdown li .snippet mark {
+        background-color: var(--highlight-bg-color);
+        color: var(--highlight-text-color);
+        font-weight: normal;
+    }
+     .search-component-wrapper .search-results-dropdown li.no-results {
+        padding: 10px 15px;
+        color: #888;
+        cursor: default;
+    }
+    .search-component-wrapper .search-results-dropdown li.no-results:hover {
+        background-color: transparent;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .search-component-wrapper .search-container.search-active .search-input-wrapper {
+            width: 220px;
+        }
+        .search-component-wrapper .search-results-dropdown {
+            width: 300px;
+        }
+    }
+    @media (max-width: 480px) {
+        .search-component-wrapper .search-container.search-active .search-input-wrapper {
+            width: 180px;
+            max-width: calc(100% - 10px);
+        }
+        .search-component-wrapper .search-results-dropdown {
+            width: 260px;
+            max-width: calc(100vw - 30px);
+        }
+        .search-component-wrapper .search-input {
+            padding: 8px 35px 8px 10px;
+            font-size: 0.9em;
+        }
+        .search-component-wrapper .search-close-btn {
+            font-size: 1.3em;
+        }
+    }
+</style>
+
+<div class="search-component-wrapper">
+    <div class="search-container" id="jekyllSearchContainer">
+        <button class="search-icon" id="jekyllSearchIcon" aria-label="Open search" title="Open search"></button>
+        <div class="search-input-wrapper" id="jekyllSearchInputWrapper">
+            <input type="search" class="search-input" id="jekyllSearchInput" placeholder="Search..." aria-label="Search input">
+            <button class="search-close-btn" id="jekyllSearchCloseBtn" aria-label="Close search" title="Close search"></button>
+        </div>
+        <ul class="search-results-dropdown" id="jekyllSearchResultsDropdown"></ul>
+    </div>
+</div>
+
+<script>
+    (function() { // Self-executing function to encapsulate the script
+        const searchContainer = document.getElementById('jekyllSearchContainer');
+        const searchIcon = document.getElementById('jekyllSearchIcon');
+        const searchInput = document.getElementById('jekyllSearchInput');
+        const searchCloseBtn = document.getElementById('jekyllSearchCloseBtn');
+        const searchResultsDropdown = document.getElementById('jekyllSearchResultsDropdown');
+        const searchInputWrapper = document.getElementById('jekyllSearchInputWrapper'); // Get the wrapper element
+
+        if (!searchContainer || !searchIcon || !searchInput || !searchCloseBtn || !searchResultsDropdown || !searchInputWrapper) {
+            console.warn('Jekyll Expanding Search: One or more required HTML elements not found. Search will not function.');
+            return;
+        }
+
+        let lunrIdx, searchStore, lunrReady = false;
+        const MIN_CHARS_FOR_LUNR_SEARCH = 2;
+
+        function debounce(fn, delay) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => fn.apply(this, args), delay);
+            };
+        }
+
+        function initLunr() {
+            if (lunrReady) return;
+            
+            const scriptElement = document.createElement('script');
+            scriptElement.src = 'https://unpkg.com/lunr/lunr.js';
+            scriptElement.onload = fetchSearchIndex;
+            scriptElement.onerror = () => {
+                console.error('[Search] Failed to load Lunr.js script.');
+                searchResultsDropdown.innerHTML = '<li class="no-results">Search unavailable.</li>';
+                searchResultsDropdown.style.display = 'block';
+            };
+            document.head.appendChild(scriptElement);
+        }
+
+        function fetchSearchIndex() {
+            const searchJsonUrl = "{{ '/search.json' | relative_url }}";
+            fetch(searchJsonUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        return Promise.reject(`Failed to load search index: ${response.statusText} (URL: ${searchJsonUrl})`);
+                    }
+                    return response.json();
+                })
+                .then(docs => {
+                    searchStore = docs;
+                    lunrIdx = lunr(function() {
+                        this.field('title', { boost: 10 });
+                        this.field('excerpt', { boost: 5 });
+                        this.field('content');
+                        this.field('tags', { boost: 7 });
+                        this.ref('url');
+
+                        docs.forEach(doc => {
+                            try {
+                                this.add(doc);
+                            } catch (e) {
+                                console.warn(`[Search] Failed to add doc to Lunr index (URL: ${doc.url}):`, e);
+                            }
+                        });
+                    });
+                    lunrReady = true;
+                    if (searchInput.value.trim().length >= MIN_CHARS_FOR_LUNR_SEARCH) {
+                        handleSearchInput();
+                    }
+                })
+                .catch(err => {
+                    console.error('[Search] Index load failed:', err);
+                    searchResultsDropdown.innerHTML = '<li class="no-results">Error loading search results.</li>';
+                    searchResultsDropdown.style.display = 'block';
+                });
+        }
+
+        function escapeForRegex(str) {
+            return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        function makeSnippetMulti(text, query, radius = 40, maxSnips = 2) {
+            if (!text || !query) return text ? (text.length > (radius*2 + (query ? query.length : 0)) ? text.substring(0, (radius*2 + (query ? query.length : 0))) + '…' : text) : '';
+            
+            const normalizedQuery = query.replace(/\*$/, '');
+            if (!normalizedQuery) return text.length > (radius*2 + query.length) ? text.substring(0, (radius*2 + query.length)) + '…' : text;
+
+            const escapedQuery = escapeForRegex(normalizedQuery);
+            const regex = new RegExp(`(.{0,${radius}})(${escapedQuery})(.{0,${radius}})`, 'gi');
+            let match;
+            const snippets = [];
+            let count = 0;
+            let lastIndex = 0;
+
+            while ((match = regex.exec(text)) !== null && count < maxSnips) {
+                const [ , rawBefore, term, rawAfter ] = match;
+                let before = rawBefore;
+                let after = rawAfter;
+
+                if (match.index > lastIndex && match.index > 0 && count === 0 && snippets.length === 0) {
+                     if (before.length === radius && text.charAt(match.index - before.length -1) !== ' ' && text.charAt(match.index - before.length -1) !== undefined ) before = '…' + before.substring(before.indexOf(' ', Math.max(0, before.length - radius + 5)) +1 || 0);
+                     else if (before.length < radius && match.index > 0) {/* keep as is */}
+                     else if (before.length === radius) before = '…' + before;
+                } else if (before.length === radius) {
+                     before = '…' + before.substring(before.indexOf(' ', Math.max(0, before.length - radius + 5)) +1 || 0);
+                }
+                
+                if (after.length === radius) {
+                     after = after.substring(0, after.lastIndexOf(' ', Math.min(after.length, radius - 5)) === -1 ? after.length : after.lastIndexOf(' ', Math.min(after.length, radius - 5)) ) + '…';
+                }
+
+                snippets.push(before + '<mark>' + term + '</mark>' + after);
+                lastIndex = regex.lastIndex;
+                count++;
+            }
+
+            if (snippets.length === 0) {
+                const maxLength = radius * 2 + (query ? query.length : 0) + 15;
+                return text.substring(0, maxLength) + (text.length > maxLength ? '…' : '');
+            }
+            return snippets.join('<br>…<br>');
+        }
+
+        function renderSearchResults(results, query) {
+            searchResultsDropdown.innerHTML = ''; 
+
+            if (results.length === 0 && query.length >= MIN_CHARS_FOR_LUNR_SEARCH ) {
+                const noResultsItem = document.createElement('li');
+                noResultsItem.textContent = 'No results found.';
+                noResultsItem.classList.add('no-results');
+                searchResultsDropdown.appendChild(noResultsItem);
+            } else if (results.length > 0) {
+                results.forEach(hit => {
+                    const doc = searchStore.find(d => d.url === hit.ref);
+                    if (!doc) {
+                        console.warn(`[Search] Document not found in store for ref: ${hit.ref}`);
+                        return;
+                    }
+                    const sourceTextForSnippet = doc.content || doc.excerpt || '';
+                    const snippet = makeSnippetMulti(sourceTextForSnippet, query);
+                    const listItem = document.createElement('li');
+                    listItem.setAttribute('data-url', "{{ site.baseurl }}" + doc.url); 
+                    const link = document.createElement('a');
+                    link.href = "{{ site.baseurl }}" + doc.url; 
+                    link.textContent = doc.title || 'Untitled';
+                    const snippetPara = document.createElement('p');
+                    snippetPara.classList.add('snippet');
+                    snippetPara.innerHTML = snippet;
+                    listItem.appendChild(link);
+                    listItem.appendChild(snippetPara);
+                    searchResultsDropdown.appendChild(listItem);
+                });
+            }
+
+            if (searchResultsDropdown.children.length > 0) {
+                searchResultsDropdown.style.display = 'block';
+            } else {
+                searchResultsDropdown.style.display = 'none';
+            }
+        }
+        
+        function handleSearchInput() {
+            const query = searchInput.value.trim();
+            if (!lunrReady || !lunrIdx) {
+                 if (query.length >= MIN_CHARS_FOR_LUNR_SEARCH) { } else {
+                    searchResultsDropdown.style.display = 'none';
+                 }
+                return;
+            }
+            if (query.length < MIN_CHARS_FOR_LUNR_SEARCH) {
+                searchResultsDropdown.style.display = 'none';
+                return;
+            }
+            const searchResults = lunrIdx.search(query + '*').slice(0, 10); 
+            renderSearchResults(searchResults, query);
+        }
+
+        searchIcon.addEventListener('click', () => {
+            searchContainer.classList.add('search-active');
+            
+            // MODIFIED: Delay focus slightly
+            setTimeout(() => {
+                searchInput.focus();
+            }, 50); // 50ms delay
+
+            if (!lunrReady) { 
+                initLunr();
+            }
+        });
+
+        function closeSearchUI() {
+            searchContainer.classList.remove('search-active');
+            searchInput.value = ''; 
+            searchResultsDropdown.style.display = 'none'; 
+        }
+
+        searchCloseBtn.addEventListener('click', closeSearchUI);
+        searchInput.addEventListener('focus', () => {
+            if (!lunrReady) {
+                initLunr();
+            }
+            if (searchInput.value.trim().length >= MIN_CHARS_FOR_LUNR_SEARCH && lunrReady) {
+                handleSearchInput();
+            }
+        });
+        
+        searchInput.addEventListener('input', debounce(handleSearchInput, 250));
+
+        searchResultsDropdown.addEventListener('click', e => {
+            const listItem = e.target.closest('li[data-url]');
+            if (listItem && listItem.dataset.url) {
+                window.location.href = listItem.dataset.url;
+            }
+        });
+
+        let hideDropdownTimeout;
+        function scheduleHideDropdown() {
+            clearTimeout(hideDropdownTimeout);
+            hideDropdownTimeout = setTimeout(() => {
+                if (document.activeElement !== searchInput && !searchResultsDropdown.contains(document.activeElement)) {
+                    searchResultsDropdown.style.display = 'none';
+                }
+            }, 200);
+        }
+
+        searchInput.addEventListener('blur', scheduleHideDropdown);
+        searchResultsDropdown.addEventListener('focusout', (e) => {
+            if (!searchResultsDropdown.contains(e.relatedTarget) && e.relatedTarget !== searchInput) {
+                 scheduleHideDropdown();
+            }
+        });
+        document.addEventListener('click', (event) => {
+            if (!searchContainer.contains(event.target)) {
+                 scheduleHideDropdown();
+            }
+        });
+        
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                if (searchResultsDropdown.style.display === 'block' && searchResultsDropdown.children.length > 0) {
+                    searchResultsDropdown.style.display = 'none'; 
+                } else {
+                    closeSearchUI(); 
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            searchResultsDropdown.style.display = 'none';
+        });
+    })(); 
+</script>

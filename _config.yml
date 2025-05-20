@@ -1,0 +1,34 @@
+title: Plant Humanities Lab
+
+description: Explore the cultural histories of plants and their influence on human societies
+
+author:
+  name: Ron Snyder
+  email: ron@snyderjr.com
+
+nav_pages:
+  - index.md
+  - about.md
+  - podcasts.md
+  - contributors/index.md
+  - contact.md
+
+max-width: 1000px
+
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:path/
+  podcasts:
+    output: true
+    permalink: /:collection/:path/
+
+show_excerpts: true
+show_rss_feed: true
+
+footer:
+  show_github_link: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
