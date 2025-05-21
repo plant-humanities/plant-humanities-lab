@@ -1,6 +1,6 @@
 # _config.local.yml
 github:
-  owner_name: juncture-digital
-  repository_name: plant-humanities
+  owner_name: plant-humanities
+  repository_name: plant-humanities-lab
   source:
     branch: main

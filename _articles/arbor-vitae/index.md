@@ -15,25 +15,40 @@ published: true
 
 # The Mysterious Tree of Life
 
+##
+{: .columns}
+
 In his 1640 herbal _Theatrum Botanicum_, [John Parkinson](Q256288) described the "tree of life," or "arbor vitæ," as ["a tall tree being similar to a cypress and covered by a dark reddish bark on the trunk and an even redder bark on the branches."](https://www.biodiversitylibrary.org/page/56601375#page/1502/mode/1up) Parkinson went on to explain that the tree, unknown to the ancients, originated in the New World and was introduced to Europe by the French. He explained that while it was presented to the [French King](Q70972), [Francis I](Q129857), as the tree of life he had no idea why. Clearly, Parkinson was unaware of the miraculous stories associated with arbor vitæ.
 
 `image manifest=gh:plant-humanities/media/arbor-vitae/bf599541d0c3a7754d7acc34ccf5c3a345987cd6adc991442aa8be5ffba2e428.yaml`
 
+##
+{: .columns}
+
 A century earlier, French explorer [Jacques Cartier](Q7321) and his crew learned of the tree and its astonishing medicinal effects from the St. Lawrence Iroquois Indians of Eastern Canada while exploring the Gulf of St. Lawrence and the [St. Lawrence River](Q3339246). The Indigenous people of this region used numerous local plants to treat disease and survive the region’s harsh winters.[^ref1] The French explorers, however, were far less equipped to survive the unforgiving environment they found themselves stranded in during the winter of 1535–36. Suffering from a mysterious disease that threatened to kill more than half of his crew, Captain Cartier turned to the [St. Lawrence Iroquois](Q129060) for help.
 
-<param ve-map title="Gulf of Saint Lawrence" center="49.408409, -63.530709" basemap="Esri_WorldPhysical" zoom="5" show-labels>
-<param ve-map-marker qid="Q3339246">
-<param ve-map-layer geojson active url="/geojson/cartier.json">
+`map location=49.408,-63.531,5 caption="Gulf of Saint Lawrence" basemaps=Esri_WorldPhysical`
+`- marker=Q3339246`
+`- geojson=cartier.json`
+
+##
+{: .columns}
 
 Captain Cartier had noticed that some of the [local Indians](Q544356) also suffered from the same affliction as his men, but unlike his men, they made full recoveries. Cartier soon learned of a medicinal decoction (or tea) the locals made and drank from a ["certain tree"](https://hdl.handle.net/2027/aeu.ark:/13960/t35151v01?urlappend=%253Bseq=82) to treat the illness. Eventually, Cartier convinced a local young man named Domagaia to share his therapeutic secret. Domagaia sent a couple of women to fetch about a dozen branches of the tree. The bark and leaves were boiled to make a decoction, which Cartier and his men were instructed to drink every other day. They were also instructed to put the dregs of the mixture on the legs of the sick. Within six days, Cartier’s crew was cured.
 
-<param ve-map title="Gulf of Saint Lawrence" center="Q544356" basemap="Esri_WorldPhysical" zoom="5.5" stroke-width="0" show-labels>
-<param ve-map-layer geojson active url="/geojson/St_Lawrence_Iroquoians.json">
+`map location=Q544356,5.5 caption="Gulf of Saint Lawrence" basemaps=Esri_WorldPhysical`
+`- geojson=St_Lawrence_Iroquoians.json`
+
+##
+{: .columns}
 
 Thanks to the medicinal knowledge of the St. Lawrence Iroquois, Captain Cartier and crew returned home safely with fascinating tales of "New France" and the local Indigenous populations. Just five years later, in 1541, Cartier was sent back to the region on a colonizing expedition. In the end, neither of Cartier’s explorations yielded material wealth for the crown. As both were considered financial failures, there was little effort to publish any accounts of either journey. Fortunately, a Venetian diplomat and cartographer was interested in Cartier’s tales of explorations. In 1550, [Giovanni Battista Ramusio](Q1378950) translated and published a collection of travel narratives, [_Navigationi et viaggi_,](https://archive.org/details/dellenavigationi00ramu/page/n835) which included a first-hand account of Cartier’s first voyage and interactions with the St. Lawrence Iroquois.[^ref2] Thirty years later, [John Florio](Q982707) translated Ramusio’s account of Cartier’s voyages into English. Cartier’s own account in French, however, would not be published until 1598.
 
 <param ve-map title="Locations where accounts of Cartier's expeditions were published." center="48.402007, 2.700250" basemap="Esri_WorldPhysical" zoom="4.5" stroke-width="0" show-labels>
 <param ve-map-layer geojson active url="/geojson/cartier_publishing.json">
+
+##
+{: .columns}
 
 According to Ramusio’s narrative, the tree used to cure the French explorers was called ["Ameda"](https://archive.org/details/dellenavigationi00ramu/page/n835) in the local language. [Florio’s translation also refers to the tree only by its indigenous name.](https://hdl.handle.net/2027/aeu.ark:/13960/t35151v01?urlappend=%253Bseq=85) In fact, all early translations of the account, published by Ramusio (1550), Florio (1580), and the English author [Richard Hakluyt](Q185510) (1600), provide nearly identical accounts, pointing to a close translation of the same source. Sadly, none provide an in-depth physical description of the tree called Ameda. Lacking any first-hand accounts with detailed physical descriptions, naturalists, botanists, and historians have debated the identity of the tree of life for more than 450 years.
 

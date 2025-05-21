@@ -10,26 +10,20 @@ tags: succulent desert fiber beverage
 published: true
 ---
 
-<style>
-  .section3 { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2em; align-items: start; margin-top: 2em; }
-  .section3 > :first-child { flex: 0 0 100%; } /* header takes full width, if defined */
-  .section3 > *:not(:first-child) { flex: 1 1 200px; }
-  .section3 iframe { box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; margin-bottom: 1em; }
-  p { font-size: 1.2em; }
-  iframe.right + p { margin-top: 0; }
-</style>
-
 `header title="Agave: A Plant with an Intoxicating History" author="Ashley Buchanan" img=wc:Gc29_agave_americana.jpg` 
+
 
 ## The Big Bloom 
 
 ###
+{: .columns}
 
 1698 was a special year for the [Hortus botanicus Leiden](Q2468128), the oldest botanical garden in the Netherlands. After 96 years, its exotic "Aloe Americana" (or *[Agave americana](Q155874)*, as it is classified today), bloomed for the first time. To commemorate the marvelous event, the Hortus commissioned an illustrated print of the plant.[^ref1] A surviving poster-sized print, recently added to the Dumbarton Oaks Rare Book Collection, reveals sixteenth and seventeenth century European botanists’ fascination with the so-called "century plant" and provides a lens to explore the history of agave—a plant that has shaped human societies across three continents.
 
 `image manifest="gh:plant-humanities/media/images/Aloe_Americana_Leiden_DO.jpg`
 
 ###
+{: .columns}
 
 The Hortus’s *Agave americana* certainly earned its nickname, taking almost a century to bloom. In its natural climate, however, an *Agave americana* typically blooms every 10 to 25 years and can grow upwards of 20 feet.[^ref2] *Agave* is a genus of [monocots](Q78961), with some 200 species indigenous to Central America, the southwestern United States, and in some tropical areas of South America. Distinguished by their strong, fleshy leaves, agaves grow slowly and require little water to survive, making them a vital resource in semiarid climates. Although best known today as the plant from which tequila is made, agave plants played a central role in ancient Amerindian religion and culture for centuries, encouraged a botanical revolution in Europe, helped form Mexican identity in the nineteenth and twentieth centuries, and offer solutions to present-day environmental challenges.
 
@@ -52,6 +46,7 @@ Long before the arrival of Europeans like Motolinía, pulque of various agave sp
 `image src=wc:Codex_Magliabechiano_%28folio_85r%29.jpg region=204,22,765,589`
 
 ###
+{: .columns}
 
 The association of heart sacrifice with pulque extended beyond metaphor. Just as the heart of man had to be sacrificed to sustain the gods, the heart of the agave had to be sacrificed to produce pulque and sustain man, resulting in the plant’s death. As the plant neared maturity, its "cajete," center—or heart, swelled and elongated as the plant gathered stored sap. To access the sap, makers would excise the stalk, creating a cavity within the plant’s center where the sap, known as "aguamiel" (honey water), accumulated. For three to six months, the makers harvested the sap daily, scraping the sides of the cavity to facilitate the flow of the sap, until the plant died. Once collected, naturally occurring microorganisms continued the fermentation process resulting in the pulque.[^ref7]
 
@@ -61,6 +56,7 @@ The association of heart sacrifice with pulque extended beyond metaphor. Just as
 ## The American Aloe
 
 ###
+{: .columns}
 
 It is unclear exactly when or how the first agave specimen arrived in Europe. It was likely brought to Spain with numerous other New World plants for cultivation. In 1576, [Carolus Clusius](Q333372) published the first description of the ["Aloe Americana,"](https://www.biodiversitylibrary.org/page/6781301) effectively distinguishing agave from other known aloe plants in Asia, Africa, and the Middle East.[^ref8] Clusius, a French naturalist and collector at the forefront of an emerging botanical revolution in Europe, claimed that he learned of the plant from Gomara’s *Storia del Messico* (first published in 1552) and encountered a living specimen in a garden in Valencia while traveling through Spain in 1564–1565.
 
@@ -91,6 +87,7 @@ While the agave in Europe was an ornamental plant that symbolized botanical know
 ## Tequila and National Identity
 
 ###
+{: .columns}
 
 Today, [tequila](https://daily.jstor.org/plant-of-the-month-agave/) is the national drink of Mexico. Since its creation, and perhaps because of its cultural hybridity, tequila has become a driving force of Mexican identity. Following the Mexican Revolution, national ideology embraced cantina (drinking) culture and the hyper-masculine "machismo" ethos tequila came to represent. Once industrial distillation was introduced to Jalisco, agave roasters (*mescalaros*) were suddenly promoted from menial laborers to alchemists. Jalisco’s tequila cottage industry elevated entire segments of mestizo populations. By 1970, tequila was an international commodity and its export has more than doubled since, with almost two-thirds of tequila exported from Mexico being consumed by Canada and the United States.[^ref13]
 
