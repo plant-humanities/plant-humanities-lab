@@ -25,7 +25,7 @@ published: true
   }
 </style>
 
-`header title="Arbor Vitae: In Search of the Tree of Life" author="Ashley Buchanan" img=wc:Neuch%C3%A2tel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg` 
+`header title="Arbor Vitae: In Search of the Tree of Life" author="Ashley Buchanan" img=https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Neuch%C3%A2tel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg/1367px-Neuch%C3%A2tel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg` 
 
 
 # The Mysterious Tree of Life
