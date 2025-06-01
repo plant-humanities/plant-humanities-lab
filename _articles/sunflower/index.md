@@ -6,7 +6,7 @@ date: 2025-01-01
 layout: post
 thumbnail: "https://raw.githubusercontent.com/plant-humanities/media/main/thumbnails/Sunflower_thumbnail.jpg"
 permalink: /sunflower
-tags: lower oilseed ornamental temperate
+tags: flower oilseed ornamental temperate
 published: true
 ---
 
