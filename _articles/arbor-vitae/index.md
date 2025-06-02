@@ -1,10 +1,10 @@
 ---
 title: "Arbor Vitae: In Search of the Tree of Life"
-description: The “tree of life,” or arbor vitæ, has long been surrounded by mystery and debate over its true identity. This story traces how the St. Lawrence Iroquois used the tree’s medicinal properties to aid French explorers and explores the evidence behind its botanical identification.
+description: The “tree of life,” or arbor vitaæ, has long been surrounded by mystery and debate over its true identity. This story traces how the St. Lawrence Iroquois used the tree’s medicinal properties to aid French explorers and explores the evidence behind its botanical identification.
 author: Ashley Buchanan
 date: 2025-01-01
 layout: post
-thumbnail: "https://raw.githubusercontent.com/plant-humanities/media/main/thumbnails/arbor-vitae.jpg"
+thumbnail: arbor-vitae.jpg
 permalink: /arbor-vitae
 tags: tree conifer ornamental temperate
 published: true
@@ -25,7 +25,7 @@ published: true
   }
 </style>
 
-`header title="Arbor Vitae: In Search of the Tree of Life" author="Ashley Buchanan" img=https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Neuch%C3%A2tel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg/1367px-Neuch%C3%A2tel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg` 
+`header title="Arbor Vitae: In Search of the Tree of Life" author="Ashley Buchanan" img=wc:Neuchâtel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg` 
 
 
 # The Mysterious Tree of Life

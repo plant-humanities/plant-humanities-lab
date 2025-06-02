@@ -11,7 +11,7 @@ permalink: /contributors
 
 [Thomas C. Anderson]()
 
-![](https://raw.githubusercontent.com/plant-humanities/media/main/contributors/Anderson.jpg)
+![](Anderson.jpg)
 
 Anderson’s research, which draws upon both historical archival studies as well as plant biology and botany, explores how early modern colonial encounters with the natural world helped shape our modern pharmacopoeia.
 

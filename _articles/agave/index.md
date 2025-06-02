@@ -4,7 +4,7 @@ description: Agave, a genus of about 200 monocot species native to the Americas,
 author: Ashley Buchanan
 date: 2025-01-01
 layout: post
-thumbnail: "https://raw.githubusercontent.com/plant-humanities/media/main/thumbnails/agave.jpg"
+thumbnail: agave.jpg
 permalink: /agave
 tags: succulent desert fiber beverage
 published: true
