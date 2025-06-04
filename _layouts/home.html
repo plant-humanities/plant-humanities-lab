@@ -45,7 +45,7 @@ layout: base
       <li>
         {%- if post.thumbnail -%}
           <div class="image-container" style="width: 250px; height: 160px; flex-shrink: 0; overflow: hidden;">
-            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="post-image shadow" style="display: block; width: 100%; height: 100%; object-fit: cover;"/>
+            <img data-src="{{ post.thumbnail }}" alt="{{ post.title }}" class="post-image shadow" style="display: block; width: 100%; height: 100%; object-fit: cover;"/>
           </div>
         {%- endif -%}
         <div>
