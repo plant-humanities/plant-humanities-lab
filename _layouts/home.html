@@ -23,7 +23,7 @@ layout: base
 
 
     <hr style="margin:0;"/>
-    <div class="site-tags" style="display: flex; background-color: #f8f8f8; padding: 6px; border-radius: 5px; flex-wrap: wrap;">
+    <div class="site-tags" style="display: flex; padding: 6px; border-radius: 5px; flex-wrap: wrap;">
       <span style="font-weight:500;">Tags:&nbsp;</span>
       {% assign sortedtags = unique_tags %}
       {% for tag in sortedtags %}
@@ -49,11 +49,11 @@ layout: base
           </div>
         {%- endif -%}
         <div>
-          <h3>
+          <h1>
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
-          </h3>
+          </h1>
           <div class="post-meta">{{ post.date | date: date_format }}</div>
 
           {%- if post.description -%}
