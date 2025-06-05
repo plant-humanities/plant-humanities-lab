@@ -4,7 +4,7 @@ description: Breadfruit, a towering tree with nourishing fruit, has long been a 
 author: Elaine Savory
 date: 2025-01-01
 layout: post
-thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Breadfruit_%28Artocarpus_altilis%29%3B_fruiting_branch._Coloured_e_Wellcome_V0044288.jpg/500px-Breadfruit_%28Artocarpus_altilis%29%3B_fruiting_branch._Coloured_e_Wellcome_V0044288.jpg"
+thumbnail: "wc:Breadfruit_%28Artocarpus_altilis%29%3B_fruiting_branch._Coloured_e_Wellcome_V0044288.jpg"
 permalink: /breadfruit
 tags: fruit tropical staple
 published: true

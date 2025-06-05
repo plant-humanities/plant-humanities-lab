@@ -4,7 +4,7 @@ description: Vermeer’s *Girl with a Pearl Earring* once featured a rich indigo
 author: Jordan Noelle Smith, Gianna Welty, & Hayley Blair
 date: 2025-01-01
 layout: post
-thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Indigofera_heterantha_Indygowiec_2019-07-20_03.jpg/320px-Indigofera_heterantha_Indygowiec_2019-07-20_03.jpg"
+thumbnail: "wc:Indigofera_heterantha_Indygowiec_2019-07-20_03.jpg"
 permalink: /indigo
 tags: shrub dye legume tropical
 published: true

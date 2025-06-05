@@ -4,7 +4,7 @@ description: Francis Drake’s 16th-century voyage around the globe helped spark
 author: Ashley Buchanan
 date: 2025-01-01
 layout: post
-thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Flore_m%C3%A9dicale_des_Antilles%2C_ou%2C_Trait%C3%A9_des_plantes_usuelles_%28Pl._207%29_%288182110630%29.jpg/330px-Flore_m%C3%A9dicale_des_Antilles%2C_ou%2C_Trait%C3%A9_des_plantes_usuelles_%28Pl._207%29_%288182110630%29.jpg"
+thumbnail: "wc:Flore_m%C3%A9dicale_des_Antilles%2C_ou%2C_Trait%C3%A9_des_plantes_usuelles_%28Pl._207%29_%288182110630%29.jpg"
 permalink: /contrayerva
 tags: herb medicinal root tropical
 published: true
