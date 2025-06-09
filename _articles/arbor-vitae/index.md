@@ -156,7 +156,6 @@ It is clear that by the mid-seventeenth century much of the medicinal knowledge 
 `- geojson url=thuja_in_europe.json caption="Spread of Arbor Vitæ"`
 
 ##
-{: .columns}
 
 In 1753, botanist [Carl Linnaeus’s](Q1043) pioneering work, _Systema Naturae_, which cemented a system of binomial classification for plants, identified the arbor vitæ, the _Thuja Theophrasis_, and the _Thuja strobilis lævibus_ as the same plant, which he reclassified as [_Thuja occidentalis_.](https://www.biodiversitylibrary.org/page/359023#page/444/mode/1up) Since then, _Thuja occidentalis_ has generally been accepted as the Ameda tree that saved Cartier and his men.
 
