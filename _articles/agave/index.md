@@ -28,9 +28,9 @@ published: true
 The Hortus’s *Agave americana* certainly earned its nickname, taking almost a century to bloom. In its natural climate, however, an *Agave americana* typically blooms every 10 to 25 years and can grow upwards of 20 feet.[^ref2] *Agave* is a genus of [monocots](Q78961), with some 200 species indigenous to Central America, the southwestern United States, and in some tropical areas of South America. Distinguished by their strong, fleshy leaves, agaves grow slowly and require little water to survive, making them a vital resource in semiarid climates. Although best known today as the plant from which tequila is made, agave plants played a central role in ancient Amerindian religion and culture for centuries, encouraged a botanical revolution in Europe, helped form Mexican identity in the nineteenth and twentieth centuries, and offer solutions to present-day environmental challenges.
 
 `map location=25.503945,-102.834000,4 caption="Agave americana distribution" basemaps=Esri_WorldPhysical`
-`- geojson=agave_distribution.json`
-`- marker=Q13160`
-`- marker=Q170603`
+`- geojson url=agave_distribution.json`
+`- marker qid=Q13160`
+`- marker qid=Q170603`
 
 ## A Miracle Plant
 
@@ -71,7 +71,7 @@ Clusius was at the center of a vibrant international network of naturalists and 
 ###
 
 `map location=Q2468128,4.5 marker .right`
-`- marker=Q13160`
+`- marker qid=Q13160`
 
 Exchanging plant specimens and botanical knowledge was about more than solidifying friendship with like-minded individuals. Clusius and his network, by virtue of their letters, plant cultivation, and publications, positioned themselves as experts and established the means through which botanic practices were formalized and later institutionalized. In 1593, Clusius moved to Leiden to develop and oversee the city’s new botanical garden—the very same botanical garden where the Aloe americana would finally bloom in 1698. First cultivated in the botanical gardens of Padua and Pisa, agave reached the court gardens of Rome, Venice, and Florence by the late sixteenth century, thriving in the Italy’s hotter and drier climate. *Aloe americana* remained an object of fascination in Italy throughout the seventeenth century and witnessing its rare flowering was an occasion worthy of commemoration.[^ref11] Eventually, agave plants would escape the boundaries of their cultivated gardens in Italy. Today, in addition to remaining popular ornamental plants, agaves grow widely throughout Italy and southern Europe.
 
@@ -92,8 +92,8 @@ While the agave in Europe was an ornamental plant that symbolized botanical know
 Today, [tequila](https://daily.jstor.org/plant-of-the-month-agave/) is the national drink of Mexico. Since its creation, and perhaps because of its cultural hybridity, tequila has become a driving force of Mexican identity. Following the Mexican Revolution, national ideology embraced cantina (drinking) culture and the hyper-masculine "machismo" ethos tequila came to represent. Once industrial distillation was introduced to Jalisco, agave roasters (*mescalaros*) were suddenly promoted from menial laborers to alchemists. Jalisco’s tequila cottage industry elevated entire segments of mestizo populations. By 1970, tequila was an international commodity and its export has more than doubled since, with almost two-thirds of tequila exported from Mexico being consumed by Canada and the United States.[^ref13]
 
 `map location=Q13160,5 caption="Jalisco, Mexico" basemaps=Esri_WorldPhysical`
-`- marker=Q13160 prefer-geojson`
-`- marker=Q170603`
+`- marker qid=Q13160 prefer-geojson`
+`- marker qid=Q170603`
 
 ## The Future of Agave
 

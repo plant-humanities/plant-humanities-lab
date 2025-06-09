@@ -27,7 +27,7 @@ layout: base
       <span style="font-weight:500;">Tags:&nbsp;</span>
       {% assign sortedtags = unique_tags %}
       {% for tag in sortedtags %}
-        <a href="{{ site.baseurl }}/tag/{{ tag }}" style="font-weight:500;">{{ tag }}</a>{% if forloop.last != true %},&nbsp;{% endif %}
+        <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last != true %},&nbsp;{% endif %}
       {% endfor %}
     </div>
     <hr style="margin:0;"/><br/>
