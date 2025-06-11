@@ -5,9 +5,9 @@ author: Ashley Thuthao Keng Dam, Diana Heredia-López, Rachael Nelson, and Erin 
 date: 2025-01-01
 layout: post
 thumbnail: ayahuasca.jpg
-# permalink: /ayahuasca
+permalink: /ayahuasca
 tags: vine psychoactive medicinal tropical
-published: true
+published: false
 ---
 
 `header title="Ayahuasca: Amazonian Plant Lessons" author="Ashley Thuthao Keng Dam, Diana Heredia-López, Rachael Nelson, and Erin Wrightson" img=https://live.staticflickr.com/8507/27951788334_154753d604_4k.jpg` 

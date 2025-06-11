@@ -8,7 +8,10 @@ import re
 import shlex
 import shutil
 from urllib.parse import unquote
+from copy import deepcopy
 
+def convert_permalink(md):
+  return re.sub(r'# permalink:', 'permalink:', md)
 
 def insert_blank_line_before_param_blocks(md):
   lines = md.splitlines(keepends=True)
@@ -73,6 +76,8 @@ def convert_flyto_links(md, map_id='map-id'):
     return f"[{text}]({map_id}/flyto/{coords})"
 
   return SPAN_FLYTO_RE.sub(lambda m: _span_to_md(m, map_id), md)
+
+first = None
 
 def convert_params(md):
   
@@ -152,7 +157,10 @@ def convert_params(md):
     for key, value in attrs.items():
       if key in ['ve-map-layer',]: continue
       map_layer_attrs.add(key)
-      repl_attrs[key] = value
+      if key == 'title':
+        repl_attrs['layer'] = value
+      else:
+        repl_attrs[key] = value
     repl_str = '`-'
     for key, value in repl_attrs.items():
       if value is None:
@@ -171,7 +179,7 @@ def convert_params(md):
       if key in ['ve-map-marker',]: continue
       map_marker_attrs.add(key)
       repl_attrs[key] = value
-    repl_str = '`-'
+    repl_str = '`- marker'
     for key, value in repl_attrs.items():
       if value is None:
         repl_str += f' {key}'
@@ -181,7 +189,57 @@ def convert_params(md):
     repl_str += '`'
     return repl_str
 
-
+  # id title
+  video_attrs = set()
+  def transform_video(attrs):
+    repl_attrs = {}
+    for key, value in attrs.items():
+      if key in ['ve-video',]: continue
+      video_attrs.add(key)
+      if key == 'title':
+        repl_attrs['caption'] = value
+      elif key in ['caption',]:
+        repl_attrs[key] = value
+      elif key == 'id':
+        repl_attrs['vid'] = value
+      #elif key in ['cover',]: # boolean attributes
+      #  repl_attrs[key] = None
+    repl_str = '`youtube'
+    for key, value in repl_attrs.items():
+      if value is None:
+        repl_str += f' {key}'
+      else:
+        if ' ' in value: value = f'"{value}"'
+        repl_str += f' {key}={value}'
+    repl_str += '`'
+    return repl_str
+  
+  # 
+  compare_attrs = set()
+  def transform_compare(attrs):
+    print(attrs)
+    global first
+    repl_attrs = {}
+    for key, value in attrs.items():
+      if key in ['ve-compare',]: continue
+      compare_attrs.add(key)
+      if key in ['manifest', 'url']:
+        repl_attrs[key + ('1' if first is None else '2')] = value
+      elif key in ['caption', ]:
+        repl_attrs[key] = value
+    if first is None:
+      first = repl_attrs
+      return None
+    
+    repl_str = '`image-compare'
+    for key, value in first.items():
+      repl_str += f' {key}={value}'
+    for key, value in repl_attrs.items():
+      repl_str += f' {key}={value}'
+    repl_str += '`'
+    first = None
+    return repl_str
+  
   def transform(match):
     full_tag = match.group(0)
     attr_text = match.group(1)
@@ -205,14 +263,19 @@ def convert_params(md):
     if 've-map' in attrs: return transform_map(attrs)
     if 've-map-layer' in attrs: return transform_map_layer(attrs)
     if 've-map-marker' in attrs: return transform_map_marker(attrs)
+    if 've-video' in attrs: return transform_video(attrs)
+    if 've-compare' in attrs: return transform_compare(attrs)
+
     return full_tag
 
   regex = re.compile(r'^[ \t]*<param\s+(.+?)>[ \t]*$', re.DOTALL | re.MULTILINE)
   md = regex.sub(transform, md)
   print('image attrs', sorted(image_attrs))
   print('map attrs', sorted(map_attrs))
-  print('map_layer_attrs attrs', sorted(map_layer_attrs))
-  print('map_marker_attrs attrs', sorted(map_marker_attrs))
+  print('map_layer attrs', sorted(map_layer_attrs))
+  print('map_marker attrs', sorted(map_marker_attrs))
+  print('video attrs', sorted(video_attrs))
+  print('compare attrs', sorted(compare_attrs))
   return md
 
 def convert(path, **kwargs):
@@ -221,7 +284,8 @@ def convert(path, **kwargs):
   if not os.path.exists(orig):
     shutil.copy(index, orig)
   md = pathlib.Path(orig if kwargs['orig'] else index).read_text(encoding='utf-8')
-
+  
+  md = convert_permalink(md)
   md = insert_blank_line_before_param_blocks(md)
   md = convert_entity_infoboxes(md)
   md = convert_zoomto_links(md)
