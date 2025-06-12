@@ -29,6 +29,10 @@ Although many associate ayahuasca with a particular species of plant, it is the 
 `- marker url=https://upload.wikimedia.org/wikipedia/commons/a/aa/The_town_of_Ocra_as_seen_from_the_air.jpg coords="-13.5105, -71.9721" size="129, 170" circle=true`
 `image src=gh:plant-humanities/media/ayahuasca/9c3570ccc6e1b6f90ccae6341bc8ca72c31747517c0a72ef74ac6bb2307f57a7.yaml aspect=0.61`
 
+<!-- TODO: implement map image marker 
+  marker url=https://upload.wikimedia.org/wikipedia/commons/a/aa/The_town_of_Ocra_as_seen_from_the_air.jpg coords="-13.5105, -71.9721" size="129, 170" circle=true
+-->
+
 ##
 
 `image-compare manifest1=gh:plant-humanities/media/ayahuasca/Yage_Is_Our_Life_YouTube_posted_by_Yage_Is_Our_Life_no_known_restrictions_1.jpg manifest2=gh:plant-humanities/media/ayahuasca/Yage_Is_Our_Life_YouTube_posted_by_Yage_Is_Our_Life_no_known_restrictions_2.jpg .right`
