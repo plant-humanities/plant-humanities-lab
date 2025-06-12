@@ -114,7 +114,7 @@ More than just visual, the ayahuasca ceremony is a multisensory journey, with mu
 
 The rich descriptions of ayahuasca ceremonies we know today have been written in the last five decades or so. Interestingly, the few materials that document early encounters with the brew often mention vernacular plant names or botanical traits of hallucinogenic plants. These details, however brief and meager, became relevant for twentieth-century ethnobotany. Selected episodes of ethnobotanical encounters, shown here, reveal how ayahuasca shaped the development of this discipline. Despite persistent religious and intellectual barriers, outsider researchers began to build their understanding of ayahuasca as early as the 1700s. The convergences and dissonances with Amazonian plant knowledge reveal different episodes of land and knowledge colonization. 
 
-<param ve-knightlab-timeline="" source="1uQHhaag3mNkvi1O-p56_BTkNnA16dXGOsw3aIazunnw" font="Lustria-Lato" timenav-position="bottom" hash-bookmark="false" initial-zoom="1" height="650">
+`iframe src=https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html source=1uQHhaag3mNkvi1O-p56_BTkNnA16dXGOsw3aIazunnw font=Lustria-Lato timenav-position=bottom hash-bookmark=false initial-zoom=1 height=650 .large`
 
 ##
 
@@ -172,6 +172,7 @@ Spruce’s work ultimately shaped twentieth-century ethnobotanical interests. Th
 Today, many in the West are most familiar with ayahuasca through its incorporation into New Age spiritualism. By the late twentieth century, westerners were flocking to Amazonia in search of an authentic experience with the brew. So profitable was this new fascination with the hallucinogen, that an entire [industry of ayahuasca tourism](https://daily.jstor.org/the-colonization-of-the-ayahuasca-experience/) began to flourish in the Amazon basin. As a result, ayahuasca rituals were westernized to focus on self-exploration and emotional healing under the leadership of new "gringo shamans" and exported through vast networks, particularly into the United States and Canada, but also through Europe, Africa, and Asia.[^ref40]
 
 <!-- TODO: implement network diagram component
+
 <param ve-d3plus-ring-network 
        url="https://raw.githubusercontent.com/plant-humanities/essays/main/ayahuasca/Networks.tsv"
        center="Ayahuasca">                                 

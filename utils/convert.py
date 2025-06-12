@@ -217,7 +217,6 @@ def convert_params(md):
   # 
   compare_attrs = set()
   def transform_compare(attrs):
-    print(attrs)
     global first
     repl_attrs = {}
     for key, value in attrs.items():
@@ -240,6 +239,18 @@ def convert_params(md):
     first = None
     return repl_str
   
+  def transform_knightlab_timeline(attrs):
+    repl_attrs = {}
+    for key, value in attrs.items():
+      if key in ['ve-knightlab-timeline',]: continue
+      repl_attrs[key] = value
+    
+    repl_str = '`iframe src=https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html'
+    for key, value in repl_attrs.items():
+      repl_str += f' {key}={value}'
+    repl_str += '`'
+    return repl_str
+
   def transform(match):
     full_tag = match.group(0)
     attr_text = match.group(1)
@@ -265,6 +276,7 @@ def convert_params(md):
     if 've-map-marker' in attrs: return transform_map_marker(attrs)
     if 've-video' in attrs: return transform_video(attrs)
     if 've-compare' in attrs: return transform_compare(attrs)
+    if 've-knightlab-timeline' in attrs: return transform_knightlab_timeline(attrs)
 
     return full_tag
 
