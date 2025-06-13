@@ -51,7 +51,7 @@ Prior to domestication, wild banana fruits were (and remain) incredibly seedy an
 
 Selecting for edibility and propagating parthenocarpic bananas was just the first step in the process of banana domestication. The next phase began as various human populations migrated, bringing their previously isolated banana species and subspecies along the way. Like humans, wild bananas are [diploids](Q118406): they have two sets of chromosomes and at fertilization receive one set from each "parent." Thanks to human selection, migration, and exchange, triploid banana hybrids that did not produce seeds were created. Hybridizing distant banana relatives produced plants that possessed three sets of chromosomes, rather than two. This rendered the progeny plant sterile and ensured it would produce fleshy, seedless fruits. In addition to being sterile, triploid banana hybrids could still mutate. Further diversity of the sterile hybrids was produced as farmers selected and propagated for desirable mutations, such as a starchy or sweet pulp. The genetic diversity of triploid bananas and their environmental adaptability ensured not only the survival of sterile banana hybrids, but also their ability to spread across geographic areas and cultures.[^ref1]
 
-`image src=From_Diploid_to_Triploid_new.jpg caption="From Diploids to Triploids." aspect=`
+`image src=From_Diploid_to_Triploid_new.jpg caption="From Diploids to Triploids." aspect=1.15`
 
 ##
 {: .columns}
@@ -180,7 +180,7 @@ Even Linnaeus had to rely on the garden and hothouse of the wealthy financier an
 
 It was not until the nineteenth century, with the development of steamships and refrigeration, that the Central and South American banana would become a major global trade commodity. Thanks to these innovations, bananas began pouring into American cities after the Civil War. In Reconstruction America, bananas became increasingly popular as they were seen as a healthy and affordable commodity. Eventually, small-scale, independent cultivation was consolidated and replaced by large-scale production conglomerates, such as the [United Fruit Company](Q1771942) (UFC)—now Chiquita Brands International. Conglomerates like the UFC focused on cultivation practices and varietals that were easier to ship, more profitable, and desired by consumers. Over time, thanks to its hardy peel and sweet taste, one selected mutation of one banana cultivar in particular came to dominate the market, the Gros Michel. Monocultures of Gros Michel swiftly supplanted most other banana cultivars in Latin America produced for the American and European markets.
 
-`image src=gh:plant-humanities/media/images/Banana_Cart_NYC_1902_LOC.jpg aspect=1.66 .large`
+`image src=gh:plant-humanities/media/images/Banana_Cart_NYC_1902_LOC.jpg aspect=1.74 .large`
 
 ##
 {: .columns}
