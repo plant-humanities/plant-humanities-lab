@@ -58,7 +58,7 @@ Selecting for edibility and propagating parthenocarpic bananas was just the firs
 
 While wild bananas are more diverse than previously understood, scientists have identified _Musa acuminata_ as the primary wild parent of parthenocarpic banana. The morphological variation that is sometimes caused by parthenocarpy, however, makes identifying and classifying banana species more difficult. As Jean Kennedy explains, "Although it is clear that parthenocarpy within section _Musa_ has occurred only in _Musa acuminata_, the parentage of the resulting edible bananas is greatly complicated by the diversity of _Musa acuminata_ at subspecies level. Parthenocarpy probably developed in at least two of these subspecies, and there are many edible hybrids between these and additional wild subspecies."[^ref2] Further complicating matters are hybridizations between _[Musa acuminata](Q132970)_ and _[Musa balbisiana](Q94643)_. The natural variation and geographic distribution of _Musa balbisiana_ remains less understood than _Musa acuminata_ and much remains to be learned about the distribution, wild/cultivated status, and genetic characterization of _Musa acuminata_ and _Musa balbisiana_ hybrids.
 
-`map caption="Geographical distribution of _Musa balbisiana_ and subspecies of _Musa acuminata_" center=9.65843,107.24832,3 zoom=5 basemap=Esri_WorldPhysical`
+`map caption="Geographical distribution of _Musa balbisiana_ and subspecies of _Musa acuminata_" center=10.83213,117.24609 zoom=3 basemap=Esri_WorldPhysical`
 `- geojson active url=M_accuminata_subspecies.json`
 
 
@@ -132,15 +132,13 @@ During this early period of renewed European interest in the banana, there was g
 ##
 {: .columns}
 
+###
+
 The most influential European author of the period, Italian physician [Pietro Andrea Mattioli](Q457191), [referred to the banana plant as "musa" and the individual fruits as "muse"](https://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10139456_00182.html) in his important herbal published in 1554. Musa, which was eventually adopted by Linnaeus as the name of the genus, is believed to be an adaptation of the Arabic word for banana, _mauz_ or _mawzah_. By the eighth century, Islamic expansion under the [Umayyad Caliphate](Q8575586) (661–750) had reached the Indian subcontinent, creating a region of trade, exchange, and communication stretching from India to Iberia. Through these vast commercial networks, bananas were traded and became popular throughout the Islamic Empire.
 
-`map center=33.28147,18.45703 zoom=3 basemap=Esri_WorldPhysical`
-`- geojson active url=Banana_Islamic_Empire.json`
-
-##
-{: .columns}
-
 Italian physicians and naturalists like Mattioli adopted the Arabic name for banana since it was through contact with the Islamic Empire in the late Middle Ages, as well as the writings of Islamic physicians such as [Avicenna](Q8011) (Ibn Sina in Arabic), that Italy was first introduced to the plant. Although Mattioli did not mention or describe the "musa tree" in the first edition of his famous herbal, its appearance in a later edition in Latin in 1554 is likely the first printed European herbal entry to describe banana.
+
+###
 
 `map caption="Medieval Venetian Commerical Traderoutes" center=37.16223,27.07031 zoom=3 basemap=Esri_WorldPhysical`
 `- geojson active url=Banana_Islamic_Empire.json`
@@ -189,14 +187,14 @@ It was not until the nineteenth century, with the development of steamships and 
 
 In the early twentieth century, multinational American corporations like the UFC were also implicated in the creation of what was referred to as the "[banana republic](Q171751)" phenomenon. The UFC and other companies bought huge swaths of land and built massive infrastructure in Central and South American countries with environments that could support banana production, such as Honduras and Guatemala. Many of these countries had nascent democratic or unstable governments and quickly became economically dependent on exporting a single product—the banana. With such a grip on a country’s infrastructure and wealth, these companies also came to dominate the countries’ governments, propping up corrupt dictatorships that exploited the working class and favored the economic interests of foreign corporations.[^ref6]
 
-`image src=United_Fruit_Company_banana_conveyors.jpg aspect=`
+`image src=United_Fruit_Company_banana_conveyors.jpg aspect=1.14`
 
 ##
 {: .columns}
 
 An intense [monoculture](Q220212) focused on the [vegetal propagation](Q464666) of one mutation of one banana hybrid proved unsustainable. Lacking genetic diversity, [Gros Michel banana](Q1547451) plantations across the globe fell victim to a pathogen known as Fusarium oxysporum, or "[Panama Disease](Q3240031)." From 1899 to the 1950s, Panama Disease destroyed Gros Michel crops throughout the Americas. Desperate to replace the valuable export, fruit conglomerates abandoned the Gros Michel for a new varietal, the smaller and less flavorful [Cavendish banana](Q1051869).
 
-`map caption="Distribution of Fusarium wilt of banana (races 1 and 2)" center=--4.21152,10.54688 basemap=Esri_WorldPhysical zoom=2`
+`map caption="Distribution of Fusarium wilt of banana (races 1 and 2)" center=-13.91408,20.39063 basemap=Esri_WorldPhysical zoom=1`
 `- geojson active url=Fusarium_wilt.json`
 
 
