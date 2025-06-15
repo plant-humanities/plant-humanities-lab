@@ -94,6 +94,8 @@ def convert_params(md):
           is_wc = True
           wc_title = unquote(value.replace('wc:','').split('/')[-1]).replace(' ','_')
           repl_attrs['src'] = f'wc:{wc_title}'
+        else:
+          repl_attrs['src'] = value
       if key == 'manifest':
         if value.startswith('wc:'):
           is_wc = True
