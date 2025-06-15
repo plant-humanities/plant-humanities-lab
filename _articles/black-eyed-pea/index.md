@@ -81,9 +81,7 @@ Despite the millennia-old European presence of the black-eyed pea, it was now un
 
 The European perspective is not the only early modern view we have on the black-eyed pea. Written records of the bean appear in the sixteenth century in China, where it is noted in the [Ming Dynasty](Q9903) [_Compendium of Materia Medica_](https://www.nlm.nih.gov/exhibition/chinesemedicine/books.html) as being a cure for flatulence and for kidney problems.[^ref8] And a beautiful illustration of the "cowpea" featured in the 30-volume Japanese agricultural encyclopaedia [_Seikei Zuetsu_,](https://digitalcollections.universiteitleiden.nl/japanese_agriculture_19th_century) published in 1804, shows how far the black-eyed pea had spread and how its usefulness had been welcomed into many agricultural traditions.
 
-<!-- TODO: Fix static image generation-->
-
-`image manifest=https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:938367/manifest caption="Cowpea [Vigna unguiculata (L.) Walp.], Seikei Zuetsu, vol. 18, Leiden University Library." aspect=0.65`
+`image src=Yardlong_bean.jpg caption="Cowpea [Vigna unguiculata (L.) Walp.], Seikei Zuetsu, vol. 18, Leiden University Library." aspect=0.65`
 
 
 # Food, Culture, and Colonialism
