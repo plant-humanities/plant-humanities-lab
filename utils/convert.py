@@ -252,6 +252,18 @@ def convert_params(md):
       repl_str += f' {key}={value}'
     repl_str += '`'
     return repl_str
+  
+  def transform_iframe(attrs):
+    repl_attrs = {}
+    for key, value in attrs.items():
+      if key in ['ve-iframe',]: continue
+      repl_attrs[key] = value
+    
+    repl_str = '`iframe '
+    for key, value in repl_attrs.items():
+      repl_str += f' {key}={value}'
+    repl_str += '`'
+    return repl_str
 
   def transform(match):
     full_tag = match.group(0)
@@ -279,6 +291,7 @@ def convert_params(md):
     if 've-video' in attrs: return transform_video(attrs)
     if 've-compare' in attrs: return transform_compare(attrs)
     if 've-knightlab-timeline' in attrs: return transform_knightlab_timeline(attrs)
+    if 've-iframe' in attrs: return transform_iframe(attrs)
 
     return full_tag
 
