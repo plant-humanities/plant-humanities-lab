@@ -99,7 +99,7 @@ The black-eyed pea, [millet](Q259438), [yams](Q8047551), and many other staple f
        author="JSTOR Global Plants, courtesy of the Natural History Museum, London."
        jpid="10.5555/al.ap.specimen.bm000589657">
 
-`image src=al.ap.specimen.bm000589657.jpg`
+`image src=al.ap.specimen.bm000589657.jpg aspect=0.61`
 
 ## 
 {: .columns}

@@ -3,26 +3,26 @@ summary:
 requiredStatement:
   attribution: 
   url: 
-reuseRights: https://creativecommons.org/publicdomain/mark/1.0 # PD Mark
-reuseRights: https://creativecommons.org/publicdomain/zero/1.0 # CC0
-reuseRights: https://creativecommons.org/licenses/by/4.0 # CC-BY
-reuseRights: https://creativecommons.org/licenses/by-sa/4.0 # CC-BY-SA
-reuseRights: https://creativecommons.org/licenses/by-nd/4.0/deed.en # CC-BY-ND
-reuseRights: https://creativecommons.org/licenses/by-nc/4.0/deed.en # CC-BY-NC
-reuseRights: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en # CC-BY-NC-SA
-reuseRights: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en # CC-BY-NC-ND
-reuseRights: http://rightsstatements.org/vocab/InC/1.0/ # InC (IN COPYRIGHT)
-reuseRights: http://rightsstatements.org/vocab/InC-OW-EU/1.0/ # InC-OW-EU (IN COPYRIGHT - EU ORPHAN WORK)
-reuseRights: http://rightsstatements.org/vocab/InC-EDU/1.0/ # InC-EDU (IN COPYRIGHT - EDUCATIONAL USE PERMITTED)
-reuseRights: http://rightsstatements.org/vocab/InC-NC/1.0/ # InC-NC (IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED)
-reuseRights: http://rightsstatements.org/vocab/InC-RUU/1.0/ # InC-RUU (IN COPYRIGHT - RIGHTS-HOLDER(S) UNLOCATABLE OR UNIDENTIFIABLE)
-reuseRights: http://rightsstatements.org/vocab/NoC-CR/1.0/ # NoC-CR (NO COPYRIGHT - CONTRACTUAL RESTRICTIONS)
-reuseRights: http://rightsstatements.org/vocab/NoC-NC/1.0/ # NoC-NC (NO COPYRIGHT - NON-COMMERCIAL USE ONLY')
-reuseRights: http://rightsstatements.org/vocab/NoC-OKLR/1.0/ # NoC-OKLR (NO COPYRIGHT - OTHER KNOWN LEGAL RESTRICTIONS)
-reuseRights: http://rightsstatements.org/vocab/NoC-US/1.0/ # NoC-US (NO COPYRIGHT - UNITED STATES)
-reuseRights: http://rightsstatements.org/vocab/CNE/1.0/ # CNE (COPYRIGHT NOT EVALUATED)
-reuseRights: http://rightsstatements.org/vocab/UND/1.0/ # UND (COPYRIGHT UNDETERMINED)
-reuseRights: http://rightsstatements.org/vocab/NKC/1.0/ # NKC (NO KNOWN COPYRIGHT)
+rights: https://creativecommons.org/publicdomain/mark/1.0 # PD Mark
+rights: https://creativecommons.org/publicdomain/zero/1.0 # CC0
+rights: https://creativecommons.org/licenses/by/4.0 # CC-BY
+rights: https://creativecommons.org/licenses/by-sa/4.0 # CC-BY-SA
+rights: https://creativecommons.org/licenses/by-nd/4.0/deed.en # CC-BY-ND
+rights: https://creativecommons.org/licenses/by-nc/4.0/deed.en # CC-BY-NC
+rights: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en # CC-BY-NC-SA
+rights: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en # CC-BY-NC-ND
+rights: http://rightsstatements.org/vocab/InC/1.0/ # InC (IN COPYRIGHT)
+rights: http://rightsstatements.org/vocab/InC-OW-EU/1.0/ # InC-OW-EU (IN COPYRIGHT - EU ORPHAN WORK)
+rights: http://rightsstatements.org/vocab/InC-EDU/1.0/ # InC-EDU (IN COPYRIGHT - EDUCATIONAL USE PERMITTED)
+rights: http://rightsstatements.org/vocab/InC-NC/1.0/ # InC-NC (IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED)
+rights: http://rightsstatements.org/vocab/InC-RUU/1.0/ # InC-RUU (IN COPYRIGHT - RIGHTS-HOLDER(S) UNLOCATABLE OR UNIDENTIFIABLE)
+rights: http://rightsstatements.org/vocab/NoC-CR/1.0/ # NoC-CR (NO COPYRIGHT - CONTRACTUAL RESTRICTIONS)
+rights: http://rightsstatements.org/vocab/NoC-NC/1.0/ # NoC-NC (NO COPYRIGHT - NON-COMMERCIAL USE ONLY')
+rights: http://rightsstatements.org/vocab/NoC-OKLR/1.0/ # NoC-OKLR (NO COPYRIGHT - OTHER KNOWN LEGAL RESTRICTIONS)
+rights: http://rightsstatements.org/vocab/NoC-US/1.0/ # NoC-US (NO COPYRIGHT - UNITED STATES)
+rights: http://rightsstatements.org/vocab/CNE/1.0/ # CNE (COPYRIGHT NOT EVALUATED)
+rights: http://rightsstatements.org/vocab/UND/1.0/ # UND (COPYRIGHT UNDETERMINED)
+rights: http://rightsstatements.org/vocab/NKC/1.0/ # NKC (NO KNOWN COPYRIGHT)
 author: 
 labelFormatted: 
 sourceLicense: 
