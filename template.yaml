@@ -2,7 +2,6 @@ label:
 summary: 
 requiredStatement:
   attribution: 
-  url: 
 rights: https://creativecommons.org/publicdomain/mark/1.0 # PD Mark
 rights: https://creativecommons.org/publicdomain/zero/1.0 # CC0
 rights: https://creativecommons.org/licenses/by/4.0 # CC-BY
@@ -24,7 +23,5 @@ rights: http://rightsstatements.org/vocab/CNE/1.0/ # CNE (COPYRIGHT NOT EVALUATE
 rights: http://rightsstatements.org/vocab/UND/1.0/ # UND (COPYRIGHT UNDETERMINED)
 rights: http://rightsstatements.org/vocab/NKC/1.0/ # NKC (NO KNOWN COPYRIGHT)
 author: 
-labelFormatted: 
-sourceLicense: 
-hash: 
+source: 
 image_url: 
