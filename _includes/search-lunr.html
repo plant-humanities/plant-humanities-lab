@@ -51,7 +51,7 @@
 
     .search-component-wrapper .search-input-wrapper {
         position: absolute;
-        left: 0;
+        right: 0; /* Changed from left: 0 */
         top: 50%;
         transform: translateY(-50%);
         display: flex;
@@ -61,7 +61,7 @@
         width: 0;
         opacity: 0;
         visibility: hidden;
-        transition: width var(--search-transition-speed) ease, opacity var(--search-transition-speed) ease, visibility var(--search-transition-speed) ease step-start 0s; /* Make visibility change instant at start of transition */
+        transition: width var(--search-transition-speed) ease, opacity var(--search-transition-speed) ease, visibility var(--search-transition-speed) ease step-start 0s;
         overflow: hidden;
         z-index: 101;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -116,7 +116,7 @@
         width: 250px;
         opacity: 1;
         visibility: visible;
-        transition: width var(--search-transition-speed) ease, opacity var(--search-transition-speed) ease, visibility var(--search-transition-speed) ease step-end 0s; /* Make visibility change instant at end of transition for hiding */
+        transition: width var(--search-transition-speed) ease, opacity var(--search-transition-speed) ease, visibility var(--search-transition-speed) ease step-end 0s;
     }
     .search-component-wrapper .search-container.search-active .search-icon {
         opacity: 0;
@@ -130,7 +130,7 @@
         margin: 0;
         position: absolute;
         top: calc(100% + 5px);
-        left: -65px;
+        right: -65px; /* Changed from left: -65px to align with right-expanding input */
         width: 350px;
         background-color: var(--dropdown-bg-color);
         border: 1px solid #ddd;
@@ -154,10 +154,13 @@
     }
     .search-component-wrapper .search-results-dropdown li a {
         display: block;
-        padding: 0 0.5em;
+        padding: 8px 0.5em 4px 0.5em;
         text-decoration: none;
         color: var(--search-accent-color);
         font-weight: bold;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     .search-component-wrapper .search-results-dropdown li:hover,
     .search-component-wrapper .search-results-dropdown li a:hover {
@@ -167,8 +170,10 @@
         font-size: 0.85em;
         color: var(--dropdown-text-color);
         line-height: 1.4;
-        padding: 0 15px 10px 15px;
+        padding: 4px 15px 10px 15px;
         margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     .search-component-wrapper .search-results-dropdown li .snippet mark {
         background-color: var(--highlight-bg-color);
@@ -187,20 +192,24 @@
     /* Responsive adjustments */
     @media (max-width: 768px) {
         .search-component-wrapper .search-container.search-active .search-input-wrapper {
-            width: 220px;
+            width: 250px;
+            max-width: calc(100vw - 40px);
         }
         .search-component-wrapper .search-results-dropdown {
-            width: 300px;
+            width: 320px;
+            max-width: calc(100vw - 20px);
+            right: -10px;
         }
     }
     @media (max-width: 480px) {
         .search-component-wrapper .search-container.search-active .search-input-wrapper {
-            width: 180px;
-            max-width: calc(100% - 10px);
+            width: 200px;
+            max-width: calc(100vw - 30px);
         }
         .search-component-wrapper .search-results-dropdown {
-            width: 260px;
-            max-width: calc(100vw - 30px);
+            width: 280px;
+            max-width: calc(100vw - 20px);
+            right: 0;
         }
         .search-component-wrapper .search-input {
             padding: 8px 35px 8px 10px;
@@ -210,6 +219,47 @@
             font-size: 1.3em;
         }
     }
+    
+    /* Mobile-specific adjustments */
+    @media (max-width: 360px) {
+        .search-component-wrapper .search-container.search-active .search-input-wrapper {
+            width: 160px;
+            max-width: calc(100vw - 20px);
+        }
+        .search-component-wrapper .search-results-dropdown {
+            width: 240px;
+            max-width: calc(100vw - 10px);
+            right: 0;
+        }
+        .search-component-wrapper .search-input {
+            padding: 6px 30px 6px 8px;
+            font-size: 0.85em;
+        }
+        .search-component-wrapper .search-results-dropdown li a {
+            padding: 6px 0.5em 2px 0.5em;
+            font-size: 0.9em;
+            line-height: 1.25;
+        }
+        .search-component-wrapper .search-results-dropdown li .snippet {
+            font-size: 0.8em;
+            padding: 2px 10px 8px 10px;
+            line-height: 1.3;
+        }
+    }
+    
+    /* Additional mobile text wrapping fixes */
+    @media (max-width: 480px) {
+        .search-component-wrapper .search-results-dropdown li a {
+            padding: 6px 0.5em 3px 0.5em;
+            font-size: 0.95em;
+            line-height: 1.25;
+        }
+        .search-component-wrapper .search-results-dropdown li .snippet {
+            padding: 3px 12px 8px 12px;
+            line-height: 1.35;
+        }
+    }
+
 </style>
 
 <div class="search-component-wrapper">
@@ -403,10 +453,17 @@
         searchIcon.addEventListener('click', () => {
             searchContainer.classList.add('search-active');
             
-            // MODIFIED: Delay focus slightly
+            // Mobile-friendly focus with longer delay
+            const isMobile = window.innerWidth <= 768;
+            const focusDelay = isMobile ? 150 : 50;
+            
             setTimeout(() => {
                 searchInput.focus();
-            }, 50); // 50ms delay
+                // Force cursor to end on mobile
+                if (isMobile) {
+                    searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+                }
+            }, focusDelay);
 
             if (!lunrReady) { 
                 initLunr();
@@ -439,26 +496,43 @@
         });
 
         let hideDropdownTimeout;
-        function scheduleHideDropdown() {
+        function scheduleHideDropdown(delay = 200) {
             clearTimeout(hideDropdownTimeout);
             hideDropdownTimeout = setTimeout(() => {
                 if (document.activeElement !== searchInput && !searchResultsDropdown.contains(document.activeElement)) {
                     searchResultsDropdown.style.display = 'none';
                 }
-            }, 200);
+            }, delay);
         }
 
-        searchInput.addEventListener('blur', scheduleHideDropdown);
+        // Improved mobile event handling
+        searchInput.addEventListener('blur', (e) => {
+            // On mobile, don't hide dropdown immediately if user is interacting with results
+            const isMobile = window.innerWidth <= 768;
+            const delay = isMobile ? 300 : 200;
+            scheduleHideDropdown(delay);
+        });
+        
         searchResultsDropdown.addEventListener('focusout', (e) => {
             if (!searchResultsDropdown.contains(e.relatedTarget) && e.relatedTarget !== searchInput) {
-                 scheduleHideDropdown();
+                const isMobile = window.innerWidth <= 768;
+                const delay = isMobile ? 300 : 200;
+                scheduleHideDropdown(delay);
             }
         });
+        
         document.addEventListener('click', (event) => {
             if (!searchContainer.contains(event.target)) {
-                 scheduleHideDropdown();
+                const isMobile = window.innerWidth <= 768;
+                const delay = isMobile ? 300 : 200;
+                scheduleHideDropdown(delay);
             }
         });
+        
+        // Handle touch events for mobile
+        searchResultsDropdown.addEventListener('touchstart', (e) => {
+            clearTimeout(hideDropdownTimeout);
+        }, { passive: true });
         
         searchInput.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
