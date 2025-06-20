@@ -11,7 +11,7 @@
     {%- feed_meta -%} 
     <style>
       .wrapper a.site-title {
-        font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+        font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
       }
       .post-content p { font-size: 1.2em; }
     </style>
@@ -87,7 +87,7 @@
                 <a class="nav-item" href="{{ url | relative_url }}">{{ title | escape }}</a>
               {% endif %}
             {% endfor %}
-            <a class="nav-item" href="https://ezsitepdf-drnxe7pzjq-uc.a.run.app/pdf?url={{ page.url | absolute_url | uri_escape }}"><i class="fa-regular fa-file-pdf"></i></span></a>
+            <a class="nav-item" href="https://ezsitepdf-drnxe7pzjq-uc.a.run.app/pdf?url={{ page.url | absolute_url | uri_escape }}?static"><i class="fa-regular fa-file-pdf"></i></span></a>
           </div>
 
         </nav>
