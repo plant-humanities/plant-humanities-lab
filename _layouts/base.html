@@ -87,7 +87,29 @@
                 <a class="nav-item" href="{{ url | relative_url }}">{{ title | escape }}</a>
               {% endif %}
             {% endfor %}
-            <a class="nav-item" href="https://pdf-converter-drnxe7pzjq-uc.a.run.app/pdf?url={{ page.url | absolute_url | uri_escape }}%3Fstatic&viewportWidth=1020&keepTogether=.section2&hideTags=header&pageBreakBefore=.footnotes"><i class="fa-regular fa-file-pdf"></i></span></a>
+            {%- assign path_parts = page.url | split: '/' -%}
+            {%- assign reversed_parts = path_parts | reverse -%}
+            {%- for part in reversed_parts -%}
+              {%- if part != "" -%}
+                {%- assign last_segment = part -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+
+            <a id="pdf-link" class="nav-item" rel="nofollow noopener noreferrer"
+              href="https://pdf-converter-drnxe7pzjq-uc.a.run.app/pdf?url={{ page.url | absolute_url | uri_escape }}%3Fstatic&viewportWidth=1020&keepTogether=.section2&hideTags=header&pageBreakBefore=.footnotes">
+              <i class="fa-regular fa-file-pdf"></i>
+            </a>
+
+            <script>
+              const cachedUrl = 'https://raw.githubusercontent.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/{{ site.github.source.branch }}/_articles/{{ last_segment }}/{{ last_segment }}.pdf';
+              fetch(cachedUrl, { method: 'HEAD' })
+                .then(res => {
+                  if (res.ok) {
+                    document.getElementById('pdf-link').href = cachedUrl;
+                  }
+                });
+            </script>
           </div>
 
         </nav>
