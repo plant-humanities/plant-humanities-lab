@@ -26,18 +26,16 @@ Everybody knows what a [banana](Q503) is. At least we think we do. Today, the ba
 # From Seedy to Seedless 
 
 ##
-{: .columns}
+
+`image src=gh:plant-humanities/media/images/Banana_Plant_Parts.jpg aspect=0.94 .right`
 
 Bananas are a tree-like perennial herb, and while they resemble palms, they are not related. When the plant matures, it begins to form a [large inflorescence (thyrse)](image-id/zoomto/478,276,938,709)-cluster of flowers-which emerges from the center of the leafy shoot and produces both male and female flowers. As the inflorescence grows, [a softball-size magenta bud](image-id/zoomto/625,557,651,492) forms at the tip, weighing down the stem, which begins to arch toward the ground. Petal-like bracts—specialized leaves—grow between the overlapping scales surrounding the bud. These fall away to reveal clusters of female flowers (pistillate). While the female flowers develop into [ fruit](image-id/zoomto/623,319,651,492), the distal portion of the inflorescence continues to elongate, eventually producing clusters of male flowers (staminate), which produce pollen. As the stem continues to grow and droops under the weight of the magenta bud, the tips of the fruit grow toward the sun, giving bananas their distinctive curved shape.
 
-`image src=gh:plant-humanities/media/images/Banana_Plant_Parts.jpg aspect=0.94`
-
 ##
-{: .columns}
+
+`image src=wc:Greater_Indian_fruit_bat_@_Kanjirappally_02.jpg aspect=1.24 .right`
 
 Bananas belong to the genus _Musa_, which is divided into four sections, the members of which include wild and domesticated bananas. There are more than 50 accepted species of _Musa_ and its native range is tropical and subtropical Asia to the western Pacific. Through trade and migration, banana cultivars were introduced to Africa, where further distinct sub-groups of varieties developed, most notably the plantain. Wild bananas are pollinated by bats and birds, which also disperse their seeds away from the "mother" plant. Bats are particularly important banana pollinators as some species co-evolved, resulting in several wild bananas being almost exclusively pollinated by bats. For millennia, bats and birds successfully pollinated the plant’s flowers and scattered banana seeds, producing important genetic variability, which yielded highly productive plants.
-
-`image src=wc:Greater_Indian_fruit_bat_@_Kanjirappally_02.jpg aspect=1.24`
 
 ##
 {: .columns}
@@ -47,19 +45,17 @@ Prior to domestication, wild banana fruits were (and remain) incredibly seedy an
 `image src=gh:plant-humanities/media/images/Domestication_of_the_banana.jpg aspect=0.71`
 
 ##
-{: .columns}
+
+`image src=From_Diploid_to_Triploid_new.jpg caption="From Diploids to Triploids." aspect=1.15 .right`
 
 Selecting for edibility and propagating parthenocarpic bananas was just the first step in the process of banana domestication. The next phase began as various human populations migrated, bringing their previously isolated banana species and subspecies along the way. Like humans, wild bananas are [diploids](Q118406): they have two sets of chromosomes and at fertilization receive one set from each "parent." Thanks to human selection, migration, and exchange, triploid banana hybrids that did not produce seeds were created. Hybridizing distant banana relatives produced plants that possessed three sets of chromosomes, rather than two. This rendered the progeny plant sterile and ensured it would produce fleshy, seedless fruits. In addition to being sterile, triploid banana hybrids could still mutate. Further diversity of the sterile hybrids was produced as farmers selected and propagated for desirable mutations, such as a starchy or sweet pulp. The genetic diversity of triploid bananas and their environmental adaptability ensured not only the survival of sterile banana hybrids, but also their ability to spread across geographic areas and cultures.[^ref1]
 
-`image src=From_Diploid_to_Triploid_new.jpg caption="From Diploids to Triploids." aspect=1.15`
-
 ##
-{: .columns}
+
+`map caption="Geographical distribution of _Musa balbisiana_ and subspecies of _Musa acuminata_" center=10.83213,117.24609 zoom=3 basemap=Esri_WorldPhysical .right`
+`- geojson active url=M_accuminata_subspecies.json`
 
 While wild bananas are more diverse than previously understood, scientists have identified _Musa acuminata_ as the primary wild parent of parthenocarpic banana. The morphological variation that is sometimes caused by parthenocarpy, however, makes identifying and classifying banana species more difficult. As Jean Kennedy explains, "Although it is clear that parthenocarpy within section _Musa_ has occurred only in _Musa acuminata_, the parentage of the resulting edible bananas is greatly complicated by the diversity of _Musa acuminata_ at subspecies level. Parthenocarpy probably developed in at least two of these subspecies, and there are many edible hybrids between these and additional wild subspecies."[^ref2] Further complicating matters are hybridizations between _[Musa acuminata](Q132970)_ and _[Musa balbisiana](Q94643)_. The natural variation and geographic distribution of _Musa balbisiana_ remains less understood than _Musa acuminata_ and much remains to be learned about the distribution, wild/cultivated status, and genetic characterization of _Musa acuminata_ and _Musa balbisiana_ hybrids.
-
-`map caption="Geographical distribution of _Musa balbisiana_ and subspecies of _Musa acuminata_" center=10.83213,117.24609 zoom=3 basemap=Esri_WorldPhysical`
-`- geojson active url=M_accuminata_subspecies.json`
 
 
 # What’s in a Name?
@@ -91,9 +87,9 @@ Thanks to domesticated bananas’ long history of human intervention and migrati
 `image region=0,3,1050,809 src=gh:plant-humanities/media/banana/266b46d3eb804d5f87a773872414152f6a302a0285e7dfa4aed33ad0d51e8d75.yaml aspect=0.74`
 
 ##
-{: .columns}
 
-###
+`map caption="Origins of Banana" center=9.45008,78.39844 zoom=2 basemap=Esri_WorldPhysical .right`
+`- geojson active url=banana_distribution.json`
 
 In 2002, a comprehensive study of relationships among wild and cultivated bananas determined that the parthenocarpic "A genotype" of almost all the edible banana groups was derived from either subspecies _banksii_ (from the Papua New Guinea region) or subspecies _errans_ (Philippines) of _Musa acuminata_ (or from both of subspecies).[^ref3] These findings reveal that the origin of banana domestication was in the regions of the Philippines and Papua New Guinea. Archaeobotanical remains identified as the genus _Musa_ attest that edible bananas were indeed present in Papua New Guinea at least 10,000 years ago and were being cultivated as early as 7,000 years ago.[^ref4]
 
@@ -101,24 +97,15 @@ From the Philippines and Papua New Guinea, domesticated parthenocarpic bananas t
 
 Europeans first learned of bananas through [Alexander the Great’s](Q8409) Asiatic campaign in 331–323 BCE. According to the Greek naturalist [Theophrastus](Q17156420) and the Roman naturalist [Pliny](Q442) the Elder, one of the plants Alexander saw, recorded, and brought back to Asia Minor was the banana. Europeans, however, had neither the climate to grow bananas nor the proximity to their natural habitat to import the fresh fruit. So, while bananas became a staple food crop in Africa, India, Southeast Asia, and the Pacific, they remained an exotic curiosity in Europe.
 
-###
-
-`map caption="Origins of Banana" center=9.45008,78.39844 zoom=2 basemap=Esri_WorldPhysical`
-`- geojson active url=banana_distribution.json`
-
 ##
-{: .columns}
 
-###
+`map caption="Voyage of Bartolomeu Dias (1487-88)" center=-10.46319,-29.53125 zoom=2 basemap=Esri_WorldPhysical .right`
+`- geojson active url=bananas_africa.json`
 
-The rise of [European maritime powers](Q133641) in the late fourteenth and fifteenth centuries brought renewed interest in the banana. By the time the Portuguese began exploring the west coast of Africa in the late fifteenth century, propagation of banana cultivars had spread through Africa south of the Sahara. Eventually, Portuguese slavers began transporting bananas alongside enslaved Africans to the West Indies. Unlike later periods, however, bananas were not viewed as a cash crop. Instead, they served as cheap and portable sustenance for enslaved individuals during their horrific transatlantic crossing.
+{The rise of [European maritime powers](Q133641) in the late fourteenth and fifteenth centuries brought renewed interest in the banana. By the time the Portuguese began exploring the west coast of Africa in the late fifteenth century, propagation of banana cultivars had spread through Africa south of the Sahara. Eventually, Portuguese slavers began transporting bananas alongside enslaved Africans to the West Indies. Unlike later periods, however, bananas were not viewed as a cash crop. Instead, they served as cheap and portable sustenance for enslaved individuals during their horrific transatlantic crossing.
 
 In 1516, [Friar Tomas de Berlanga](Q115599), then a Catholic missionary, landed on the Island of [Hispaniola](Q25277) (now comprising Haiti and the Dominican Republic) and planted banana stems (or suckers) as a means to continue to feed the growing enslaved African population. When Friar Tomas was made Bishop of Panama in 1534, he took banana plants with him to the mainland. Bananas were also carried to Mexico by the Spanish and eventually spread rapidly throughout Central America.[^ref5]
 
-###
-
-`map caption="Voyage of Bartolomeu Dias (1487-88)" center=-10.46319,-29.53125 zoom=2 basemap=Esri_WorldPhysical`
-`- geojson active url=bananas_africa.json`
 
 # Many Names, One Plant
 
@@ -130,18 +117,13 @@ During this early period of renewed European interest in the banana, there was g
 `map caption=Goa basemap=Esri_WorldPhysical center=Q1171 zoom=7`
 
 ##
-{: .columns}
 
-###
+`map caption="Medieval Venetian Commerical Traderoutes" center=37.16223,27.07031 zoom=3 basemap=Esri_WorldPhysical .right`
+`- geojson active url=Banana_Islamic_Empire.json`
 
 The most influential European author of the period, Italian physician [Pietro Andrea Mattioli](Q457191), [referred to the banana plant as "musa" and the individual fruits as "muse"](https://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10139456_00182.html) in his important herbal published in 1554. Musa, which was eventually adopted by Linnaeus as the name of the genus, is believed to be an adaptation of the Arabic word for banana, _mauz_ or _mawzah_. By the eighth century, Islamic expansion under the [Umayyad Caliphate](Q8575586) (661–750) had reached the Indian subcontinent, creating a region of trade, exchange, and communication stretching from India to Iberia. Through these vast commercial networks, bananas were traded and became popular throughout the Islamic Empire.
 
 Italian physicians and naturalists like Mattioli adopted the Arabic name for banana since it was through contact with the Islamic Empire in the late Middle Ages, as well as the writings of Islamic physicians such as [Avicenna](Q8011) (Ibn Sina in Arabic), that Italy was first introduced to the plant. Although Mattioli did not mention or describe the "musa tree" in the first edition of his famous herbal, its appearance in a later edition in Latin in 1554 is likely the first printed European herbal entry to describe banana.
-
-###
-
-`map caption="Medieval Venetian Commerical Traderoutes" center=37.16223,27.07031 zoom=3 basemap=Esri_WorldPhysical`
-`- geojson active url=Banana_Islamic_Empire.json`
 
 ##
 
@@ -151,12 +133,11 @@ The Flemish physician and botanist [Rembert Dodoens](Q437466) used the term "mus
 `image region=-12,12,1287,1074 src=gh:plant-humanities/media/banana/2f2a61166b6f85de058cba19afe6a1b646838393b04edf8b42a93323d85fae63.yaml aspect=0.58`
 
 ##
-{: .columns}
+
+`map caption="Early Modern Names for Banana" center=7.71371,12.65625 zoom=1 basemap=Esri_WorldPhysical .right`
+`- geojson active url=banana_names.json`
 
 While the adoption of the Arabic word for banana provided some standardization of nomenclature, it was far from universally used. In fact, numerous names, sometimes contradictory, were given for banana. Confusing matters further was the enduring description of banana, rather than the fig or apple, as the forbidden fruit of the garden of Eden. The authors of many sixteenth and seventeenth century herbals, including Mattioli, Dodoens, [Carolus Clusius,](https://www.biodiversitylibrary.org/page/6781452) and [Andrea Cesalpino](https://bibdigital.rjb.csic.es/viewer/13478/?offset=#page=129&viewer=picture&o=share&n=0&q=) described the banana plant as the tree growing in the Garden of Eden. The persistence of this tradition continued well into the eighteenth century. Even Linnaeus, in his [treatise on the banana palm,](http://linnean-online.org/120150/) weighed in on the topic, ultimately dismissing the idea as a metaphor in his penultimate chapter. Finally, thanks to their geographic origin and early association with palm trees and dates, and enduring associations with the Garden of Eden, bananas were also often referred to as "Indian figs."
-
-`map caption="Early Modern Names for Banana" center=7.71371,12.65625 zoom=1 basemap=Esri_WorldPhysical`
-`- geojson active url=banana_names.json`
 
 ##
 {: .columns}
@@ -183,11 +164,10 @@ It was not until the nineteenth century, with the development of steamships and 
 `image src=gh:plant-humanities/media/images/Banana_Cart_NYC_1902_LOC.jpg aspect=1.74 .large`
 
 ##
-{: .columns}
+
+`image src=United_Fruit_Company_banana_conveyors.jpg aspect=1.14 .right`
 
 In the early twentieth century, multinational American corporations like the UFC were also implicated in the creation of what was referred to as the "[banana republic](Q171751)" phenomenon. The UFC and other companies bought huge swaths of land and built massive infrastructure in Central and South American countries with environments that could support banana production, such as Honduras and Guatemala. Many of these countries had nascent democratic or unstable governments and quickly became economically dependent on exporting a single product—the banana. With such a grip on a country’s infrastructure and wealth, these companies also came to dominate the countries’ governments, propping up corrupt dictatorships that exploited the working class and favored the economic interests of foreign corporations.[^ref6]
-
-`image src=United_Fruit_Company_banana_conveyors.jpg aspect=1.14`
 
 ##
 {: .columns}
@@ -210,12 +190,11 @@ Today the Cavendish banana remains the dominant cultivated and exported varietal
 -->
 
 ##
-{: .columns}
+
+`map caption="Top 20 Banana Producing Countries 2012" center=13.91608,14.0625 zoom=1 .right`
+`- geojson active url=top_20_banana_countries.json`
 
 While we need to rethink how we select, hybridize, and propagate bananas, scientists have also been rethinking how banana cultivars are classified. In 1955, an informal nomenclature system to classify banana cultivars was developed by Norman Simmonds and Kenneth Shepherd. Instead of assigning binomial names, Simmonds and Shepherd organized edible bananas into genome groups, according to the chromosomal contributions of their ancestral wild species (i.e., AAA, AAB, and ABB) and subgroups for closely related cultivars derived from mutation selection and propagation (i.e., the Gros Michel and Cavendish).[^ref8] While Simmonds and Shepherd had to rely on chromosomal classification based on the visible morphology of banana cultivars, scientists today have more reliable genome techniques, allowing them to analyze and reclassify the genetic make-up of hundreds of banana cultivars. And so, we have two systems of nomenclature for the banana: one for wild, seedy bananas and another for the seedless edible cultivars. This work has revealed that more than 100 subspecies of Musa acuminata have been implicated in the domestication of bananas. Despite this work, scientists still do not know just how many banana cultivars actually exist and are still working to formalize a genome-based classification system in the hopes of finally creating an internally coherent list of names for banana species, subspecies, and cultivars.[^ref9]
-
-`map caption="Top 20 Banana Producing Countries 2012" center=13.91608,14.0625 zoom=1`
-`- geojson active url=top_20_banana_countries.json`
 
 
 [^ref1]: Xavier Perrier et al., "Multidisciplinary perspectives on banana (_Musa_ spp.) domestication," _PNAS_ 108 (28) (2011): 11311–11318. [http://dx.DOI.org/10.1073/pnas.1102001108](https://doi.org/10.1073/pnas.1102001108)

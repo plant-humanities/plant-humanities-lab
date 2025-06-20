@@ -140,18 +140,16 @@ The black-eyed pea’s global journey is well documented in the [Economic Botany
 # Culinary History and Cultural Celebrations
 
 ##
-{: .columns}
+
+`youtube vid=R6l8jRF-eGA caption="A feast of African-American culinary contributions, baked into the South’s DNA" .right`
 
 Today, black-eyed peas are grown commercially in at least 33 countries, reflecting the widespread embrace of the bean among geographically disparate peoples, places, and cultures.[^ref20] As acclaimed food historian and chef [Michael W. Twitty](Q49562413) points out: "Very few people in the modern West eat one cuisine or live within one culinary construct," but rather enjoy a multiplicity of culinary histories.[^ref21] Twitty coined the term "identity cooking" to characterize "how we construct complex identities and then express them through how we eat," an idea that is useful for any discussion of food as widely used across culinary traditions as black-eyed peas.[^ref22]
 
-`youtube vid=R6l8jRF-eGA caption="A feast of African-American culinary contributions, baked into the South’s DNA"`
-
 ##
-{: .columns}
+
+`youtube vid=v7HwKxDus9E caption="Tiebou yapp niébé" .right`
 
 Black-eyed peas are a staple of the [Southern American](Q49042) diet and an iconic component of African American culinary history. The beans are key ingredients for everything from stews to salads to savory bean and rice dishes, but perhaps they are most known for their association with New Year’s celebrations. [Hoppin’ John](Q1763911), a popular rice, bean, and pork dish that is thought to bring good luck and prosperity, is an absolute must for any modern Southerner on New Year’s Day. It is often served with greens to symbolize wealth.[^ref23] [Thiebou niebe](Q1810575), a classic Senegalese dish of black-eyed peas, rice, and ham, may be the basis for the recipe.[^ref24] 
-
-`youtube vid=v7HwKxDus9E caption="Tiebou yapp niébé"`
 
 ##
 
@@ -180,30 +178,27 @@ Today, the [Food and Agriculture Organization of the United Nations](Q82151) est
 `- geojson layer=Distribution. url=https://raw.githubusercontent.com/plant-humanities/essays/main/black_eyed_peas/Distribution_5.geojson`
 
 ##
-{: .columns}
+
+`image-compare manifest1=wc:Drying_cowpeas.jpg manifest2=wc:Wild_and_cultivated_cowpea_%287856427546%29.jpg aspect=1.5 .right`
 
 [Agriculture](Q11451) is having to adapt to our changing climate, both in terms of practices and what crops can be grown where. Even though black-eyed peas are considered very hardy, the crop may struggle as temperatures rise and rains become more erratic. Crop breeding is one way to make commercial black-eyed peas more resilient, while perhaps also making them more digestible and nutritious. Hardy wild [relatives](Q1141015) of the black-eyed pea may hold genes or genetic traits that will allow the crop to survive hotter, drier conditions, and perhaps be more pest-resistant.[^ref34] If these traits can be bred into commercial varieties then the black-eyed pea may hold one of the answers to ensuring food security throughout the world. 
 
-`image-compare manifest1=wc:Drying_cowpeas.jpg manifest2=wc:Wild_and_cultivated_cowpea_%287856427546%29.jpg`
-
 ##
-{: .columns}
+
+`youtube vid=pqmBsUHSkBg caption="Beyond the gardens, the crop wild relatives project" .right`
 
 The [Crop Wild Relatives Project](https://www.croptrust.org/work/projects/crop-wild-relatives/) is researching 11 primary relatives of the black-eyed pea in partnership with 33 countries and global seed banks, including the [International Institute of Tropical Agriculture](Q1142738) and Royal Botanic Garden, Kew’s [Millennium Seed Bank](Q2603353).[^ref35] Southern and western Africa are hotspots for wild black-eyed pea genetic variation. The importance of such relatives demonstrates how vital it is to protect wild plants and wild habitats. In a telling [quote](https://www.cwrdiversity.org/cowpea/) from Ousame Boukar, a Nigerian cowpea breeder: "The cowpea has nourished people for many centuries, but now it needs a hand to ensure it can continue to be an unfailing friend even while the climate crisis is affecting production." Programs like the Crop Wild Relatives Project bring us full circle, back to the wild plants of Africa and the adoption of the ancient practices of growing, seed collecting, and crop breeding.
 
-`youtube vid=pqmBsUHSkBg caption="Beyond the gardens, the crop wild relatives project"`
 
-       
 # A Food of the Future
 
 ##
-{: .columns}
+
+`image-compare manifest1=wc:Kids_%E2%80%98n_Fiber_%286120828233%29.jpg manifest2=gh:plant-humanities/media/black-eyed-peas/c444bc99e57e63b56a871d63bdc64134900c6905b516b652568cc75c356d730a.yaml aspect=1.8 .right`
 
 Black-eyed pea’s many names reflect its worldwide appeal. It is known as crowder pea, caupi, southern pea, alubia carilla, neibe, and frijole, as well as chowlee in India, gubgub in the West Indies, and akkerboon in South Africa.[^ref36] And black-eyed peas and other legumes are globally growing in status as key cooking ingredients and foods of the future. Highly nutritious and relatively easy to grow, black-eyed peas will no doubt play an important part in future [food security](Q1229911): providing food in changing climates and helping small-scale farmers combat poverty and hunger.[^ref37] As the climate becomes warmer and more unpredictable, and as human populations grow and resources become more limited, crops such as black-eyed peas, with its many virtues, will contribute to the diets of more people.[^ref38]
 
-`image-compare manifest1=wc:Kids_%E2%80%98n_Fiber_%286120828233%29.jpg manifest2=gh:plant-humanities/media/black-eyed-peas/c444bc99e57e63b56a871d63bdc64134900c6905b516b652568cc75c356d730a.yaml`
 
-       
 [^ref1]: A. C. D’Andrea et al., "Early Domesticated Cowpea (_Vigna Unguiculata_) from Central Ghana," _Antiquity_ 81, no. 313 (September 2007): 686–98. [https://doi.org/10.1017/S0003598X00095661](https://www.cambridge.org/core/journals/antiquity/article/abs/early-domesticated-cowpea-vigna-unguiculata-from-central-ghana/141865EBCB5341EC2120B636874BFD5E)
 [^ref2]: Amanda Logan, _The Scarcity Slot: Excavating Histories of African Food Security_ (Berkeley: University of California Press, 2020).
 [^ref3]: Andrew Dalby, "Black-eyed Pea," in _Food in the Ancient World From A to Z_ (London and New York: Routledge, 2003), 56.
