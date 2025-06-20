@@ -23,11 +23,10 @@ published: true
 `- geojson url=us-states.json layer="Boxwood in US"`
 
 ##
-{: .columns}
+
+`image src=6105d6cc76af400325e94d588ce511be5bfdbb73b437dc51eca43917d7a43e3d.yaml region=154,53,900,667 aspect=1.33 .right`
 
 [Boxwood](Q158703) is a genus of evergreen [shrubs](Q42295) that enjoys great commercial success as ornamental garden plants. Among its varieties and cultivars, the most popular is arguably English or [common boxwood](Q27344) (_Buxus sempervirens_ ‘Suffruticosa’), native to western and southern Europe, northwest Africa, and southwest Asia. In the United States—where this cultivated variety had been mass introduced on the wave of the early twentieth-century interest in European gardens—its sales, until recently, represented the greatest proportion (around 15%) among broadleaf evergreens, reaching an annual revenue of $126 million in 2014.[^ref2] A boxwood-flanked promenade, in the words of landscape architect Diane McGuire, was historically "the most common element found in almost every garden in the southern United States."
-
-`image src=6105d6cc76af400325e94d588ce511be5bfdbb73b437dc51eca43917d7a43e3d.yaml region=154,53,900,667 aspect=1.33`
 
 ##
 {: .columns}
@@ -44,13 +43,12 @@ One of the finest among these, [Dumbarton Oaks](Q1264942)—designed by [Beatrix
 # "A Plant Known to Everybody"
 
 ##
-{: .columns}
 
-How did boxwood come to represent the lasting legacy of the European garden tradition? Its historical fortunes hardly amount to a dazzling story of overseas exploration, important discoveries, or economic exploitation—the "big business" of early modern botany, to use Daniela Bleichmar’s phrase.[^ref4] An integral element in the Mediterranean [maquis—scrubland](Q667552) vegetation—boxwood has been familiar to Europeans for many centuries. Sixteenth-century Italians considered it "a plant that is known to everybody, since it abundantly grows all over Italy"; while in England it was habitually found among "sundry waste and barren hills."[^ref5] Boxwood’s adaptation to garden design went back to antiquity. Roman author and politician [Pliny the Younger](Q168707) mentions its use in his villa "in Tuscis," where, cut into various shapes representing figures and letters, it served as the main material for elaborate topiary work.[^ref6] This malleability of boxwood, the ease with which it lent itself to [pruning](Q500094), was particularly valued by the ancients, making it an indispensable and versatile medium for the creation of green architecture and sculpture.
-
-`map caption="Native European distribution of common boxwood (_Buxus sempervirens_)." center=47.192704,23.108475 zoom=4`
+`map caption="Native European distribution of common boxwood (_Buxus sempervirens_)." center=47.192704,23.108475 zoom=4 .right`
 `- geojson active url=Buxus_sempervirens_plg.json layer=Places`
 `- geojson active url=Buxus_sempervirens_pnt.json layer=Places`
+
+How did boxwood come to represent the lasting legacy of the European garden tradition? Its historical fortunes hardly amount to a dazzling story of overseas exploration, important discoveries, or economic exploitation—the "big business" of early modern botany, to use Daniela Bleichmar’s phrase.[^ref4] An integral element in the Mediterranean [maquis—scrubland](Q667552) vegetation—boxwood has been familiar to Europeans for many centuries. Sixteenth-century Italians considered it "a plant that is known to everybody, since it abundantly grows all over Italy"; while in England it was habitually found among "sundry waste and barren hills."[^ref5] Boxwood’s adaptation to garden design went back to antiquity. Roman author and politician [Pliny the Younger](Q168707) mentions its use in his villa "in Tuscis," where, cut into various shapes representing figures and letters, it served as the main material for elaborate topiary work.[^ref6] This malleability of boxwood, the ease with which it lent itself to [pruning](Q500094), was particularly valued by the ancients, making it an indispensable and versatile medium for the creation of green architecture and sculpture.
 
 
 # Ancient Love vs. Early Modern Dismissal
@@ -80,6 +78,8 @@ Boxwood’s potential medicinal applications met with a similar lack of enthusia
 
 # A Crafty Kind of Wood
 
+##
+
 If Mattioli and Parkinson considered boxwood primarily an ornamental plant "well adapted to weaving espaliers in gardens and dividing one space from another,"[^ref17] its slow growth rate had important industrial implications. Hardened through the process of gradual maturation, its timber acquired such valued qualities as durability and density, making it indeed similar to guaiacum.[^ref18] Boxwood, according to Soderini, could last "forever" and "was good for the printing industry and other fine woodwork."[^ref19] Since it lent itself well to lathing, Gerard considered it particularly suitable for "dagger hafts, boxes, and suchlike uses."[^ref20] Sixteenth-century Netherlandish [rosary](Q132539) beads—true miracles of late [Gothic craftsmanship](Q46825)—testify to these remarkable properties. These exquisite boxwood carvings, which often measure less than two inches in diameter, could represent on a tiny scale multi-figure biblical scenes without losing any of their dramatic intensity.
 
 `image src=wc:Prayer_Bead_with_the_Adoration_of_the_Magi_and_the_Crucifixion_MET_DP371957.jpg caption="Sixteenth-century Netherlandish rosary bead (exterior)." aspect=1.14`
@@ -97,11 +97,10 @@ The vindication of boxwood as an essential garden plant took place in late sixte
 `image caption="Garden design pattern, in Claude Mollet, _Theatre des plans et iardinages_, 1652, plate 5." manifest=https://iiif.lib.harvard.edu/manifests/drs:47289351 seq=238 aspect=0.77`
 
 ##
-{: .columns}
+
+`map caption="French royal gardens where Claude Mollet experimented with boxwood." center=Q90 zoom=8 .right`
 
 In practical terms, borders involving a combination of different shrubs as described by De Serres needed to be regularly replanted. If they were to last longer, his advice was to use boxwood alone regardless of its smell.[^ref23] The advocate of this method was royal gardener [Claude Mollet](Q919880), who was credited with inventing _parterres de broderie_ and supplying their illustrations for De Serres’s treatise _Théâtre d’Agriculture_. Coming from a family of gardeners, Mollet wrote from the perspective of a professional horticulturist (who among other things, he believed, was supposed to be well-versed in [astrology](Q34362)). A committed champion of boxwood, he emphasized the volatility of the French climate affected by two "extremes," "the great heat and the great cold," which caused the "nuisance and expense of having to redo and replant garden compartments once every three years."[^ref24] Mollet’s solution was to reduce the composition of borders solely to boxwood, which he started to implement for King [Henri IV](Q936976) in 1595 in the gardens of [Saint-Germain-en-Laye](Q60847808), [Monceaux](Q1440821), and [Fontainebleau](Q182872); decades later, they would still remain in "good shape."[^ref25] The species that he particularly praised was _nain_ (dwarf) boxwood, which did not grow as tall as other varieties and had smaller leaves, but showed the same resistance to freezing and heat.[^ref26]
-
-`map caption="French royal gardens where Claude Mollet experimented with boxwood." center=Q90 zoom=8`
 
 
 # A Global Garden Element
@@ -123,6 +122,8 @@ Closely connected with these expatriate circles was British landscape architect 
 
 
 # Humble Yet Resilient
+
+##
 
 Deeply invested with cultural symbolism, boxwood represents the rich legacy of the formal gardens of Europe characterized by geometric layout, controlling vistas, and ambitious scale. Characterized by climate resistance and malleability, it has served not merely as plant material, but a key medium of stylistic expression across the globe, reflecting a horticultural tradition with origins in antiquity. The story of boxwood is that of a humble yet resilient plant, which, after centuries of disparagement and neglect, succeeded in taking over the garden world. Whether or not it would be able retain this hard-earned preeminence as the most sought-after ornamental shrub, only time can tell.[^ref30]
 
