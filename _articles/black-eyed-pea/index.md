@@ -104,7 +104,7 @@ The black-eyed pea, [millet](Q259438), [yams](Q8047551), and many other staple f
 
 In the southern United States, enslaved peoples cultivated black-eyed peas as a crop largely for livestock.[^ref14] However, it was also a food served to them as well as a fixture in their kitchen gardens. Numerous firsthand accounts of enslaved peoples refer to black-eyed peas. In his 1837 [memoir,](https://archive.org/details/slaveryinunit00ballcha/page/n3/mode/2up?view=theater) [Charles Ball](Q5075393) (1780–unknown) recalls, "We had plenty of bread, and a supply of black-eyed peas, gathered from our garden, some of which [were] boiled in our kettle."[^ref15] Francis Fedric wrote of the bean, "The dinner [of enslaved persons] consists generally of black-eyed peas soup, as it is called. About a quart of peas is boiled in a large pan, and a small piece of meat, just to flavour the soup, is put into the pan. The next day it would be bean soup...served out to the men and women in bowls; but the children feed like pigs out of troughs."[^ref16] Black-eyed peas also held special cultural significance to enslaved Africans, serving for many as a marker of auspicious occasions, luck, and fertility.
 
-`iframe  src=https://archive.org/embed/slaveryinunit00ballcha/page/172/mode/1up aspect=0.59`
+`iframe src=https://archive.org/embed/slaveryinunit00ballcha/page/172/mode/1up aspect=0.59`
 
 ## 
 {: .columns}

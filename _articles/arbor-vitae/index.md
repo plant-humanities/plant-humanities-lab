@@ -42,7 +42,7 @@ In his 1640 herbal _Theatrum Botanicum_, [John Parkinson](Q256288) described the
 
 A century earlier, French explorer [Jacques Cartier](Q7321) and his crew learned of the tree and its astonishing medicinal effects from the St. Lawrence Iroquois Indians of Eastern Canada while exploring the Gulf of St. Lawrence and the [St. Lawrence River](Q3339246). The Indigenous people of this region used numerous local plants to treat disease and survive the region’s harsh winters.[^ref1] The French explorers, however, were far less equipped to survive the unforgiving environment they found themselves stranded in during the winter of 1535–36. Suffering from a mysterious disease that threatened to kill more than half of his crew, Captain Cartier turned to the [St. Lawrence Iroquois](Q129060) for help.
 
-`map location=49.408,-63.531,5 caption="Gulf of Saint Lawrence" basemaps=Esri_WorldPhysical`
+`map center=49.408,-63.531 zoom=5 caption="Gulf of Saint Lawrence" basemaps=Esri_WorldPhysical`
 `- marker qid=Q3339246`
 `- geojson url=cartier.json`
 
@@ -51,7 +51,7 @@ A century earlier, French explorer [Jacques Cartier](Q7321) and his crew learned
 
 Captain Cartier had noticed that some of the [local Indians](Q544356) also suffered from the same affliction as his men, but unlike his men, they made full recoveries. Cartier soon learned of a medicinal decoction (or tea) the locals made and drank from a ["certain tree"](https://hdl.handle.net/2027/aeu.ark:/13960/t35151v01?urlappend=%253Bseq=82) to treat the illness. Eventually, Cartier convinced a local young man named Domagaia to share his therapeutic secret. Domagaia sent a couple of women to fetch about a dozen branches of the tree. The bark and leaves were boiled to make a decoction, which Cartier and his men were instructed to drink every other day. They were also instructed to put the dregs of the mixture on the legs of the sick. Within six days, Cartier’s crew was cured.
 
-`map location=Q544356,5.5 caption="Gulf of Saint Lawrence" basemaps=Esri_WorldPhysical`
+`map center=Q544356 zoom=5.5 caption="Gulf of Saint Lawrence" basemaps=Esri_WorldPhysical`
 `- geojson url=St_Lawrence_Iroquoians.json`
 
 ##
@@ -59,7 +59,7 @@ Captain Cartier had noticed that some of the [local Indians](Q544356) also suffe
 
 Thanks to the medicinal knowledge of the St. Lawrence Iroquois, Captain Cartier and crew returned home safely with fascinating tales of "New France" and the local Indigenous populations. Just five years later, in 1541, Cartier was sent back to the region on a colonizing expedition. In the end, neither of Cartier’s explorations yielded material wealth for the crown. As both were considered financial failures, there was little effort to publish any accounts of either journey. Fortunately, a Venetian diplomat and cartographer was interested in Cartier’s tales of explorations. In 1550, [Giovanni Battista Ramusio](Q1378950) translated and published a collection of travel narratives, [_Navigationi et viaggi_,](https://archive.org/details/dellenavigationi00ramu/page/n835) which included a first-hand account of Cartier’s first voyage and interactions with the St. Lawrence Iroquois.[^ref2] Thirty years later, [John Florio](Q982707) translated Ramusio’s account of Cartier’s voyages into English. Cartier’s own account in French, however, would not be published until 1598.
 
-`map location=48.402,2.7003,4.5 caption="Locations where accounts of Cartier's expeditions were published." basemaps=Esri_WorldPhysical`
+`map center=48.402,2.7003 zoom=4.5 caption="Locations where accounts of Cartier's expeditions were published." basemaps=Esri_WorldPhysical`
 `- geojson url=cartier_publishing.json `
 
 ##
@@ -87,7 +87,7 @@ Through linguistic, botanical, and historical analysis numerous trees have been 
 
 Sixteenth- and seventeenth-century European herbals consistently describe the tree of life as a _Thuja_ (a genus of coniferous trees) or similar to a cypress, without fruit (although the cone is now considered a fruit), and very aromatic. From this we can conclude that the tree of life was indeed an evergreen coniferous tree native to the area around present-day [Quebec](Q2145) and [Montreal](Q340).
 
-`map location=Q2145,3 basemaps=Esri_WorldPhysical`
+`map center=Q2145 zoom=3 basemaps=Esri_WorldPhysical`
 `- marker qid=Q2145`
 `- geojson url=ThujaDistribution.json`
 
@@ -96,7 +96,7 @@ Sixteenth- and seventeenth-century European herbals consistently describe the tr
 
 Canada is home to approximately 30 species of coniferous trees, which, sometimes called evergreens, keep their foliage year-round.[^ref3] For the Indigenous peoples of eastern Canada, coniferous forests offered sources of food, building materials, and medicines for human survival. Thanks to their general distribution, ability to survive cold climates, easy identification, and their very real pharmacological properties, coniferous trees were used medicinally by all indigenous groups of eastern Canada. The [tannins](Q187607) of coniferous trees have astringent and antiseptic properties, while their resins and essential oils have aromatic and stimulant properties.[^ref4] More importantly, many conifers contain high levels of vitamin C.
 
-`map location=42.655,-74.715,3.5 basemaps=Esri_WorldPhysical caption="Thuja Distribution"`
+`map center=42.655,-74.715 zoom=3.5 basemaps=Esri_WorldPhysical caption="Thuja Distribution"`
 `- geojson url=ThujaDistribution.json`
 
 ##
@@ -104,7 +104,7 @@ Canada is home to approximately 30 species of coniferous trees, which, sometimes
 
 The [Ojibwa](Q255872) and many other Indigenous peoples of eastern North America boiled the leaves of several local conifers, notably common juniper and white cedar, to make medicinal teas.[^ref5] The inner bark of the balsam fir was also used to brew a medicinal tea by the Miꞌkmaq and Maritime Indians. Unfortunately, the St. Lawrence Iroquoians Cartier encountered disappeared sometime in the late sixteenth century, but the continued use of conifers for medicinal teas by many of their neighbors and successors highlights these populations’ knowledge of their natural resources and success in creating a local subsistence base.
 
-`map location=42.655,-74.715,4 basemaps=Esri_WorldPhysical`
+`map center=42.655,-74.715 zoom=4 basemaps=Esri_WorldPhysical`
 `- geojson url=Maritime_Indians.json`
 
 ##
@@ -112,7 +112,7 @@ The [Ojibwa](Q255872) and many other Indigenous peoples of eastern North America
 
 Unlike the European view of Indigenous medicines, which they often described as panaceas, the Iroquois practiced (and continue to practice) a form of sympathetic medicine. That is to say that the Iroquois identified relationships between cure and disease and often prescribed specific plant remedies for specific ailments.[^ref6] We can see this in the case of the tree of life. When Cartier implored Domagaia for the secret to his miraculous recovery from the illness that plagued his men, Domagaia explained that ["he had taken the juice and sappe of the leaves of a certaine tree, and therewith had healed himself: For it was a singular remedie against that disease."](https://hdl.handle.net/2027/aeu.ark:/13960/t35151v01?urlappend=%253Bseq=85) Over the centuries of surviving the harsh winters of eastern Canada, the St. Lawrence Iroquois had developed a successful treatment for a disease that commonly beset individuals living in cold climates—scurvy.
 
-`map location=Q544356,6 caption="Territory occupied by the St. Lawrence Iroquoians, circa 1535" basemaps=Esri_WorldPhysical`
+`map center=Q544356 zoom=6 caption="Territory occupied by the St. Lawrence Iroquoians, circa 1535" basemaps=Esri_WorldPhysical`
 `- geojson url=St_Lawrence_Iroquoians.json layer="St. Lawrence Iroquoians"`
 
 ##
@@ -136,7 +136,7 @@ Today, adult scurvy is treated with 300–1,000 mg of ascorbic acid per day. Alt
 
 Cartier returned to France with seeds from the Ameda tree, which were presented to the French King, Francis I, as from the tree of life. Unfortunately, because accounts of Cartier’s explorations were not widely published until the end of the sixteenth century, the miraculous story of the arbor vitæ was not well known until well into the seventeenth century. We do know, however, thanks to a French naturalist, [Pierre Belon](Q445560), that the seeds presented to the king were planted and the tree later propagated in France. In 1553, Belon wrote the first botanical work devoted to coniferous trees, in which he noted that there were many arbor vitæs growing in the royal garden at [Fontainebleau](Q201428). Unfortunately, Belon makes no mention of Cartier and his crew’s recovery or where the tree originated, only that the tree was brought to the King and was given the name arbor vitæ.
 
-`map location=48.402,2.700,10 caption="France" aspect=0.68`
+`map center=48.402,2.700 zoom=10 caption="France" aspect=0.68`
 `image manifest=wc:Fontainebleau_bird%27s_eye_view.jpg aspect=0.68`
 
 ##
@@ -144,7 +144,7 @@ Cartier returned to France with seeds from the Ameda tree, which were presented 
 
 From Belon’s work, we can trace the knowledge, or lack of knowledge, of the arbor vitæ in Europe through herbals. Arbor vitæ appears in the herbals of [Matthias de l'Obel](Q1860320) (1576), [Castore Durante](Q205031) (1585), [John Gerard](Q1333338) (1597), [Caspar Bauhin](Q123612) (1598), [Carolus Clusius](Q333372) (1601), and [John Parkinson](Q256288) (1640).[^ref9] From these works it is clear that much of the knowledge surrounding the arbor vitæ—where it came from, its medicinal properties, and why it was called the tree of life—had already been lost. While all similarly describe the physical attributes of a coniferous tree deemed the tree of life, only Bauhin, Clusius, and Parkinson placed the origin of the tree in Canada, and none mention Cartier and the Ameda tree. Clusius, having seen the tree in the botanical garden of the French King, also noted that the arbor vitæ was now ["so widespread that everyone with a passion for horticulture grows one in his garden."](https://biodiversitylibrary.org/page/529649)
 
-`map location=48.402,2.7,5 basemaps=Esri_WorldPhysical`
+`map center=48.402,2.7 zoom=5 basemaps=Esri_WorldPhysical`
 `- geojson url=arbor_vitae_publishing.json`
 
 ##
@@ -152,7 +152,7 @@ From Belon’s work, we can trace the knowledge, or lack of knowledge, of the ar
 
 It is clear that by the mid-seventeenth century much of the medicinal knowledge associated with the arbor vitæ was lost. Further complicating matters of identification was the rate at which the arbor vitæ spread through Europe and the tendency to call any conifer imported from North America an arbor vitæ. Conversely, many American conifers were simply named in terms of their European counterparts and identified as a thuja or cedrus. Thus, by the end of the sixteenth century, the arbor vitæ was also known as ["Thuja theophrasti"](https://bibdigital.rjb.csic.es/viewer/10754/?offset=#page=512&viewer=picture&o=bookmark&n=0&q=) and ["Cedrus Lycia."](https://bibdigital.rjb.csic.es/viewer/13070/?offset=#page=634&viewer=picture&o=bookmark&n=0&q=)
 
-`map location=45.9034,14.814,3.5 title="Spread of Arbor Vitae accross Europe" basemaps=Esri_WorldPhysical`
+`map center=45.9034,14.814 zoom=3.5 title="Spread of Arbor Vitae accross Europe" basemaps=Esri_WorldPhysical`
 `- geojson url=thuja_in_europe.json caption="Spread of Arbor Vitæ"`
 
 ##
@@ -169,7 +169,7 @@ In 1753, botanist [Carl Linnaeus’s](Q1043) pioneering work, _Systema Naturae_,
 
 Although tales of Cartier’s explorations were not initially widely published, interest in them, as well as identifying the tree that miraculously cured scurvy, increased in the eighteenth and early nineteenth centuries as the European colonial enterprise expanded. Numerous naturalists, botanists, and historians have attempted to confirm the identity of Ameda as _Thuja occidentalis_ or prove it wrong. While _Thuja occidentalis_ remains the consensus, other strong contenders are the white spruce and the eastern white pine, since both have names in the Mohawk language, "onnita" and "ohnehta" respectively, that sound similar to later European spelling varieties of Ameda (Anneda, Annedda, and Hanneda). Finally, many argue that it was the balsam fir, as it has the highest levels of vitamin C (270 mg) of any North American conifer.
 
-`map location=14.9963,6.7126,2 caption="Territory of the First French Empire (blue) and Second French Empire (light blue)" basemaps=Esri_WorldPhysical`
+`map center=14.9963,6.7126 zoom=2 caption="Territory of the First French Empire (blue) and Second French Empire (light blue)" basemaps=Esri_WorldPhysical`
 `- geojson url=French_Empire.json`
 
 
@@ -180,7 +180,7 @@ Although tales of Cartier’s explorations were not initially widely published, 
 
 The Scottish surgeon [James Lind](Q709525) (1716–1794) is typically credited for solving the mystery of scurvy and discovering its cure. But as Lind explained in his 1772 [_A treatise of the scurvy_,](https://books.google.com/books?id=T1OT3tYmh5wC&printsec=frontcover&dq=A+treatise+of+the+scurvy.+In+three+parts,+Lind&hl=it&sa=X&ved=0ahUKEwiWmP2Kw_vlAhVBrlkKHa9NDYwQ6AEILDAA#v=onepage&q=cartier&f=false) he was keenly aware of the therapeutic properties of "spruce beer," which he knew to be a common drink of the indigenous peoples of Newfoundland and because of which "they kept pretty free from the scurvy." Lind also mentioned Cartier’s Ameda tree and, like so many before him, offered an identification, calling it "the large swampy American spruce tree." Lind’s treatise promoted a decoction of "the tops, cones, leaves, or even green bark and wood of these trees" as an excellent antiscorbutic medicine. However, Lind saw "spruce beer" and decoctions of coniferous trees more as preventative medicines.
 
-`map location=Q48335,5 caption="Newfoundland" center="Q48335" basemaps=Esri_WorldPhysical`
+`map center=Q48335 zoom=5 caption="Newfoundland" center="Q48335" basemaps=Esri_WorldPhysical`
 `- geojson url=Newfoundland.json caption="Newfoundland"`
 
 ##
@@ -188,7 +188,7 @@ The Scottish surgeon [James Lind](Q709525) (1716–1794) is typically credited f
 
 During his tenure as ship surgeon on the HMS Salisbury, Lind observed and recorded the effects of scurvy and carried out an early version of a controlled clinical trial on the men aboard. For one of the groups of afflicted sailors, Lind added orange and lemon juice to their meals. This group of men recovered and Lind's experiment forever linked scurvy treatment with citrus, and eventually vitamin C.[^ref10] While citrus fruits have become firmly associated with the treatment of scurvy, the coniferous teas prepared by the Indigenous peoples of eastern Canada were a more effective therapeutic (in both prevention and treatment), since they provided higher levels of vitamin C as well as other important biofactors.
 
-`map location=52.282,-5.244,5 caption="Journey of the HMS Salisbury" basemaps=Esri_WorldPhysical`
+`map center=52.282,-5.244 zoom=5 caption="Journey of the HMS Salisbury" basemaps=Esri_WorldPhysical`
 `- geojson url=Lind.json`
 
 ##
@@ -196,7 +196,7 @@ During his tenure as ship surgeon on the HMS Salisbury, Lind observed and record
 
 Sadly, we may never know for sure exactly which tree was used to make the medicinal tea that saved Cartier and his men. It is more likely that the Indigenous peoples of the region knew that many of the local coniferous trees could be used for the same medical purpose together or interchangeably. What we do know, however, is that the indigenous knowledge of the therapeutic properties of coniferous trees not only saved the lives of early explorers and colonizers, it was essential in the development of our understanding and treatment of scurvy. 
 
-`map location=41.727,-45.853,3 basemaps=Esri_WorldPhysical`
+`map center=41.727,-45.853 zoom=3 basemaps=Esri_WorldPhysical`
 `- geojson url=custom.geo(1).json`
 
 
