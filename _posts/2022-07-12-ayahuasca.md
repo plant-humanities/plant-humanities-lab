@@ -35,8 +35,8 @@ Many traditions are associated with the preparation and imbibing of the decoctio
 
 Consuming ayahuasca produces a roughly four-hour period of altered consciousness. During this time, practitioners experience otherworldly visuals and fluctuations in conceptions of reality and selfhood. Most Indigenous groups of the Amazon basin understand the world as a series of interlocking human and nonhuman persons, both visible and invisible.[^ref7] By entering the "ayahuasca world," a liminal meeting place with more-than-human beings, Indigenous participants in the ritual are able to better visualize the forces at work around them.[^ref8] Such insight is used to treat physical ailments, address mental health concerns, and provide spiritual guidance. In these Amazonian communities, ayahuasca is central to religious, healing, and initiation ceremonies as a form of traditional medicine and psychiatry.[^ref9]
 
-{% include embed/image.html src="Ayahuasca_Trip_-_Don_Emilio.png" aspect="1.78" %}
-{% include embed/image.html src="Ayahuasca_Trip_-_Pablo_Amaringo.png" aspect="1.78" %}
+{% include embed/image.html src="Ayahuasca_Trip_-_Don_Emilio.png" caption="Account of Ayahuasca Trip by Don Emilio" aspect="1.78" %}
+{% include embed/image.html src="Ayahuasca_Trip_-_Pablo_Amaringo.png" caption="Account of Ayahuasca Trip by Pablo Amaringo" aspect="1.78" %}
 
 # The Origins of Ayahuasca and Plant Knowledge 
 
@@ -46,9 +46,9 @@ The earliest archaeological evidence of the use of _Banisteriopsis caapi_ and _P
 
 How did apparently isolated Amazonian communities come to know the synergistic effect between different plant species in one of the most biodiverse forests of the world? For decades, outside researchers have assumed that Indigenous people have accumulated botanical knowledge by trial and error.[^ref11] This umbrella method for diverse ways of knowing the natural world obscures the sophistication and depth of botanical knowledge of the Amazonians. Ayahuasca brews across the Amazon harness the psychoactive properties of at least 97 species from 38 plant families.[^ref12] Aside from _Psychotria viridis_, Amazonian Indigenous groups have identified the medicinal properties of at least three other _[Psychotria](Q904250)_ species.[^ref13]
 
-{% include embed/image.html src="Bundles_of_ayahuasca.jpg" aspect="1.50" %}
-{% include embed/image.html src="Decorated_ritual_ceramic_vase.jpg" aspect="0.67" %}
-{% include embed/image.html src="Pottery_cup_with_raised_base.jpg" aspect="1.75" %}
+{% include embed/image.html src="Bundles_of_ayahuasca.jpg" caption="Bundles of ayahuasca" aspect="1.50" %}
+{% include embed/image.html src="Decorated_ritual_ceramic_vase.jpg" caption="Decorated ritual ceramic vase" aspect="0.67" %}
+{% include embed/image.html src="Pottery_cup_with_raised_base.jpg" caption="Pottery cup with raised base" aspect="1.75" %}
 
 While these are veritable feats of botanical research, Indigenous ways of knowing are not necessarily measured by such standards nor rely exclusively on observations and collection of written data. Many _ayahuasqueros_ in the Peruvian Amazon learn ayahuasca recipes through oral traditions from elders, but the "teacher" is considered to be the brew and its sacred plants, not the elder alone.[^ref14] Learning through plant teachers involves at times solitude (_dietas_), long periods of sensorial interactions with the plant, and incorporating dreams and visions as significant teachings.[^ref15]
 
