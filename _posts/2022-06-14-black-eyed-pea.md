@@ -20,7 +20,7 @@ categories: ["Trade & Empire", "Enslaved Labor & Diaspora"]
 
 While the [black-eyed pea](Q498940), or cowpea, has a global history stretching back millennia, its social and cultural significance has changed over time. A staple crop in Africa, revered by some peoples as a symbol of luck and fertility worthy of offering to the deities, within Europe it was considered solely as a humble food for laborers. In the Americas, too, the bean was a marker of class and culture, as it was mainly an important food source for enslaved peoples. Modern-day cuisine the world over embraces the black-eyed pea as a food rich in culture and history as well as a delicious source of innovative dishes that celebrate new traditions. The black-eyed pea is a powerful reminder of just how intertwined human identity is with the plants we eat.
 
-{% include embed/image.html src="wc:Nigeria_Cowpea_fro_F_IITA.jpg" caption="Spread of black-eyed peas overtime" aspect="1.33" %}
+{% include embed/image.html src="wc:Nigeria_Cowpea_fro_F_IITA.jpg" aspect="1.33" %}
 
 {% include embed/image.html src="wc:Wild_cowpea_flowers_(6930710085).jpg" aspect="1.08" %}
 
@@ -31,7 +31,7 @@ While the [black-eyed pea](Q498940), or cowpea, has a global history stretching 
 
 Black-eyed peas ([_Vigna unguiculata_](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1127257-2)) are [leguminous plants](Q44448) that grow best in semi-arid conditions but can thrive in poor soils with little help. They are heat-loving and drought-tolerant, and grow quickly, often giving a harvest of beans within 100 days. The ease of growth and usefulness of this crop contributed to its spread from West and East Africa to Egypt by circa 2500 BCE and to the Mediterranean and the Indian subcontinent by 1500 BCE. Archaeological and genetic evidence show that West Africans domesticated wild relatives of the plant at least 6,000 years ago.[^ref1] Because of their quick maturing and reliability, black-eyed peas are an important part of mixed [food systems](Q5465532): wild gathering, hunting, fishing, and [aquaculture](Q188989), keeping small livestock, and/or building larger herds, [agroforestry](Q397350), and crop cultivation. Diverse specializations protect the community by relying on different foods at different times of the year and ensuring no single crop failure will cause a famine.[^ref2]
 
-{% include embed/image.html src="Herniter_Muñoz-Amatriaín_Close_Proposed_spread_of_cowpea.jpg" aspect="1.87" %}
+{% include embed/image.html src="Herniter_Muñoz-Amatriaín_Close_Proposed_spread_of_cowpea.jpg" caption="Spread of black-eyed peas overtime" aspect="1.87" %}
 
 # Cultural Perceptions in Europe
 
