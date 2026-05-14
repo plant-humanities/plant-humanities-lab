@@ -20,7 +20,7 @@ categories: ["Trade & Empire", "Enslaved Labor & Diaspora"]
 
 While the [black-eyed pea](Q498940), or cowpea, has a global history stretching back millennia, its social and cultural significance has changed over time. A staple crop in Africa, revered by some peoples as a symbol of luck and fertility worthy of offering to the deities, within Europe it was considered solely as a humble food for laborers. In the Americas, too, the bean was a marker of class and culture, as it was mainly an important food source for enslaved peoples. Modern-day cuisine the world over embraces the black-eyed pea as a food rich in culture and history as well as a delicious source of innovative dishes that celebrate new traditions. The black-eyed pea is a powerful reminder of just how intertwined human identity is with the plants we eat.
 
-{% include embed/image.html src="wc:Nigeria_Cowpea_fro_F_IITA.jpg" aspect="1.33" %}
+{% include embed/image.html src="wc:Nigeria_Cowpea_fro_F_IITA.jpg" caption="Spread of black-eyed peas overtime" aspect="1.33" %}
 
 {% include embed/image.html src="wc:Wild_cowpea_flowers_(6930710085).jpg" aspect="1.08" %}
 
