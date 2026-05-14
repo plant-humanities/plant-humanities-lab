@@ -58,7 +58,7 @@ Canada is home to approximately 30 species of coniferous trees, which, sometimes
 
 The [Ojibwa](Q255872) and many other Indigenous peoples of eastern North America boiled the leaves of several local conifers, notably common juniper and white cedar, to make medicinal teas.[^ref5] The inner bark of the balsam fir was also used to brew a medicinal tea by the Miꞌkmaq and Maritime Indians. Unfortunately, the St. Lawrence Iroquoians Cartier encountered disappeared sometime in the late sixteenth century, but the continued use of conifers for medicinal teas by many of their neighbors and successors highlights these populations’ knowledge of their natural resources and success in creating a local subsistence base.
 
-{% include embed/map.html center="42.655,-74.715" zoom="4" basemap="Esri_WorldPhysical" geojson="Maritime_Indians.json" %}
+{% include embed/map.html center="42.655,-74.715" zoom="4" basemap="Esri_WorldPhysical" caption="Ojibwa and Mi'kmaq distribution" geojson="Maritime_Indians.json" %}
 
 Unlike the European view of Indigenous medicines, which they often described as panaceas, the Iroquois practiced (and continue to practice) a form of sympathetic medicine. That is to say that the Iroquois identified relationships between cure and disease and often prescribed specific plant remedies for specific ailments.[^ref6] We can see this in the case of the tree of life. When Cartier implored Domagaia for the secret to his miraculous recovery from the illness that plagued his men, Domagaia explained that ["he had taken the juice and sappe of the leaves of a certaine tree, and therewith had healed himself: For it was a singular remedie against that disease."](https://hdl.handle.net/2027/aeu.ark:/13960/t35151v01?urlappend=%253Bseq=85) Over the centuries of surviving the harsh winters of eastern Canada, the St. Lawrence Iroquois had developed a successful treatment for a disease that commonly beset individuals living in cold climates—scurvy.
 
@@ -81,11 +81,11 @@ Cartier returned to France with seeds from the Ameda tree, which were presented 
 
 From Belon’s work, we can trace the knowledge, or lack of knowledge, of the arbor vitæ in Europe through herbals. Arbor vitæ appears in the herbals of [Matthias de l'Obel](Q1860320) (1576), [Castore Durante](Q205031) (1585), [John Gerard](Q1333338) (1597), [Caspar Bauhin](Q123612) (1598), [Carolus Clusius](Q333372) (1601), and [John Parkinson](Q256288) (1640).[^ref9] From these works it is clear that much of the knowledge surrounding the arbor vitæ—where it came from, its medicinal properties, and why it was called the tree of life—had already been lost. While all similarly describe the physical attributes of a coniferous tree deemed the tree of life, only Bauhin, Clusius, and Parkinson placed the origin of the tree in Canada, and none mention Cartier and the Ameda tree. Clusius, having seen the tree in the botanical garden of the French King, also noted that the arbor vitæ was now ["so widespread that everyone with a passion for horticulture grows one in his garden."](https://biodiversitylibrary.org/page/529649)
 
-{% include embed/map.html center="48.402,2.7" zoom="5" basemap="Esri_WorldPhysical" geojson="arbor_vitae_publishing.json" %}
+{% include embed/map.html center="48.402,2.7" zoom="5" basemap="Esri_WorldPhysical" caption="Herbals with information on Arbor vitæ throughout Europe" geojson="arbor_vitae_publishing.json" %}
 
 It is clear that by the mid-seventeenth century much of the medicinal knowledge associated with the arbor vitæ was lost. Further complicating matters of identification was the rate at which the arbor vitæ spread through Europe and the tendency to call any conifer imported from North America an arbor vitæ. Conversely, many American conifers were simply named in terms of their European counterparts and identified as a thuja or cedrus. Thus, by the end of the sixteenth century, the arbor vitæ was also known as ["Thuja theophrasti"](https://bibdigital.rjb.csic.es/viewer/10754/?offset=#page=512&viewer=picture&o=bookmark&n=0&q=) and ["Cedrus Lycia."](https://bibdigital.rjb.csic.es/viewer/13070/?offset=#page=634&viewer=picture&o=bookmark&n=0&q=)
 
-{% include embed/map.html center="45.9034,14.814" zoom="3.5" basemap="Esri_WorldPhysical" geojson="thuja_in_europe.json" %}
+{% include embed/map.html center="45.9034,14.814" zoom="3.5" basemap="Esri_WorldPhysical" caption="Confifers throughout Europe" geojson="thuja_in_europe.json" %}
 
 In 1753, botanist [Carl Linnaeus’s](Q1043) pioneering work, _Systema Naturae_, which cemented a system of binomial classification for plants, identified the arbor vitæ, the _Thuja Theophrasis_, and the _Thuja strobilis lævibus_ as the same plant, which he reclassified as [_Thuja occidentalis_.](https://www.biodiversitylibrary.org/page/359023#page/444/mode/1up) Since then, _Thuja occidentalis_ has generally been accepted as the Ameda tree that saved Cartier and his men.
 
@@ -110,7 +110,7 @@ During his tenure as ship surgeon on the HMS Salisbury, Lind observed and record
 
 Sadly, we may never know for sure exactly which tree was used to make the medicinal tea that saved Cartier and his men. It is more likely that the Indigenous peoples of the region knew that many of the local coniferous trees could be used for the same medical purpose together or interchangeably. What we do know, however, is that the indigenous knowledge of the therapeutic properties of coniferous trees not only saved the lives of early explorers and colonizers, it was essential in the development of our understanding and treatment of scurvy. 
 
-{% include embed/map.html center="41.727,-45.853" zoom="3" basemap="Esri_WorldPhysical" geojson="custom.geo(1).json" %}
+{% include embed/map.html center="41.727,-45.853" zoom="3" basemap="Esri_WorldPhysical" caption="Movement of Indigenous theraputic properties from North America to Europe" geojson="custom.geo(1).json" %}
 
 [^ref1]: For the purposes of this work, "Indigenous people(s)" refers to a cultural group(s) in an ecological area that developed a successful subsistence base from the natural resources available in that area.
 [^ref2]: As a diplomat, Rasmusio was said to have used his political influence to collect original travel narratives. 
