@@ -59,7 +59,7 @@ Visual representations of black-eyed peas and other varieties of beans and peas 
 
 Despite the millennia-old European presence of the black-eyed pea, it was now understood in Europe as an itinerant body within a Eurocentric [taxonomy](Q8269924) of plants. European explorers visiting Africa, Asia, and the Americas reinforced this idea. Their observations, often reported in books, were soon taken throughout Europe as factual. For example, Dutch trader and explorer [Pieter de Marees’](Q3117063) 1602 book about West Africa includes an illustration of the [black-eyed pea](img1/zoomto/418,756,583,437) in an idealized landscape alongside people and other plants.[^ref7]
 
-{% include embed/image.html id="img1" src="indiaeorientalis00mare_1_n170.jpg" aspect="0.65" %}
+{% include embed/image.html id="img1" src="indiaeorientalis00mare_1_n170.jpg" caption="Illustratoin of black-eyed pea in Pieter de Marees' account of West Africa, source?" aspect="0.65" %}
 
 The European perspective is not the only early modern view we have on the black-eyed pea. Written records of the bean appear in the sixteenth century in China, where it is noted in the [Ming Dynasty](Q9903) [_Compendium of Materia Medica_](https://www.nlm.nih.gov/exhibition/chinesemedicine/books.html) as being a cure for flatulence and for kidney problems.[^ref8] And a beautiful illustration of the "cowpea" featured in the 30-volume Japanese agricultural encyclopaedia [_Seikei Zuetsu_,](https://digitalcollections.universiteitleiden.nl/japanese_agriculture_19th_century) published in 1804, shows how far the black-eyed pea had spread and how its usefulness had been welcomed into many agricultural traditions.
 
