@@ -37,12 +37,12 @@ In Africa’s arid savanna regions, watermelons were originally welcomed as sour
 Watermelon-like fruit were referenced in ancient Greek and Roman texts using a variety of terms including _pepon_, _melopepon_, and _kolokynte_, suggesting that these plants proliferated in the Mediterranean region during antiquity.[^ref7] At that time, they were still likely to have sturdy and pale flesh—not quite as red and soft as it is today. [Pliny the Elder](Q82778) dedicated a section of his _[Naturalis Historia](Q442)_ to _pepones_, which, he wrote, made a very refreshing food, but also had a laxative effect. Various parts of the fruit were used to alleviate pain, induce vomiting, and even cleanse the skin and clear spots.[^ref8]
 
 {% include embed/image.html src="459932909.jpg" caption="Jombert, Charles Antoine, 1712-1784. Les delices de Versailles et des maisons royales, ou, Recueil de vues perpectives des plus beaux endroits des châteaux, parcs, jardins, fontaines & bosquets de Versailles, la Ménagerie, Trianon, Marly, Meudon, Saint-Cloud, Fontainebleau, Chantilly, Sceaux, Maisons &c. MDCCLXVI [1766].  RARE RBR O-2-5 JOM. Dumbarton Oaks Research Library, Washington, D.C." region="pct:19.20,17.88,63.41,10.46" aspect="1" %}
-{% include embed/image.html src="mobot31753000819224_0513.jpg" aspect="0.55" %}
+{% include embed/image.html src="mobot31753000819224_0513.jpg" aspect="0.55" caption="Pliny the Elder's *Naturalis Historia*, published circa AD 77–79" %}
 
 Watermelons were cultivated in Spain after the Arab conquest, with evidence of their agricultural use, mostly in the form of seeds, dating to the tenth century. Illuminated manuscripts from southern Italy illustrate the varieties of watermelons grown there. Early health treatises, such as _[Tacuinum Sanitatis](Q608662)_, show harvesters [who taste-test them](http://visualiseur.bnf.fr/ConsulterElementNum?O=08100553&E=JPEG&Deb=75&Fin=75&Param=C) in the fields. However, sweetness did not appear to be a consistent characteristic of watermelons. Writing in the late sixteenth century, [John Gerard](Q1333338), in his [_Herball_,](https://www.biodiversitylibrary.org/page/35441755) described their flesh as "spungie and of a flimsie substance," which could be "eaten rawe, but more commonly boiled"; whereas the plant itself was still associated with curative properties: "it ingendereth a waterish bloud, mitigateth the extremitie of heat of the inner parts, and tempereth the sharpness and fervent heat of choler."[^ref9]
 
-{% include embed/image.html src="Albucasis_Observations_sur_la_nature_btv1b105380445.jpg" aspect="0.73" %}
-{% include embed/image.html src="mobot31753000817756_0950.jpg" aspect="0.60" %}
+{% include embed/image.html src="Albucasis_Observations_sur_la_nature_btv1b105380445.jpg" aspect="0.73" caption="Image of watermelon harvesting in *Tacuinum Sanitatis*, National Library of France" %}
+{% include embed/image.html src="mobot31753000817756_0950.jpg" aspect="0.60" caption="Passage from John Gerard's *Herball*, 1597, Biodiversity Heritage Library" %}
 
 In fact, centuries later, in 1888, watermelons were still being promoted as a face cleanser in U.S. newspapers. A certain Miss Carrie Townsend from St. Louis, Missouri, recommended them to girls with freckles who looked "as if they had been about when a bran bin had exploded," claiming that no matter what was wrong with the face, the juice of the watermelon would rectify it.[^ref10] Although perhaps not quite as powerful as Miss Townsend suggests, watermelon-based treatments are re-emerging as a natural skin cleanser today, including West African kalahari or [ootanga oil](Q3819066) that is traditionally extracted from the fruit’s seeds.
 
@@ -81,7 +81,7 @@ Aspects of the fruit became bound up with [representations of African Americans,
 
 Stories of watermelon theft contributed to the perception of Black criminality following the enactment of the [thirteenth amendment](Q175613), which abolished slavery. The seemingly irresistible lure of the watermelon suggested that it did "more to tempt the colored race to steal than all other fruit combined," with countless anecdotes supposedly citing the words of African Americans who claimed that stolen watermelons tasted better than those bought.[^ref15] The narrative of African American watermelon-stealing was so entrenched that the Tennessee state bill that criminalized such trespasses in 1870 was commonly known as the "watermelon bill." These cultural tropes continued to shape the exclusionary racial politics in the United States well into the twentieth century and [are still pervasive today.](https://www.vox.com/first-person/2019/8/29/20836933/watermelon-racist-history-black-people)[^ref16]
 
-{% include embed/image.html src="8e036f50a495b55cf479e34d4a9dd4a56f171d8fac6c1165862237271433.jpg" aspect="1.15" %}
+{% include embed/image.html src="8e036f50a495b55cf479e34d4a9dd4a56f171d8fac6c1165862237271433.jpg" aspect="1.15" caption="Racialized illustration of the watermelon stereotype. In *'Blasts' from the Ram's Horn*, 1902. Intrnet Archive."  %}
 
 # "Cholera Bombshells"
 
@@ -91,7 +91,7 @@ The racist notion that watermelon consumption revealed unhealthy habits of Afric
 
 At the turn of the twentieth century, for instance, British mine owners in Korea [banned watermelons](http://www.koreatimes.co.kr/www/nation/2018/07/721_251812.html) from their workers’ camps to prevent outbreaks of cholera. The logic behind this decision seemed to be based on the "immense quantities" of watermelons consumed by Korean workers, including the rind (probably the white pith, which was considered good for indigestion). The racialized attitudes toward over-indulging in certain types of food were joined here by the moralizing of disease. The campaign was effective in preventing cholera, but it is unclear if its success was due to the watermelon ban.[^ref18] Similarly, posters from the Soviet Union during a cholera epidemic that lasted into the early 1920s used watermelons to illustrate how poor hygiene could lead to disease, from drinking unboiled water to eating unwashed fruit.
 
-{% include embed/image.html src="0faea65ea08620dd489e7f49d6653b6fefa8c0f0d33767d6faad2a039885.jpg" aspect="1.38" %}
+{% include embed/image.html src="0faea65ea08620dd489e7f49d6653b6fefa8c0f0d33767d6faad2a039885.jpg" aspect="1.38" caption="Unhygienic practices which lead to cholera. Colour lithograph by the Ukraine Military Sanitary Directorate, Sanitary Enlightenment Department of the Kiev Region, 1921. Wellcome Collection." %}
 
 # Commodification and Ecological Costs
 
