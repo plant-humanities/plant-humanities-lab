@@ -31,6 +31,10 @@ storykit:
     iframe {
         width: 100%;
     }
+
+    span.s2 {
+        overflow-wrap: anywhere;
+    }
 </style>
 
 # Welcome
@@ -40,7 +44,7 @@ This guide is written for program participants who will author interactive visua
 * Edit pages directly in your browser and see your changes within seconds
 * Write a plant narrative using only Markdown
 * Add interactive images, side-by-side comparisons, maps, videos, and timelines
-* Drive those visuals from links in your own writing
+* Create those visuals from links in your own writing
 * Submit a finished narrative for review and publication
 
 No prior experience with GitHub, Jekyll, or Markdown is assumed. Read straight through the first time, then come back to individual sections as a reference while you are writing.
@@ -102,9 +106,9 @@ You don't need to be a GitHub or Jekyll expert, but a few terms come up througho
 Before you begin authoring, you need:
 
 * A GitHub account
-* Your GitHub username added to the website repository with permission to create branches and edit files
+* Your GitHub username added to the **[plant-humanities/sandbox](https://github.com/plant-humanities/sandbox)** repository with permission to create branches and edit files
 
-The site is already set up and configured. A program administrator will direct you to the GitHub repository you should use and add your username to it. If you can view the repository in GitHub but you don't see a pencil icon next to files, or you can't create a branch, your account hasn't been added yet — ask the administrator.
+The site is already set up and configured. The repository you will work in is **[plant-humanities/sandbox](https://github.com/plant-humanities/sandbox)**. A program administrator will add your GitHub username to it. If you can view the repository in GitHub but you don't see a pencil icon next to files, or you can't create a branch, your account hasn't been added yet — ask the administrator.
 
 ## Creating a GitHub Account
 
@@ -122,9 +126,9 @@ Once your account is active, share your username with the program administrator 
 
 ## Working on Your Own Branch
 
-Once you have access to the repository, the first thing to do is move off the `main` branch and onto your own.
+Once you have access to the **plant-humanities/sandbox** repository, the first thing to do is to create a new branch to be used as a personal work area.
 
-1. In the repository on GitHub, click the branch selector near the top of the file list. It usually reads **main**.
+1. Open [github.com/plant-humanities/sandbox](https://github.com/plant-humanities/sandbox) and click the branch selector near the top of the file list. It usually reads **main**.
 2. In the box that appears, type a branch name. Use lower-case letters and hyphens — for example `mango-narrative`, `mary-map-updates`, or `team-rose-draft`. Pick something that briefly describes the work you're doing.
 3. Click **Create branch: `<your-name>` from `main`**.
 
@@ -170,7 +174,7 @@ The bookmarklet automatically builds a preview URL from the GitHub username, rep
 
 Once the bookmarklet is installed:
 
-1. In the repository on GitHub, open any `.md` file in the `_posts` folder.
+1. Open [github.com/plant-humanities/sandbox](https://github.com/plant-humanities/sandbox) and navigate to any `.md` file in the `_posts` folder.
 2. Click **Preview on GitHub** in your bookmarks bar.
 3. A new tab opens with the file rendered the same way the live site would render it.
 
@@ -213,18 +217,16 @@ media_subpath: /assets/posts/mango
 image:
   path: mango_header.jpg
   alt: A mango tree in full fruit
-storykit: true
 ---
 
 The mango tree...
 ```
 {: .nolineno }
 
-Three lines deserve special attention:
+A couple of lines deserve special attention:
 
 * `published: false` keeps your narrative hidden from the live site until you are ready.
 * `media_subpath` must match exactly the name of the folder where you upload images for this narrative. The convention is `/assets/posts/<narrative-slug>/`.
-* `storykit: true` turns on the interactive viewers described in Part 4. Without it, only standard Markdown works.
 
 The file `_posts/.template.md` in the repository is a starter you can copy when creating a new narrative.
 
@@ -232,7 +234,7 @@ The file `_posts/.template.md` in the repository is a starter you can copy when 
 
 The main file for a visual narrative is a Markdown file stored in the `_posts` directory. To create a new one:
 
-1. In the repository (on **your** branch), navigate to the `_posts` folder.
+1. In the **plant-humanities/sandbox** repository (on **your** branch), navigate to the `_posts` folder.
 2. Open `.template.md` and copy its contents.
 3. Click **Add file → Create new file**.
 4. Name the new file following this pattern:
@@ -383,15 +385,14 @@ The line uses Jekyll's **Liquid include** syntax. It looks like this:
 
 You do not need to understand Liquid in detail. Copy an example from this guide, change the attribute values to your own, and you are done.
 
-Three rules apply to every viewer:
+Two rules apply to every viewer:
 
-1. The narrative's front matter must include `storykit: true`.
-2. Attribute values must be in straight double quotes (`"value"`), not curly quotes (`"value"`).
-3. If you want to drive the viewer from a link in your text — for example, a "zoom in here" link — you must give the viewer an `id`.
+1. Attribute values must be in straight double quotes (`"value"`), not curly quotes (`"value"`).
+2. If you want to drive the viewer from a link in your text — for example, a "zoom in here" link — you must give the viewer an `id`.
 
 ## 4.1 Image Viewer
 
-The Image Viewer displays an image that looks like an ordinary picture. When the reader clicks it, a large, high-resolution viewer opens with smooth zoom and pan. This is the right component for any image whose detail matters — herbarium specimens, archival photographs, botanical illustrations, paintings.
+The Image Viewer displays an image that looks like an ordinary photo. When the reader clicks it, a large, high-resolution version of the viewer opens with smooth zoom and pan. This is the right component for any image whose detail matters — herbarium specimens, archival photographs, botanical illustrations, paintings.
 
 ### Using a Wikimedia Commons image
 
@@ -430,12 +431,11 @@ Caption, photographer credit, and license text are pulled automatically — you 
 A "local" image is one you have uploaded into the repository. Use a local image when:
 
 * The image isn't available on Wikimedia Commons
-* You have permission to use a specific image from a museum or archive
-* You need a specific size or crop that Commons doesn't provide
+* You own or have permission to use a specific image from a museum or archive
 
 To upload and reference a local image:
 
-1. In the repository on your branch, navigate to `assets/posts/`.
+1. In the **plant-humanities/sandbox** repository on your branch, navigate to `assets/posts/`.
 2. Use **Add file → Create new file** to create a folder for your narrative — for example `assets/posts/mango/`. (Type the folder name followed by `/` in the new-file name to create the folder.)
 3. Use **Add file → Upload files** to upload your image into that folder.
 4. Make sure the narrative's front matter sets `media_subpath` to that folder, and that **the folder name and `media_subpath` value match exactly**.
@@ -746,7 +746,7 @@ A pull request says, in effect:
 
 To open a pull request:
 
-1. In the repository on GitHub, click the **Pull requests** tab.
+1. In the **plant-humanities/sandbox** repository on GitHub, click the **Pull requests** tab.
 2. Click **New pull request**.
 3. Set the *base* branch to `main` and the *compare* branch to yours.
 4. Click **Create pull request**.
