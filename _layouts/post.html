@@ -388,15 +388,16 @@ script_includes:
     }
 
     const mainWrapper = document.getElementById('main-wrapper');
+    console.log(`page.storykit.mode: {{ page.storykit.mode }} site.storykit.mode: {{ site.storykit.mode }}`);
     let mode_toggle = ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true';
-    let mode = mode_toggle
-      ? localStorage.getItem('postViewMode') || '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat'
+    let modeStr = mode_toggle
+      ? '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || localStorage.getItem('postViewMode') || 'flat'
       : '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat';
-    mode = mode === 'col1' || mode === 'flat' ? 'flat' : 'col2';
+    let mode = modeStr === 'col1' || modeStr === 'flat' ? 'flat' : 'col2';
     let doAutoFloat = ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true';
     let groupEmbeds = ('{{ page.storykit.group_embeds }}' || '{{ site.storykit.group_embeds }}' || 'true').toLowerCase() === 'true';
     let wikidataInfoPopups = ('{{ page.storykit.wikidata_info_popups }}' || '{{ site.storykit.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
-    console.log(`StoryKit: isMobile:${isMobile} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
+    console.log(`StoryKit: isMobile:${isMobile} modeStr:${modeStr} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
 
     if (mode === 'flat' || mode === 'col1') {
       let contentEl = document.querySelector('.post-content');
