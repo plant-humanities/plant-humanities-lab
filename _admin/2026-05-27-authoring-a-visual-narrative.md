@@ -133,13 +133,13 @@ No prior experience with [GitHub](https://github.com/), [Jekyll](https://jekyllr
 
 ## What Is StoryKit?
 
-**StoryKit** is the name used on this site for a streamlined version of **[Juncture](https://labs.jstor.org/projects/juncture/)**, a visual narrative authoring and display framework. Juncture grew out of a 2018 digital humanities collaboration between **[JSTOR Labs](https://labs.jstor.org)** and **[Dumbarton Oaks](https://www.doaks.org/)**, with one straightforward goal:
+**StoryKit** is the name used on this site for a simplified version of **[Juncture](https://labs.jstor.org/projects/juncture/)**, a visual narrative authoring and display framework. Juncture grew out of a 2018 digital humanities collaboration between **[JSTOR Labs](https://labs.jstor.org)** and **[Dumbarton Oaks](https://www.doaks.org/)**, with one straightforward goal:
 
 > Enable students and scholars to create interactive visual narratives using Markdown — without requiring coding skills.
 
 Juncture was created to make it easier to build web-based visual narratives that combine prose with rich visual and interactive content. StoryKit keeps that same core idea but in a simpler form tailored for this site, built directly on Jekyll instead of relying on heavy custom infrastructure.
 
-For authors, the important point is that StoryKit lets you write mostly in regular Markdown while adding special instructions where you want interactive viewers to appear — images, maps, videos, timelines, and other media. You do not need to understand the technical details. You mainly need to know how to edit a Markdown file, add the appropriate StoryKit viewer instructions, preview your work, and submit it for review.
+For authors, the important point is that StoryKit lets you write mostly in regular Markdown and add special instructions wherever you want interactive viewers to appear: images, maps, videos, timelines, and more. You do not need to understand the technical details. You just need to know how to edit a Markdown file, add the appropriate viewer instructions, preview your work, and submit it for review.
 
 ## What You Are Creating
 
@@ -162,7 +162,7 @@ You don't need to be a GitHub or Jekyll expert, but a few terms come up througho
 
 **GitHub repository.** The website is stored in a GitHub repository. Think of the repository as the project folder for the website. It contains every file needed to build the site, including all the visual narratives.
 
-**Branch.** A Git concept for an independent copy of a repository. The repository has a `main` branch from which the live site is built; only designated administrators can change `main` directly. When you create a branch you get your own copy of `main` to work in — you can create and edit files, preview the results, and revise freely without affecting the live site. Your changes stay on your branch until an administrator reviews and merges them into `main`.
+**Branch.** A Git concept for an independent copy of a repository. The repository has a `main` branch from which the live site is built; only designated administrators can change `main` directly. When you create a branch, you get your own copy of `main` to work in. You can create and edit files, preview your work, and revise freely without affecting the live site. Your changes stay on your branch until an administrator reviews and merges them into `main`.
 
 **Commit.** GitHub's version of a save. When you commit, you save your changes to your branch. Each commit can include a short comment ("commit message") describing what changed, such as *Add introduction section* or *Fix typo in caption*.
 
@@ -170,9 +170,9 @@ You don't need to be a GitHub or Jekyll expert, but a few terms come up througho
 
 **Markdown.** A simple way to write formatted text using plain text. Headings, lists, links, and emphasis all have lightweight equivalents in Markdown that are much easier to type than HTML.
 
-**StoryKit viewer.** An interactive element you can insert into a visual narrative — an image viewer, a map, a YouTube video, and so on. Viewers are added with **Liquid include tags**. Liquid is the templating language used by Jekyll; an *include* tag is a short instruction that tells Jekyll to insert a pre-built component at that point in the page. For StoryKit viewers the tag looks like `{% raw %}{% include embed/image.html src="..." %}{% endraw %}` — you supply the attribute values, and Jekyll does the rest.
+**StoryKit viewer.** An interactive element you can insert into a visual narrative: an image viewer, a map, a YouTube video, and so on. Viewers are added with **Liquid include tags**. Liquid is the templating language used by Jekyll; an *include* tag is a short instruction that tells Jekyll to insert a pre-built component at that point in the page. For a StoryKit viewer the tag looks like `{% raw %}{% include embed/image.html src="..." %}{% endraw %}`. You supply the attribute values, and Jekyll handles the rest.
 
-**Preview tool.** A small utility that lets you see a high-quality preview of your visual narrative while you are still editing it. It closely imitates the way the final site will render the page.
+**Preview tool.** A small utility that lets you see how your visual narrative will look on the live site, without waiting for GitHub Pages to rebuild. It renders the page the same way the live site does.
 
 **Pull request.** How you ask for your completed changes to be reviewed and possibly published. When your narrative is ready, you open a pull request from your working branch into `main`. An administrator reviews the changes and decides whether to merge them.
 
@@ -187,7 +187,7 @@ Before you begin authoring, you need:
 * A GitHub account
 * Your GitHub username added to the **[plant-humanities/sandbox](https://github.com/plant-humanities/sandbox)** repository with permission to create branches and edit files
 
-The site is already set up and configured. The repository you will work in is **[plant-humanities/sandbox](https://github.com/plant-humanities/sandbox)**. A program administrator will add your GitHub username to it. If you can view the repository in GitHub but you don't see a pencil icon next to files, or you can't create a branch, your account hasn't been added yet — ask the administrator.
+The repository you will work in is **[plant-humanities/sandbox](https://github.com/plant-humanities/sandbox)**. A program administrator will add your GitHub username to it. If you can view the repository in GitHub but you don't see a pencil icon next to files, or you can't create a branch, your account hasn't been added yet. Contact the administrator.
 
 ## Creating a GitHub Account
 
@@ -195,7 +195,7 @@ GitHub is a free service. To create an account:
 
 1. Go to <https://github.com> and click **Sign up**.
 2. Use an email address you can check. School or work email works fine.
-3. Pick a username. Your username will appear in URLs and in commit history, so choose something you don't mind being public — many people use a variant of their name.
+3. Pick a username. Your username will appear in URLs and in commit history, so choose something you don't mind being public. Many people use a variant of their name.
 4. Verify your email through the confirmation message GitHub sends.
 
 <blockquote class="prompt-tip"><p><strong>Pick your username carefully.</strong> Changing it later is possible but breaks links to your work. A short, professional-looking username serves you well past this program.</p></blockquote>
@@ -204,10 +204,10 @@ Once your account is active, share your username with the program administrator 
 
 ## Working on Your Own Branch
 
-Once you have access to the **plant-humanities/sandbox** repository, the first thing to do is to create a new branch to be used as a personal work area.
+Once you have access to the **plant-humanities/sandbox** repository, start by creating a branch for your work.
 
-1. Open [github.com/plant-humanities/sandbox](https://github.com/plant-humanities/sandbox). Near the top-left of the file list, find the **branch selector** — a small button labelled with the current branch name (usually **main**) and a downward arrow.
-2. Click the branch selector. In the box that appears, type a branch name. Use lower-case letters and hyphens — for example `mango-narrative`, `mary-map-updates`, or `team-rose-draft`. Pick something that briefly describes the work you're doing.
+1. Open [github.com/plant-humanities/sandbox](https://github.com/plant-humanities/sandbox). Near the top-left of the file list you will see the **branch selector**, a small button labelled with the current branch name (usually **main**) and a downward arrow.
+2. Click the branch selector. In the box that appears, type a branch name. Use lower-case letters and hyphens, for example `mango-narrative`, `mary-map-updates`, or `team-rose-draft`. Pick something that briefly describes your work.
 3. Click **Create branch: `<your-name>` from `main`**.
 
 You are now on your own branch. Any edits you make from this point on affect only this branch until you ask for them to be merged into `main`.
@@ -225,14 +225,14 @@ flowchart LR
 
 <blockquote class="prompt-tip"><p><strong>Why work on a branch?</strong> While you experiment on your branch, the published version of the site keeps rendering from <code>main</code>. Nothing you do on a branch is visible to the public until an administrator merges it in.</p></blockquote>
 
-Throughout the rest of the guide, **always check that the branch selector shows your branch — not `main` — before editing.** The branch selector is visible at the top of the file list any time you are browsing the repository; check it every time you return to GitHub to continue working.
+Throughout the rest of the guide, **always check that the branch selector shows your branch (not `main`) before editing.** The branch selector is visible at the top of the file list any time you are browsing the repository; check it every time you return to GitHub to continue working.
 
 ## Editing a File on GitHub
 
 Most of your authoring time will be spent editing files you have already created. To edit any file in the repository:
 
 1. Confirm the branch selector shows your branch.
-2. Navigate to the file — for example, click into the `_posts` folder and then click your narrative's `.md` filename.
+2. Navigate to the file. For example, click into the `_posts` folder and then click your narrative's `.md` filename.
 3. GitHub shows the rendered preview of the file. To edit it, click the **pencil icon** (✏) in the upper-right area of the file view, near the **Raw** and **Download** buttons.
 4. The editor opens. Make your changes.
 5. When finished, scroll down to the **Commit changes** section at the bottom of the page.
@@ -241,7 +241,7 @@ Most of your authoring time will be spent editing files you have already created
 
 Your changes are saved to your branch and are immediately available to preview.
 
-<blockquote class="prompt-tip"><p><strong>The GitHub editor has a Preview tab</strong> (at the top of the editing area) that shows basic Markdown formatting — headings, bold, italics, and lists. It is handy for checking paragraph structure. However, it does <strong>not</strong> render StoryKit viewers; those show as raw code in GitHub's preview. Use the bookmarklet preview tool to see viewers rendered correctly.</p></blockquote>
+<blockquote class="prompt-tip"><p><strong>The GitHub editor has a Preview tab</strong> (at the top of the editing area) that shows basic Markdown formatting: headings, bold, italics, and lists. It is handy for checking paragraph structure. However, it does <strong>not</strong> render StoryKit viewers; those show as raw code in GitHub's preview. Use the bookmarklet preview tool to see viewers rendered correctly.</p></blockquote>
 
 ## Using the Preview Tool
 
@@ -285,7 +285,7 @@ You install the preview tool by dragging a bookmarklet into your browser's bookm
 
 3. Confirm that a new bookmark labelled *Preview on GitHub* now appears in your bookmarks bar.
 
-The bookmarklet automatically builds a preview URL from the GitHub username, repository, file path, and branch of whichever `.md` page you happen to be looking at — so you don't have to build the URL by hand.
+The bookmarklet reads the current GitHub page address and builds the preview URL for you, so you don't have to construct it by hand.
 
 ### Day-to-day use
 
@@ -295,7 +295,7 @@ Once the bookmarklet is installed:
 2. Click **Preview on GitHub** in your bookmarks bar.
 3. A new tab opens with the file rendered the same way the live site would render it.
 
-<blockquote class="prompt-tip"><p><strong>Work with two browser windows side by side.</strong> Keep GitHub open in one window and the preview in the other. After each commit, switch to the preview window and reload. This tight loop — edit, commit, reload — makes it easy to catch problems early, before they compound.</p></blockquote>
+<blockquote class="prompt-tip"><p><strong>Work with two browser windows side by side.</strong> Keep GitHub open in one window and the preview in the other. After each commit, switch to the preview window and reload. This edit-commit-reload cycle makes it easy to catch problems before they pile up.</p></blockquote>
 
 <blockquote class="prompt-warning"><p><strong>If the preview fails to open</strong>, check that you launched the bookmarklet while looking at a <code>.md</code> file (not a folder or another file type). The bookmarklet only works on <code>.md</code> pages inside a repository.</p></blockquote>
 
@@ -305,10 +305,12 @@ Once the bookmarklet is installed:
 
 The text of every visual narrative is written in **Markdown**, a plain-text format for writing styled documents. You will never need to write HTML by hand. Markdown is small enough to learn in an afternoon; the rest of this part covers everything you need for a polished article.
 
+For a comprehensive Markdown reference, see [Markdown Guide](https://www.markdownguide.org/). If you want to experiment with Markdown before using it in a narrative, web-based playgrounds such as [Dillinger](https://dillinger.io/) let you type Markdown on one side and see the rendered result instantly on the other, with no setup required.
+
 A Markdown file has two parts:
 
-1. **Front matter** — a block at the very top, between two `---` lines, that tells the site what the post is and how to display it.
-2. **Body** — everything below the front matter. This is your narrative.
+1. **Front matter**: a block at the very top, between two `---` lines, that tells the site what the post is and how to display it.
+2. **Body**: everything below the front matter. This is your narrative.
 
 A minimal narrative looks like this:
 
@@ -414,7 +416,7 @@ Wrap text in asterisks or underscores to emphasise it.
 ```
 {: .nolineno }
 
-Use italics for the scientific name of a plant (*Mangifera indica*), for the title of a book or journal, and for foreign-language words on first use. Use bold sparingly — it is loud and quickly becomes noise if used in every paragraph.
+Use italics for the scientific name of a plant (*Mangifera indica*), for the title of a book or journal, and for foreign-language words on first use. Use bold sparingly; it loses its force quickly if overused.
 
 ## 3.4 Popovers (Entity Information Boxes)
 
@@ -426,7 +428,7 @@ Popovers are powered by **[Wikidata](https://www.wikidata.org/wiki/Wikidata:Main
 
 1. Search Wikipedia for the subject.
 2. On the Wikipedia article, look in the left-hand sidebar for **Wikidata item**.
-3. The page that opens shows the identifier at the top — for example **Q156928** for *Viburnum opulus*.
+3. The page that opens shows the identifier at the top, for example **Q156928** for *Viburnum opulus*.
 
 ### Writing the link
 
@@ -471,7 +473,7 @@ See the [Map Viewer](#43-map-viewer) section below.
 Footnotes let you cite sources without cluttering the prose. Kramdown (the Markdown processor Jekyll uses) supports them with a two-part syntax.
 
 1. In the body, place a marker where the footnote should appear.
-2. Anywhere later in the file — usually at the bottom — write the definition.
+2. Anywhere later in the file (usually at the bottom), write the definition.
 
 ```markdown
 The guelder rose plays a prominent role in Ukrainian folk song.[^1]
@@ -495,7 +497,7 @@ A few things to know:
 
 # Part 4 — The Content Viewers
 
-The content viewers are what set the Plant Humanities Lab platform apart from a normal blog. They are interactive components — images you can zoom into, maps you can fly around, before-and-after sliders, embedded videos — and they are inserted into your Markdown with a single line.
+The content viewers are what set the Plant Humanities Lab apart from a standard blog. They are interactive components — images you can zoom into, maps you can pan around, before-and-after sliders, embedded videos — each added to your narrative with a single line of code.
 
 The line uses Jekyll's **Liquid include** syntax. It looks like this:
 
@@ -514,28 +516,28 @@ You do not need to understand Liquid in detail. Copy an example from this guide,
 Two rules apply to every viewer:
 
 1. Attribute values must be in straight double quotes (`"value"`), not curly quotes (`"value"`).
-2. If you want to drive the viewer from a link in your text — for example, a "zoom in here" link — you must give the viewer an `id`.
+2. If you want to drive the viewer from a link in your text (for example, a "zoom in here" link), you must give the viewer an `id`.
 
-<blockquote class="prompt-warning"><p><strong>Watch out for curly quotes.</strong> If you type a viewer tag directly in GitHub's editor you will get straight quotes automatically. But if you draft the tag in a word processor — Word, Google Docs, Apple Pages — and paste it in, the quote characters are often silently converted to typographic curly quotes (<code>"</code> and <code>"</code>). The viewer will fail to render with no obvious error message. If a viewer shows as a placeholder, check its quote characters first.</p></blockquote>
+<blockquote class="prompt-warning"><p><strong>Watch out for curly quotes.</strong> Typing a viewer tag directly in GitHub's editor produces straight quotes automatically. But if you draft the tag in a word processor (Word, Google Docs, Apple Pages) and paste it in, the quote characters are often silently converted to typographic curly quotes (<code>"</code> and <code>"</code>). The viewer will fail to render with no obvious error message. If a viewer shows as a placeholder, check its quote characters first.</p></blockquote>
 
 ## 4.1 Image Viewer
 
-The Image Viewer displays an image that looks like an ordinary photo. When the reader clicks it, a large, high-resolution version of the viewer opens with smooth zoom and pan. This is the right component for any image whose detail matters — herbarium specimens, archival photographs, botanical illustrations, paintings.
+The Image Viewer displays an image that looks like an ordinary photo. When the reader clicks it, a large, high-resolution version of the viewer opens with smooth zoom and pan. This is the right component for any image whose detail matters: herbarium specimens, archival photographs, botanical illustrations, paintings.
 
 The viewer supports three source types:
 
-* **Wikimedia Commons** — referenced with a `wc:` shorthand; caption, attribution, and license are pulled automatically.
-* **Any URL** — a direct link to any publicly accessible image, including IIIF-served images and museum collection pages.
-* **Locally hosted** — an image file uploaded into the repository.
+* **Wikimedia Commons**: referenced with a `wc:` shorthand; caption, attribution, and license are fetched automatically.
+* **Any URL**: a direct link to any publicly accessible image, including IIIF-served images and museum collection pages.
+* **Locally hosted**: an image file uploaded into the repository.
 
 ### Using a Wikimedia Commons image
 
-[Wikimedia Commons](https://commons.wikimedia.org) is the free media library that powers Wikipedia, and it is the preferred source for narrative images. The platform provides robust long-term hosting, rich metadata, and clear licensing — and the Image Viewer has first-class support for it, pulling caption, attribution, and license text automatically.
+[Wikimedia Commons](https://commons.wikimedia.org) is the free media library that powers Wikipedia, and it is the preferred source for narrative images. The Image Viewer has built-in support for Commons: it fetches the caption, attribution, and license information automatically, so you don't need to enter them by hand.
 
 To use a Commons image:
 
 1. Find the image on Commons.
-2. Copy the file name. It appears at the top of the file page — for example, `File:Monument Valley, Utah, USA.jpg`.
+2. Copy the file name. It appears at the top of the file page, for example `File:Monument Valley, Utah, USA.jpg`.
 3. In your Markdown, reference it with the shorthand `wc:File_Name.jpg` (replace spaces with underscores; do not include the leading `File:`).
 
 <div class="example">
@@ -558,13 +560,13 @@ To use a Commons image:
 </div>
 </div>
 
-Caption, photographer credit, and license text are pulled automatically — you don't need to type them in. Most files on Commons are public domain or available under open licenses; even so, take a moment to review the Commons file page to confirm what is required for a specific image.
+Caption, photographer credit, and license text are fetched automatically. Most files on Commons are public domain or available under open licenses, but take a moment to check the file page for any specific requirements.
 
-<blockquote class="prompt-tip"><p><strong>If you own the image, consider uploading it to Wikimedia Commons.</strong> Commons is a robust, preservation-grade hosting platform backed by the Wikimedia Foundation. Uploading your image there gives it long-term archival storage, support for rich descriptive metadata, and a clear licensing framework that you control. It also makes the image discoverable and reusable by others — subject to whatever license you choose — which amplifies the impact of your work. Once on Commons, the Image Viewer handles attribution automatically, just like any other Commons image.</p></blockquote>
+<blockquote class="prompt-tip"><p><strong>If you own the image, consider uploading it to Wikimedia Commons.</strong> Commons is a well-maintained, long-term hosting platform backed by the Wikimedia Foundation. Uploading there gives your image archival storage, support for detailed descriptive metadata, and a licensing framework you control. It also makes the image available to other researchers and educators under whatever terms you choose. Once it's on Commons, the Image Viewer handles attribution automatically, just like any other Commons image.</p></blockquote>
 
 ### Using any URL-accessible image
 
-The viewer can display any image that is publicly accessible via a URL — museum collection images, images hosted on institutional repositories, or images served via the IIIF standard.
+The viewer can display any image that is publicly accessible via a URL: museum collection images, images hosted on institutional repositories, or images served via the IIIF standard.
 
 **Direct image URL:**
 
@@ -577,7 +579,7 @@ The viewer can display any image that is publicly accessible via a URL — museu
 ```
 {: .nolineno }
 
-**IIIF manifest URL** — many museums publish high-resolution images via [IIIF](https://iiif.io). If a museum provides a manifest URL you can pass it with the `manifest` attribute instead of `src`; the viewer loads the manifest and displays the image at full resolution with metadata drawn from it:
+**IIIF manifest URL**: many museums publish high-resolution images via [IIIF](https://iiif.io). If a museum provides a manifest URL, pass it with the `manifest` attribute instead of `src`; the viewer loads the manifest and displays the image at full resolution with metadata drawn from it:
 
 ```liquid
 {% raw %}{% include embed/image.html
@@ -590,14 +592,14 @@ Use the `attribution` attribute to add or override the credit line when the auto
 
 ### Using a locally hosted image
 
-A "local" image is one you have uploaded into the repository itself. Use this option when the image is not available from any public URL — for example a personal photograph or a scan you have obtained specifically for the narrative.
+A "local" image is one you have uploaded into the repository itself. Use this option when the image is not available from any public URL, for example a personal photograph or a scan obtained specifically for this narrative.
 
 <blockquote class="prompt-tip"><p>Before uploading an image locally, ask whether you could instead upload it to <strong>Wikimedia Commons</strong>. If you own the image and are willing to share it under an open licence, Commons is the better long-term home: it provides archival preservation, rich metadata, and automatic attribution handling that local hosting does not.</p></blockquote>
 
 To upload and reference a local image:
 
 1. In the **plant-humanities/sandbox** repository on your branch, navigate to `assets/posts/`.
-2. Click **Add file → Create new file**. In the filename field, type your folder name followed by `/` and a placeholder filename — for example `mango/.gitkeep`. Add a single space as the file content, then commit. This creates the `assets/posts/mango/` folder.
+2. Click **Add file → Create new file**. In the filename field, type your folder name followed by `/` and a placeholder filename, for example `mango/.gitkeep`. Add a single space as the file content, then commit. This creates the `assets/posts/mango/` folder.
 
    <blockquote class="prompt-tip"><p><strong>GitHub cannot save an empty folder.</strong> You must create at least one file inside a new folder before GitHub will save it. The <code>.gitkeep</code> placeholder file above serves that purpose; you can delete it later once real image files are in the folder.</p></blockquote>
 
@@ -640,7 +642,7 @@ The Image Compare Viewer places two images on top of one another with a vertical
 
 ### Basic use
 
-You need two images in the same folder — they can be local files or Wikimedia Commons files — and you set the `before` and `after` attributes.
+You need two images (either local files or Wikimedia Commons files) in the same folder, and you set the `before` and `after` attributes.
 
 ```liquid
 {% raw %}{% include embed/image-compare.html
@@ -713,7 +715,7 @@ markers="37.01056, -110.2425~Monument Valley|36.0544, -112.1401~Grand Canyon"
 ```
 {: .nolineno }
 
-You can also use a Wikidata Q-identifier in place of coordinates for a marker — the map resolves the location automatically. For example: `markers="Q220~Rome"`.
+You can also use a Wikidata Q-identifier in place of coordinates for a marker; the map resolves the location automatically. For example: `markers="Q220~Rome"`.
 
 ### Other useful attributes
 
@@ -763,7 +765,7 @@ Combine `start` and `end` to highlight a specific clip from a longer video.
 
 ## 4.5 Zoom-to and Fly-to Animations
 
-This is the feature that makes a Plant Humanities Lab visual narrative different from a normal blog post: links in your prose can **control** the viewers on the page. The text becomes part of the interface.
+This is what sets a Plant Humanities Lab visual narrative apart from a standard blog post: links in your prose can **control** the viewers on the page. A reader clicks a place name and the map flies there; they click a phrase and the image zooms in. The text and the visuals work together.
 
 Three things have to be true for an action link to work:
 
@@ -875,7 +877,7 @@ This opens the expanded video, seeks to 0:42, and stops at 1:15.
 
 ## 4.6 The General Iframe (and Timeline JS)
 
-For visualisations that are not built into the platform, the general **iframe** include lets you embed any external interactive page. An *iframe* is a web page inside another web page; from your side, all you have to provide is its URL.
+For content that isn't covered by the dedicated viewers, the general **iframe** include lets you embed any external interactive page. An *iframe* is simply a web page displayed inside another web page; all you need to provide is its URL.
 
 ```liquid
 {% raw %}{% include embed/iframe.html
@@ -905,7 +907,7 @@ The workflow is:
 1. **Open the Timeline JS template.** Visit <https://timeline.knightlab.com> and click **Make a Timeline**. Follow the **Get the Spreadsheet Template** link to make your own copy.
 2. **Fill in your events.** Each row of the sheet is one moment on the timeline: a date, a headline, a paragraph of text, and optionally a media URL (image, YouTube link, Wikipedia page).
 3. **Publish the sheet.** In Google Sheets, choose **File → Share → Publish to web** and accept the defaults.
-4. **Generate the embed URL.** Back on the Timeline JS site, paste the URL of your published sheet into the box. The site gives you a **Preview URL** — something like `https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=<your-sheet-id>`.
+4. **Generate the embed URL.** Back on the Timeline JS site, paste the URL of your published sheet into the box. The site gives you a **Preview URL**, something like `https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=<your-sheet-id>`.
 5. **Embed it in your narrative:**
 
    ```liquid
@@ -917,9 +919,9 @@ The workflow is:
    ```
    {: .nolineno }
 
-That's all. To update the timeline later, just edit the Google Sheet — your narrative picks up the new version automatically next time the page is loaded.
+That's all. To update the timeline later, just edit the Google Sheet and your narrative will pick up the new version automatically the next time the page loads.
 
-The same pattern works for any external interactive page that allows itself to be embedded — Internet Archive book viewers, museum collection pages, Sketchfab 3-D models, charts published from Datawrapper or Flourish, and so on. If a service offers an **embed URL**, the general iframe include is what you reach for.
+The same pattern works for any external page that allows embedding: Internet Archive book viewers, museum collection pages, Sketchfab 3-D models, charts from Datawrapper or Flourish, and so on. If a service provides an **embed URL**, the iframe include is what you need.
 
 ## 4.7 Mermaid Diagrams
 
@@ -950,7 +952,7 @@ flowchart LR
 ````
 {: .nolineno }
 
-Which renders as:
+Result:
 
 ```mermaid
 flowchart LR
@@ -980,7 +982,7 @@ math: true
 
 Use `$$` as the delimiter. The placement of blank lines determines whether the equation is displayed as a block or inline.
 
-**Block equation** (its own line, centred) — blank lines required before and after the `$$` delimiters:
+**Block equation** (its own centred line); blank lines are required before and after the `$$` delimiters:
 
 ```markdown
 $$
@@ -989,14 +991,14 @@ $$
 ```
 {: .nolineno }
 
-**Inline equation** (flows within a sentence) — no blank lines:
+**Inline equation** (flows within a sentence); no blank lines:
 
 ```markdown
 The result follows from $$ E = mc^2 $$ directly.
 ```
 {: .nolineno }
 
-**Inline equation in a list item** — escape the first `$`:
+**Inline equation in a list item**; escape the first `$`:
 
 ```markdown
 - \$$ \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6} $$
@@ -1027,7 +1029,7 @@ To open a pull request:
 
 The pull request does **not** automatically publish your narrative. It gives an administrator a chance to review the work first.
 
-<blockquote class="prompt-tip"><p><strong>Make sure the preview looks exactly right before opening the pull request.</strong> The administrator will see your narrative in the state it is in when the request is opened. You can still commit fixes to your branch after opening it — the pull request updates automatically — but it is cleaner to resolve all issues first.</p></blockquote>
+<blockquote class="prompt-tip"><p><strong>Make sure the preview looks right before opening the pull request.</strong> The administrator will see your narrative as it is when the request is opened. You can still commit fixes after opening it (the pull request updates automatically), but it is cleaner to resolve everything first.</p></blockquote>
 
 ## What an Administrator Does
 
@@ -1050,7 +1052,7 @@ This workflow protects the live website while still letting authors work indepen
 * Administrators retain control over what gets published
 * Mistakes can be caught before they appear on the public site
 
-The key idea is simple: authors work in branches, the live site is published from main, and pull requests are how finished work is reviewed and published.
+The key idea is straightforward: authors work in branches, the live site is published from `main`, and pull requests are how finished work gets reviewed and published.
 
 ---
 
@@ -1066,7 +1068,7 @@ Don't wait until the whole narrative is finished before using the preview tool. 
 
 ## Use Clear File Names
 
-Use file names that are short, descriptive, and consistent with the site's existing naming pattern. Avoid spaces — use hyphens instead.
+Use file names that are short, descriptive, and consistent with the site's existing naming pattern. Avoid spaces; use hyphens instead.
 
 Good: `2026-05-12-history-of-the-garden.md`
 
@@ -1074,11 +1076,11 @@ Avoid: `My New Essay Final Version.md`
 
 ## Keep Captions and Credits Accurate
 
-Images and other media are often central to a visual narrative. Double-check that captions, credits, and source information are correct before submitting — especially when using locally uploaded images that don't come with automatic Wikimedia attribution.
+Images and other media are often central to a visual narrative. Double-check that captions, credits, and source information are correct before submitting, especially when using locally uploaded images that don't carry automatic Wikimedia attribution.
 
 ## Ask for Help Before Publishing
 
-If something doesn't look right in the preview, ask for help before opening the pull request. Most common issues are easy to fix once identified — a missing `id`, a mismatched `media_subpath`, a stray curly quote — but they can be hard to spot if you've been staring at the same draft for hours.
+If something doesn't look right in the preview, ask for help before opening the pull request. Most problems are easy to fix once identified (a missing `id`, a mismatched `media_subpath`, a stray curly quote), but they're hard to see when you've been looking at the same draft for hours.
 
 ---
 
@@ -1113,7 +1115,7 @@ Before opening a pull request, verify:
 * All Wikidata Q-identifiers in popover links point to the right entity
 * All footnotes resolve to a definition at the bottom of the file
 * Captions and attribution on local images are correct
-* The branch contains only commits related to your narrative — nothing accidental elsewhere
+* The branch contains only commits related to your narrative, with nothing accidental included
 * The file name follows the `yyyy-mm-dd-narrative-name.md` pattern
 
 ## Troubleshooting
@@ -1124,7 +1126,7 @@ If something isn't behaving the way you expect, work through this list in order.
 * **A local image isn't loading.** Check that `media_subpath` in the front matter exactly matches the folder name in `assets/posts/`. Capitalisation and dashes matter.
 * **An action link does nothing when clicked.** Check that the viewer has an `id` attribute and that the link's URL begins with exactly that `id`.
 * **Quotes around an attribute value cause errors.** Use straight double quotes `"..."`, not curly ones `"…"`. Curly quotes often appear when text is pasted from word processors.
-* **An image is not rotating.** Use `rotate="90"` (or `"180"`, `"270"`). Some older narratives in the repository use `rotation=` — that is an unsupported attribute name and has no effect; rename it to `rotate=`.
+* **An image is not rotating.** Use `rotate="90"` (or `"180"`, `"270"`). Some older narratives in the repository use `rotation=`, which is not supported and has no effect; rename it to `rotate=`.
 * **Footnotes aren't rendering.** Make sure there is a blank line before the first `[^x]:` definition.
 * **Your changes aren't showing up on the public site.** Confirm that `published: true` is in the front matter, the pull request has been merged into `main`, and that one to five minutes have passed for the rebuild.
 * **The preview tool isn't opening.** Make sure you launched the bookmarklet while looking at a `.md` file on GitHub, not a folder.
