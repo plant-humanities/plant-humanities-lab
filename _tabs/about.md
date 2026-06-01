@@ -72,6 +72,8 @@ between the life sciences and the humanities that connects the deep time of evol
 planetary processes with the historical time of human cultures, both to shed light on our current
 environmental predicament, and to help us imagine new futures for plant-people relationships.
 
+{% include embed/image.html src="2679761_Ehret_pl_0013 (2).tiff" %}
+
 In the next phase of the initiative, we plan to include additional digital tools that will enable
 students and researchers to embark on their own explorations, alongside new plant narratives.
 We also envisage organizing the narratives around the concept of “plant humanities hotspots,” on
