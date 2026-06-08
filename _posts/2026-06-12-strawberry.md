@@ -1,4 +1,4 @@
----​
+---
 title: 'Strawberry: The Paradoxical Delights of the Devil’s Fruit'​
 description: Strawberries are nice​
 author: Elizabeth Mirabal, Madeleine Dowd, and Sophia Kamps
