@@ -9,7 +9,7 @@ published: false
 featured: true
 media_subpath: /assets/posts/stawberry
 image:
-  path: wc:103_fragaria_vesca_L.jpg
+  path: wc:Garden_strawberry_(Fragaria_×_ananassa)_single2.jpg
 storykit: true
 categories: ["Food & Sustenance", "Spice & Flavor"]
 ---
