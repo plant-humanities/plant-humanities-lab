@@ -31,8 +31,8 @@ It is tempting to think of plants as static, passive things, the “mute, immobi
 
 *F. vesca* are the small, ruby-like fruits that have jeweled Europe and Western Asia—both in wild and cultivated forms—since at least Roman times.[^5] These strawberries are small in stature but pack an intense flavor, variously described as “bubble gum,”[^6] “rose,” “pineapple,” and “vanilla.”[^7]
 
-{% include embed/image.html src="wc:Fragaria_vesca_fruit_-_Keila.jpg" %}
+{% include embed/image.html src="wc:Fragaria_vesca_fruit_-_Keila.jpg" caption="*Fragaria vesca*" %}
 
 *F. moschata*, also called musk strawberries, are the *F. vesca*’s slightly larger, funkier cousin. With a native range stretching from France to Central Siberia,[^8] *F. moschata* made a name for themselves with their unusually powerful fragrance. With a scent so strong that “a few ripe berries can perfume a room,” the musk strawberry was considered a delicacy due to its flavor notes of honey, musk, wine, raspberry, and clove.[^9] So revered was this rare strawberry that it was immortalized in Jane Austen’s *Emma* when a party guest declared the hautboy (the English name for the *F. moschata*), as compared to other strawberries, “infinitely superior—no comparison—the others hardly eatable.”[^10]
 
-{% include embed/image.html src="wc:Fragaria_moschata_detail.JPG" %}
+{% include embed/image.html src="wc:Fragaria_moschata_detail.JPG" caption="*Fragaria moschata*" %}
