@@ -9,7 +9,7 @@ media_subpath: /assets/posts/strawberry
 image:​
   path: wc:Growing_Strawberries_in_Kent_-_geograph.org.uk_-_331348.jpg
 storykit: true
-featured: false​
+featured: true​
 categories: ["americas"]​
 ---
 
