@@ -23,3 +23,8 @@ The strawberry plant contradicts itself often; the contrast between our notion o
 {% include embed/image.html src=wc:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg caption="
 The Garden of Earthly Delights in the Museo del Prado in Madrid, c. 1495–1505, attributed to Hieronymus Bosch, Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:StrawberryPickersNearPonchatoulaFSA.jpeg)" %}
 
+# A Cultivation Story
+
+It is tempting to think of plants as static, passive things, the “mute, immobile furniture” in the background of human history.[^4] But we need only to look at the story of the strawberry—and its radical transformation as a biotic agent and an object of cultural import—to get a sense of the plant as a dynamic and lively entity. The modern supermarket strawberry, *Fragaria x ananassa*, resulted from the complex interaction of *fragaria* biology, the desires of human cultivators, and the chance meeting of certain plants at the right place and time. Because of this, the strawberry most of us encounter today looks, tastes, smells, and feels very different from its wild forerunners, the *F. vesca*, *F. moschata*, *F. virginiana*, and *F. chiloensis*.
+
+{% include embed/image.html src="wc:1932_Catalog_Rayner_Bros._-_selected_varieties_of_strawberry_plants_(1932)_(16668617532).jpg" %}
