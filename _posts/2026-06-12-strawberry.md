@@ -64,3 +64,7 @@ The strawberry’s story by no means ends with the creation of the *Fragaria x a
 Perhaps the biggest change in the story of the strawberry over the last century is the introduction of soil fumigants to the growing process, which treat the soil for pests and diseases like wilt. Chloropicrin combined with methyl bromide became the strawberry-growing cocktail of choice for California strawberry growers, increasing crop yield by twenty- or thirty-fold in some cases. So widespread did these chemicals become that banks would not always make loans to growers who did not fumigate.[^22]
 
 {% include embed/image.html src="wc:Growing_Strawberries_in_Kent_-_geograph.org.uk_-_331348.jpg" %}
+
+Unsurprisingly, fumigation comes with many adverse effects to farmers and people living around strawberry plantations; cancer, damage to lungs, liver, kidneys, nervous system, lower birth weight and smaller baby head circumference are just a few of the observed effects. Yet many strawberry growers are trapped in a cycle of use; without the increased yield occasioned by fumigants, they can’t turn a large enough profit to stay in business.[^23]
+
+{% include embed/image.html src="wc:Miaoli_Dahu_Strawberry_Farm_1.jpg" %}
