@@ -41,6 +41,10 @@ The Americas, too, were abundant with strawberries, wild and cultivated. The *F.
 
 {% include embed/image.html src="wc:Fragaria_virginiana_15-p.bot-fraga.virgin-01.jpg" caption="*Fragaria virginia*" %}
 
-The *F. chiloensis* lined the Western coast of North and South America as well as present day Argentina and Bolivia.[^13] Often referred to as simply “the chili,” by the Europeans who first encountered it in Chile, it is reported to have a mild, sweet flavor like a white peach.[^14] At least three Indigenous groups in what is now Chile began domesticating the F. chiloensis: the Mapuche, Huilliche, and Picunche peoples ate the strawberries fresh and dried, and used them for medicine.[^15]
+The *F. chiloensis* lined the Western coast of North and South America as well as present day Argentina and Bolivia.[^13] Often referred to as simply “the chili,” by the Europeans who first encountered it in Chile, it is reported to have a mild, sweet flavor like a white peach.[^14] At least three Indigenous groups in what is now Chile began domesticating the *F. chiloensis*: the Mapuche, Huilliche, and Picunche peoples ate the strawberries fresh and dried, and used them for medicine.[^15]
 
 {% include embed/image.html src="drs_42968518.jpg" caption="George Brookshaw. “The strawberry”, Pomona Britannica. 1817. [Oak Spring Garden Library, Upperville, VA.]" %}
+
+That these Indigenous people had been cultivating F. chiloensis long before European involvement in Chile is evidenced by the Mapuche having different words for wild (llahuen) and cultivated (quellghen) strawberries.  Therefore, some artificial selection for larger cultivated strawberries had transpired by the time the French engineer Amédée François Frézier encountered F. chiloensis on a 1712 visit to Chile. Compared to the European F. moschata and F. vesca, the largesse of the F. chiloensis was something to behold; Frézier’s expedition returned to France with strawberry plants in tow, five of which survived the journey back to Marseille. 
+
+{% include embed/iframe.html src="https://archive.org/embed/voyagetosouthsea00frzi" %}
