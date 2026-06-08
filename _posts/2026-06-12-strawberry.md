@@ -68,3 +68,8 @@ Perhaps the biggest change in the story of the strawberry over the last century 
 Unsurprisingly, fumigation comes with many adverse effects to farmers and people living around strawberry plantations; cancer, damage to lungs, liver, kidneys, nervous system, lower birth weight and smaller baby head circumference are just a few of the observed effects. Yet many strawberry growers are trapped in a cycle of use; without the increased yield occasioned by fumigants, they can’t turn a large enough profit to stay in business.[^23]
 
 {% include embed/image.html src="wc:Miaoli_Dahu_Strawberry_Farm_1.jpg" %}
+
+# Sensuality, Purity, and Evil: The Strawberry in Art and Literature
+
+Throughout the history of literature and art, strawberries have inspired sensual connotations as well as associations with evil characteristics. *F. vesca*, the European wild strawberry, was sometimes associated with youth or innocence, seen as miraculous because it springs up without tilling, is hardy enough to survive in the wild, and is freely provided by nature, a sense that is at odd with the dangerous chemicals and hard labor required to grow and harvest our modern strawberry.[^24] Through the lenses of vegetal textuality and visual analysis, this section explores the different meanings and associations that the strawberry plant holds in artistic and literary traditions.[^25] While aware that vegetal textuality and artistic symbolism are an extrinsic languages often imposed on plants, this approach uncovers the intriguing paradoxes that have shaped the presence of strawberry plants in art and literature.
+
