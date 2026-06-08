@@ -36,3 +36,7 @@ It is tempting to think of plants as static, passive things, the “mute, immobi
 *F. moschata*, also called musk strawberries, are the *F. vesca*’s slightly larger, funkier cousin. With a native range stretching from France to Central Siberia,[^8] *F. moschata* made a name for themselves with their unusually powerful fragrance. With a scent so strong that “a few ripe berries can perfume a room,” the musk strawberry was considered a delicacy due to its flavor notes of honey, musk, wine, raspberry, and clove.[^9] So revered was this rare strawberry that it was immortalized in Jane Austen’s *Emma* when a party guest declared the hautboy (the English name for the *F. moschata*), as compared to other strawberries, “infinitely superior—no comparison—the others hardly eatable.”[^10]
 
 {% include embed/image.html src="wc:Fragaria_moschata_detail.JPG" caption="*Fragaria moschata*" %}
+
+The Americas, too, were abundant with strawberries, wild and cultivated. The *F. virginiana* is the American wild strawberry, abundant and small but powerfully sweet. It grows in a variety of conditions, including full shade, prairies, meadows, woods, and hillsides, making them suitable for the variable North American climate.[^11] For many Indigenous American groups, the *F. virginiana* plays a special celebratory role as one of the first fruits of the summer to ripen.[^12]
+
+{% include embed/image.html src="wc:Fragaria_virginiana_15-p.bot-fraga.virgin-01.jpg" caption="*Fragaria virginia*" %}
