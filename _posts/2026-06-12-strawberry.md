@@ -7,7 +7,7 @@ permalink: /strawberry
 tags: fruit food temperate
 published: false
 featured: true
-media_subpath: /assets/posts/stawberry
+media_subpath: /assets/posts/strawberry
 image:
   path: wc:Fragaria_vesca_fruit_-_Keila.jpg
 storykit: true
