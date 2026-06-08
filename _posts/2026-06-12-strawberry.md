@@ -43,4 +43,4 @@ The Americas, too, were abundant with strawberries, wild and cultivated. The *F.
 
 The *F. chiloensis* lined the Western coast of North and South America as well as present day Argentina and Bolivia.[^13] Often referred to as simply “the chili,” by the Europeans who first encountered it in Chile, it is reported to have a mild, sweet flavor like a white peach.[^14] At least three Indigenous groups in what is now Chile began domesticating the F. chiloensis: the Mapuche, Huilliche, and Picunche peoples ate the strawberries fresh and dried, and used them for medicine.[^15]
 
-
+{% include embed/image.html src="drs_42968518.jpg" caption="George Brookshaw. “The strawberry”, Pomona Britannica. 1817. [Oak Spring Garden Library, Upperville, VA.]" %}
