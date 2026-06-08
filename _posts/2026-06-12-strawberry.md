@@ -7,7 +7,7 @@ permalink: /strawberry​​
 published: false​
 media_subpath: /assets/posts/strawberry
 image:​
-  path: wc:Growing_Strawberries_in_Kent_-_geograph.org.uk_-_331348.jpg
+  path: wc:103_Fragaria_vesca_L.jpg
 storykit: true
 featured: true​
 categories: ["americas"]​
