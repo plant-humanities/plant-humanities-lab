@@ -40,3 +40,7 @@ It is tempting to think of plants as static, passive things, the “mute, immobi
 The Americas, too, were abundant with strawberries, wild and cultivated. The *F. virginiana* is the American wild strawberry, abundant and small but powerfully sweet. It grows in a variety of conditions, including full shade, prairies, meadows, woods, and hillsides, making them suitable for the variable North American climate.[^11] For many Indigenous American groups, the *F. virginiana* plays a special celebratory role as one of the first fruits of the summer to ripen.[^12]
 
 {% include embed/image.html src="wc:Fragaria_virginiana_15-p.bot-fraga.virgin-01.jpg" caption="*Fragaria virginia*" %}
+
+The *F. chiloensis* lined the Western coast of North and South America as well as present day Argentina and Bolivia.[^13] Often referred to as simply “the chili,” by the Europeans who first encountered it in Chile, it is reported to have a mild, sweet flavor like a white peach.[^14] At least three Indigenous groups in what is now Chile began domesticating the F. chiloensis: the Mapuche, Huilliche, and Picunche peoples ate the strawberries fresh and dried, and used them for medicine.[^15]
+
+
