@@ -1,8 +1,8 @@
 ---
-title: 'Strawberry: The Paradoxical Delights of the Devil’s Fruit'​
-description: Strawberries are nice​
+title: 'Strawberry: The Paradoxical Delights of the Devil’s Fruit'
+description: Strawberries are nice
 author: Elizabeth Mirabal, Madeleine Dowd, and Sophia Kamps
-date: 2026-06-12​
+date: 2026-06-12
 permalink: /strawberry​​
 published: false​
 media_subpath: /assets/posts/strawberry
