@@ -20,5 +20,6 @@ In the popular imagination, strawberries seldom conjure associations with the de
 
 The strawberry plant contradicts itself often; the contrast between our notion of it as a fruit of pleasure, beauty, and sensuality and the suffering strawberry pickers endure is just one example. As scholars Yota Batsaki and Philip Grant observe, “Plants have many personalities depending on their specific environmental and cultural contexts.”[^3] In this narrative, we explore the strawberry as a location of paradox in two senses: we examine moments when the strawberry as an organism has challenged its symbolic and cultural representations, and we explore moments when those symbolic representations contradict one another in different global contexts. In the first section, we explore the horticultural development of the modern strawberry, tracking its change from small wild strawberry to supermarket behemoth. Next, we chart the strawberry as a symbolic object in art and literary traditions, demonstrating how its meaning changed across time and space. Finally, we explore the strawberry’s significance in American Indigenous cultures.
 
-{% include embed/image.html src=wc:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg %}
+{% include embed/image.html src=wc:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg caption="
+The Garden of Earthly Delights in the Museo del Prado in Madrid, c. 1495–1505, attributed to Hieronymus Bosch, Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:StrawberryPickersNearPonchatoulaFSA.jpeg)" %}
 
