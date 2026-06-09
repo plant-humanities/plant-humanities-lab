@@ -92,5 +92,5 @@ Further evidence of the religious significance of the strawberry comes in depict
 
 The wild European strawberry is also a common inhabitant of the hortus conclusus, the enclosed garden around the Virgin Mary that evokes the purity and impenetrability of Mary's virginity, signifying Mary herself as an enclosed garden.[^31] Strawberries are frequently found among its flowers, accompanying roses and violets. Their presence can be partly explained by their decorative beauty but also suggests a strong symbolic connection to the Virgin.
 
-{% include embed/image.html src="upper_rhenish_master.jpeg" caption="Upper Rhenish Master, *The Little Garden of Paradise*, ca. 1410–1420, Städel Museum, Frankfurt am Main." %}
+{% include embed/image.html src="upper_rhenish_master_Large.jpeg" caption="Upper Rhenish Master, *The Little Garden of Paradise*, ca. 1410–1420, Städel Museum, Frankfurt am Main." %}
 {% include embed/image.html src="upper_rhenish_master_detail.png" caption="Detail of Upper Rhenish Master, *The Little Garden of Paradise*, ca. 1410–1420, Städel Museum, Frankfurt am Main." %}
