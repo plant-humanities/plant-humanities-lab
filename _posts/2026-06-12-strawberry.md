@@ -120,3 +120,7 @@ By the end of the sixteenth century, the strawberry fades from religious art but
 
 {% include embed/image.html src="wc:Emma_Van_Name_by_Joshua_Johnson.jpg" %}
 {% include embed/image.html src="wc:Grace_Allison_McCurdy_and_Her_Daughters,_Mary_Jane_and_Letitia_Grace_by_Joshua_Johnson_-_Stierch.jpg" %}
+
+The strawberry plant maintained its original Ovidian significance among American transcendental writers such as Henry David Thoreau, while retaining less mythologized interpretations by female writers. Emily Dickinson, for example, considered strawberries a symbol of freedom. In her poem, “Over the Fence,” strawberry plants grow over the fence of a garden that resembles a *hortus conclusus* —“I could climb —if I tried, I know—/Berries are nice!”[^43]— but she also plays with the idea of a transfiguration that would shield her from the social condemnation associated with trespassing.
+
+{% include embed/image.html src="wc:Emily_Dickinson.jpg" caption="Daguerreotype of the poet Emily Dickinson, ca. 1848. The poet is holding violet flowers." %}
