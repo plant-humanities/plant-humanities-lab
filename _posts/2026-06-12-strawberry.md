@@ -113,3 +113,5 @@ The dangerous and deceitful connotations of the strawberry suggested by Virgil w
 
 {% include embed/image.html src="wc:Garden_delights.jpg" caption="
 The Garden of Earthly Delights in the Museo del Prado in Madrid, c. 1495–1505, attributed to Hieronymus Bosch." %}
+{% include embed/image.html src="wc:Bosch,_Hieronymus_-_The_Garden_of_Earthly_Delights,_central_panel_-_Detail_Strawberry.jpg" %}
+{% include embed/image.html src="wc:Bosch,_Hieronymus_-_The_Garden_of_Earthly_Delights,_central_panel_-_Detai_Man_eating_a_strawberry,_Man_eating_a_cherry,_and_a_man_bending_over_a_fictional_fruit.jpg" %}
