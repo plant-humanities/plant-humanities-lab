@@ -79,8 +79,8 @@ Classical writers have conflicting interpretations of the strawberry plant, rang
 
 {% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vS9cdojbiwfFGJ145oUB0KBQZwYlRfKLChzBwMjqHZbCp_dw4uAwa9nMTKKxkkN0S0hS-9QjNJsXuVL&font=Default&lang=en&initial_zoom=2&width=100%25&height=650" class="full" %}
 
-*F. vesca* appears frequently in the [borders](img1/zoomto/200,500.300,600) of illuminated manuscripts beginning in the early fifteenth century.[^29] Colorful, round, and conveniently located on trailing green vines, the visual form of the strawberry is well suited for this decorative function. Strawberries grow among birds, beasts, and flowers in the decorative borders of books of hours and medieval prayer books. Interestingly, both the visual appeal and the symbolic value of the strawberry in the illuminated manuscript come not just from the red fruit, but from its delicate white flowers.
+*F. vesca* appears frequently in the borders of illuminated manuscripts beginning in the early fifteenth century.[^29] Colorful, round, and conveniently located on trailing green vines, the visual form of the strawberry is well suited for this decorative function. [Strawberries](img1/zoomto/200,500.300,600) grow among birds, beasts, and flowers in the decorative borders of books of hours and medieval prayer books. Interestingly, both the visual appeal and the symbolic value of the strawberry in the illuminated manuscript come not just from the red fruit, but from its delicate white flowers.
 
 {% include embed/image.html id="img1" src="Master_isabella.jpg" caption="Alexander Benning, *Hours of Queen Isabella the Catholic*, Queen of Spain, 1495, Fol. 102v, Cleveland Museum of Art" aspect="1" %}
-{% include embed/image.html src="nypl.jpg" caption="*Book of Hours*, 1400-1499, French, NYPL MA 156, fol. 13r" %}
-{% include embed/image.html src="Morgan m278.110r.jpg" caption="*Book of Hours*, 1480-1490, Flemish, Morgan Library, New York M.278, fol. 110r" %}
+{% include embed/image.html src="nypl.jpg" id="img2" caption="*Book of Hours*, 1400-1499, French, NYPL MA 156, fol. 13r" aspect="1" %}
+{% include embed/image.html src="Morgan m278.110r.jpg" id="img3" caption="*Book of Hours*, 1480-1490, Flemish, Morgan Library, New York M.278, fol. 110r" aspect="1" %}
