@@ -87,3 +87,5 @@ Classical writers have conflicting interpretations of the strawberry plant, rang
 
 Further evidence of the religious significance of the strawberry comes in depictions of two Biblical gardens. The wild European *F. vesca* is often included in depictions of the Garden of Eden before the fall of Adam and Eve. Strawberries appear below the feet of Adam and Eve as they flee Eden in Giovanni di Paolo’s *The Creation of the World and the Expulsion from Paradise* (1445), though in this case without their white flowers. In conjunction with the lilies and roses, the fruit is intended to represent the perfect righteousness of Christ’s followers as well as the fruitful results of their worship.[^30]
 
+{% include embed/image.html src="di_paolo.jpg" caption="Giovanni di Paolo, *The Creation of the World and the Expulsion from Paradise*, 1445, The Metropolitan Museum of Art" %}
+{% include embed/image.html src="di_paolo_detail.png" caption="Detail of Giovanni di Paolo, *The Creation of the World and the Expulsion from Paradise*, 1445, The Metropolitan Museum of Art" %}
