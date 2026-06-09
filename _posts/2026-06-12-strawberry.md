@@ -89,3 +89,7 @@ Further evidence of the religious significance of the strawberry comes in depict
 
 {% include embed/image.html src="di_paolo.jpg" caption="Giovanni di Paolo, *The Creation of the World and the Expulsion from Paradise*, 1445, The Metropolitan Museum of Art" aspect="1" %}
 {% include embed/image.html src="di_paolo_detail.png" caption="Detail of Giovanni di Paolo, *The Creation of the World and the Expulsion from Paradise*, 1445, The Metropolitan Museum of Art" aspect="1" %}
+
+The wild European strawberry is also a common inhabitant of the hortus conclusus, the enclosed garden around the Virgin Mary that evokes the purity and impenetrability of Mary's virginity, signifying Mary herself as an enclosed garden.[^31] Strawberries are frequently found among its flowers, accompanying roses and violets. Their presence can be partly explained by their decorative beauty but also suggests a strong symbolic connection to the Virgin.
+
+{% include embed/image.html src="" %}
