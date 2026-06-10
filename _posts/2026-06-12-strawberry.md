@@ -149,7 +149,7 @@ An extractive spirit permeates the first Iberian and creole descriptions of the 
 
 Although *F. chiloensis* was unfamiliar to Europeans, historical evidence indicates that it was known across a broad region of southern America. It is likely that the Chilean Picunche people had contact with the northern agrarian Inca and may have been the first to bring strawberry plants from the wild into their home gardens.  In Chapter XI of *Comentarios reales* (1609), “De las frutas de árboles mayores,” Inca Garcilaso de la Vega refers to a fruit that he calls “chili” that arrived in Cuzco in 1557: “it is very tasty and very attractive; it grows on low plants, almost lying on the ground; it has a ridge at the top, like the ‘madroño’ tree, and is the same size, not round but somewhat elongated in the shape of a heart.”  This confirms that pre-Columbian populations had a robust association with *F. chiloensis* long before Spanish explorers celebrated it in their writings or French naval officer Captain Amédée François Frézier encountered it in the eighteenth century.
 
-{% include embed/image-compare.html before="Rozier_Francois.jpeg&bs=0.62" after="wc:Fragaria_chiloensis_kz01.jpg&ay=48.5&as=1.2" 
+{% include embed/image-compare.html before="Rozier_Francois.jpeg&bs=0.62" after="https://commons.wikimedia.org/wiki/File:Fragaria_chiloensis_kz01.jpg&ay=48.5&as=1.2" 
     aspect=""
     position="50"
     caption="left: François Rozier, *Cours d’agriculture*, tome 5, planche 4, figure 1,1784 -- right: *Fragaria chiloensis*, in the Botanischer Garten, Berlin-Dahlem" %}
