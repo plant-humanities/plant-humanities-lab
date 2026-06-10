@@ -186,7 +186,7 @@ The Cherokee Connecticut River Powwow Society hosts their annual Strawberry Moon
 
 Strawberries evoke relationships rooted in kinship, affection, and emotional connections among North American Indigenous people. Potawatomi writer Robin Wall Kimmerer beautifully expresses this sentiment: “In a way, I was raised by strawberries, fields of them.”[^58] In her reflection, Kimmerer imbues strawberry plants with a maternal, protective, and formative role. She further illustrates this connection by recounting the mythic origin story, in which Sky Woman ascends back to the firmament, leaving behind the plants as teachers for her people.[^59] This myth allows us to fully appreciate the writer’s intimate relationship with strawberry plants, which she understands as sources of knowledge, as well as spiritual comfort and safety.
 
-{% include embed/image.htlm src="wc:INconversation_with_Robin_Wall_Kimmerer_(53043186169).jpg" %}
+{% include embed/image.html src="wc:INconversation_with_Robin_Wall_Kimmerer_(53043186169).jpg" %}
 
 # A Dialogue between Plant and Community
 
