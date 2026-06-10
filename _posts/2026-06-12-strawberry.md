@@ -174,4 +174,4 @@ The common representation of *F. chiloensis*, which primarily focuses on its exo
 
 As we have been observing, before the arrival of European colonizers in South America, Indigenous populations had an extensive knowledge of and relationship with the strawberry plant. In a similar vein, Indigenous peoples in New England had woven strawberries into their ontology preceding the arrival of English settlers in North America. For the Iroquois, for example, strawberries are connected to the original creation and are considered a gift from Sky Woman, the mother goddess, alongside the three sisters of traditional agriculture: corn, beans, and squash. They are the first fruits of spring and are celebrated annually at the strawberry festival.[^55] The deep link this community has with the plant is palpable not only in their mythology and oral traditions but also in their handicrafts.
 
-{% include embed/youtube.html  src="RSi39qSrVYI" end="1:02" caption="*The Indigenous story of the strawberry*, YouTube.com, City News." %}
+{% include embed/youtube.html  vid="RSi39qSrVYI" end="1:02" caption="*The Indigenous story of the strawberry*, YouTube.com, City News." %}
