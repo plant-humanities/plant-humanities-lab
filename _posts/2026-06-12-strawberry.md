@@ -153,3 +153,7 @@ Although *F. chiloensis* was unfamiliar to Europeans, historical evidence indica
     aspect="1"
     position="50"
     caption="left: François Rozier, *Cours d’agriculture*, tome 5, planche 4, figure 1,1784 -- right: *Fragaria chiloensis*, in the Botanischer Garten, Berlin-Dahlem" %}
+
+Frézier’s story has been retold many times with overtones that border on fiction and obscure the prior knowledge of the fruit by Indigenous peoples. Fascinated by how much larger *F. chiloensis* was than *F. vesca*, in his travel memoirs, *Relation du voyage de la mer du Sud aux côtes du Chili et du Pérou fait pendant les années 1712, 1713, et 1714*, like the Spaniards, Frézier compared it in size to walnuts or hens’ eggs.[^50] The only disagreement he had with his Iberian and creole predecessors’ was that he thought the fruit of the New World was “somewhat less delicious in taste than our wood strawberries.”[^51]
+
+{% include embed/image.html src="wc:Planche_XI.jpg" caption="Fragaria chiloensis in Relation du voyage de la mer du Sud aux côtes du Chili et du Pérou fait pendant les années 1712, 1713, et 1714 by Frézier, 1716." %}
