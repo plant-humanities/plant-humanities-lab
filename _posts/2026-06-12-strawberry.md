@@ -1,6 +1,6 @@
 ---
 title: 'Strawberry: The Paradoxical Delights of the Devil’s Fruit'
-description: Strawberries are nice
+description: Strawberries tell a long and twisted history of globalization and experimentation which is intertwined with visual culture, literary discourse, and spiritual beliefs.
 author: Elizabeth Mirabal, Madeleine Dowd, and Sophia Kamps
 date: 2026-06-12
 permalink: /strawberry
