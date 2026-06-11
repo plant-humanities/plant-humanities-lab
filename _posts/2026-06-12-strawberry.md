@@ -196,3 +196,63 @@ Strawberries evoke relationships rooted in kinship, affection, and emotional con
 The *Fragaria x. ananassa* sits in an uncanny valley within the history of the strawberry, at once faintly echoing the shape and flavor of its wild predecessors while also occasioning a very different sensorial experience for the eater. Big, firm, and tart, *F. x ananassa* is not the inevitable endpoint in an evolutionary trajectory, but rather the contingent result of a long and twisted history of globalization and experimentation. The strawberry that is available today in most supermarkets is the outlier of the family, representing a highly commodified turn within a much longer and larger history of strawberries as objects of art, culture, reverence, beauty, and pleasure. *F. x ananassa* in a sense contradicts its wild relatives, each of which diverge from one another in their own right; for instance, the strawberry depicted in Bosch’s *The Garden of Earthly Delights* represents a different plant species with a different “personality” than we see in Gabriela Mistral’s poetry. Like all living entities, the strawberry is dynamic, self-contradictory, and complex; it cannot be summarized by examining one specimen or one society’s beliefs around it, because it does not have a fixed essence. Its identity and spirit are deeply intertwined with the historical and cultural narratives surrounding its cultivation, knowledge, and consumption. Initially depicted as a symbol of abundance in colonial paintings of the New World, the strawberry’s representation in the nineteenth century became an ideal for simpler lifeways, a site for multispecies encounter, and an allegory of female freedom. For Chile’s indigenous populations, the strawberry has begun to transcend mere agricultural importance; it has become a potent symbol of resistance against foreign oppression. The strawberry evokes reverence through its associations with both romantic and mystical allure, while exhibiting the qualities of nurturing, guidance, and protection. It’s cultural history is a shared testament to the dialogue between plant and community, where each has been shaped and transformed by the other.
 
 {% include embed/image.html src="wc:HK_樂富_Lok_Fu_Place_Plaza_橫頭磡_Wang_Tau_Hom_mall_shop_百佳_Fusion_Supermarket_December_2021_SS2_red_strawberry.jpg" aspect="0.78" %}
+
+[^1]: Dvera I. Saxton, *The Devil's Fruit: Farmworkers, Health, and Environmental Justice* (New Brunswick, N.J.: Rutgers University Press, 2021).
+[^2]: "La Fruta del Diablo. Battle for Justice in California Strawberry Fields," *Revolutionary Worker*, May 4, 1997. https://revcom.us/a/v19/905-09/905/farm.htm
+[^3]: Yota Batsaki and Philip Gant, “The Secret Life of Kudzu,” _Scientific American_, August 1, 2019. https://www.scientificamerican.com/blog/observations/the-secret-life-of-kudzu/.
+[^4]: Michael Pollan, “The Intelligent Plant,” *The New Yorker*, December 23 and 30, 2013. https://www.newyorker.com/magazine/2013/12/23/the-intelligent-plant.
+[^5]: Noel Kingsbury, *Hybrid: The History and Science of Plant Breeding* (Chicago: University of Chicago Press, 2009), 83.
+[^6]: Jeremy Bartlett, “Wild Strawberry, Fragaria vesca,” *Let It Grow* (blog), June 8, 2019, accessed August 8, 2025. https://www.jeremybartlett.co.uk/2019/06/08/wild-strawberry-fragaria-vesca/.
+[^7]: Alan Carter (author username “Gardener”), “Alpine Strawberry,” *A Food Forest in Your Garden* (blog), September 18, 2013, accessed August 8, 2025. https://www.foodforest.garden/2013/09/18/alpine-strawberry/.
+[^8]: “Fragaria Moschata Subsp. Moschata: Plants of the World Online: Kew Science.” *Plants of the World Online*, powo.science.kew.org/taxon/urn:lsid:ipni.org:names:3297345-4. Accessed January 29, 2026.
+[^9]: David Karp, “Berried Treasure: Why Is Horticulturalist Harry Jan Swartz So Determined to Grow an Exotic Strawberry Beloved by Jane Austen?,” *Smithsonian Magazine*, July 2006, accessed August 8, 2025. https://www.smithsonianmag.com/science-nature/berried-treasure-120534521/.
+[^10]: Jane Austen, Emma (London: Penguin Classics, 2003), 282.
+[^11]: “Fragaria virginiana Wild Strawberry,” *Prairie Moon Nursery* (product page), accessed August 8, 2025. https://www.prairiemoon.com/fragaria-virginiana-wild-strawberry.
+[^12]: Robin Wall Kimmerer, *Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge, and the Teachings of Plants* (Minneapolis: Milkweed Editions, 2013), 93.
+[^13]: “Fragaria Chiloensis (L.) Mill.: Plants of the World Online: Kew Science.” *Plants of the World Online*, powo.science.kew.org/taxon/urn:lsid:ipni.org:names:724988-1. Accessed January 29, 2026.
+[^14]: Michelle Johnson, “Frutilla Blanca: A One-Of-A-Kind Strawberry from Chile,” *Baker Creek Heirloom Seeds* (blog), updated April 30, 2024, accessed August 8, 2025. https://www.rareseeds.com/blog/post/frutilla-blanca-white-strawberry-history?.
+[^15]: Chad E. Finn, et. al., “The Chilean Strawberry (Fragaria chiloensis): Over 1,000 Years of Domestication,” *HortScience* 48, no. 4 (April 1, 2013): 418–421. https://doi.org/10.21273/HORTSCI.48.4.418.
+[^16]: Mary Katherine Newman, “The Story of the Strawberry,” *History Workshop Eating the Past* (blog), April 5, 2023, accessed August 8, 2025. https://www.historyworkshop.org.uk/food/the-story-of-the-strawberry/.
+[^17]: Noel Kingsbury, *Hybrid: The History and Science of Plant Breeding* (Chicago and London: University of Chicago Press, 2009), 83–87.
+[^18]: Noel Kingsbury, 84.
+[^19]: Quoted in David Karp, “Berried Treasure: Why Is Horticulturalist Harry Jan Swartz So Determined to Grow an Exotic Strawberry Beloved by Jane Austen?,” *Smithsonian Magazine*, July 2006, accessed August 8, 2025. https://www.smithsonianmag.com/science-nature/berried-treasure-120534521/.
+[^20]: Noel Kingsbury, 84–86.
+[^21]: Noel Kingsbury, 136.
+[^22]: C. Graber and N. Twilley (2019, August 27). *Running on fumes: Strawberry’s dirty secret* [Podcast episode]. Gastropod. https://gastropod.com/running-on-fumes-strawberrys-dirty-secret/.
+[^23]: C. Graber and N. Twilley (2019, August 27). *Running on fumes: Strawberry’s dirty secret* [Podcast episode]. Gastropod. https://gastropod.com/running-on-fumes-strawberrys-dirty-secret/.
+[^24]: Victoria Dickenson, *Berries* (Islington, London.: Reaktion Books, 2020), 46.
+[^25]: There is a long-standing Indigenous and Western tradition of “botanically curious” authors who generated what plant studies scholarship defines as vegetal textuality, that is, texts with plant-based themes. To learn more about this concept, see Monica Gagliano, John C. Ryan, and Patrícia I. Vieira, *The Language of Plants: Science, Philosophy, Literature* (Minneapolis: University of Minnesota Press, 2017), xvi.
+[^26]: Dickenson, 47.
+[^27]: Allen J. Grieco, “The Social Politics of Pre-Linnaean Botanical Classification,” *Tatti Studies in the Italian Renaissance* 4 (1991), 141.
+[^28]: Ovid quoted by Dickenson, *Berries*, 44–45.
+[^29]: Celia Fisher, *The Medieval Flower Book* (London: British Library, 2007), 114.
+[^30]: Elizabeth Haig, *The Floral Symbolism of the Great Masters* (London: Kegan Paul, Trench, Trubner & Co, 1913), 30.
+[^31]: Dickenson, 47.
+[^32]: Schongauer’s painting was among the works destroyed in the 1947 fire at the Musée des Beaux Arts de Strasbourg. See Lawrence J. Ross, “The Meaning of Strawberries in Shakespeare,” *Studies in the Renaissance*, 7 (1960), 234.
+[^33]: Ross, 234.
+[^34]: Henry Hawkins, *Partheneia sacra, or, The mysterious and delicious garden of the sacred Parthenes : symbolically set forth and enriched with pious devises and emblemes for the entertainment of deuout soules, contriued al to the honour of the incomparable Virgin Marie, Mother of God, for the pleasure and deuotion especially of the parthenian sodalitie of her Immaculate Conception* (Rouen: John Cousterier, 1633), 10.
+[^35]: Celia Fisher and J. Paul Getty Museum, *Flowers of the Renaissance* (Los Angeles: J. Paul Getty Museum, 2011), 149.
+[^36]: Fisher, 114.
+[^37]: Fisher.
+[^38]: Margaret A. Sullivan, “The timely art of Hieronymus Bosch: the left panel of "The Garden of Earthly Delights," *Oud Holland* 127, no. 4 (2014), 176.
+[^39]: Walter S. Gibson, “The Strawberries of Hieronymus Bosch,” *Cleveland Studies in the History of Art* 8 (2003), 27. 
+[^40]: Fisher, 114.
+[^41]: “Joshua Johnson,” *Smithsonian American Art Museum*. https://americanart.si.edu/artist/joshua-johnson-2479. 
+[^42]: Elizabeth A. Petrino, *Emily Dickinson and Her Contemporaries: Women's Verse in America, 1820–1885* (University Press of New England, 1998), 63.
+[^43]: Emily Dickinson, *The Complete Poems of Emily Dickinson* (New York: Back Bay Books, 1976), 115.
+[^44]: John Townsend Trowbridge, “Strawberries,” *Our Young Folks* 4 (July 1868): 398–399.
+[^45]: Alonso González de Nájera, *Desengaño y reparo de la guerra del reino de Chile* (Madrid: Imprenta de la viuda de Calero, 1866), 168. Translation by Elizabeth Mirabal. 
+[^46]: González de Nájera, 55. 
+[^47]: Alonso de Ovalle, *Histórica relación del Reyno de Chile* (Roma: Francisco Cauallo, 1646), 8. Translation by Elizabeth Mirabal.
+[^48]: J. F. Hancock, A. Lavín, and J.B. Retamales, “Our Southern Strawberry Heritage: Fragaria chiloensis of Chile,” *HortScience*, 34 (1999), 814.
+[^49]: Garcilaso De la Vega, *Comentarios reales* (Lisboa: Pedro Crasbeeck, 1609), 420. Translation by Elizabeth Mirabal.
+[^50]: Pablo Neruda, as documented by Lesley Wylie, had several books on Chilean plants in his personal library, including the 1716 French edition of Frézier’s work. See Leslie Wylie, *The Poetics of Plants in Spanish American Literature*. (Pittsburgh: University of Pittsburgh Press, 2024), 175.
+[^51]: Amédée François Frézier, *A Voyage to the South-Sea, and along the Coasts of Chili and Peru* (London: Jonah Bowyer, 1717), 76.
+[^52]: Translation by Elizabeth Mirabal. Each fruit is labeled with a letter and accompanied by a brief description within the painting itself.
+[^53]: Daniela Bleichmar, *Visual Voyages. Images of Latin American Nature from Columbus to Darwin* (New Haven: Yale University Press, 2017), 150.
+[^54]: Gabriela Mistral, “La fresa” in *Ternura* (México, D.F.: Espasa-Calpe Mexicana, 1989), 118. Translation by Elizabeth Mirabal.
+[^55]: Dickenson, 59. A fuller explanation of the Potawatomi understanding of Sky Woman will be presented later in this plant narrative.
+[^56]: E. Barrie Kavasch, *Enduring Harvests: Native American Foods and Festivals for Every Season* (Old Saybrook, Connecticut: Globe Pequot Press, 1995), 266.
+[^57]: Dickenson.
+[^58]: Robin Wall Kimmerer, *Braiding Sweetgrass for Young Adults: Indigenous Wisdom, Scientific Knowledge, and the Teachings of Plants* (Minneapolis: Zest Books, 2022), 32.
+[^59]: Robin Wall Kimmerer, “Ancient Green: Moss, Climate and Deep Time,” *Emergence Magazine*, April 20, 2022. https://emergencemagazine.org/essay/ancient-green/.
