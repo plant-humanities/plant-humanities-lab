@@ -1,6 +1,9 @@
 ---
 title: 'Strawberry: The Paradoxical Delights of the Devil’s Fruit'
-description: Originating from wild strains with robust flavors, strawberries underwent a dramatic transformation into the uniform supermarket variants we know today. Intersecting with this history of globalization and hybridization, strawberries possess a duality of meanings: they symbolize innocence and desire, plenitude and peril, kinship and defiance.
+description: Originating from wild strains with robust flavors, strawberries underwent a dramatic transformation 
+into the uniform supermarket variants we know today. Intersecting with this history of globalization and 
+hybridization, strawberries possess a duality of meanings: they symbolize innocence and desire, plenitude and 
+peril, kinship and defiance.
 author: Elizabeth Mirabal, Madeleine Dowd, and Sophia Kamps
 date: 2026-06-12
 permalink: /strawberry
