@@ -14,6 +14,11 @@ categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 Zoe Dubno did not expect her life to unravel. It was on a whim that the writer began taking St. John’s wort, an over-the-counter herbal supplement marketed as a gentle alternative to antidepressants. Trusting its natural origins, she started dosing herself twice daily without consulting a doctor. Four months later, the calm she sought gave way to chaos: sudden fainting spells, spiraling paranoia, and panic attacks so severe she feared she was losing her mind.[^1]
 
-{% include embed/image-compare.html before="wc:Hypericum_perforatum_kz03.jpg" after="Holding-the-supplement-June-30.jpg" class="right" %}
+{% include embed/image-compare.html
+    before="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hypericum_perforatum_kz03.jpg/1280px-Hypericum_perforatum_kz03.jpg&by=0.5"
+    after="https://storykit-preview.netlify.app/api/raw/plant-humanities/plant-humanities-lab/st-johns-wort/assets/posts/st-johns-wort/Holding-the-supplement-June-30.jpg&as=1.27"
+    aspect=""
+    position="50"
+%}
 
 [^1]: Zoe Dubno, “Supplements Made Me Lose My Mind,” *The Cut*, May 15, 2025. https://www.thecut.com/article/supplements-made-me-lose-my-mind.html.
