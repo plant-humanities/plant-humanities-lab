@@ -125,7 +125,7 @@ The strawberry plant maintained its original Ovidian significance among American
 
 {% include embed/image.html src="wc:Emily_Dickinson.jpg" caption="Daguerreotype of the poet Emily Dickinson, ca. 1848. The poet is holding violet flowers." %}
 
-Dickinson’s fascination with the strawberry plant blossomed into a vibrant herbarium she nurtured during her time at Amherst Academy, and continued for seven years. The lower left corner of sheet 52 of the herbarium features a specimen of [*F. virginiana*](img5/zoom-to/10.04,64.78,25.71,26.42), where she notes the five-petaled flower, displayed both in full bloom and still in bud, as well as the serrated edges of the leaves.
+Dickinson’s fascination with the strawberry plant blossomed into a vibrant herbarium she nurtured during her time at Amherst Academy, and continued for seven years. The lower left corner of sheet 52 of the herbarium features a specimen of [*F. virginiana*](img5/zoom-to/pct:10.04,64.78,25.71,26.42), where she notes the five-petaled flower, displayed both in full bloom and still in bud, as well as the serrated edges of the leaves.
 
 {% include embed/image.html src="Emily.jpg" id="img5" caption="Fragaria virginiana in Herbarium, Emily Dickinson, ca. 1839-1846. Houghton Library © President and Fellows of Harvard College. MS Am 1118.11 Page 52, Houghton Library, Harvard University." %}
 
