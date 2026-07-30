@@ -29,6 +29,8 @@ annotated high-resolution images, network visualizations, and interactive maps. 
 broad audience, the Lab serves as an open access education resource for faculty and students in
 Plants and People courses.
 
+{% include embed.html src="DSC_0170.jpg" class="full" %}
+
 ## So Many Stories to Tell
 
 As a visitor of the Lab, you will discover fascinating stories of plants from around the world.
