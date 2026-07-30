@@ -436,7 +436,7 @@ function decodeBase64Utf8(b64) {
 }
 
 /** Fetch a file from the Chirpy gem via jsDelivr CDN. */
-const CHIRPY_VERSION = 'v7.5.0';  // update when upgrading the gem
+const CHIRPY_VERSION = 'v7.6.0';  // update when upgrading the gem
 const cdnCache = new Map();
 async function fetchChirpyCDN(repoPath) {
   if (cdnCache.has(repoPath)) return cdnCache.get(repoPath);

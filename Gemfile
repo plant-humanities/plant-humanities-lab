@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # .gitignore excludes Gemfile.lock, so CI resolved fresh every build).
 # Upgrading is deliberate: bump here AND CHIRPY_VERSION in preview/index.html,
 # then re-record the CDN fixtures and regenerate the render goldens.
-gem "jekyll-theme-chirpy", "= 7.5.0"
+gem "jekyll-theme-chirpy", "= 7.6.0"
 
 gem "html-proofer", "~> 5.0", group: :test
 

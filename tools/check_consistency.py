@@ -56,6 +56,24 @@ def check_chirpy_version() -> None:
             "Update CHIRPY_VERSION in preview/index.html when upgrading the gem."
         )
 
+    # editor/context.js keeps its own copy of the same constant, by its own
+    # admission a "mirror" -- and nothing checked it, so a Chirpy upgrade that
+    # updated preview/index.html alone left the editor fetching theme files at
+    # the old tag. That is invisible against the live CDN (the old tag still
+    # resolves) and only surfaces once the render harness stops serving
+    # fixtures for the retired version. Three copies, one check.
+    context = (REPO / "editor" / "context.js").read_text()
+    m = re.search(r"CHIRPY_VERSION\s*=\s*['\"]v?(\d+\.\d+\.\d+)['\"]", context)
+    if not m:
+        errors.append("editor/context.js: could not find CHIRPY_VERSION")
+        return
+    if m.group(1) != gem_version:
+        errors.append(
+            f"CHIRPY_VERSION mismatch: editor/context.js pins {m.group(1)} "
+            f"but Gemfile.lock resolves jekyll-theme-chirpy {gem_version}. "
+            "It mirrors preview/index.html -- update both when upgrading."
+        )
+
 
 def iter_text_files():
     for path in REPO.rglob("*"):
