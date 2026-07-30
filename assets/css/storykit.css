@@ -352,7 +352,11 @@ div figcaption {
     padding: 0 0.5em;
 }
 
-[data-mode="dark"] .col2 .active {
+/* Chirpy < 7.5 marked dark mode with [data-mode="dark"]; 7.5+ uses
+   [data-bs-theme="dark"]. Match both so two-column dark styling survives
+   either theme version. */
+[data-mode="dark"] .col2 .active,
+[data-bs-theme="dark"] .col2 .active {
     background: var(--main-bg);
     border: 1px solid #777;
     border-radius: 6px;
@@ -396,7 +400,8 @@ div figcaption {
     padding: 0 0.5em;
 }
 
-[data-mode="dark"] .col2 .post-content {
+[data-mode="dark"] .col2 .post-content,
+[data-bs-theme="dark"] .col2 .post-content {
     background: var(--main-bg);
 }
 

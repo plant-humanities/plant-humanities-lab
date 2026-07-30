@@ -71,7 +71,11 @@ script_includes:
   #topbar-wrapper {
     background: #F6F8FA !important;
   }
-  [data-mode="dark"] #topbar-wrapper {
+  /* Chirpy signalled dark mode with [data-mode="dark"] before 7.5 and with
+     [data-bs-theme="dark"] from 7.5 on. Both are matched so this override
+     survives either. */
+  [data-mode="dark"] #topbar-wrapper,
+  [data-bs-theme="dark"] #topbar-wrapper {
       background: var(--main-bg) !important;
   }
 
@@ -420,9 +424,13 @@ script_includes:
       toolbar.style.marginLeft = 'auto';
     }
 
-    // All display-mode and feature initialization is delegated to
-    // initStoryKit / setViewMode in storykit.js — the single mode controller.
-    // (The toggle button in col2-toggle.html calls setViewMode too.)
+    /* All display-mode and feature initialization is delegated to
+       initStoryKit / setViewMode in storykit.js — the single mode controller.
+       (The toggle button in col2-toggle.html calls setViewMode too.)
+
+       NOTE: use block comments only in inline scripts. In production the
+       compress.html layout (compress_html.ignore.envs: [development]) strips
+       newlines, so a `//` comment swallows the rest of the script. */
     initStoryKit({
       pageMode: '{{ page.storykit.mode }}',
       siteMode: '{{ site.storykit.mode }}',

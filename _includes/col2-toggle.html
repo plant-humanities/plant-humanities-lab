@@ -29,7 +29,10 @@ this include is only the button UI. It follows mode changes via the
     const btn = document.querySelector('.js-col2-toggle');
     if (btn) {
         if (isMobile) {
-            // Two-column mode is unavailable on small screens.
+            /* Two-column mode is unavailable on small screens.
+               Block comment, not `//`: the production compress.html layout
+               strips newlines and a line comment would eat the rest of this
+               script (and unbalance the braces). */
             btn.remove();
         } else {
             const icon = btn.querySelector('i');
