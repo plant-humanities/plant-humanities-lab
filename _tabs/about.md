@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 1
+media_subpath: /assets/posts/about
 ---
 
 ## Welcome to the Plant Humanities Lab
@@ -27,7 +28,6 @@ horticultural treatises and botanical illustrations. They are enhanced by digita
 annotated high-resolution images, network visualizations, and interactive maps. Written for a
 broad audience, the Lab serves as an open access education resource for faculty and students in
 Plants and People courses.
-
 
 ## So Many Stories to Tell
 
