@@ -2,7 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 1
-media_subpath: /assets/posts/about
+media_subpath: /assets/posts/about-page
 ---
 
 ## Welcome to the Plant Humanities Lab
@@ -21,6 +21,8 @@ into the past and illuminate burning issues of today, including legacies of colo
 displacement. Climate change, habitat loss, and accelerated species extinctions add to the
 urgency of acknowledging the vital importance of plants.
 
+{% include embed/image.html src="DSC_0170.jpg" aspect="0.75" %}
+
 With a rolling publication cycle, he Lab features peer-reviewed narratives that reflect the multiple characters and significance of plants to humans. The visual essays are created using Juncture, an
 open-source tool developed by JSTOR Labs and led by Ron Snyder. The narratives integrate a
 wide variety of primary sources, from herbarium specimens and early modern herbals to
@@ -28,8 +30,6 @@ horticultural treatises and botanical illustrations. They are enhanced by digita
 annotated high-resolution images, network visualizations, and interactive maps. Written for a
 broad audience, the Lab serves as an open access education resource for faculty and students in
 Plants and People courses.
-
-{% include embed.html src="DSC_0170.jpg" class="full" %}
 
 ## So Many Stories to Tell
 
