@@ -58,7 +58,7 @@ Paste the template contents into the newly created file and edit the front matte
 
 ## 3. Completing the Front Matter
 
-Example based on the [Monument Valley post]({{ site.baseurl }}/monument-valley):
+Example based on the [Monument Valley post](https://rsnyder.github.io/storykit-starter/monument-valley/):
 
 ```yaml
 ---

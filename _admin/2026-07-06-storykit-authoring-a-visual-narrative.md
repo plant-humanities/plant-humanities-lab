@@ -1294,7 +1294,7 @@ More cases are covered in the [Troubleshooting Guide](storykit-troubleshooting).
 
 ## Where to Go from Here
 
-* Read a published narrative to see these techniques in action. The [Monument Valley post]({{ site.baseurl }}/monument-valley/) uses the image viewer, `zoomto` and `flyto` action links, a multi-marker map, YouTube embeds, entity popovers, and footnotes — nearly everything in this guide on one page. To read its raw source, open `_posts/2026-01-10-monument-valley.md` in GitHub and click **Raw**.
+* Read a published narrative to see these techniques in action. The [Monument Valley post](https://rsnyder.github.io/storykit-starter/monument-valley/) uses the image viewer, `zoomto` and `flyto` action links, a multi-marker map, YouTube embeds, entity popovers, and footnotes — nearly everything in this guide on one page. To read its raw source, open `_posts/2026-01-10-monument-valley.md` in GitHub and click **Raw**.
 * Browse the [full author documentation]({{ site.baseurl }}/admin/) for a deeper reference on each viewer, formatting and layout options, and the two-column display mode.
 * When your narrative is ready, open a pull request and an administrator will review it.
 

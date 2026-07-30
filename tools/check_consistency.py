@@ -62,8 +62,16 @@ def check_chirpy_version() -> None:
     # the old tag. That is invisible against the live CDN (the old tag still
     # resolves) and only surfaces once the render harness stops serving
     # fixtures for the retired version. Three copies, one check.
-    context = (REPO / "editor" / "context.js").read_text()
-    m = re.search(r"CHIRPY_VERSION\s*=\s*['\"]v?(\d+\.\d+\.\d+)['\"]", context)
+    #
+    # OPTIONAL, because this script is synced to site repos and the editor is
+    # not: one central instance serves them all, so they carry no editor/ at
+    # all (see FILES_TO_SYNC in sync_code.py, and docs/editor-central.md).
+    # Reading it unconditionally crashed every downstream build with a
+    # FileNotFoundError. Where the file is absent there is no mirror to drift.
+    context_path = REPO / "editor" / "context.js"
+    if not context_path.exists():
+        return
+    m = re.search(r"CHIRPY_VERSION\s*=\s*['\"]v?(\d+\.\d+\.\d+)['\"]", context_path.read_text())
     if not m:
         errors.append("editor/context.js: could not find CHIRPY_VERSION")
         return

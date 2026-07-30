@@ -42,7 +42,7 @@ SRC_USER = "rsnyder"
 SRC_REPO = "storykit-starter"
 # Pinned commit of storykit-starter that this repo was last baselined to.
 # Bump deliberately (see module docstring), never point back at a branch name.
-SRC_REF = "56dc5f1f1b394ceb473372ab5178bd76c13a2761"
+SRC_REF = "b2ff8127630f26eab2579537e9a012cd6d2cccfc"
 
 # Optional: GitHub token (env var) to avoid rate limits / access private repos
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -147,6 +147,21 @@ class Result:
     changed: List[str] = field(default_factory=list)
     unchanged: List[str] = field(default_factory=list)
     failed: List[str] = field(default_factory=list)
+
+
+def parse_manifest(source: str) -> set:
+    """FILES_TO_SYNC entries declared in a copy of this script.
+
+    Used to compare the manifest a run iterated against the one it just wrote
+    over itself. Comments are stripped first: the list carries explanatory
+    prose, and quoted text inside it would otherwise read as filenames (the
+    same trap check_consistency.py fell into).
+    """
+    m = re.search(r"FILES_TO_SYNC\s*=\s*\[(.*?)\]", source, re.S)
+    if not m:
+        return set()
+    body = re.sub(r"#[^\n]*", "", m.group(1))
+    return set(re.findall(r"['\"]([^'\"]+)['\"]", body))
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -317,13 +332,25 @@ def main(argv: List[str]) -> int:
     # iterated -- they are silently skipped. --ref does not help: it chooses
     # where files come from, not which files. Say so, loudly, because the
     # symptom is a sync that reports success while leaving the repo broken.
+    #
+    # Gate on the MANIFEST actually differing, not on sync_code.py having
+    # changed. The self-pin below rewrites SRC_REF on every explicit-ref apply,
+    # so the file always differs from upstream afterwards and a change-based
+    # test fired every single run -- advice that is always on is advice nobody
+    # reads.
     if args.apply and "tools/sync_code.py" in result.changed:
-        print(
-            "\n*** RE-RUN THE SYNC ***"
-            "\ntools/sync_code.py was itself updated by this run, so any files"
-            "\nadded to FILES_TO_SYNC upstream were NOT fetched -- this run used"
-            "\nthe old manifest. Run the same command again to pick them up."
-        )
+        missed = sorted(parse_manifest((repo_root / "tools" / "sync_code.py").read_text())
+                        - set(FILES_TO_SYNC))
+        if missed:
+            print(
+                "\n*** RE-RUN THE SYNC ***"
+                "\ntools/sync_code.py was updated by this run and the new manifest"
+                "\nadds entries this run could not fetch, because it iterated the"
+                "\nOLD list:"
+            )
+            for rel in missed:
+                print(f"  - {rel}")
+            print("Run the same command again to pick them up.")
 
     if result.changed and not args.apply:
         print(

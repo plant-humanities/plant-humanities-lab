@@ -64,6 +64,16 @@ jobs:
         continue-on-error: true
 
       - name: Test site
+        # Opt-out per repo: set the Actions VARIABLE STORYKIT_LINK_CHECK to
+        # "false" (Settings -> Secrets and variables -> Actions -> Variables).
+        # Unset means the check runs, so link checking stays the default.
+        #
+        # A variable rather than an edit to this file, because this workflow is
+        # synced from storykit-starter and every sync overwrites it. A site repo
+        # that had commented this step out silently got it back — and a link
+        # checker you cannot turn off is one that gets worked around. The
+        # variable lives in repo settings, so it survives syncs.
+        if: vars.STORYKIT_LINK_CHECK != 'false'
         run: |
           bundle exec htmlproofer "_site${{ steps.pages.outputs.base_path }}" \
             --disable-external \
