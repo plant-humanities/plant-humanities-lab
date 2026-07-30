@@ -42,7 +42,7 @@ SRC_USER = "rsnyder"
 SRC_REPO = "storykit-starter"
 # Pinned commit of storykit-starter that this repo was last baselined to.
 # Bump deliberately (see module docstring), never point back at a branch name.
-SRC_REF = "d6e34095d6ef3b43be2bc2e17fa77ea6750e142e"
+SRC_REF = "ee4550d0603b32a646ded649fe3fe9c19342ec60"
 
 # Optional: GitHub token (env var) to avoid rate limits / access private repos
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -117,7 +117,27 @@ FILES_TO_SYNC = [
     #    serves all repos (storykit-starter/docs/editor-central.md).
     "_admin/2026-07-06-storykit-authoring-a-visual-narrative.md",
     "tools/sync_code.py",
+    # pages-deploy.yml runs exactly two repo scripts, sync_code.py above and
+    # check_consistency.py here, so both have to travel with it. This one was
+    # left out, meaning downstream copies froze at whenever the repo was created
+    # and drifted silently from the manifest they validate. Same class of bug as
+    # the .ruby-version omission below.
+    "tools/check_consistency.py",
     "Gemfile",
+    # The Setup Ruby step in pages-deploy.yml takes NO ruby-version input; it
+    # reads .ruby-version, so that file has to travel with the workflow. Without
+    # it a downstream deploy dies inside setup-ruby before reaching the build,
+    # reporting that ruby-version must be specified when no .ruby-version or
+    # .tool-versions file exists. Regression from b91ecdd, which replaced the
+    # inline ruby-version 3.3 pin with the .ruby-version lookup and added the
+    # file here but not to this list; the canonical repo kept building, so the
+    # breakage was only ever visible downstream.
+    #
+    # Keep comments in this list free of apostrophes and quote characters:
+    # check_consistency.py mines the list for quoted paths, and older copies of
+    # it (downstream repos do not receive that file) read such prose as
+    # filenames and fail the build.
+    ".ruby-version",
     ".github/workflows/pages-deploy.yml",
 ]
 
