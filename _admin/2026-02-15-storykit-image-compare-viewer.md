@@ -139,6 +139,25 @@ Use a value other than `50` when one image is more recognisable and you want it 
 
 ---
 
+#### width / height
+{: .attribute }
+
+Explicit pixel dimensions for the in-page viewer. Normally omitted — the viewer sizes itself to the available width and the `aspect` ratio.
+
+    width="600"
+    height="400"
+
+---
+
+#### id
+{: .attribute }
+
+An identifier for the viewer. The Image Compare viewer doesn't currently support [action links](storykit-action-links), so an `id` is rarely needed.
+
+    id="compare1"
+
+---
+
 ## Alignment Query Parameters
 
 These parameters are appended to the `before` or `after` attribute values by the adjustment tool. You will not normally write them by hand, but they are documented here for completeness.
@@ -186,7 +205,6 @@ Positive offset values shift the image right (X) or down (Y). Negative values sh
     before="Westgate_Towers_c1905.jpg&bx=-8&by=-6&bs=1.31"
     after="Westgate_Towers_2021.jpg&ax=-4&ay=-2&as=1.17"
     caption="Westgate Towers — c.1905 vs 2021"
-    aspect="1.5"
     position="50"
 %}
 </div>

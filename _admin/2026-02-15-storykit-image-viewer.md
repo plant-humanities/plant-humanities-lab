@@ -7,7 +7,7 @@ media_subpath: /assets/posts/storykit
 # image: image.png
 # show_header_image: false
 toc: true
-order: 22
+order: 21
 storykit:
     mode: flat
     toolbar: false
@@ -130,7 +130,7 @@ The `src` attribute define the image to display.  You can use:
 #### manifest
 {: .attribute }
 
-The for the image manifest attribute a full URL to an IIIF manifest must b provided.
+References a IIIF image by its manifest. A full URL to the IIIF manifest must be provided.
 
     manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
 
@@ -143,14 +143,21 @@ These improve presentation but are not required.
 #### aspect
 {: .attribute }
 
----
-
-Controls the image shape.
+Controls the image shape (width-to-height ratio).
 
     aspect="1200/630"
     aspect="1"
 
 You usually don’t need to change this unless you want a taller or more square presentation.
+
+---
+
+#### attribution
+{: .attribute }
+
+A credit line displayed with the image. For Wikimedia Commons images the attribution is fetched automatically, so this is mainly useful for images from other sources.
+
+    attribution="Photo: J. Smith, CC BY 4.0"
 
 ---
 
@@ -165,6 +172,15 @@ Keep captions short and descriptive.
 
 ---
 
+#### class
+{: .attribute }
+
+Size and position words like `medium right float` — see [Formatting Tips](storykit-formatting-tips).
+
+    class="medium right"
+
+---
+
 #### cover
 {: .attribute }
 
@@ -173,6 +189,15 @@ Makes the image fill its space more dramatically, similar to a cover photo.
     cover="true"
 
 This works well for wide landscape images.
+
+---
+
+#### id
+{: .attribute }
+
+An identifier for the viewer, **required when using action links** such as `zoomto` (see the [Action Link Example](#action-link-example) below).
+
+    id="img1"
 
 ---
 
@@ -199,9 +224,18 @@ Rotates the image.
 #### seq
 {: .attribute }
 
-Selects image in a multi-image IIIF manifest.  By default, the first image in a manifest is displayed.  If multiple images are defined in a manifest others can be referenced using the `seq` attribute.  In this example the 2nd image in the manifest is displayed.
+Selects the image in a multi-image IIIF manifest.  By default, the first image in a manifest is displayed.  If multiple images are defined in a manifest others can be referenced using the `seq` attribute.  In this example the 3rd image in the manifest is displayed.
 
     seq="3"
+
+---
+
+#### width
+{: .attribute }
+
+Requests a specific pixel width for the in-page image (the high-resolution version used in the expanded viewer is unaffected). Normally omitted — an appropriate size is chosen automatically.
+
+    width="800"
 
 ---
 
@@ -323,7 +357,7 @@ When the action link is clicked, the image viewer will zoom into the area define
 {: .nolineno }
 {% endraw %}
 
-Note the addition of the `id` attribute with the value `img1`.
+Note the addition of the `id` attribute with the value `img2`.
 
 ```markdown
 [Merrick Butte](img2/zoomto/pct:67.68,34.23,23.22,27){: label="Custom Label"}
@@ -345,5 +379,7 @@ In this action link the first segment of the URL contains the `id` of the image 
 [zoomto action link with](img2/zoomto/pct:67.68,34.23,23.22,27){: label="Custom Label"}
 
 Note that in this example the label for the zoomed region is taken from the custom attributes appended to the link.
+
+The full action-link syntax, common pitfalls, and the actions supported by every viewer are covered in the [Action Links reference](storykit-action-links).
 
 ---

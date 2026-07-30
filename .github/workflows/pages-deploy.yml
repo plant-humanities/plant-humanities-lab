@@ -38,11 +38,14 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          # Create/enable the Pages site (source: GitHub Actions) if it isn't already
+          enablement: true
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3
+          # Ruby version is read from .ruby-version so local and CI builds stay in sync
           bundler-cache: true
 
       - name: Build site
@@ -50,11 +53,24 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
-      #- name: Test site
-      #  run: |
-      #    bundle exec htmlproofer _site \
-      #      \-\-disable-external \
-      #      \-\-ignore-urls "/^Q[0-9]+$/,/\/zoomto|flyto\//,/^http:\/\/127\.0\.0\.1/,/^http:\/\/0\.0\.0\.0/,/^http:\/\/localhost/"
+      - name: Check repo consistency
+        run: python3 tools/check_consistency.py
+
+      - name: Check drift against storykit-starter
+        # Reports (but does not block on) differences between this repo's framework
+        # files and the canonical rsnyder/storykit-starter repo. Drift is expected
+        # while local improvements await upstreaming; this step makes it visible.
+        run: python3 tools/sync_code.py --check
+        continue-on-error: true
+
+      - name: Test site
+        run: |
+          bundle exec htmlproofer "_site${{ steps.pages.outputs.base_path }}" \
+            --disable-external \
+            --no-enforce-https \
+            --swap-urls "^${{ steps.pages.outputs.base_path }}/:/" \
+            --ignore-files "/assets\/components\//" \
+            --ignore-urls "/^Q[0-9]+$/,/\/(zoomto|flyto|playat|play|pause)\//,/^http:\/\/127\.0\.0\.1/,/^http:\/\/0\.0\.0\.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3

@@ -5,12 +5,11 @@ permalink: /admin/storykit-youtube-viewer
 date: 2026-02-22
 media_subpath: /assets/posts/storykit
 toc: true
-order: 25
+order: 24
 storykit:
     mode: flat
     toolbar: false
 ---
-
 <style>
     @media (min-width: 1650px) {
         #main-wrapper>.container {
@@ -159,6 +158,24 @@ An identifier for the viewer, required when using action links.
     id="vid1"
 
 The `id` is used by action links in the article text to target this specific viewer. See the [Action Link Example](#action-link-example) below.
+
+---
+
+#### aspect
+{: .attribute }
+
+The width-to-height ratio of the in-page preview. Defaults to `1.55`.
+
+    aspect="1.78"
+
+---
+
+#### class
+{: .attribute }
+
+Size and position words like `medium right float` — see [Formatting Tips](storykit-formatting-tips).
+
+    class="medium right"
 
 ---
 
@@ -331,6 +348,10 @@ Action links follow this URL format:
 | Action | Argument format | Description |
 |---|---|---|
 | `playat` | `start` or `start,end` | Opens the expanded viewer and plays from `start`, optionally stopping at `end`. Times may be in seconds or `h:mm:ss`. |
+| `play` | optional `start` | Resumes playback, optionally seeking to `start` first. |
+| `pause` | none | Pauses playback. |
+
+The full action-link syntax and the actions supported by every viewer are covered in the [Action Links reference](storykit-action-links).
 
 ### Argument Format Examples
 

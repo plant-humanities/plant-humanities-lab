@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css" />
 
   <!-- Leaflet + gesture handling -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling@1.2.2/dist/leaflet-gesture-handling.min.css"
+    integrity="sha384-IKK988kZjVpx+y4Iqax/6yU7EVQx/sHewAKb/iqDCb9tCtgy25bGk5ZINDla9rgv" crossorigin="anonymous" />
 
   <!-- Fonts -->
   <link rel="stylesheet"
@@ -212,19 +214,29 @@
 
       <figcaption>
         <span class="title caption-title"></span>
+        <button id="expandBtn" class="expand-btn" type="button" title="Expand map" aria-label="Expand map">
+          <i class="fa-solid fa-expand" aria-hidden="true"></i>
+        </button>
       </figcaption>
     </figure>
   </main>
 
+  <!-- StoryKit component runtime (postMessage protocol) -->
+  <script src="../js/storykit-component.js"></script>
+
   <!-- Leaflet core + plugins (global) -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://juncture-digital.github.io/Leaflet.SmoothWheelZoom/Leaflet.SmoothWheelZoom.js"></script>
-  <script src="https://unpkg.com/leaflet-gesture-handling"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@allmaps/leaflet/dist/bundled/allmaps-leaflet-1.9.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  <script src="../js/vendor/Leaflet.SmoothWheelZoom.js"></script>
+  <script src="https://unpkg.com/leaflet-gesture-handling@1.2.2/dist/leaflet-gesture-handling.min.js"
+    integrity="sha384-TqJpQ0URK8MzCC4s3ekivmwQmVfay3oiXhBt/Vl5nViiMrO7+rdFTc5VKDeUuto8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@allmaps/leaflet@1.0.0-beta.44/dist/bundled/allmaps-leaflet-1.9.umd.js"
+    integrity="sha384-p5+AU66OWJcE5rj1uoKbiA5W8d9g4JTLC6OXGLhIPTywhAWpU9jYhCV6euO75cE2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/exif-js@2.3.0/exif.js"
+    integrity="sha384-mjCisVk+9cQGYprByJbHxzwFO7BVEgR6iCftsCqnmHNKA8uzLYoRng5h1qKMvHjp" crossorigin="anonymous"></script>
 
   <script type="module">
-    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+    import { marked } from "https://cdn.jsdelivr.net/npm/marked@18.0.5/lib/marked.esm.js";
     import "https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js";
 
     // ------------------------------- constants -------------------------------
@@ -256,12 +268,12 @@
     };
 
     const MARKER_ICON_TEMPLATE = {
-      iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png",
-      iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png",
+      iconUrl: "../img/leaflet/marker-icon.png",
+      iconRetinaUrl: "../img/leaflet/marker-icon-2x.png",
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [1, -34],
-      shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+      shadowUrl: "../img/leaflet/marker-shadow.png",
       shadowSize: [41, 41]
     };
 
@@ -270,24 +282,21 @@
     const captionTitleEl = document.querySelector("figcaption .title");
     const coordsEl = document.querySelector("#coords");
     const mapEl = document.querySelector("#map");
-    // const expandBtn = document.querySelector("#expandBtn");
+    const expandBtn = document.querySelector("#expandBtn");
 
     // ------------------------------ expand button ---------------------------
-    function postShowDialog() {
-      console.log('showDialog')
-      // Keep aspect stable and simple per your request
-      window.parent.postMessage(
-        { type: "showDialog", props: { aspect: 1.0, src: `${location.href}` } },
-        "*"
-      );
+    const isMaxMode = new URLSearchParams(location.search).has("max");
+    if (isMaxMode) {
+      // Already in the expanded dialog — no point offering to expand again.
+      expandBtn.style.display = "none";
+    } else {
+      expandBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const sep = location.search ? "&" : "?";
+        StoryKit.showDialog(`${location.href}${sep}max`, 1.0);
+      });
     }
-    /*
-    expandBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      postShowDialog();
-    });
-    */
 
     // ------------------------------ utilities ------------------------------
     const isQid = (s) => typeof s === "string" && /^Q\d+$/.test(s.trim());
@@ -321,7 +330,7 @@
     }
 
     function setCaption(caption) {
-      captionTitleEl.innerHTML = mdToHtml(decodeURIComponent(String(caption)).replace(/_/g, " "));
+      captionTitleEl.innerHTML = mdToHtml(caption);
     }
 
     function parseAspectRatio(value) {
@@ -352,11 +361,10 @@
         aspectRatio = parseAspectRatio(raw);
       }
       let width = mapEl.clientWidth;
-      width = mainEl.clientWidth;
       if (iframe && width) {
         let captionHeight = captionTitleEl.clientHeight || parseInt(captionTitleEl?.style.height?.slice(0, -2)) || 0;
         let containerHeight = width / aspectRatio + captionHeight + 20;
-        console.log('setting container height', { aspectRatio, width, captionHeight, containerHeight });
+        // console.log('setting container height', { aspectRatio, width, captionHeight, containerHeight });
         if (!iframe.style.width) iframe.style.width = '100%';
         iframe.style.height = `${containerHeight}px`;
       }
@@ -912,28 +920,13 @@
     }
 
     // ------------------------------ messaging ------------------------------
-    function parseMessageData(event) {
-      const raw = event?.data;
-      if (!raw) return null;
-      if (typeof raw === "string") {
-        try { return JSON.parse(raw); } catch { return null; }
-      }
-      if (typeof raw === "object") return raw;
-      return null;
-    }
-
     function setupFlyToMessaging({ map, getEntity }) {
       let prior = null;
       let lastTargetKey = null;
 
-      window.addEventListener("message", async (event) => {
-        const msg = parseMessageData(event);
-        if (!msg) return;
-
-        const action = String(msg.action || "").toLowerCase();
+      StoryKit.onAction(async ({ action, args }) => {
         if (action !== "flyto") return;
 
-        const args = Array.isArray(msg.args) ? msg.args : [];
         const locZoom = String(args[0] ?? "").trim();
         if (!locZoom) return;
 
@@ -1000,7 +993,11 @@
 
       const qids = collectQIDsFromProps(props);
       const entities = qids.size ? await getEntityData(Array.from(qids), props.language) : {};
-      const getEntity = async (qid) => entities[qid] || null;
+      // Q-ids referenced only by flyto action links aren't in props, so fetch on demand
+      const getEntity = async (qid) => {
+        if (!entities[qid]) Object.assign(entities, await getEntityData([qid], props.language));
+        return entities[qid] || null;
+      };
 
       // Center / zoom
       let centerLatLng = null;

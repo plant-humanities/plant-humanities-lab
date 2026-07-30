@@ -7,8 +7,11 @@
     <title>Image Compare</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace.js"></script>
+
+    <!-- StoryKit component runtime (postMessage protocol) -->
+    <script src="../js/storykit-component.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -412,6 +415,31 @@
 
         if (isMax) document.body.classList.add("is-max");
 
+        // Aspect ratio detected from loaded images (or seeded from ?aspect= param)
+        let detectedAr = aspect ? parseFloat(aspect) : null;
+
+        // Directly resize the parent iframe using the known aspect ratio.
+        // Called both on initial load and whenever the iframe width changes.
+        let _lastViewportWidth = 0;
+        function setIframeHeight() {
+            if (isMax) return;
+            const iframe = window.frameElement;
+            if (!iframe || !detectedAr || !isFinite(detectedAr) || detectedAr <= 0) return;
+            // Use viewport width inside the iframe — excludes scrollbars, so content
+            // sized to this width will never trigger horizontal scroll in the parent.
+            const viewportWidth = document.documentElement.clientWidth;
+            if (!viewportWidth) return;
+            // Body has 12px padding on each side; figure is min(1100px, 100%)
+            const figureWidth = Math.min(1100, viewportWidth - 24);
+            const comparerHeight = figureWidth / detectedAr;
+            const captionEl = document.getElementById('caption');
+            const captionHeight = (captionEl && captionEl.textContent.trim()) ? (captionEl.offsetHeight || 22) : 0;
+            // 24px body padding + 10px figure gap (always present between comparer and figcaption)
+            const total = 34 + comparerHeight + captionHeight;
+            if (!iframe.style.width) iframe.style.width = '100%';
+            iframe.style.height = `${Math.ceil(total)}px`;
+        }
+
         const defaults = { bx:0, by:0, bs:1, ax:0, ay:0, as:1 };
         const align = {};
         for (const k of Object.keys(defaults)) {
@@ -424,8 +452,8 @@
         const $toast    = document.getElementById("toast");
 
         // ── Height signaling to parent iframe ────────────────────────────
-        // Sends { type:"image-compare:height", height:<px> } via postMessage.
-        // Parent page should listen and set iframe.style.height accordingly.
+        // Sends storykit:height via StoryKit.reportHeight (see
+        // docs/postmessage-protocol.md). The host sets iframe.style.height.
         //
         // WHY NOT scrollHeight:
         //   scrollHeight on documentElement counts the *content* height of every
@@ -439,23 +467,57 @@
         //   exactly once, after the slowest/most important dimension is done.
 
         function notifyHeight() {
-            comparer.style.display = 'block'; 
+            comparer.style.display = 'block';
             if (isMax) {
-                const panelIsOpen = $panel.classList.contains("open");
-                let containerHeight = window.frameElement.clientHeight;
-                let containerWidth = window.frameElement.clientWidth;
-                let comparerWidth = comparer.clientWidth;
+                // Width is fixed by the dialog; derive comparer height from aspect ratio,
+                // then resize the iframe to fit comparer + caption + alignment panel.
+                const availableW = document.documentElement.clientWidth;
+                const ar = (detectedAr && isFinite(detectedAr) && detectedAr > 0)
+                    ? detectedAr
+                    : (comparer.clientWidth > 0 && comparer.clientHeight > 0
+                        ? comparer.clientWidth / comparer.clientHeight : 1);
 
-                let comparerHeight = containerHeight - (panelIsOpen ? 254 : 44); // Account for panel height when open, plus some padding
-                let comparerAspect = comparer.clientWidth / comparer.clientHeight;
-                comparer.style.height = `${comparerHeight}px`;
-                comparer.style.width = `${comparerHeight * comparerAspect}px`;
+                // offsetHeight is 0 when panel is closed (max-height: 0), actual height when open.
+                const panelIsOpen = $panel.classList.contains('open');
+                const panelH = $panel.offsetHeight + (panelIsOpen ? 10 : 0); // +10 for margin-top
+                const captionH = ($caption && $caption.textContent.trim()) ? ($caption.offsetHeight || 0) : 0;
+                const captionGap = captionH > 0 ? 10 : 0;
+
+                const iframe = window.frameElement;
+                let comparerH, comparerW;
+
+                if (panelIsOpen && iframe) {
+                    // Panel open: keep iframe at its current height and shrink the comparer
+                    // to make room for the panel — avoids growing past the dialog height.
+                    const iframeH = iframe.offsetHeight || (Math.round(availableW / ar) + captionGap + captionH);
+                    comparerH = Math.max(50, iframeH - panelH - captionGap - captionH);
+                    comparerW = Math.min(availableW, Math.round(comparerH * ar));
+                } else {
+                    // Panel closed: size comparer to fill full width at aspect ratio.
+                    comparerH = Math.round(availableW / ar);
+                    comparerW = availableW;
+                }
+
+                comparer.style.width  = `${comparerW}px`;
+                comparer.style.height = `${comparerH}px`;
                 comparer.style.margin = 'auto';
+
+                const totalH = comparerH + captionGap + captionH + panelH;
+                if (iframe) iframe.style.height = `${totalH}px`;
             }
             requestAnimationFrame(() => {
-                // body.offsetHeight sees the clipped panel box, not its scrollable content
-                const h = document.body.offsetHeight;
-                if (!isMax) window.parent.postMessage({ type: "image-compare:height", height: h }, "*");
+                requestAnimationFrame(() => {
+                    // body.offsetHeight sees the clipped panel box, not its scrollable content
+                    const h = document.body.offsetHeight;
+                    if (!isMax) {
+                        StoryKit.reportHeight(h);
+                        const iframe = window.frameElement;
+                        if (iframe) {
+                            if (!iframe.style.width) iframe.style.width = '100%';
+                            iframe.style.height = `${h}px`;
+                        }
+                    }
+                });
             });
         }
 
@@ -498,16 +560,27 @@
         // Notify height once images settle
         let loadCount = 0;
         [$imgBefore, $imgAfter].forEach(img => {
-            console.log(img);
-            const done = () => { 
-                if (++loadCount === 2) {
-                    // notifyHeight(); 
-                };
-            }
+            const done = () => {
+                if (++loadCount === 2 && !detectedAr && $imgBefore.naturalWidth && $imgBefore.naturalHeight) {
+                    detectedAr = $imgBefore.naturalWidth / $imgBefore.naturalHeight;
+                }
+            };
             img.addEventListener("load", done);
             img.addEventListener("error", done);
         });
         window.addEventListener("load", notifyHeight);
+
+        // Re-compute iframe height whenever the iframe's width changes.
+        // Guard against re-entry: setting iframe.style.height fires the observer
+        // again, but the viewport width won't have changed, so we skip it.
+        if (window.frameElement && !isMax) {
+            new ResizeObserver(() => {
+                const w = document.documentElement.clientWidth;
+                if (w === _lastViewportWidth) return;
+                _lastViewportWidth = w;
+                setIframeHeight();
+            }).observe(window.frameElement);
+        }
 
         // ── Mode behaviour ───────────────────────────────────────────────
         //
@@ -536,13 +609,11 @@
             function onPreviewClick() {
                 const maxParams = new URLSearchParams(location.search);
                 maxParams.set("max", "true");
-                const maxSrc = `${location.pathname}?${maxParams.toString()}`;
-                const dialogAspect = aspect ? parseFloat(aspect) : 1.0;
-                window.parent.postMessage({
-                    type:   "showDialog",
-                    src:    maxSrc,
-                    aspect: dialogAspect,
-                }, "*");
+                const maxSrc = `${location.origin}${location.pathname}?${maxParams.toString()}`;
+                // Prefer the aspect ratio we detected from the loaded images;
+                // fall back to the explicit ?aspect= param, then 1.0.
+                const dialogAspect = detectedAr || (aspect ? parseFloat(aspect) : 1.0);
+                StoryKit.showDialog(maxSrc, dialogAspect);
             }
 
         } else {
@@ -630,22 +701,23 @@
 
             // Build alignment query suffix for before and after independently.
             // Only non-default values are included, matching the format:
-            //   before="image.jpg&bx=-4&by=-2&bs=1.17"
+            //   before="image.jpg?bx=-4&by=-2&bs=1.17"
             function alignSuffix(xKey, yKey, sKey) {
                 const parts = [];
                 if (align[xKey] !== defaults[xKey]) parts.push(`${xKey}=${align[xKey]}`);
                 if (align[yKey] !== defaults[yKey]) parts.push(`${yKey}=${align[yKey]}`);
                 if (align[sKey] !== defaults[sKey]) parts.push(`${sKey}=${align[sKey]}`);
-                return parts.length ? "&" + parts.join("&") : "";
+                return parts.length ? "?" + parts.join("&") : "";
             }
 
-            // For relative URLs, keep only the last path segment (filename) plus
-            // any query string. Absolute URLs (http/https) are left as-is.
+            // For relative URLs and StoryKit preview URLs, keep only the filename.
+            // Other absolute URLs (http/https) are left as-is.
+            const storykitPreviewPattern = /^https?:\/\/storykit-preview\.netlify\.app\/api\/raw\//i;
             function tagUrl(url) {
-                if (/^https?:\/\//i.test(url)) return url;
-                // Strip leading path segments, preserve everything from the
-                // last '/' onward (including query string / hash if any)
-                return url.replace(/^.*\//, "");
+                if (storykitPreviewPattern.test(url) || !/^https?:\/\//i.test(url)) {
+                    return url.replace(/^.*\//, "");
+                }
+                return url;
             }
 
             const beforeVal = tagUrl(beforeUrl) + alignSuffix("bx", "by", "bs");
@@ -656,16 +728,22 @@
             lines.push(`    before="${beforeVal}"`);
             lines.push(`    after="${afterVal}"`);
             if (caption)  lines.push(`    caption="${caption}"`);
-            lines.push(`    aspect="${aspect || ""}"`);
+            if (aspect)   lines.push(`    aspect="${aspect}"`);
             lines.push(`    position="${position || "50"}"`);
             lines.push(`%}`);
 
             const tag = lines.join("\n");
 
-            navigator.clipboard.writeText(tag).then(() => {
-                $toast.textContent = "Tag copied!";
-                $toast.classList.add("show");
-                setTimeout(() => $toast.classList.remove("show"), 2000);
+            StoryKit.copyText(tag).then((copied) => {
+                if (copied) {
+                    $toast.textContent = "Tag copied!";
+                    $toast.classList.add("show");
+                    setTimeout(() => $toast.classList.remove("show"), 2000);
+                } else {
+                    // Both clipboard paths refused — surface the tag for
+                    // manual copying instead of failing silently.
+                    window.prompt("Copy the tag manually:", tag);
+                }
             });
         });
 
@@ -676,18 +754,13 @@
     ═══════════════════════════════════════════════════════════════════
     PARENT PAGE INTEGRATION — iframe auto-resize
     ═══════════════════════════════════════════════════════════════════
-    Add to your host page to let the iframe grow/shrink when the
-    alignment panel opens or closes:
-
-        window.addEventListener("message", (e) => {
-            if (e.data?.type === "image-compare:height") {
-                const iframe = document.getElementById("your-iframe-id");
-                if (iframe) iframe.style.height = e.data.height + "px";
-            }
-        });
-
-    Message payload: { type: "image-compare:height", height: <number> }
+    This component reports its desired height with the StoryKit protocol
+    message { type: "storykit:height", payload: { height: <px> } }.
+    The StoryKit host page (assets/js/storykit.js) handles it
+    automatically; a custom host page would need an equivalent listener.
+    See docs/postmessage-protocol.md.
     ═══════════════════════════════════════════════════════════════════
     -->
+
 </body>
 </html>

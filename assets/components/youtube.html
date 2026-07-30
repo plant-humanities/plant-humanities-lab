@@ -39,24 +39,24 @@
 
   ─── Messages TO this component (from parent) ────────────────────────────────
 
-    Sent via: target.contentWindow.postMessage(JSON.stringify(msg), '*')
+    StoryKit postMessage protocol (see docs/postmessage-protocol.md):
 
-    { event: 'action', action: 'playat', args: ['start,end'] }
+    { type: 'storykit:action', payload: { action: 'playat', args: ['start,end'] } }
       Opens the expanded dialog and begins playing at the given time range.
       args[0] is a comma-separated string of start and optional end times.
       Examples:
         args: ['90']          → play from 1:30
         args: ['1:30,2:45']   → play from 1:30, stop at 2:45
 
-    { event: 'action', action: 'play', args: ['start'] }
+    { type: 'storykit:action', payload: { action: 'play', args: ['start'] } }
       Plays the already-visible max-mode player from an optional start time.
 
-    { event: 'action', action: 'pause' }
+    { type: 'storykit:action', payload: { action: 'pause' } }
       Pauses the already-visible max-mode player.
 
   ─── Messages FROM this component (to parent) ────────────────────────────────
 
-    { type: 'showDialog', src: '...', aspect: 1.7 }
+    { type: 'storykit:showDialog', payload: { src: '...', aspect: 1.7 } }
       Requests the parent open an expanded dialog containing this component
       loaded at the given src URL (which includes ?max=true and any playback
       params). aspect is the suggested width/height ratio for the dialog.
@@ -202,6 +202,9 @@
     </figure>
   </main>
 
+  <!-- StoryKit component runtime (postMessage protocol) -->
+  <script src="../js/storykit-component.js"></script>
+
   <script>
     // ── YouTube IFrame Player API bootstrap ──────────────────────────────────────
     // The API script is loaded dynamically. Once ready it calls onYouTubeIframeAPIReady.
@@ -212,7 +215,7 @@
 
   <script type="module">
 
-    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+    import { marked } from "https://cdn.jsdelivr.net/npm/marked@18.0.5/lib/marked.esm.js";
 
     // ── Utilities ───────────────────────────────────────────────────────────────
 
@@ -244,14 +247,6 @@
       if (str === null || str === undefined) return null
       if (!isNaN(str)) return parseFloat(str)
       return str.split(':').slice(0, 3).map(Number).reduce((acc, v) => acc * 60 + v, 0)
-    }
-
-    /**
-     * Safely parses a postMessage event payload.
-     * Returns the parsed object or null if parsing fails.
-     */
-    const parseMessage = event => {
-      try { return JSON.parse(event.data) } catch { return null }
     }
 
     // ── Props — parsed from URL query string ────────────────────────────────────
@@ -378,8 +373,8 @@
     const onPreviewClick = () => {
       const maxParams = new URLSearchParams(location.search)
       maxParams.set('max', 'true')
-      const maxSrc = `${location.pathname}?${maxParams.toString()}`
-      window.parent.postMessage({ type: 'showDialog', src: maxSrc, aspect: 1.7 }, '*')
+      const maxSrc = `${location.origin}${location.pathname}?${maxParams.toString()}`
+      StoryKit.showDialog(maxSrc, 1.7)
     }
 
     // ── Caption ─────────────────────────────────────────────────────────────────
@@ -397,22 +392,16 @@
         .catch(() => { /* silently ignore — caption just stays blank */ })
     }
 
-    // ── Inbound postMessage handler ─────────────────────────────────────────────
+    // ── Inbound action handler ──────────────────────────────────────────────────
     // Handles action messages sent from the parent page to this component.
 
-    window.addEventListener('message', event => {
-      const data = parseMessage(event)
-      if (!data) return
-      if (data.channel === 'widget') return  // ignore Shoelace internal messages
-
-      const action = String(data.action || '').toLowerCase()
-
+    StoryKit.onAction(({ action, args }) => {
       if (action === 'playat') {
         // Open the expanded dialog and play from a specified time range.
         // args[0] is a comma-separated "start" or "start,end" string.
-        // Example data-args values: "90"  "1:30"  "1:30,2:45"
-        if (!Array.isArray(data.args) || !data.args[0]) return
-        const parts = data.args[0].split(',').map(s => s.trim())
+        // Example values: "90"  "1:30"  "1:30,2:45"
+        if (!args[0]) return
+        const parts = args[0].split(',').map(s => s.trim())
         const start = toSeconds(parts[0])
         const end = parts[1] ? toSeconds(parts[1]) : null
 
@@ -423,13 +412,13 @@
         if (end !== null) maxParams.set('end', end)
         else maxParams.delete('end')
 
-        const maxSrc = `${location.pathname}?${maxParams.toString()}`
-        window.parent.postMessage({ type: 'showDialog', src: maxSrc, aspect: 1.7 }, '*')
+        const maxSrc = `${location.origin}${location.pathname}?${maxParams.toString()}`
+        StoryKit.showDialog(maxSrc, 1.7)
 
       } else if (action === 'play') {
         // Play the max-mode player, optionally seeking to a start time first.
         if (!ytPlayer) return
-        const start = data.args?.[0] ? toSeconds(data.args[0]) : null
+        const start = args[0] ? toSeconds(args[0]) : null
         if (start !== null) ytPlayer.seekTo(start, true)
         ytPlayer.playVideo()
 

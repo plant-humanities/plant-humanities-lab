@@ -48,7 +48,7 @@ Over time, the implementation went through several iterations. The current archi
 StoryKit does not replace Jekyll or the Chirpy theme. It extends and complements them.
 
 * **Jekyll** provides the static site engine.
-* **Chirpy** provides the theme, layout, typography, navigation, and core documentation model (see “Getting Started”  and “Writing a New Post” ).
+* **Chirpy** provides the theme, layout, typography, and navigation (see the [official Chirpy documentation](https://chirpy.cotes.page/) for theme-level topics).
 * **StoryKit** adds interactive media components and text-driven interactions on top of that foundation.
 
 The result is:
@@ -101,29 +101,38 @@ StoryKit functionality is controlled in two places:
 
 ### Global Configuration
 
-Site-wide settings are defined in `_config.yml`. This determines:
+Site-wide defaults are defined in the `storykit:` block of `_config.yml`. This determines:
 
-* Which StoryKit features are available
-* How components behave by default
+* The default display mode (flat or two-column)
+* Which conveniences are on by default (auto-float, embed grouping, entity popups, the post toolbar)
 
-If StoryKit is not configured in `_config.yml`, its functionality is effectively inactive.
+Individual posts can override any of these in their own Front Matter.
 
-### Per-Post Enablement
+### Per-Post Settings
 
-StoryKit is **not enabled by default**.
+StoryKit is **enabled by default** on every post. You don't need to add anything to a post's Front Matter to use viewers, action links, or entity popups — they just work.
 
-To use StoryKit features in a post, you must explicitly enable it in that post’s Front Matter:
+If you want a post to behave as a plain Chirpy post with no StoryKit behaviors, opt out explicitly:
 
 ```yaml
 ---
 title: Example Post
-storykit: true
+storykit: false
 ---
 ```
 
-Only posts that include the `storykit` field in their Front Matter will activate the additional scripts and behaviors.
+You can also fine-tune StoryKit per post by using an object instead of a boolean. Any setting from the site-wide `storykit:` block in `_config.yml` can be overridden this way:
 
-This design keeps the base site lightweight and ensures that standard posts behave exactly like normal Chirpy posts unless StoryKit is intentionally enabled.
+```yaml
+---
+title: Example Post
+storykit:
+    mode: 2col          # two-column scrollytelling layout
+    auto_float: false   # don't float viewers beside paragraphs
+---
+```
+
+The full list of settings is in the [Display Modes guide](storykit-display-modes).
 
 ---
 
@@ -178,9 +187,10 @@ Another key StoryKit feature is the ability to create **Entity Information Boxes
 
 When an author links a term to a Wikidata identifier (for example, a person, place, or concept), StoryKit can automatically generate a small information popup. This popup typically includes:
 
-* A short description
+* The entity's name and short description
+* A summary drawn from Wikipedia
 * An image (when available)
-* Basic structured facts
+* A link to the full Wikipedia article
 
 This allows authors to enrich their essays with contextual information without manually writing sidebars or summaries.
 

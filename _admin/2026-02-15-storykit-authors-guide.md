@@ -5,7 +5,7 @@ permalink: /admin/storykit-authors-guide
 date: 2026-02-15
 toc: true
 mermaid: true
-order: 12
+order: 11
 storykit:
     mode: flat
     toolbar: false
@@ -70,21 +70,20 @@ date: 2026-01-10
 categories: [examples]
 tags: [Monument Valley]
 published: false
-pin: true
 media_subpath: /assets/posts/monument-valley
 image:
   path: Monument_Valley.jpg
   alt: Monument Valley
-storykit: true
 ---
 ```
 
 #### Key Points
 
-* `published: false` while drafting
+* `published: false` while drafting; change to `true` to publish
 * `media_subpath` must exactly match the folder name created in the `/assets/posts` folder
 * `image.path` uses filename only
-* StoryKit settings may be a boolean or an object
+* A single author can also be given as `author: Name`; use the `authors:` list form for one or more authors
+* StoryKit is **on by default** — no front matter needed to use viewers or action links. Add `storykit: false` to opt a post out, or a `storykit:` settings block to fine-tune behavior (see the [Display Modes guide](storykit-display-modes))
 
 ---
 
@@ -194,19 +193,21 @@ The preview renders instantly from the repo — no full site rebuild required.
 
 ## 7. StoryKit Features
 
-A basic post is created using using plain text and standard Markdown tags.  These Chirpy guides provide information on writing text-based posts using Markdown formatting.
-
-- [Text and Typography](text-and-typography)
-- [Writing a New Post](write-a-new-post)
+A basic post is created using plain text and standard Markdown tags. For general Markdown and theme formatting topics, see the [official Chirpy documentation](https://chirpy.cotes.page/).
 
 Using the StoryKit extensions interactive images, maps, videos and more can easily be added to a post using simple tags.  More information on the StoryKit extensions can be found in the following guides.
 
 - [StoryKit Overview](storykit-overview)
-- [Image viewer](storykit-image-viewer)
+- [Viewers Overview](storykit-viewers-overview) — all viewers at a glance
+- [Image Viewer](storykit-image-viewer)
 - [Map Viewer](storykit-map-viewer)
 - [Image Compare Viewer](storykit-image-compare-viewer)
 - [YouTube Viewer](storykit-youtube-viewer)
+- [Network Viewer](storykit-vis-network-viewer)
+- [Iframe Viewer](storykit-iframe-viewer)
 - [Entity Info Popups](storykit-entity-info-popups)
+- [Action Links](storykit-action-links) — making text control the viewers
+- [Display Modes](storykit-display-modes) — flat vs. two-column layout
 
 ---
 
@@ -253,5 +254,7 @@ Confirm required `_includes/embed/` files exist.
 * `media_subpath` matches folder exactly
 * Images uploaded
 * Only filenames used
-* StoryKit enabled if needed
+* Every viewer that action links target has an `id`
 * `published: true` when ready
+
+More help: [Troubleshooting Guide](storykit-troubleshooting).

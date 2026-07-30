@@ -95,8 +95,8 @@ script_includes:
 
 {% if page.storykit != false %}
   <link rel="stylesheet" href="{{ '/assets/css/storykit.css' | relative_url }}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/themes/light.css">
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/shoelace.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace.js"></script>
 {% endif %}
 
 <article class="px-1" data-toc="{{ enable_toc }}">
@@ -179,9 +179,21 @@ script_includes:
         </span>
       {% endif %}
 
-      {% if page.image and page.show_header_image != false %}
+      {%- comment -%}
+        Guard against a BLANK image.path (the .template.md ships the field
+        empty): `path | default: image` falls back to the whole image MAPPING,
+        which Liquid serializes into the src as "{...}" and breaks the page
+        (and htmlproofer). Treat a blank/missing path as "no header image".
+      {%- endcomment -%}
+      {%- assign _hdr_src = page.image.path -%}
+      {%- if _hdr_src == blank and page.image.first == nil -%}
+        {%- comment -%} image given as a plain string, not a mapping {%- endcomment -%}
+        {%- assign _hdr_src = page.image -%}
+      {%- endif -%}
+      {%- if _hdr_src == blank -%}{%- assign _hdr_src = nil -%}{%- endif -%}
+      {% if _hdr_src and page.show_header_image != false %}
 
-        {% assign src = page.image.path | default: page.image %}
+        {% assign src = _hdr_src %}
         
         {%- assign p4 = src | slice: 0, 4 -%}
         {%- assign is_abs = false -%}
@@ -206,7 +218,22 @@ script_includes:
         {% capture src %}src="{{ src }}"{% endcapture %}
 
         {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
-        {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
+        {%- comment -%} data-sk-alt tells storykit.js the FRONT-MATTER truth:
+            Chirpy's alt fallback ("Preview Image") + Liquid's default filter
+            make absent and empty alt indistinguishable in the DOM. absent →
+            auto-caption from Commons metadata; empty → author's opt-out.
+            Embedded inside this capture so alt-present pages render
+            byte-identically. {%- endcomment -%}
+        {%- comment -%} Key-presence detection: bare `alt:` parses as YAML
+            null — == nil can't tell it from a missing key, but iterating the
+            mapping's keys can (null-valued keys still appear). Present-but-
+            empty is the author's caption opt-out; absent invites the
+            automatic Commons caption. {%- endcomment -%}
+        {%- assign _sk_has_alt_key = false -%}
+        {%- for _sk_pair in page.image -%}
+          {%- if _sk_pair[0] == 'alt' -%}{%- assign _sk_has_alt_key = true -%}{%- endif -%}
+        {%- endfor -%}
+        {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% if _sk_has_alt_key == false %} data-sk-alt="absent"{% elsif page.image.alt == blank %} data-sk-alt="empty"{% endif %}{% endcapture %}
 
         {% if page.image.lqip %}
           {%- capture lqip -%}lqip="{{ page.image.lqip }}"{%- endcapture -%}
@@ -216,6 +243,12 @@ script_includes:
           <img {{ src }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }}>
           {%- if page.image.alt -%}
             <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
+          {%- endif -%}
+          {%- comment -%} Manual attribution (front matter image.attribution);
+              Commons-hosted headers get an automatic line from storykit.js's
+              headerAttribution() when this is absent. {%- endcomment -%}
+          {%- if page.image.attribution -%}
+            <small class="sk-header-attribution text-center d-block">{{ page.image.attribution }}</small>
           {%- endif -%}
         </div>
       {% endif %}
@@ -361,7 +394,7 @@ script_includes:
 {% if page.storykit != false %}
   <script type="module">
 
-    import { isMobile, autoFloat, makeEntityPopups, wrapAdjacentEmbedsAsTabs, addActionLinks, restructureMarkdownToSections } from "{{ '/assets/js/storykit.js' | relative_url }}";
+    import { initStoryKit } from "{{ '/assets/js/storykit.js' | relative_url }}";
 
     function moveToolbarIntoTopbar() {
       const toolbar = document.getElementById("toolbar");
@@ -387,34 +420,17 @@ script_includes:
       toolbar.style.marginLeft = 'auto';
     }
 
-    const mainWrapper = document.getElementById('main-wrapper');
-    console.log(`page.storykit.mode: {{ page.storykit.mode }} site.storykit.mode: {{ site.storykit.mode }}`);
-    let mode_toggle = ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true';
-    let modeStr = mode_toggle
-      ? '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || localStorage.getItem('postViewMode') || 'flat'
-      : '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat';
-    let mode = modeStr === 'col1' || modeStr === 'flat' ? 'flat' : 'col2';
-    let doAutoFloat = ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true';
-    let groupEmbeds = ('{{ page.storykit.group_embeds }}' || '{{ site.storykit.group_embeds }}' || 'true').toLowerCase() === 'true';
-    let wikidataInfoPopups = ('{{ page.storykit.wikidata_info_popups }}' || '{{ site.storykit.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
-    console.log(`StoryKit: isMobile:${isMobile} modeStr:${modeStr} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
-
-    if (mode === 'flat' || mode === 'col1') {
-      let contentEl = document.querySelector('.post-content');
-      const newContentEl = restructureMarkdownToSections(contentEl);
-      if (newContentEl) contentEl.replaceWith(newContentEl);
-    }
-
-    mainWrapper.classList.add(mode === 'col2' ? 'col2' : 'col1');
-    new MutationObserver(() => {
-      mode = mainWrapper.classList.contains('col2') ? 'col2' : 'flat';
-      console.log(`mode=${mode}`);
-    }).observe(mainWrapper, {attributes: true, attributeFilter: ['class']});
-
-    if (wikidataInfoPopups) makeEntityPopups();
-    if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
-    addActionLinks();
-    if (doAutoFloat && !isMobile) autoFloat();
+    // All display-mode and feature initialization is delegated to
+    // initStoryKit / setViewMode in storykit.js — the single mode controller.
+    // (The toggle button in col2-toggle.html calls setViewMode too.)
+    initStoryKit({
+      pageMode: '{{ page.storykit.mode }}',
+      siteMode: '{{ site.storykit.mode }}',
+      modeToggle: ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true',
+      autoFloat: ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true',
+      groupEmbeds: ('{{ page.storykit.group_embeds }}' || '{{ site.storykit.group_embeds }}' || 'true').toLowerCase() === 'true',
+      wikidataInfoPopups: ('{{ page.storykit.wikidata_info_popups }}' || '{{ site.storykit.wikidata_info_popups }}' || 'true').toLowerCase() === 'true',
+    });
 
     document.addEventListener("DOMContentLoaded", moveToolbarIntoTopbar);
     window.addEventListener("pageshow", moveToolbarIntoTopbar);

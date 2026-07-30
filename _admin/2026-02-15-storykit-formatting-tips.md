@@ -68,7 +68,7 @@ Once auto-float is off, you can control exactly how each viewer looks by adding 
 <div markdown="1">
 {% raw %}
 ```liquid
-{% include my-map.html class="medium right" %}
+{% include embed/map.html center="37.01056, -110.2425" class="medium right" %}
 ```
 {: .nolineno }
 {% endraw %}
@@ -87,8 +87,8 @@ By default, `float` pins the viewer to the **right**. Add `left` to pin it to th
 <div markdown="1">
 {% raw %}
 ```liquid
-{% include my-image.html class="float" %}        ← right side (default)
-{% include my-image.html class="float left" %}   ← left side
+{% include embed/image.html src="photo.jpg" class="float" %}        ← right side (default)
+{% include embed/image.html src="photo.jpg" class="float left" %}   ← left side
 ```
 {: .nolineno }
 {% endraw %}
