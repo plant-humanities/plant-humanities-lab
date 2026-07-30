@@ -148,6 +148,15 @@ Without a token, GitHub limits you to a handful of preview loads per hour. Addin
 5. Click **Generate token**
 6. **Copy the token** that appears — it starts with `ghp_`
 
+> **If you also use the StoryKit editor,** tick the **`repo`** box at step 4 instead of leaving
+> everything unchecked. The editor and the preview tool share the same saved token, and a
+> scopeless token can raise the rate limit but cannot read private repositories or commit —
+> so the editor would fail to save. One classic token with `repo` serves both tools.
+>
+> Note this is a **classic** token (the page above), not a *fine-grained* one. A fine-grained
+> token is tied to a single resource owner and cannot reach repositories you merely collaborate
+> on, which makes commits fail even though the token looks valid.
+
 > ⚠️ You won't be able to see this token again after you leave the page. Copy it now.
 
 **Save the token in the preview tool:**

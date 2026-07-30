@@ -297,7 +297,7 @@ The bookmarklet reads the current GitHub page address and builds the preview URL
 The preview tool reads your file from GitHub's servers. Without a token, GitHub limits you to a handful of preview loads per hour — fine for a quick look, frustrating for a working session. Adding a free **personal access token** raises the limit to 5,000 loads per hour, effectively unlimited.
 
 1. Go to [github.com/settings/tokens/new](https://github.com/settings/tokens/new) *(sign in if prompted)*.
-2. In the **Note** field type `Jekyll Preview`, choose an expiration, and — important — **do not check any permission boxes**.
+2. In the **Note** field type `Jekyll Preview`, choose an expiration, and leave the permission boxes **unchecked** — raising the rate limit needs no scopes. (If you also commit from the StoryKit editor, tick **`repo`** instead: both tools share one saved token, and a scopeless one cannot commit.)
 3. Click **Generate token** and **copy the token** that appears (it starts with `ghp_`). You won't be able to see it again after leaving the page.
 4. Open the preview page at [{{ site.url }}{{ site.baseurl }}/preview]({{ site.url }}{{ site.baseurl }}/preview), click the **⚙ Config** button in the top bar, enter `1`, then paste your token.
 
