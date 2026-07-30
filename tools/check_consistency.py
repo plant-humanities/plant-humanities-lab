@@ -101,7 +101,9 @@ def check_sync_manifest() -> None:
         if not (REPO / rel).exists():
             errors.append(
                 f"FILES_TO_SYNC entry does not exist locally: {rel} "
-                "(stale manifest, or a file was deleted without updating it)"
+                "(stale manifest, a file deleted without updating it, or a "
+                "path your .gitignore excludes so the sync wrote it but git "
+                "never committed it -- check with: git check-ignore -v " + rel
             )
 
 

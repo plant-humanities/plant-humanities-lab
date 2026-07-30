@@ -42,7 +42,7 @@ SRC_USER = "rsnyder"
 SRC_REPO = "storykit-starter"
 # Pinned commit of storykit-starter that this repo was last baselined to.
 # Bump deliberately (see module docstring), never point back at a branch name.
-SRC_REF = "ee4550d0603b32a646ded649fe3fe9c19342ec60"
+SRC_REF = "6fe8716db2770ff7ce11f90ef48c83a654388173"
 
 # Optional: GitHub token (env var) to avoid rate limits / access private repos
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -311,6 +311,19 @@ def main(argv: List[str]) -> int:
                 print(f"\nSelf-pin updated: SRC_REF -> {args.ref[:12]} (commit this change).")
         except Exception as e:
             print(f"\nWARNING: could not update self-pin SRC_REF: {e} — bump it manually.")
+
+    # The manifest is read from the RUNNING script, so when a sync replaces
+    # this file the entries added upstream were never in the list this run
+    # iterated -- they are silently skipped. --ref does not help: it chooses
+    # where files come from, not which files. Say so, loudly, because the
+    # symptom is a sync that reports success while leaving the repo broken.
+    if args.apply and "tools/sync_code.py" in result.changed:
+        print(
+            "\n*** RE-RUN THE SYNC ***"
+            "\ntools/sync_code.py was itself updated by this run, so any files"
+            "\nadded to FILES_TO_SYNC upstream were NOT fetched -- this run used"
+            "\nthe old manifest. Run the same command again to pick them up."
+        )
 
     if result.changed and not args.apply:
         print(
