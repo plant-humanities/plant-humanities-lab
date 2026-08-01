@@ -77,7 +77,7 @@ The plant’s abundance on grazing land was especially problematic due to its to
 
 To counter these issues, in 1944, the U.S. government imported two species of beetle that feed on St. John’s wort. Beginning with nine sites in California, tens of thousands of these insects were released, successfully reducing the presence of St. John’s wort in the state to one percent of its previous spread.[^24] Humboldt County — which includes about 60 miles of the Klamath River and was the site of the largest release of beetles — dedicated a monument to the “Klamath weed beetle” in 1958.[^25] Now, St. John’s wort is successfully contained to localized patches.
 
-{% include embed/iframe.html src="25192302.pdf" caption="“The Little Beetle that KO’d Klamath Weed,” University of California Agricultural Extension Service, Rohner Park, Fortuna, California, July 12, 1958." %}
+{% include embed/iframe.html src="25192302.pdf" caption="The Little Beetle that KO’d Klamath Weed, University of California Agricultural Extension Service, Rohner Park, Fortuna, California, July 12, 1958." %}
 
 # From Petals to Prescriptions
 
@@ -139,7 +139,7 @@ Despite scientists’ concerns about St. John’s wort, its cultural presence as
 
 “I figured the supplements could only help. And if they did nothing, then I’d at least enjoy the positive placebo effect of participating in self-care,” Dubno wrote.[^50] Misguided reasons for believing St. John’s wort is safe — that it is natural, sold over the counter, or just another pseudoscientific supplement — increases the likelihood of irresponsible self-administration, such as Dubno’s choice to abruptly stop taking St. John’s wort instead of weaning as one would with an antidepressant. Moreover, because Dubno didn’t recognize the potential danger, and because she presumed medical professionals just held bias against the use of supplements, failing to acknowledge the connection between her symptoms and the supplement delayed effective treatment.[^51]
 
-{% include embed/image.html src="Holding_sjw_June_30.JPG" caption="St. John's wort supplement in the supplements aisle of a CVS in Georgetown, Washington D.C. Photo taken by the author, June 30, 2025." %}
+{% include embed/image.html src="Holding_sjw.JPG" caption="St. John's wort supplement in the supplements aisle of a CVS in Georgetown, Washington D.C. Photo taken by the author, June 30, 2025." %}
 
 In summary, despite their popular appeal, such unregulated substances can ultimately prove dangerous. As recently as 2025, the United States Secretary of Health and Human Services Robert F. Kennedy Jr. has argued against the “aggressive suppression” of the 1994 FDA law that authorized such controversial cures as dietary supplements, encouraging their manufacturers to make bolder claims about the effectiveness of these drugs to receive government subsidies.[^52] Yet for supplements such as St. John’s wort, which can lead to extreme mental and physical effects if improperly administered, less regulation can only increase potential risks for people in search of mental support. By contrast, standardized dosages across brands and mandatory warning labels listing drug interactions could go a long way toward improving the supplement’s safety.[^53]
 
