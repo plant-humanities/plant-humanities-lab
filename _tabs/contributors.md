@@ -231,6 +231,7 @@ Hannah Hardenbergh is a designer and artist from the Rocky Mountains of Colorado
 In her art practice, Hannah pushes the limitations of painting to represent abstractions of the human and non-human and has shown artwork at group exhibitions with SHIM Art Network in New York and Bridgeport, CT. Hannah holds a B.A. from Harvard College in History and Literature and will complete her master’s degree in landscape architecture at Harvard’s Graduate School of Design in 2025.
 
 ## Ciel Haviland
+{: .img-top }
 
 ![Ciel Haviland](Haviland_headshot.jpg)
 
