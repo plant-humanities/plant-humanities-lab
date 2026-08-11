@@ -230,6 +230,12 @@ She received her PhD in art history from the University of Kansas in 2020. Her r
 Hannah Hardenbergh is a designer and artist from the Rocky Mountains of Colorado and attends the Harvard Graduate School of Design. Her work investigates how photography and image analysis frame collective imaginations of place, and the crucial social underpinnings that shape regional systems of water, soil, and plant communities.  
 In her art practice, Hannah pushes the limitations of painting to represent abstractions of the human and non-human and has shown artwork at group exhibitions with SHIM Art Network in New York and Bridgeport, CT. Hannah holds a B.A. from Harvard College in History and Literature and will complete her master’s degree in landscape architecture at Harvard’s Graduate School of Design in 2025.
 
+## Ciel Haviland
+
+![Ciel Haviland](Haviland_headshot.jpg)
+
+Ciel is a PhD candidate at Stanford University in the History of Science. She focuses on Early Modern North American and European understandings of the plant world as well as the overlapping concepts of science and aesthetics. Her MA thesis focused on the botanizing of women and the implications of empire in the development of science through the archives of Elizabeth Gwillim. She is currently co-coordinating the Stanford Environmental and Climate History Workshop and Engaged Plant Humanities with the Fiber Optics Research Workshop.
+
 ## Diana Heredia-López
 
 ![Diana Heredia-López](Heredia.jpg)
