@@ -308,7 +308,7 @@ His current work examines how American botanist Asa Gray first took an interest 
 
 ## Elizabeth Mirabal
 
-![Elizabeth Mirabal](Mirabal.jpg)
+![Elizabeth Mirabal](Mirabal.JPG)
 
 Elizabeth Mirabal is a Ph.D. Candidate in the Department of Spanish, Italian, and Portuguese at the University of Virginia and a P.E.O. Scholar. She holds an M.A. in Spanish from UVA and a B.A. in Journalism from the University of Havana. As a participant in the 2025 Plant Humanities Summer Program, her research examined the relationships nineteenth-century writers in the Americas forged with plants through private texts such as diaries and letters. Her interest in the poetic dimensions of herbariums has deepened since the publication of her poetry collection Herbarium (2021), later translated into English by Valparaíso Editions USA (2024). Her article, “Flores dispersas, hojas secas: El herbarium poeticus epistolar y exílico de Dolores Rodríguez de Tió,” received the Best Article Award from the Nineteenth Century Section of the Latin American Studies Association (LASA). She has published in journals in Spain, Argentina, the United States, Mexico, and Cuba, including _Hispania_, _Revista Hispánica Moderna_, _Poéticas_, _República de las Letras_, _Recial_, _Cuban Studies_, _Intervenxions_, _Iowa Literaria_, and _NACLA_, among others. Her work has been supported by several recognitions and fellowships, among them the Tibor Wlassics Dante Prize, the Frederick W. Beinecke Fellowship, and the Goizueta Graduate Research Fellowship.
 
