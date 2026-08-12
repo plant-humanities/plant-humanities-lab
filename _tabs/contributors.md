@@ -276,6 +276,12 @@ Edyth Jostol is a designer based in Seattle.  She received her Masters in Land
 Kalinoski’s research examines plant-life exhibition work through the lens of performance to investigate theories of time, extinction, and the natural world. Her research is grounded on what we as humans can learn from plants and how they shape humans’ positions in the world.  
 Taking from disciplines such as performance studies, anthropology, museum studies, environmental studies, and philosophy, Kalinoski’s work imagines a new form of politics around the lessons learned from nature. Kalinoski is a master candidate at New York University’s Tisch School of the Arts Performance Studies program and a theater practitioner. Her work is centered on plant studies and theories extinction through the lens of performance and exploring new notions of time in the Anthropocene. She has been awarded the Artist and Scholar Award for her research and has presented her work across the United States.
 
+## Kate Kaufman
+
+![Kate Kaufman](kaufman.jpg)
+
+Kate Kaufman is a student at Harvard College, where she is studying neuroscience and social studies. Her thesis concerns 21st century anti-internet movements. An aspiring journalist, Kate's writing often focuses on mental health, technology, and scientific progress. She has completed writing fellowships at The Maine Monitor and Harvard Magazine and is currently serving as the co-editor-in-chief of Fifteen Minutes, The Harvard Crimson's weekly magazine for narrative journalism. Kate was Dumbarton Oaks' 2025 Plant Humanities Summer Intern.
+
 ## Wouter Klein
 {: .img-top }
 
