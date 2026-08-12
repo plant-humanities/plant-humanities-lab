@@ -278,7 +278,7 @@ Taking from disciplines such as performance studies, anthropology, museum studie
 
 ## Kate Kaufman
 
-![Kate Kaufman](kaufman.jpg)
+![Kate Kaufman](kaufman.jpeg)
 
 Kate Kaufman is a student at Harvard College, where she is studying neuroscience and social studies. Her thesis concerns 21st century anti-internet movements. An aspiring journalist, Kate's writing often focuses on mental health, technology, and scientific progress. She has completed writing fellowships at The Maine Monitor and Harvard Magazine and is currently serving as the co-editor-in-chief of Fifteen Minutes, The Harvard Crimson's weekly magazine for narrative journalism. Kate was Dumbarton Oaks' 2025 Plant Humanities Summer Intern.
 
