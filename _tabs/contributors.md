@@ -177,6 +177,10 @@ She holds a Masters in Landscape Architecture and Masters in Design Studies from
 Ashley Thuthao Keng Dam (Ph.D. - they/them) is a medical anthropologist, ethnobotanist, and food writer living in the Netherlands. Thao is a multimodial mixed methods researcher who loves all things food, plants, and medicine.   
 They completed the Plant Humanities Summer School Programme in 2021. Thao received their Ph.D. in Ecogastronomy, Education, and Society in 2022 from Università degli Studi di Scienze Gastronomiche (Pollenzo, Italy). They received their anthropological training from the University of Oxford (M.Sc., 2018, UK) and St. Mary's College of Maryland (B.A. Hons., 2016, USA). Currently, Thao works as a lecturer in Global Health in the Department of Health, Ethics, and Society (HES) at Maastricht University and is an Explorer for the National Geographic Society.
 
+## Maddie Dowd
+
+A student in Philosophy, with a secondary in Human Evolutionary Biology at Harvard University, Maddie Dowd was awarded the 2025 Hoopes Prize for her senior thesis, entitled “Imagining Other Minds: A Smithian Empathy for Animal Ethics,” supervised and nominated by Professor Samantha Matherne. Her intellectual interests include animal ethics, philosophy of mind, and philosophy of biology.
+
 ## Christina Emery
 
 ![Christina Emery](Emery.jpg)
@@ -275,6 +279,10 @@ Edyth Jostol is a designer based in Seattle.  She received her Masters in Land
 
 Kalinoski’s research examines plant-life exhibition work through the lens of performance to investigate theories of time, extinction, and the natural world. Her research is grounded on what we as humans can learn from plants and how they shape humans’ positions in the world.  
 Taking from disciplines such as performance studies, anthropology, museum studies, environmental studies, and philosophy, Kalinoski’s work imagines a new form of politics around the lessons learned from nature. Kalinoski is a master candidate at New York University’s Tisch School of the Arts Performance Studies program and a theater practitioner. Her work is centered on plant studies and theories extinction through the lens of performance and exploring new notions of time in the Anthropocene. She has been awarded the Artist and Scholar Award for her research and has presented her work across the United States.
+
+## Sophia Kamps
+
+Sophia Kamps is a PhD student on an AHRC-funded project between Royal Holloway, University of London, and the Royal Botanic Gardens, Kew, focusing on the Lovell Reeve & Co. archives. Her research explores the nineteenth-century readership of natural history texts, the impact of serial publishing on science, and the history of botanical illustration, emphasizing the roles of working-class designers and women artists
 
 ## Wouter Klein
 {: .img-top }
