@@ -58,7 +58,7 @@ Harvard—is in dialogue with traditional and recent approaches such as ethnobot
 botany, the environmental humanities, and critical plant studies. But our methodology has
 distinctive features reflected in the Lab narratives.
 
-{% include embed/image.html src="2679761_Ehret_pl_0013.tiff" aspect="0.75" %}
+{% include embed/image.html src="013717125_album_pl_0011.jpg" aspect="0.75" %}
 
 First, we start with the plant at the level of the species or family, rather than plants in the
 abstract, to ground our narratives in specific evolutionary and cultural histories. We are
