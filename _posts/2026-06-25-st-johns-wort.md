@@ -6,6 +6,7 @@ date: 2026-06-25
 permalink: /st-johns-wort 
 tags: herb pharmacology europe 
 published: true 
+featured: true
 media_subpath: /assets/posts/st-johns-wort 
 image: 
   path: wc:St._John%27s_wort_%2850050399481%29.jpg 
