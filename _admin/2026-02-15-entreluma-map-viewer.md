@@ -1,14 +1,14 @@
 ---
-title: "StoryKit: Map Viewer"
-description: How to use the StoryKit map viewer in your Markdown posts.
-permalink: /admin/storykit-map-viewer
+title: "Entreluma: Map Viewer"
+description: How to use the Entreluma map viewer in your Markdown posts.
+permalink: /admin/entreluma-map-viewer
 date: 2026-02-15
-media_subpath: /assets/posts/storykit
+media_subpath: /assets/posts/entreluma
 # image: map.png
 # show_header_image: false
 toc: true
 order: 22
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 ---
@@ -46,7 +46,7 @@ storykit:
     }
 </style>
 
-StoryKit lets you add **interactive maps** to your Markdown posts using a simple include. You do not need to write HTML, CSS, or JavaScript.
+Entreluma lets you add **interactive maps** to your Markdown posts using a simple include. You do not need to write HTML, CSS, or JavaScript.
 
 ---
 
@@ -236,7 +236,7 @@ Defines a caption to add to the map viewer.
 ## class
 {: .attribute }
 
-Size and position words like `medium right float` — see [Formatting Tips](storykit-formatting-tips).
+Size and position words like `medium right float` — see [Formatting Tips](entreluma-formatting-tips).
 
     class="medium right"
 
@@ -322,6 +322,6 @@ Try it: fly to [Monument Valley](map1/flyto/37.02828,-110.23819,11), or to the [
 
 Clicking the **same** link a second time returns the map to the view it had before — readers can peek at a location and come right back.
 
-The full action-link syntax, including custom labels, is in the [Action Links reference](storykit-action-links).
+The full action-link syntax, including custom labels, is in the [Action Links reference](entreluma-action-links).
 
 ---

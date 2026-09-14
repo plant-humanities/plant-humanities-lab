@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="robots" content="noindex">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Image Compare</title>
@@ -10,8 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace.js"></script>
 
-    <!-- StoryKit component runtime (postMessage protocol) -->
-    <script src="../js/storykit-component.js"></script>
+    <!-- Entreluma component runtime (postMessage protocol) -->
+    <script src="../js/entreluma-component.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -452,7 +453,7 @@
         const $toast    = document.getElementById("toast");
 
         // ── Height signaling to parent iframe ────────────────────────────
-        // Sends storykit:height via StoryKit.reportHeight (see
+        // Sends entreluma:height via Entreluma.reportHeight (see
         // docs/postmessage-protocol.md). The host sets iframe.style.height.
         //
         // WHY NOT scrollHeight:
@@ -510,7 +511,7 @@
                     // body.offsetHeight sees the clipped panel box, not its scrollable content
                     const h = document.body.offsetHeight;
                     if (!isMax) {
-                        StoryKit.reportHeight(h);
+                        Entreluma.reportHeight(h);
                         const iframe = window.frameElement;
                         if (iframe) {
                             if (!iframe.style.width) iframe.style.width = '100%';
@@ -613,7 +614,7 @@
                 // Prefer the aspect ratio we detected from the loaded images;
                 // fall back to the explicit ?aspect= param, then 1.0.
                 const dialogAspect = detectedAr || (aspect ? parseFloat(aspect) : 1.0);
-                StoryKit.showDialog(maxSrc, dialogAspect);
+                Entreluma.showDialog(maxSrc, dialogAspect);
             }
 
         } else {
@@ -710,11 +711,11 @@
                 return parts.length ? "?" + parts.join("&") : "";
             }
 
-            // For relative URLs and StoryKit preview URLs, keep only the filename.
+            // For relative URLs and Entreluma preview URLs, keep only the filename.
             // Other absolute URLs (http/https) are left as-is.
-            const storykitPreviewPattern = /^https?:\/\/storykit-preview\.netlify\.app\/api\/raw\//i;
+            const entrelumaPreviewPattern = /^https?:\/\/entreluma-preview\.netlify\.app\/api\/raw\//i;
             function tagUrl(url) {
-                if (storykitPreviewPattern.test(url) || !/^https?:\/\//i.test(url)) {
+                if (entrelumaPreviewPattern.test(url) || !/^https?:\/\//i.test(url)) {
                     return url.replace(/^.*\//, "");
                 }
                 return url;
@@ -734,7 +735,7 @@
 
             const tag = lines.join("\n");
 
-            StoryKit.copyText(tag).then((copied) => {
+            Entreluma.copyText(tag).then((copied) => {
                 if (copied) {
                     $toast.textContent = "Tag copied!";
                     $toast.classList.add("show");
@@ -754,9 +755,9 @@
     ═══════════════════════════════════════════════════════════════════
     PARENT PAGE INTEGRATION — iframe auto-resize
     ═══════════════════════════════════════════════════════════════════
-    This component reports its desired height with the StoryKit protocol
-    message { type: "storykit:height", payload: { height: <px> } }.
-    The StoryKit host page (assets/js/storykit.js) handles it
+    This component reports its desired height with the Entreluma protocol
+    message { type: "entreluma:height", payload: { height: <px> } }.
+    The Entreluma host page (assets/js/entreluma.js) handles it
     automatically; a custom host page would need an equivalent listener.
     See docs/postmessage-protocol.md.
     ═══════════════════════════════════════════════════════════════════

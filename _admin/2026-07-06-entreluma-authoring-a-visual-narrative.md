@@ -1,12 +1,12 @@
 ---
-title: "StoryKit: Authoring a Visual Narrative"
-description: A start-to-finish guide for students creating their first interactive visual narrative on a StoryKit site. Covers what StoryKit is and where it came from, the GitHub workflow you'll use to draft and publish, the Markdown you'll write, and every StoryKit viewer the platform offers.
-permalink: /admin/storykit-authoring-a-visual-narrative
+title: "Entreluma: Authoring a Visual Narrative"
+description: A start-to-finish guide for students creating their first interactive visual narrative on an Entreluma site. Covers what Entreluma is and where it came from, the GitHub workflow you'll use to draft and publish, the Markdown you'll write, and every Entreluma viewer the platform offers.
+permalink: /admin/entreluma-authoring-a-visual-narrative
 date: 2026-07-06
 toc: true
 mermaid: true
 order: 5
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 media_subpath: /assets/posts/image-compare
@@ -124,27 +124,27 @@ This guide is written for students and program participants who will author inte
 * Create those visuals from links in your own writing
 * Submit a finished narrative for review and publication
 
-No prior experience with [GitHub](https://github.com/), [Jekyll](https://jekyllrb.com/), or [Markdown](https://www.markdownguide.org/) is assumed. It is assumed that a StoryKit site has already been created for your class or program, and that an administrator will add your GitHub username to it so you can contribute. Read straight through the first time, then come back to individual sections as a reference while you are writing.
+No prior experience with [GitHub](https://github.com/), [Jekyll](https://jekyllrb.com/), or [Markdown](https://www.markdownguide.org/) is assumed. It is assumed that an Entreluma site has already been created for your class or program, and that an administrator will add your GitHub username to it so you can contribute. Read straight through the first time, then come back to individual sections as a reference while you are writing.
 
 ---
 
 # Part 1 — What You Are Doing
 
-## What Is StoryKit?
+## What Is Entreluma?
 
-**StoryKit** is a Markdown-first framework for creating and displaying visual narratives. It evolved from **[Juncture](https://labs.jstor.org/projects/juncture/)**, which grew out of a 2018 digital humanities collaboration between **[JSTOR Labs](https://labs.jstor.org)** and **[Dumbarton Oaks](https://www.doaks.org/)**, with one straightforward goal:
+**Entreluma** is a Markdown-first framework for creating and displaying visual narratives. It evolved from **[Juncture](https://labs.jstor.org/projects/juncture/)**, which grew out of a 2018 digital humanities collaboration between **[JSTOR Labs](https://labs.jstor.org)** and **[Dumbarton Oaks](https://www.doaks.org/)**, with one straightforward goal:
 
 > Enable students and scholars to create interactive visual narratives using Markdown — without requiring coding skills.
 
-Juncture was created to make it easier to build web-based visual narratives that combine prose with rich visual and interactive content. StoryKit keeps that same core idea but in a simpler, more maintainable form: it is built directly on **Jekyll** (the tool GitHub uses to turn plain text into websites) and the **Chirpy** theme, rather than relying on heavy custom infrastructure.
+Juncture was created to make it easier to build web-based visual narratives that combine prose with rich visual and interactive content. Entreluma keeps that same core idea but in a simpler, more maintainable form: it is built directly on **Jekyll** (the tool GitHub uses to turn plain text into websites) and the **Chirpy** theme, rather than relying on heavy custom infrastructure.
 
-For authors, the important point is that StoryKit lets you write mostly in regular Markdown and add special instructions wherever you want interactive viewers to appear: images, maps, videos, network diagrams, timelines, and more. You do not need to understand the technical details. You just need to know how to edit a Markdown file, add the appropriate viewer instructions, preview your work, and submit it for review.
+For authors, the important point is that Entreluma lets you write mostly in regular Markdown and add special instructions wherever you want interactive viewers to appear: images, maps, videos, network diagrams, timelines, and more. You do not need to understand the technical details. You just need to know how to edit a Markdown file, add the appropriate viewer instructions, preview your work, and submit it for review.
 
-If you want more background on how StoryKit fits together, see the [StoryKit Overview](storykit-overview). But you don't need it to get started — everything essential is in this guide.
+If you want more background on how Entreluma fits together, see the [Entreluma Overview](entreluma-overview). But you don't need it to get started — everything essential is in this guide.
 
 ## What You Are Creating
 
-A **visual narrative** is a web page that combines written text with interactive media. A StoryKit visual narrative may include:
+A **visual narrative** is a web page that combines written text with interactive media. A Entreluma visual narrative may include:
 
 * Text written in Markdown
 * Plain images and high-resolution zoom-and-pan viewers
@@ -156,7 +156,7 @@ A **visual narrative** is a web page that combines written text with interactive
 * Mathematical equations rendered by MathJax
 * Flow charts, sequence diagrams, and other diagrams drawn with Mermaid
 
-You write the narrative in a plain text file using Markdown, with StoryKit instructions added where interactive viewers should appear. When the site is published, GitHub Pages and Jekyll convert that file into a finished web page.
+You write the narrative in a plain text file using Markdown, with Entreluma instructions added where interactive viewers should appear. When the site is published, GitHub Pages and Jekyll convert that file into a finished web page.
 
 ## A Few Terms You Should Know
 
@@ -168,13 +168,13 @@ You don't need to be a GitHub or Jekyll expert, but a few terms come up througho
 
 **Commit.** GitHub's version of a save. When you commit, you save your changes to your branch. Each commit can include a short comment ("commit message") describing what changed, such as *Add introduction section* or *Fix typo in caption*.
 
-**Jekyll.** The tool that turns the source files into finished web pages. You will never run Jekyll yourself. GitHub Pages runs Jekyll automatically when the site is published, and the preview tool imitates the same process so you can check your work in advance.
+**Jekyll.** The tool that turns the source files into finished web pages. You will never run Jekyll yourself. GitHub Pages runs Jekyll automatically when the site is published, and the Entreluma Editor provides a publication-style preview so you can check your work in advance.
 
 **Markdown.** A simple way to write formatted text using plain text. Headings, lists, links, and emphasis all have lightweight equivalents in Markdown that are much easier to type than HTML.
 
-**StoryKit viewer.** An interactive element you can insert into a visual narrative: an image viewer, a map, a YouTube video, and so on. Viewers are added with **Liquid include tags**. Liquid is the templating language used by Jekyll; an *include* tag is a short instruction that tells Jekyll to insert a pre-built component at that point in the page. For a StoryKit viewer the tag looks like `{% raw %}{% include embed/image.html src="..." %}{% endraw %}`. You supply the attribute values, and Jekyll handles the rest.
+**Entreluma viewer.** An interactive element you can insert into a visual narrative: an image viewer, a map, a YouTube video, and so on. Viewers are added with **Liquid include tags**. Liquid is the templating language used by Jekyll; an *include* tag is a short instruction that tells Jekyll to insert a pre-built component at that point in the page. For an Entreluma viewer the tag looks like `{% raw %}{% include embed/image.html src="..." %}{% endraw %}`. You supply the attribute values, and Jekyll handles the rest.
 
-**Preview tool.** A small utility that lets you see how your visual narrative will look on the live site, without waiting for GitHub Pages to rebuild. It renders the page the same way the live site does.
+**Entreluma Editor preview.** A live view of the current editing buffer that lets you inspect your narrative without waiting for GitHub Pages to rebuild. The published site remains authoritative for deployment-only and site-wide behavior.
 
 **Pull request.** How you ask for your completed changes to be reviewed and possibly published. When your narrative is ready, you open a pull request from your working branch into `main`. An administrator reviews the changes and decides whether to merge them.
 
@@ -243,79 +243,26 @@ Most of your authoring time will be spent editing files you have already created
 
 Your changes are saved to your branch and are immediately available to preview.
 
-<blockquote class="prompt-tip"><p><strong>The GitHub editor has a Preview tab</strong> (at the top of the editing area) that shows basic Markdown formatting: headings, bold, italics, and lists. It is handy for checking paragraph structure. However, it does <strong>not</strong> render StoryKit viewers; those show as raw code in GitHub's preview. Use the bookmarklet preview tool to see viewers rendered correctly.</p></blockquote>
+<blockquote class="prompt-tip"><p><strong>The GitHub editor has a Preview tab</strong> (at the top of the editing area) that shows basic Markdown formatting: headings, bold, italics, and lists. It is handy for checking paragraph structure. However, it does <strong>not</strong> render Entreluma viewers; those show as raw code in GitHub's preview. Use the bookmarklet editor preview to see viewers rendered correctly.</p></blockquote>
 
-## Using the Preview Tool
+## Using the Entreluma Editor
 
-When you commit a change on GitHub, the live site does not update immediately. GitHub Pages must rebuild the entire site, which takes one to five minutes. During that wait you cannot see your edits.
-
-The **StoryKit preview tool** sidesteps that wait by rendering a single file directly from your branch, usually in under five seconds.
+The [Entreluma Editor](https://editor.entreluma.org) lets you edit Markdown and see a publication-style preview without waiting for a GitHub Pages deployment.
 
 ### One-time setup
 
-You install the preview tool by dragging a bookmarklet into your browser's bookmarks bar. You only do this once per browser.
+1. Open the Entreluma Editor.
+2. Select **GitHub**, then **Sign in with GitHub** if you need private-repository access or want to save changes.
+3. Choose a writable repository and branch.
+4. Optionally drag the **Edit in Entreluma** bookmarklet from the GitHub panel to your bookmarks bar.
 
-1. Make sure your bookmarks bar is visible:
-   * Chrome / Edge: <kbd>⌘⇧B</kbd> on macOS, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> on Windows
-   * Firefox: View menu → Toolbars → Bookmarks Toolbar
-   * Safari: View menu → Show Favorites Bar
-2. **Drag** the button below into your bookmarks bar. Do not click it — drag it.
-
-<div class="guide-drag-zone">
-  <a id="guide-bookmarklet-link" href="#" title="Drag me to your bookmarks bar">🔖 Preview on GitHub</a>
-  <p>Drag the button above to your bookmarks bar</p>
-</div>
-
-<script>
-(function() {
-  var previewUrl = '{{ site.url }}{{ site.baseurl }}/preview';
-
-  var code = "(function(){" +
-    "var m=location.href.match(/github\\.com\\/([^/]+)\\/([^/]+)\\/blob\\/([^/]+)\\/(.+\\.md)/);" +
-    "if(!m)return alert('Navigate to a .md file in GitHub first');" +
-    "var p=JSON.stringify({o:m[1],r:m[2],ref:m[3],p:m[4]});" +
-    "window.open('" + previewUrl + "#'+encodeURIComponent(p),'_blank');" +
-    "})();";
-
-  var link = document.getElementById('guide-bookmarklet-link');
-  if (link) {
-    link.href = 'javascript:' + code;
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert('Drag this button to your bookmarks bar — do not click it.');
-    });
-  }
-})();
-</script>
-
-3. Confirm that a new bookmark labelled *Preview on GitHub* now appears in your bookmarks bar.
-
-The bookmarklet reads the current GitHub page address and builds the preview URL for you, so you don't have to construct it by hand.
-
-### Raising the preview's rate limit (recommended)
-
-The preview tool reads your file from GitHub's servers. Without a token, GitHub limits you to a handful of preview loads per hour — fine for a quick look, frustrating for a working session. Adding a free **personal access token** raises the limit to 5,000 loads per hour, effectively unlimited.
-
-1. Go to [github.com/settings/tokens/new](https://github.com/settings/tokens/new) *(sign in if prompted)*.
-2. In the **Note** field type `Jekyll Preview`, choose an expiration, and leave the permission boxes **unchecked** — raising the rate limit needs no scopes. (If you also commit from the StoryKit editor, tick **`repo`** instead: both tools share one saved token, and a scopeless one cannot commit.)
-3. Click **Generate token** and **copy the token** that appears (it starts with `ghp_`). You won't be able to see it again after leaving the page.
-4. Open the preview page at [{{ site.url }}{{ site.baseurl }}/preview]({{ site.url }}{{ site.baseurl }}/preview), click the **⚙ Config** button in the top bar, enter `1`, then paste your token.
-
-The token is saved in your browser; you won't need to enter it again unless you clear your browser data or switch browsers. The [Preview Setup guide](storykit-preview-setup) covers this in more detail, including what the preview can and can't show.
+You can open an existing story with **Open…**, by dragging a GitHub file link into the document list, or by using the bookmarklet while viewing the file on GitHub.
 
 ### Day-to-day use
 
-Once the bookmarklet is installed:
+Keep the editor and preview panes visible together. The preview updates from the current buffer, so you can inspect each viewer before committing. Use **Audit** to check the story, then **Sync with GitHub** when you are ready to save. Export important drafts or story packages as an additional backup.
 
-1. Open the repository on GitHub and navigate to your `.md` file in the `_posts` folder.
-2. Click **Preview on GitHub** in your bookmarks bar.
-3. A new tab opens with the file rendered the same way the live site would render it.
-
-<blockquote class="prompt-tip"><p><strong>Work with two browser windows side by side.</strong> Keep GitHub open in one window and the preview in the other. After each commit, switch to the preview window and reload. This edit-commit-reload cycle makes it easy to catch problems before they pile up.</p></blockquote>
-
-<blockquote class="prompt-warning"><p><strong>If the preview fails to open</strong>, check that you launched the bookmarklet while looking at a <code>.md</code> file (not a folder or another file type). The bookmarklet only works on <code>.md</code> pages inside a repository.</p></blockquote>
-
----
+The [Editor and Preview Setup guide](entreluma-preview-setup) explains repository connection, browser-local drafts, and preview boundaries in more detail.
 
 # Part 3 — Markdown Basics
 
@@ -362,12 +309,12 @@ Each front matter field plays a role:
 | `tags` | Any number of keyword tags for filtering and search — e.g. `[bridges, san-francisco]` |
 | `published` | Set to `false` while drafting; change to `true` when you submit the pull request |
 | `featured` | Set to `true` to highlight the article on the home page; leave `false` unless asked by an administrator |
-| `storykit` | StoryKit extensions are **enabled by default** — you do not need this field. Add `storykit: false` only if you want to disable all viewers on a specific page |
+| `entreluma` | Entreluma extensions are **enabled by default** — you do not need this field. Add `entreluma: false` only if you want to disable all viewers on a specific page |
 | `media_subpath` | The folder where your uploaded images live. Must match the folder name in `assets/posts/` exactly (see §3.1) |
 | `image.path` | The header image shown on the article card and at the top of the page. Use a `wc:` shorthand for a Wikimedia Commons file (e.g. `wc:GoldenGateBridge-001.jpg`) or a local filename. Aim for an image that looks good at roughly 16:9 landscape proportions |
 | `image.alt` | A brief text description of the header image, used for screen readers and accessibility |
 
-<blockquote class="prompt-tip"><p>StoryKit extensions are enabled by default — you do not need a <code>storykit:</code> line in your front matter. The only time you would add it is <code>storykit: false</code> to explicitly disable all viewers on a specific page, or a <code>storykit:</code> settings block to fine-tune layout behavior (see the <a href="storykit-display-modes">Display Modes guide</a>).</p></blockquote>
+<blockquote class="prompt-tip"><p>Entreluma extensions are enabled by default — you do not need a <code>entreluma:</code> line in your front matter. The only time you would add it is <code>entreluma: false</code> to explicitly disable all viewers on a specific page, or a <code>entreluma:</code> settings block to fine-tune layout behavior (see the <a href="entreluma-display-modes">Display Modes guide</a>).</p></blockquote>
 
 The file `_posts/.template.md` in the repository is a starter you can copy when creating a new narrative.
 
@@ -461,7 +408,7 @@ A worked example: [Monument Valley](Q192017), on the Utah–Arizona state line, 
 
 <blockquote class="prompt-tip"><p>Use popovers selectively. One per concept is plenty; linking the first meaningful mention of a person, place, or concept is usually enough.</p></blockquote>
 
-More detail, including styling options, is in the [Entity Info Popups guide](storykit-entity-info-popups).
+More detail, including styling options, is in the [Entity Info Popups guide](entreluma-entity-info-popups).
 
 ## 3.5 URLs (Links)
 
@@ -515,7 +462,7 @@ A few things to know:
 
 # Part 4 — The Content Viewers
 
-The content viewers are what set a StoryKit site apart from a standard blog. They are interactive components — images you can zoom into, maps you can pan around, before-and-after sliders, embedded videos, network diagrams — each added to your narrative with a single line of code.
+The content viewers are what set an Entreluma site apart from a standard blog. They are interactive components — images you can zoom into, maps you can pan around, before-and-after sliders, embedded videos, network diagrams — each added to your narrative with a single line of code.
 
 The line uses Jekyll's **Liquid include** syntax. It looks like this:
 
@@ -540,21 +487,21 @@ Two rules apply to every viewer:
 
 ## How Viewers Are Placed on the Page
 
-Before diving into the individual viewers, it helps to know how StoryKit lays them out, because the default behaviour sometimes surprises new authors.
+Before diving into the individual viewers, it helps to know how Entreluma lays them out, because the default behaviour sometimes surprises new authors.
 
-By default, StoryKit uses **auto-float**: when a viewer tag comes immediately after a paragraph of text, the viewer is automatically placed *beside* that paragraph (to the right, at about half the content width) rather than below it. This produces an attractive magazine-style layout with no effort on your part — just put each viewer tag directly after the paragraph it illustrates.
+By default, Entreluma uses **auto-float**: when a viewer tag comes immediately after a paragraph of text, the viewer is automatically placed *beside* that paragraph (to the right, at about half the content width) rather than below it. This produces an attractive magazine-style layout with no effort on your part — just put each viewer tag directly after the paragraph it illustrates.
 
 If you would rather have viewers appear full-width, stacked between paragraphs, turn auto-float off for your post by adding this to the front matter:
 
 ```yaml
-storykit:
+entreluma:
   auto_float: false
 ```
 {: .nolineno }
 
-With auto-float off, you can size and position each viewer individually with a `class` attribute using a **size word** (`small`, `medium`, `large`, `full`) and a **position word** (`left`, `right`, `center`), for example `class="medium right"`. The [Formatting Tips guide](storykit-formatting-tips) explains all the options, including how to make text wrap around a viewer.
+With auto-float off, you can size and position each viewer individually with a `class` attribute using a **size word** (`small`, `medium`, `large`, `full`) and a **position word** (`left`, `right`, `center`), for example `class="medium right"`. The [Formatting Tips guide](entreluma-formatting-tips) explains all the options, including how to make text wrap around a viewer.
 
-StoryKit also offers an alternative **two-column "scrollytelling" layout**, where text scrolls in one column while the media it refers to stays pinned in the other. That is beyond what you need for a first essay; when you're curious, see the [Display Modes guide](storykit-display-modes).
+Entreluma also offers an alternative **two-column "scrollytelling" layout**, where text scrolls in one column while the media it refers to stays pinned in the other. That is beyond what you need for a first essay; when you're curious, see the [Display Modes guide](entreluma-display-modes).
 
 ## 4.1 Image Viewer
 
@@ -670,10 +617,10 @@ Because `media_subpath` is set, the platform automatically resolves `tower_const
 | `region` | Open the viewer zoomed into a particular area — see §4.5 for how to get this value |
 | `rotate` | Rotate the image — accepted values are `"90"`, `"180"`, or `"270"` |
 | `seq` | Select a specific image in a multi-image IIIF manifest. The first image is 1. For example, `seq="3"` displays the third image |
-| `class` | Size and position words like `medium right` — see [Formatting Tips](storykit-formatting-tips) |
+| `class` | Size and position words like `medium right` — see [Formatting Tips](entreluma-formatting-tips) |
 | `id` | Required only if you want to target the viewer from a link |
 
-The complete reference is in the [Image Viewer guide](storykit-image-viewer).
+The complete reference is in the [Image Viewer guide](entreluma-image-viewer).
 
 ## 4.2 Image Compare Viewer
 
@@ -685,8 +632,8 @@ You need two images (either local files or Wikimedia Commons files) in the same 
 
 ```liquid
 {% raw %}{% include embed/image-compare.html
-    before="Westgate_Towers_c1905.jpg"
-    after="Westgate_Towers_2021.jpg"
+    before="wc:Westgate_002.jpg"
+    after="wc:Westgate_Towers,_Canterbury.jpg"
     caption="Westgate Towers, Canterbury — c.1905 vs 2021"
     aspect="1.5"
     position="50"
@@ -717,12 +664,12 @@ While the panel is open the top image is partially transparent, so misalignment 
 Here is an aligned comparison, live — drag the divider, and double-click the expanded view to see the alignment panel for yourself:
 
 {% include embed/image-compare.html
-    before="Westgate_Towers_c1905.jpg&bx=-8&by=-6&bs=1.31"
-    after="Westgate_Towers_2021.jpg&ax=-4&ay=-2&as=1.17"
+    before="wc:Westgate_002.jpg&bx=-8&by=-6&bs=1.31"
+    after="wc:Westgate_Towers,_Canterbury.jpg&ax=-4&ay=-2&as=1.17"
     caption="Westgate Towers, Canterbury — c.1905 vs 2021"
 %}
 
-The `&bx=...` and `&ax=...` values appended to the filenames are the alignment corrections. You never write these by hand — the **Copy tag** button generates them. Details are in the [Image Compare Viewer guide](storykit-image-compare-viewer).
+The `&bx=...` and `&ax=...` values appended to the filenames are the alignment corrections. You never write these by hand — the **Copy tag** button generates them. Details are in the [Image Compare Viewer guide](entreluma-image-compare-viewer).
 
 ## 4.3 Map Viewer
 
@@ -786,7 +733,7 @@ markers="37.01056, -110.2425~Monument Valley|36.0544, -112.1401~Grand Canyon"
 | `basemap` | Choose a different map style — see the table below |
 | `geojson` | Path or URL of a GeoJSON file to draw on the map — useful for regions, routes, or distribution ranges |
 | `allmaps` | An [Allmaps](https://allmaps.org) identifier for layering a historical map on top of the modern one |
-| `class` | Size and position words like `medium right` — see [Formatting Tips](storykit-formatting-tips) |
+| `class` | Size and position words like `medium right` — see [Formatting Tips](entreluma-formatting-tips) |
 | `id` | Required if you want to drive the map from links in your text (see §4.5) |
 
 ### Available basemaps
@@ -801,7 +748,7 @@ markers="37.01056, -110.2425~Monument Valley|36.0544, -112.1401~Grand Canyon"
 
 You can list multiple basemaps separated by `|` to offer a layer-switcher control in the viewer. For example: `basemap="OpenStreetMap|Esri_WorldPhysical"`.
 
-The complete reference is in the [Map Viewer guide](storykit-map-viewer).
+The complete reference is in the [Map Viewer guide](entreluma-map-viewer).
 
 ## 4.4 YouTube Viewer
 
@@ -827,11 +774,11 @@ Useful optional attributes:
 | `autoplay` | Set to `"true"` to start playing as soon as the expanded view opens. |
 | `id` | Required for action links (see §4.5). |
 
-Combine `start` and `end` to highlight a specific clip from a longer video. The complete reference is in the [YouTube Viewer guide](storykit-youtube-viewer).
+Combine `start` and `end` to highlight a specific clip from a longer video. The complete reference is in the [YouTube Viewer guide](entreluma-youtube-viewer).
 
 ## 4.5 Zoom-to and Fly-to Animations
 
-This is what sets a StoryKit visual narrative apart from a standard blog post: links in your prose can **control** the viewers on the page. A reader clicks a place name and the map flies there; they click a phrase and the image zooms in. The text and the visuals work together.
+This is what sets an Entreluma visual narrative apart from a standard blog post: links in your prose can **control** the viewers on the page. A reader clicks a place name and the map flies there; they click a phrase and the image zooms in. The text and the visuals work together.
 
 Three things have to be true for an action link to work:
 
@@ -958,7 +905,7 @@ This opens the expanded video, seeks to 0:42, and stops at 1:15.
 
 <blockquote class="prompt-warning"><p>Action links only work when the viewer is on the same page. If clicking a link does nothing, check that the <code>id</code> in the link exactly matches the <code>id</code> on the viewer's include tag.</p></blockquote>
 
-The complete reference, including additional actions such as `play` and `pause`, is in the [Action Links guide](storykit-action-links).
+The complete reference, including additional actions such as `play` and `pause`, is in the [Action Links guide](entreluma-action-links).
 
 ## 4.6 Network Viewer
 
@@ -966,7 +913,7 @@ The Network Viewer draws an interactive node-and-edge diagram — the kind of pi
 
 The viewer has two parts that work together in your Markdown:
 
-1. **A data block** — a paragraph of CSV lines describing the nodes and edges, tagged with a special ID so StoryKit can find it (and hide it from readers).
+1. **A data block** — a paragraph of CSV lines describing the nodes and edges, tagged with a special ID so Entreluma can find it (and hide it from readers).
 2. **The include tag** — declares the viewer and connects it to the data block by ID.
 
 The connection is a naming convention: if the viewer has `id="my_network"`, its data block must be tagged `{: #my_network-csv }` — the viewer's ID plus `-csv`.
@@ -1024,11 +971,11 @@ edge,4,1,filmed at
 </div>
 </div>
 
-The data paragraph is invisible on the published page — StoryKit hides any element whose ID ends in `-csv`. Readers only see the diagram.
+The data paragraph is invisible on the published page — Entreluma hides any element whose ID ends in `-csv`. Readers only see the diagram.
 
 <blockquote class="prompt-warning"><p>The <code>{% raw %}{: #film_network-csv }{% endraw %}</code> tag must come immediately after the last CSV line, with <strong>no blank line</strong> between. If a blank line creeps in, the raw CSV text shows on the page instead of attaching to the viewer.</p></blockquote>
 
-The complete reference is in the [Network Viewer guide](storykit-vis-network-viewer).
+The complete reference is in the [Network Viewer guide](entreluma-vis-network-viewer).
 
 ## 4.7 The General Iframe (and Timeline JS)
 
@@ -1076,7 +1023,7 @@ The workflow is:
 
 That's all. To update the timeline later, just edit the Google Sheet and your narrative will pick up the new version automatically the next time the page loads.
 
-The same pattern works for any external page that allows embedding: Internet Archive book viewers, museum collection pages, Sketchfab 3-D models, charts from Datawrapper or Flourish, and so on. If a service provides an **embed URL**, the iframe include is what you need. The complete reference is in the [Iframe Viewer guide](storykit-iframe-viewer).
+The same pattern works for any external page that allows embedding: Internet Archive book viewers, museum collection pages, Sketchfab 3-D models, charts from Datawrapper or Flourish, and so on. If a service provides an **embed URL**, the iframe include is what you need. The complete reference is in the [Iframe Viewer guide](entreluma-iframe-viewer).
 
 ## 4.8 Mermaid Diagrams
 
@@ -1168,7 +1115,7 @@ The result follows from $$ E = mc^2 $$ directly.
 
 ## When Your Narrative Is Ready
 
-When your visual narrative looks the way you want it to in the preview tool, you're ready to submit it for review. Set `published: true` in the front matter, commit, and then open a **pull request**.
+When your visual narrative looks the way you want it to in the Entreluma Editor preview, you're ready to submit it for review. Set `published: true` in the front matter, commit, and then open a **pull request**.
 
 A pull request says, in effect:
 
@@ -1203,7 +1150,7 @@ This workflow protects the live website while still letting authors work indepen
 
 * Authors can safely draft and revise content
 * The live website isn't changed until work has been reviewed
-* The preview tool lets authors see a realistic version of the final page
+* The Entreluma Editor preview lets authors see a realistic version of the final page
 * Administrators retain control over what gets published
 * Mistakes can be caught before they appear on the public site
 
@@ -1219,7 +1166,7 @@ It's better to make several small commits than one very large commit. Small chan
 
 ## Preview After Every Viewer You Add
 
-Don't wait until the whole narrative is finished before using the preview tool. Commit and preview after adding each new StoryKit viewer. That way, if something breaks you know exactly which change caused it. Waiting until the end to preview makes problems much harder to trace.
+Don't wait until the whole narrative is finished before using the Entreluma Editor preview. Commit and preview after adding each new Entreluma viewer. That way, if something breaks you know exactly which change caused it. Waiting until the end to preview makes problems much harder to trace.
 
 ## Use Clear File Names
 
@@ -1260,7 +1207,7 @@ A condensed cheat sheet for everything in Part 4.
 | Zoom an image to a region from a link | `[text](imageId/zoomto/pct:x,y,w,h)` |
 | Fly a map to a location from a link | `[text](mapId/flyto/lat,lng,zoom)` or `[text](mapId/flyto/Qid,zoom)` |
 | Jump a video to a timestamp from a link | `[text](videoId/playat/start,end)` |
-| Control a viewer's size or position | `class="medium right"` etc. — see [Formatting Tips](storykit-formatting-tips) |
+| Control a viewer's size or position | `class="medium right"` etc. — see [Formatting Tips](entreluma-formatting-tips) |
 
 ## Pre-Submission Checklist
 
@@ -1268,7 +1215,7 @@ Before opening a pull request, verify:
 
 * `published: true` is in the narrative's front matter
 * The `media_subpath` matches the folder where you uploaded images
-* Every StoryKit viewer renders correctly in the preview when you scroll the whole article
+* Every Entreluma viewer renders correctly in the preview when you scroll the whole article
 * All Wikidata Q-identifiers in popover links point to the right entity
 * All footnotes resolve to a definition at the bottom of the file
 * Captions and attribution on local images are correct
@@ -1279,7 +1226,7 @@ Before opening a pull request, verify:
 
 If something isn't behaving the way you expect, work through this list in order.
 
-* **A viewer is showing as a broken image or a placeholder.** Check that the narrative's front matter does not contain `storykit: false`, which disables all viewers.
+* **A viewer is showing as a broken image or a placeholder.** Check that the narrative's front matter does not contain `entreluma: false`, which disables all viewers.
 * **A local image isn't loading.** Check that `media_subpath` in the front matter exactly matches the folder name in `assets/posts/`. Capitalisation and dashes matter.
 * **An action link does nothing when clicked.** Check that the viewer has an `id` attribute and that the link's URL begins with exactly that `id`.
 * **Quotes around an attribute value cause errors.** Use straight double quotes `"..."`, not curly ones `“…”`. Curly quotes often appear when text is pasted from word processors.
@@ -1287,14 +1234,14 @@ If something isn't behaving the way you expect, work through this list in order.
 * **A network diagram is empty, or raw CSV text shows on the page.** Check that the data block's tag is exactly the viewer's `id` plus `-csv`, and that the tag sits immediately after the last CSV line with no blank line in between.
 * **Footnotes aren't rendering.** Make sure there is a blank line before the first `[^x]:` definition.
 * **Your changes aren't showing up on the public site.** Confirm that `published: true` is in the front matter, the pull request has been merged into `main`, and that one to five minutes have passed for the rebuild.
-* **The preview tool isn't opening.** Make sure you launched the bookmarklet while looking at a `.md` file on GitHub, not a folder.
-* **The preview complains about a rate limit.** Add a GitHub personal access token as described in [Part 2](#raising-the-previews-rate-limit-recommended).
+* **The Entreluma Editor preview isn't opening.** Make sure you opened a valid Markdown file and selected the intended repository and branch.
+* **The preview complains about a rate limit.** Sign in again from the GitHub panel and confirm repository access.
 
-More cases are covered in the [Troubleshooting Guide](storykit-troubleshooting).
+More cases are covered in the [Troubleshooting Guide](entreluma-troubleshooting).
 
 ## Where to Go from Here
 
-* Read a published narrative to see these techniques in action. The [Monument Valley post](https://rsnyder.github.io/storykit-starter/monument-valley/) uses the image viewer, `zoomto` and `flyto` action links, a multi-marker map, YouTube embeds, entity popovers, and footnotes — nearly everything in this guide on one page. To read its raw source, open `_posts/2026-01-10-monument-valley.md` in GitHub and click **Raw**.
+* Read a published narrative to see these techniques in action. The [Monument Valley post](https://rsnyder.github.io/entreluma/monument-valley/) uses the image viewer, `zoomto` and `flyto` action links, a multi-marker map, YouTube embeds, entity popovers, and footnotes — nearly everything in this guide on one page. To read its raw source, open `_posts/2026-01-10-monument-valley.md` in GitHub and click **Raw**.
 * Browse the [full author documentation]({{ site.baseurl }}/admin/) for a deeper reference on each viewer, formatting and layout options, and the two-column display mode.
 * When your narrative is ready, open a pull request and an administrator will review it.
 

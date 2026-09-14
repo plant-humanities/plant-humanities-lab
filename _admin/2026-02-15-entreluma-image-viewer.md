@@ -1,14 +1,14 @@
 ---
-title: "StoryKit: Image Viewer"
-description: How to use the StoryKit image viewer in your Markdown posts.
-permalink: /admin/storykit-image-viewer
+title: "Entreluma: Image Viewer"
+description: How to use the Entreluma image viewer in your Markdown posts.
+permalink: /admin/entreluma-image-viewer
 date: 2026-02-15
-media_subpath: /assets/posts/storykit
+media_subpath: /assets/posts/entreluma
 # image: image.png
 # show_header_image: false
 toc: true
 order: 21
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 ---
@@ -48,13 +48,13 @@ storykit:
 
 ## Overview
 
-At first glance, the StoryKit Image Viewer looks similar to the standard image support built into Jekyll and the Chirpy theme. It displays a clean, responsive image in the page, just like a normal Markdown image.
+At first glance, the Entreluma Image Viewer looks similar to the standard image support built into Jekyll and the Chirpy theme. It displays a clean, responsive image in the page, just like a normal Markdown image.
 
 The difference becomes clear when the image is clicked.
 
-When a reader clicks the page image, StoryKit opens a larger viewer using the **highest-resolution version available**. This version supports smooth zooming and panning, allowing readers to explore fine detail. The image shown in the page itself is optimized for normal web viewing, so your page loads quickly and looks clean. The high-resolution version is only loaded when needed.
+When a reader clicks the page image, Entreluma opens a larger viewer using the **highest-resolution version available**. This version supports smooth zooming and panning, allowing readers to explore fine detail. The image shown in the page itself is optimized for normal web viewing, so your page loads quickly and looks clean. The high-resolution version is only loaded when needed.
 
-This makes the StoryKit viewer ideal for:
+This makes the Entreluma viewer ideal for:
 
 - Maps  
 - Archival photographs  
@@ -64,14 +64,14 @@ This makes the StoryKit viewer ideal for:
 
 ### First-Class Support for Wikimedia Commons
 
-The StoryKit viewer makes using Wikimedia Commons especially convenient.
+The Entreluma viewer makes using Wikimedia Commons especially convenient.
 
 You can reference a Commons image either by:
 
 - Full Commons URL  
 - The shorthand format: `wc:File_Name.jpg`
 
-StoryKit automatically:
+Entreluma automatically:
 
 - Retrieves the optimal image size for the page  
 - Loads the highest-resolution version for exploration  
@@ -82,7 +82,7 @@ This removes much of the friction normally involved in correctly using Commons i
 
 ### Interactive Storytelling
 
-Where StoryKit goes beyond a traditional image viewer is in **interactivity**.
+Where Entreluma goes beyond a traditional image viewer is in **interactivity**.
 
 You can link text to viewer actions such as:
 
@@ -98,7 +98,7 @@ The result is a more immersive reading experience — one where the image become
 In short:
 
 - Use the standard Chirpy image when you simply need to display a picture.
-- Use the StoryKit Image Viewer when the image is something readers should explore.
+- Use the Entreluma Image Viewer when the image is something readers should explore.
 
 ## Attributes
 
@@ -175,7 +175,7 @@ Keep captions short and descriptive.
 #### class
 {: .attribute }
 
-Size and position words like `medium right float` — see [Formatting Tips](storykit-formatting-tips).
+Size and position words like `medium right float` — see [Formatting Tips](entreluma-formatting-tips).
 
     class="medium right"
 
@@ -380,6 +380,6 @@ In this action link the first segment of the URL contains the `id` of the image 
 
 Note that in this example the label for the zoomed region is taken from the custom attributes appended to the link.
 
-The full action-link syntax, common pitfalls, and the actions supported by every viewer are covered in the [Action Links reference](storykit-action-links).
+The full action-link syntax, common pitfalls, and the actions supported by every viewer are covered in the [Action Links reference](entreluma-action-links).
 
 ---

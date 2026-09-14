@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/ayahuasca
 image:
   path: 27951788334_154753d604_4k.jpg
-storykit: true
+entreluma: true
 categories: ["Healing & Knowledge", "Psychoactive & Ritual"]
 ---
 

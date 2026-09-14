@@ -1,11 +1,11 @@
 ---
-title: "StoryKit: Iframe Viewer"
-description: How to embed external web pages, exhibits, and widgets in your Markdown posts with the StoryKit iframe viewer.
-permalink: /admin/storykit-iframe-viewer
+title: "Entreluma: Iframe Viewer"
+description: How to embed external web pages, exhibits, and widgets in your Markdown posts with the Entreluma iframe viewer.
+permalink: /admin/entreluma-iframe-viewer
 date: 2026-02-15
 toc: true
 order: 26
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 ---
@@ -44,11 +44,11 @@ storykit:
 
 ## Overview
 
-The iframe viewer is the general-purpose embed: it places any external web page inside your post, framed and captioned consistently with the other StoryKit viewers.
+The iframe viewer is the general-purpose embed: it places any external web page inside your post, framed and captioned consistently with the other Entreluma viewers.
 
 Use it when none of the specialized viewers fits — digital exhibits, library viewers (like the Biodiversity Heritage Library), data dashboards, interactive timelines, or any web resource that offers an embeddable URL.
 
-Use a specialized viewer instead when one exists for your content: the [Image](storykit-image-viewer), [Map](storykit-map-viewer), [Image Compare](storykit-image-compare-viewer), [YouTube](storykit-youtube-viewer), and [Network](storykit-vis-network-viewer) viewers all offer interactivity that a plain iframe can't (zooming, action links, and so on).
+Use a specialized viewer instead when one exists for your content: the [Image](entreluma-image-viewer), [Map](entreluma-map-viewer), [Image Compare](entreluma-image-compare-viewer), [YouTube](entreluma-youtube-viewer), and [Network](entreluma-vis-network-viewer) viewers all offer interactivity that a plain iframe can't (zooming, action links, and so on).
 
 ## Attributes
 
@@ -106,7 +106,7 @@ An explicit frame width in pixels. Normally omitted — the frame fills the avai
 #### class
 {: .attribute }
 
-Size and position words like `medium right float` — see [Formatting Tips](storykit-formatting-tips).
+Size and position words like `medium right float` — see [Formatting Tips](entreluma-formatting-tips).
 
     class="medium right"
 
@@ -115,7 +115,7 @@ Size and position words like `medium right float` — see [Formatting Tips](stor
 #### id
 {: .attribute }
 
-An identifier for the frame. The iframe viewer doesn't support [action links](storykit-action-links), so an `id` is rarely needed, but it can be useful as a link target.
+An identifier for the frame. The iframe viewer doesn't support [action links](entreluma-action-links), so an `id` is rarely needed, but it can be useful as a link target.
 
     id="bhl1"
 
@@ -151,7 +151,7 @@ An identifier for the frame. The iframe viewer doesn't support [action links](st
 ## Troubleshooting
 
 **The frame is blank or shows a refusal message.**
-Many sites block embedding (with the `X-Frame-Options` or `frame-ancestors` security headers). There's no way around this from StoryKit — check whether the site offers a dedicated "embed" URL (many viewers and exhibits do), or link to it normally instead.
+Many sites block embedding (with the `X-Frame-Options` or `frame-ancestors` security headers). There's no way around this from Entreluma — check whether the site offers a dedicated "embed" URL (many viewers and exhibits do), or link to it normally instead.
 
 **The frame is tiny or cut off.**
 Set `aspect` (or `height`) explicitly. Without one, browsers give iframes a small default height.

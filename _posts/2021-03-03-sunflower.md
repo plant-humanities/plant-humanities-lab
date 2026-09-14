@@ -13,7 +13,7 @@ published: true
 media_subpath: /assets/posts/sunflower
 image:
   path: BES_Hort_2_000140.jpg
-storykit: true
+entreluma: true
 categories: ["Gardens & Aesthetics", "Art & Imagination"]
 ---
 

@@ -39,24 +39,24 @@
 
   ─── Messages TO this component (from parent) ────────────────────────────────
 
-    StoryKit postMessage protocol (see docs/postmessage-protocol.md):
+    Entreluma postMessage protocol (see docs/postmessage-protocol.md):
 
-    { type: 'storykit:action', payload: { action: 'playat', args: ['start,end'] } }
+    { type: 'entreluma:action', payload: { action: 'playat', args: ['start,end'] } }
       Opens the expanded dialog and begins playing at the given time range.
       args[0] is a comma-separated string of start and optional end times.
       Examples:
         args: ['90']          → play from 1:30
         args: ['1:30,2:45']   → play from 1:30, stop at 2:45
 
-    { type: 'storykit:action', payload: { action: 'play', args: ['start'] } }
+    { type: 'entreluma:action', payload: { action: 'play', args: ['start'] } }
       Plays the already-visible max-mode player from an optional start time.
 
-    { type: 'storykit:action', payload: { action: 'pause' } }
+    { type: 'entreluma:action', payload: { action: 'pause' } }
       Pauses the already-visible max-mode player.
 
   ─── Messages FROM this component (to parent) ────────────────────────────────
 
-    { type: 'storykit:showDialog', payload: { src: '...', aspect: 1.7 } }
+    { type: 'entreluma:showDialog', payload: { src: '...', aspect: 1.7 } }
       Requests the parent open an expanded dialog containing this component
       loaded at the given src URL (which includes ?max=true and any playback
       params). aspect is the suggested width/height ratio for the dialog.
@@ -64,6 +64,7 @@
 <html lang="en">
 
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
@@ -202,8 +203,8 @@
     </figure>
   </main>
 
-  <!-- StoryKit component runtime (postMessage protocol) -->
-  <script src="../js/storykit-component.js"></script>
+  <!-- Entreluma component runtime (postMessage protocol) -->
+  <script src="../js/entreluma-component.js"></script>
 
   <script>
     // ── YouTube IFrame Player API bootstrap ──────────────────────────────────────
@@ -315,7 +316,6 @@
         playerVars,
         host: 'https://www.youtube-nocookie.com',
         events: {
-          onReady: onPlayerReady,
           onStateChange: onPlayerStateChange,
         }
       })
@@ -323,17 +323,6 @@
       // Ensure the generated iframe has the right permissions
       ytPlayer.a?.setAttribute('allow', 'autoplay; encrypted-media')
       ytPlayer.a?.setAttribute('allowfullscreen', '')
-    }
-
-    // Called when the player is fully initialised and ready to receive commands
-    const onPlayerReady = () => {
-      // In non-max mode, inject the click overlay over the player iframe
-      if (!props.max) {
-        const overlay = document.createElement('div')
-        overlay.className = 'click-overlay'
-        wrapper.appendChild(overlay)
-        overlay.addEventListener('click', onPreviewClick)
-      }
     }
 
     // Called whenever the player state changes (playing, paused, ended, etc.)
@@ -374,7 +363,23 @@
       const maxParams = new URLSearchParams(location.search)
       maxParams.set('max', 'true')
       const maxSrc = `${location.origin}${location.pathname}?${maxParams.toString()}`
-      StoryKit.showDialog(maxSrc, 1.7)
+      Entreluma.showDialog(maxSrc, 1.7)
+    }
+
+    // Expansion must work even when the third-party player cannot initialize
+    // inside an opaque preview sandbox (or while YouTube is still loading).
+    if (!props.max) {
+      if (poster) poster.style.display = 'block';
+      const overlay = document.createElement('div');
+      overlay.className = 'click-overlay';
+      overlay.setAttribute('role', 'button');
+      overlay.setAttribute('aria-label', 'Open video');
+      overlay.tabIndex = 0;
+      overlay.addEventListener('click', onPreviewClick);
+      overlay.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onPreviewClick(); }
+      });
+      wrapper.appendChild(overlay);
     }
 
     // ── Caption ─────────────────────────────────────────────────────────────────
@@ -395,7 +400,7 @@
     // ── Inbound action handler ──────────────────────────────────────────────────
     // Handles action messages sent from the parent page to this component.
 
-    StoryKit.onAction(({ action, args }) => {
+    Entreluma.onAction(({ action, args }) => {
       if (action === 'playat') {
         // Open the expanded dialog and play from a specified time range.
         // args[0] is a comma-separated "start" or "start,end" string.
@@ -413,7 +418,7 @@
         else maxParams.delete('end')
 
         const maxSrc = `${location.origin}${location.pathname}?${maxParams.toString()}`
-        StoryKit.showDialog(maxSrc, 1.7)
+        Entreluma.showDialog(maxSrc, 1.7)
 
       } else if (action === 'play') {
         // Play the max-mode player, optionally seeking to a start time first.

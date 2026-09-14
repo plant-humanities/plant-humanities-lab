@@ -1,19 +1,19 @@
 {%- comment -%}
 Flat / two-column display-mode toggle button.
 All mode logic (initial mode, class toggling, scrollytelling init/teardown,
-localStorage persistence) lives in setViewMode in assets/js/storykit.js —
+localStorage persistence) lives in setViewMode in assets/js/entreluma.js —
 this include is only the button UI. It follows mode changes via the
-"storykit:modechange" event so it stays in sync no matter who switches modes.
+"entreluma:modechange" event so it stays in sync no matter who switches modes.
 {%- endcomment -%}
 
-{%- if page.storykit.mode_toggle == nil -%}
-    {%- if site.storykit.mode_toggle == nil -%}
+{%- if page.entreluma.mode_toggle == nil -%}
+    {%- if site.entreluma.mode_toggle == nil -%}
         {%- assign toggle_enabled = true -%}
     {% else %}
-        {%- assign toggle_enabled = site.storykit.mode_toggle -%}
+        {%- assign toggle_enabled = site.entreluma.mode_toggle -%}
     {%- endif -%}
 {%- else -%}
-    {%- assign toggle_enabled = page.storykit.mode_toggle -%}
+    {%- assign toggle_enabled = page.entreluma.mode_toggle -%}
 {%- endif -%}
 
 {%- if toggle_enabled -%}
@@ -24,7 +24,7 @@ this include is only the button UI. It follows mode changes via the
 </a>
 
 <script type="module">
-    import { isMobile, setViewMode, getViewMode } from '{{ "/assets/js/storykit.js" | relative_url }}';
+    import { isMobile, setViewMode, getViewMode } from '{{ "/assets/js/entreluma.js" | relative_url }}';
 
     const btn = document.querySelector('.js-col2-toggle');
     if (btn) {
@@ -40,7 +40,7 @@ this include is only the button UI. It follows mode changes via the
                 if (icon) icon.className = mode === 'col2' ? 'fa-regular fa-square' : 'fa-solid fa-table-columns';
             };
 
-            window.addEventListener('storykit:modechange', (e) => setIcon(e.detail.mode));
+            window.addEventListener('entreluma:modechange', (e) => setIcon(e.detail.mode));
             if (getViewMode()) setIcon(getViewMode());
 
             btn.addEventListener('click', (e) => {

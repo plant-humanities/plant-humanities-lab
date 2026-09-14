@@ -13,7 +13,7 @@ featured: true
 media_subpath: /assets/posts/passionflower
 image:
   path: wc:Passiflora_passion_flower.jpg
-storykit: true
+entreluma: true
 categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 

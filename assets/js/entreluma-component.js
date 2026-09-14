@@ -1,18 +1,18 @@
 /**
- * StoryKit component runtime
+ * Entreluma component runtime
  * --------------------------
  * Shared messaging layer for the iframe viewer components in
  * /assets/components/. Loaded as a classic script so both module and
  * non-module component pages can use it:
  *
- *     <script src="../js/storykit-component.js"></script>
+ *     <script src="../js/entreluma-component.js"></script>
  *
- * Exposes a single global, window.StoryKit, implementing the component
- * side of the StoryKit postMessage protocol (see docs/postmessage-protocol.md).
+ * Exposes a single global, window.Entreluma, implementing the component
+ * side of the Entreluma postMessage protocol (see docs/postmessage-protocol.md).
  *
  * All messages use one envelope in both directions:
  *
- *     { type: "storykit:<name>", payload: { ... } }
+ *     { type: "entreluma:<name>", payload: { ... } }
  *
  * Components and the host page are always same-origin (components are
  * static pages served from the same site), so messages are sent to and
@@ -39,6 +39,7 @@
     }
   } catch (e) { /* unparsable referrer — fall through to own origin */ }
 
+  var OPAQUE_SANDBOX = window.origin === 'null';
   var TARGET_ORIGIN = window.SK_TARGET_ORIGIN || EMBEDDER_ORIGIN || window.location.origin;
 
   /** Tolerant message parse: accepts objects or JSON strings, never throws. */
@@ -60,24 +61,25 @@
   function sendToHost(type, payload) {
     if (window.parent === window) return; // not embedded; nothing to do
     window.parent.postMessage(
-      { type: "storykit:" + type, payload: payload || {} },
-      TARGET_ORIGIN
+      { type: "entreluma:" + type, payload: payload || {} },
+      OPAQUE_SANDBOX ? '*' : TARGET_ORIGIN
     );
   }
 
   /**
    * Listen for enveloped messages from the host. The handler receives
    * (name, payload, event) where name is the type without the
-   * "storykit:" prefix. Messages from other origins or without the
+   * "entreluma:" prefix. Messages from other origins or without the
    * prefix are ignored.
    */
   function onMessage(handler) {
     window.addEventListener("message", function (event) {
-      if (!isTrustedOrigin(event.origin)) return;
+      if (event.source !== window.parent) return;
+      if (event.origin === 'null' ? !OPAQUE_SANDBOX : !isTrustedOrigin(event.origin)) return;
       var msg = safeParse(event.data);
       if (!msg || typeof msg.type !== "string") return;
-      if (msg.type.indexOf("storykit:") !== 0) return;
-      handler(msg.type.slice("storykit:".length), msg.payload || {}, event);
+      if (msg.type.indexOf("entreluma:") !== 0) return;
+      handler(msg.type.slice("entreluma:".length), msg.payload || {}, event);
     });
   }
 
@@ -201,7 +203,7 @@
     return Promise.resolve(legacyCopy());
   }
 
-  window.StoryKit = {
+  window.Entreluma = {
     safeParse: safeParse,
     sendToHost: sendToHost,
     onMessage: onMessage,

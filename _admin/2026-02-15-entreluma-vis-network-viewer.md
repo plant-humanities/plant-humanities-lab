@@ -1,11 +1,11 @@
 ---
-title: "StoryKit: Network Viewer"
-description: How to use the StoryKit network viewer to draw node-and-edge relationship diagrams from simple CSV data in your Markdown posts.
-permalink: /admin/storykit-vis-network-viewer
+title: "Entreluma: Network Viewer"
+description: How to use the Entreluma network viewer to draw node-and-edge relationship diagrams from simple CSV data in your Markdown posts.
+permalink: /admin/entreluma-vis-network-viewer
 date: 2026-02-15
 toc: true
 order: 25
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 ---
@@ -44,7 +44,7 @@ storykit:
 
 ## Overview
 
-The StoryKit Network Viewer draws an interactive node-and-edge diagram — the kind of picture you'd use to show relationships: people connected to places, plants to the countries that use them, concepts to related concepts.
+The Entreluma Network Viewer draws an interactive node-and-edge diagram — the kind of picture you'd use to show relationships: people connected to places, plants to the countries that use them, concepts to related concepts.
 
 You provide the relationships as a few lines of simple comma-separated data placed right in your post. The viewer lays the diagram out automatically; readers can drag nodes around and click the diagram to open a larger version.
 
@@ -58,7 +58,7 @@ Use it for:
 
 The network viewer has two parts that work together in your Markdown:
 
-1. **A data block** — a paragraph of CSV lines describing the nodes and edges, tagged with a special ID so StoryKit can find it (and hide it from readers).
+1. **A data block** — a paragraph of CSV lines describing the nodes and edges, tagged with a special ID so Entreluma can find it (and hide it from readers).
 2. **The include tag** — declares the viewer and connects it to the data block by ID.
 
 The connection is a naming convention: if the viewer has `id="my_network"`, its data block must be tagged `{: #my_network-csv }` — the viewer's ID plus `-csv`.
@@ -110,7 +110,7 @@ edge,1,3,used in aguas frescas
 
 {% include embed/vis-network.html id="plant_network" caption="Tamarind connections" %}
 
-The data paragraph is invisible on the published page — StoryKit hides any element whose ID ends in `-csv`. Readers only see the diagram. Click the diagram to open the expanded version.
+The data paragraph is invisible on the published page — Entreluma hides any element whose ID ends in `-csv`. Readers only see the diagram. Click the diagram to open the expanded version.
 
 > The `{: #plant_network-csv }` line is a kramdown *attribute block* — it attaches the ID to the paragraph of CSV lines directly above it. It must come immediately after the last CSV line, with no blank line between.
 {: .prompt-info }
@@ -160,7 +160,7 @@ The width-to-height ratio of the viewer. Defaults to `1.0` (square).
 #### class
 {: .attribute }
 
-Size and position words like `medium right float` — see [Formatting Tips](storykit-formatting-tips).
+Size and position words like `medium right float` — see [Formatting Tips](entreluma-formatting-tips).
 
     class="medium right"
 

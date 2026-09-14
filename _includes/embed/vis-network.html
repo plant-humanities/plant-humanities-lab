@@ -1,5 +1,5 @@
 {%- comment -%}
-StoryKit network (vis-network) viewer embed. Builds the component query
+Entreluma network (vis-network) viewer embed. Builds the component query
 string (each value escaped with cgi_escape before appending) and delegates
 iframe emission to embed/_iframe.html. The component locates its CSV data
 block on the host page by the id convention "<id>-csv" unless dataid is
@@ -29,7 +29,7 @@ given explicitly.
 {%- include embed/_iframe.html
       src=component_src
       base_class="embed-vis-network"
-      title="StoryKit network viewer"
+      title="Entreluma network viewer"
       id=include.id
       class=include.class
       aspect=aspect

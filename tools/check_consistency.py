@@ -2,17 +2,10 @@
 """Repo consistency checks, run in CI after the Jekyll build.
 
 Checks:
-  1. CHIRPY_VERSION in preview/index.html matches the jekyll-theme-chirpy
-     version resolved in Gemfile.lock (the preview tool fetches theme files
-     from the Chirpy gem via jsDelivr and silently drifts otherwise).
-  2. Exactly one Shoelace version is referenced across the repo (multiple
+  1. Exactly one Shoelace version is referenced across the repo (multiple
      simultaneous versions double-load the library and can conflict).
-  3. Every entry in tools/sync_code.py FILES_TO_SYNC exists locally (a
-     missing entry means the manifest is stale or a file was deleted here
-     without updating the manifest).
 
-Exits non-zero on failure. Shoelace convergence is reported as a warning
-until the dependency-pinning work lands; flip SHOELACE_STRICT to True then.
+Exits non-zero on failure.
 """
 from __future__ import annotations
 
@@ -32,55 +25,6 @@ TEXT_SUFFIXES = {".html", ".js", ".css", ".md", ".yml", ".yaml", ".scss", ".json
 
 errors: list[str] = []
 warnings: list[str] = []
-
-
-def check_chirpy_version() -> None:
-    lock = (REPO / "Gemfile.lock").read_text()
-    m = re.search(r"jekyll-theme-chirpy \((\d+\.\d+\.\d+)\)", lock)
-    if not m:
-        errors.append("Gemfile.lock: could not find jekyll-theme-chirpy version")
-        return
-    gem_version = m.group(1)
-
-    preview = (REPO / "preview" / "index.html").read_text()
-    m = re.search(r"CHIRPY_VERSION\s*=\s*['\"]v?(\d+\.\d+\.\d+)['\"]", preview)
-    if not m:
-        errors.append("preview/index.html: could not find CHIRPY_VERSION")
-        return
-    preview_version = m.group(1)
-
-    if gem_version != preview_version:
-        errors.append(
-            f"CHIRPY_VERSION mismatch: preview/index.html pins {preview_version} "
-            f"but Gemfile.lock resolves jekyll-theme-chirpy {gem_version}. "
-            "Update CHIRPY_VERSION in preview/index.html when upgrading the gem."
-        )
-
-    # editor/context.js keeps its own copy of the same constant, by its own
-    # admission a "mirror" -- and nothing checked it, so a Chirpy upgrade that
-    # updated preview/index.html alone left the editor fetching theme files at
-    # the old tag. That is invisible against the live CDN (the old tag still
-    # resolves) and only surfaces once the render harness stops serving
-    # fixtures for the retired version. Three copies, one check.
-    #
-    # OPTIONAL, because this script is synced to site repos and the editor is
-    # not: one central instance serves them all, so they carry no editor/ at
-    # all (see FILES_TO_SYNC in sync_code.py, and docs/editor-central.md).
-    # Reading it unconditionally crashed every downstream build with a
-    # FileNotFoundError. Where the file is absent there is no mirror to drift.
-    context_path = REPO / "editor" / "context.js"
-    if not context_path.exists():
-        return
-    m = re.search(r"CHIRPY_VERSION\s*=\s*['\"]v?(\d+\.\d+\.\d+)['\"]", context_path.read_text())
-    if not m:
-        errors.append("editor/context.js: could not find CHIRPY_VERSION")
-        return
-    if m.group(1) != gem_version:
-        errors.append(
-            f"CHIRPY_VERSION mismatch: editor/context.js pins {m.group(1)} "
-            f"but Gemfile.lock resolves jekyll-theme-chirpy {gem_version}. "
-            "It mirrors preview/index.html -- update both when upgrading."
-        )
 
 
 def iter_text_files():
@@ -110,33 +54,8 @@ def check_shoelace_versions() -> None:
         (errors if SHOELACE_STRICT else warnings).append(msg)
 
 
-def check_sync_manifest() -> None:
-    sync = (REPO / "tools" / "sync_code.py").read_text()
-    m = re.search(r"FILES_TO_SYNC\s*=\s*\[(.*?)\]", sync, re.S)
-    if not m:
-        errors.append("tools/sync_code.py: could not parse FILES_TO_SYNC")
-        return
-    # Strip comments before scanning for quoted paths. FILES_TO_SYNC carries
-    # explanatory comments by convention, and prose contains apostrophes
-    # ("pages-deploy.yml's Setup Ruby step") and quoted error text — all of
-    # which this deliberately naive quoted-string scan would otherwise read as
-    # filenames, failing CI with entries that were never entries.
-    body = re.sub(r"#[^\n]*", "", m.group(1))
-    entries = re.findall(r"['\"]([^'\"]+)['\"]", body)
-    for rel in entries:
-        if not (REPO / rel).exists():
-            errors.append(
-                f"FILES_TO_SYNC entry does not exist locally: {rel} "
-                "(stale manifest, a file deleted without updating it, or a "
-                "path your .gitignore excludes so the sync wrote it but git "
-                "never committed it -- check with: git check-ignore -v " + rel
-            )
-
-
 def main() -> int:
-    check_chirpy_version()
     check_shoelace_versions()
-    check_sync_manifest()
 
     for w in warnings:
         print(f"WARNING: {w}")

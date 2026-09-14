@@ -138,7 +138,7 @@
 
     {%- assign _src_p3 = _src | slice: 0, 3 -%}
     {% if _src_p3 == 'wc:' %}
-      <!-- Wikimedia Commons shorthand (StoryKit): media-url.html resolved the
+      <!-- Wikimedia Commons shorthand (Entreluma): media-url.html resolved the
            wc: token into a full upload.wikimedia.org thumb URL. The resolved
            URL does NOT end with the original src value, so the prefix trick
            below would mangle it — replace the whole src attribute instead.

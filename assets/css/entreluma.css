@@ -859,7 +859,7 @@ figure.iframe-wrapper img.embed-iframe-img {
 }
 
 /* Header-image attribution (manual via front matter image.attribution, or
-   automatic for Commons-hosted headers — storykit.js headerAttribution) */
+   automatic for Commons-hosted headers — entreluma.js headerAttribution) */
 .sk-header-attribution {
   margin-top: 0.35rem;
   font-size: 0.75rem;

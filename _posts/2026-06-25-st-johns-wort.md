@@ -10,7 +10,7 @@ featured: true
 media_subpath: /assets/posts/st-johns-wort 
 image: 
   path: wc:St._John%27s_wort_%2850050399481%29.jpg 
-storykit: true 
+entreluma: true
 categories: ["Gardens & Aesthetics", "Ornamental Cultivation"] 
 ---
 
@@ -18,7 +18,7 @@ Zoe Dubno did not expect her life to unravel. It was on a whim that the writer b
 
 {% include embed/image-compare.html
     before="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hypericum_perforatum_kz03.jpg/1280px-Hypericum_perforatum_kz03.jpg&by=0.5"
-    after="https://storykit-preview.netlify.app/api/raw/plant-humanities/plant-humanities-lab/st-johns-wort/assets/posts/st-johns-wort/Holding-the-supplement-June-30.jpg&as=1.27"
+    after="Holding-the-supplement-June-30.jpg&as=1.27"
     aspect="1"
 %}
 

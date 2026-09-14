@@ -180,6 +180,10 @@ collections:
 
 defaults:
   - scope:
+      path: "assets/components"
+    values:
+      sitemap: false
+  - scope:
       path: "" # An empty string here means all files in the project
       type: posts
     values:
@@ -218,6 +222,7 @@ compress_html:
     envs: [development]
 
 exclude:
+  - prototypes
   - "*.gem"
   - "*.gemspec"
   - docs
@@ -237,8 +242,9 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-# The options for the StoryKit layout, which provides enhanced features for content presentation and interaction.
-storykit:
+# The options for the Entreluma extensions, which provide enhanced features for content presentation and interaction.
+entreluma:
+  editor_url: https://editor.entreluma.org # optional authoring application
   mode: flat                  # default layout style: flat or 2col
   mode_toggle: true           # Enable the toggle button to switch between 2col and flat styles
   auto_float: true            # auto float embeds

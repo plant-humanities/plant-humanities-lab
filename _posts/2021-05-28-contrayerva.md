@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/contrayerva
 image:
   path: Contrayerva_Header.jpg
-storykit: true
+entreluma: true
 categories: ["Healing & Knowledge", "Women's Botanical Knowledge"]
 ---
 

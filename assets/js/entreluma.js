@@ -1,5 +1,5 @@
 /**
- * StoryKit client helpers
+ * Entreluma client helpers
  * ----------------------
  * Assumes this file is loaded as an ES module (e.g., <script type="module" ...>).
  *
@@ -55,6 +55,7 @@ const HOST_ORIGIN =
 // actual component iframes on the page at init, so we trust exactly the
 // places we load viewers from. Set to null to allow all origins (not
 // recommended).
+const OPAQUE_SANDBOX = window.origin === 'null';
 const allowedMessageOrigins = new Set([HOST_ORIGIN]);
 
 /** Trust the origins we actually load viewer component iframes from. */
@@ -67,6 +68,7 @@ function registerComponentOrigins(root = document) {
 
 /** targetOrigin for posting INTO a component iframe: its own origin. */
 function originOfIframe(el) {
+    if (OPAQUE_SANDBOX) return '*'; // descendants inherit the opaque sandbox
     try { return new URL(el.src, location.href).origin; }
     catch { return HOST_ORIGIN; }
 }
@@ -133,7 +135,7 @@ function computeDialogWidth({ aspect }) {
     return clamp(Math.round(w), 320, Math.round(window.innerWidth * 0.98));
 }
 
-function showDialog({ aspect, src } = {}) {
+function showDialog({ aspect, src } = {}, localAssignment = null) {
     if (activeDialog) return;
     const srcUrl = safeURL(src);
     if (!srcUrl) {
@@ -144,7 +146,7 @@ function showDialog({ aspect, src } = {}) {
     const width = computeDialogWidth({ aspect });
 
     const dialog = document.createElement("sl-dialog");
-    dialog.id = "storykitDialog";
+    dialog.id = "entrelumaDialog";
     dialog.setAttribute("size", "large");
     dialog.setAttribute("no-header", "");
     dialog.style.setProperty("--width", `${width}px`);
@@ -177,6 +179,11 @@ function showDialog({ aspect, src } = {}) {
     iframe.setAttribute("allowfullscreen", "");
     iframe.setAttribute("allow", "autoplay; encrypted-media");
     iframe.src = srcUrl.toString();
+    // Only inherit a local assignment from the registered sending viewer.
+    // The resource broker also checks the exact runtime URL and generation.
+    if (localAssignment && srcUrl.searchParams.get('sk_resource') === localAssignment) {
+        iframe.dataset.skResource = localAssignment;
+    }
 
     wrapper.appendChild(iframe);
     dialog.appendChild(wrapper);
@@ -213,21 +220,23 @@ function safeParseMessage(data) {
 }
 
 /**
- * Host side of the StoryKit postMessage protocol.
- * All messages use the envelope { type: "storykit:<name>", payload: {...} }
+ * Host side of the Entreluma postMessage protocol.
+ * All messages use the envelope { type: "entreluma:<name>", payload: {...} }
  * — see docs/postmessage-protocol.md.
  */
 function addMessageHandler() {
     window.addEventListener("message", (event) => {
-        if (!isOriginAllowed(event.origin)) return;
+        if (event.origin === 'null') {
+            if (!OPAQUE_SANDBOX || !findIframeBySourceWindow(event.source)) return;
+        } else if (!isOriginAllowed(event.origin)) return;
 
         const msg = safeParseMessage(event.data);
-        if (!msg || typeof msg.type !== "string" || !msg.type.startsWith("storykit:")) return;
+        if (!msg || typeof msg.type !== "string" || !msg.type.startsWith("entreluma:")) return;
 
-        const name = msg.type.slice("storykit:".length);
-        const payload = msg.payload || {};
+        const name = msg.type.slice("entreluma:".length);
+        let payload = msg.payload || {};
         const reply = (type, replyPayload) =>
-            event.source?.postMessage({ type: `storykit:${type}`, payload: replyPayload }, event.origin);
+            event.source?.postMessage({ type: `entreluma:${type}`, payload: replyPayload }, event.origin === 'null' ? '*' : event.origin);
 
         switch (name) {
             case "showDialog": {
@@ -244,7 +253,7 @@ function addMessageHandler() {
                     const resolved = safeURL(payload.src, sender.src);
                     if (resolved) payload = { ...payload, src: resolved.href };
                 }
-                showDialog(payload);
+                showDialog(payload, sender?.dataset.skResource || null);
                 return;
             }
 
@@ -275,7 +284,7 @@ function addMessageHandler() {
             }
 
             default:
-                console.debug(`StoryKit: ignoring unknown message type storykit:${name}`);
+                console.debug(`Entreluma: ignoring unknown message type entreluma:${name}`);
         }
     });
 }
@@ -506,9 +515,9 @@ function addActionLinks({ root = document.body } = {}) {
 
     // Diagnostics: embeds rendered without an id (embed/_iframe.html marks
     // them) can never be targeted by action links — surface once, quietly.
-    const noId = root.querySelectorAll('[data-storykit-warn="no-id"]');
+    const noId = root.querySelectorAll('[data-entreluma-warn="no-id"]');
     if (noId.length) {
-        console.info(`StoryKit: ${noId.length} viewer embed(s) on this page have no id attribute; ` +
+        console.info(`Entreluma: ${noId.length} viewer embed(s) on this page have no id attribute; ` +
             `action links cannot target them. Add id="..." to the include if you need to.`);
     }
 
@@ -588,12 +597,12 @@ function addActionLinks({ root = document.body } = {}) {
                 document.querySelector(`.col2 [data-id="${ds.target}"]`) ||
                 document.getElementById(ds.target);
             if (!targetEl || !targetEl.contentWindow) {
-                console.warn(`StoryKit: action link target "${ds.target}" not found — ` +
+                console.warn(`Entreluma: action link target "${ds.target}" not found — ` +
                     `check that a viewer include on this page has id="${ds.target}"`);
                 return;
             }
             targetEl.contentWindow.postMessage({
-                type: "storykit:action",
+                type: "entreluma:action",
                 payload: { action: ds.action, args: parsedArgs, label: ds.label }
             }, originOfIframe(targetEl));
         });
@@ -601,7 +610,7 @@ function addActionLinks({ root = document.body } = {}) {
 
     if (unboundTargets.length) {
         const ids = [...new Set(unboundTargets)].join('", "');
-        console.warn(`StoryKit: ${unboundTargets.length} action link(s) reference viewer id(s) "${ids}" ` +
+        console.warn(`Entreluma: ${unboundTargets.length} action link(s) reference viewer id(s) "${ids}" ` +
             `that don't exist on this page — check that each targeted viewer include has a matching id attribute.`);
     }
 }
@@ -663,7 +672,7 @@ function extractQidFromAnchor(a) {
  * reading session don't re-query Wikidata/Wikipedia (rate-limit and latency
  * resilience). Failures are non-fatal: uncached entities simply get no popup
  * and the anchor stays a normal link. */
-const ENTITY_CACHE_PREFIX = "storykit:entity:";
+const ENTITY_CACHE_PREFIX = "entreluma:entity:";
 const ENTITY_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 
 function readEntityCache(qid) {
@@ -1182,7 +1191,7 @@ function teardown2col() {
  * ------------------------------------------- */
 
 const MODE_STORAGE_KEY = "postViewMode";
-let currentMode = null; // 'flat' | 'col2' once initStoryKit/setViewMode has run
+let currentMode = null; // 'flat' | 'col2' once initEntreluma/setViewMode has run
 
 function normalizeMode(value) {
     const v = String(value || "").toLowerCase();
@@ -1206,7 +1215,7 @@ function resolveInitialMode({ pageMode, siteMode, modeToggle = true } = {}) {
 /**
  * Switch the page between flat and two-column display. Idempotent; the only
  * place that toggles the col1/col2 classes, persists the reader's choice,
- * and initializes/tears down scrollytelling. Fires "storykit:modechange"
+ * and initializes/tears down scrollytelling. Fires "entreluma:modechange"
  * on window so UI (e.g. the toolbar toggle icon) can follow along.
  */
 function setViewMode(mode, { persist = true } = {}) {
@@ -1229,7 +1238,7 @@ function setViewMode(mode, { persist = true } = {}) {
         try { localStorage.setItem(MODE_STORAGE_KEY, toCol2 ? "col2" : "col1"); } catch { /* storage blocked */ }
     }
 
-    window.dispatchEvent(new CustomEvent("storykit:modechange", { detail: { mode: effective } }));
+    window.dispatchEvent(new CustomEvent("entreluma:modechange", { detail: { mode: effective } }));
 }
 
 function getViewMode() {
@@ -1242,7 +1251,7 @@ function getViewMode() {
  * the interactive features.
  *
  * @param {object} cfg
- *   pageMode / siteMode  - storykit.mode from front matter / _config.yml
+ *   pageMode / siteMode  - entreluma.mode from front matter / _config.yml
  *   modeToggle           - whether the reader's toggle (and saved choice) applies
  *   autoFloat, groupEmbeds, wikidataInfoPopups - feature flags (default true)
  */
@@ -1332,7 +1341,7 @@ async function headerAttribution(attempt = 0) {
   } catch { /* offline / API hiccup — attribution is best-effort */ }
 }
 
-function initStoryKit(cfg = {}) {
+function initEntreluma(cfg = {}) {
     // Trust messages from wherever this page's viewer components actually
     // load — same-origin normally, the deployed site when a local-dev
     // editor/preview renders this page.
@@ -1508,7 +1517,7 @@ export {
     addActionLinks,
     init2col,
     restructureMarkdownToSections,
-    initStoryKit,
+    initEntreluma,
     setViewMode,
     getViewMode,
 };

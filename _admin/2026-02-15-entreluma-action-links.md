@@ -1,12 +1,12 @@
 ---
-title: "StoryKit: Action Links"
+title: "Entreluma: Action Links"
 description: The complete reference for action links — the Markdown links that let your text zoom images, fly maps, and play video segments.
-permalink: /admin/storykit-action-links
+permalink: /admin/entreluma-action-links
 date: 2026-02-15
-media_subpath: /assets/posts/storykit
+media_subpath: /assets/posts/entreluma
 toc: true
 order: 30
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 ---
@@ -41,7 +41,7 @@ storykit:
 
 An action link is a standard Markdown link whose URL, instead of pointing to a web page, tells a viewer on the same page to do something. To the reader it looks like any other link — but clicking it zooms an image, flies a map to a location, or plays a video segment.
 
-This is the heart of StoryKit's interactive storytelling: your prose guides the reader visually. Instead of writing "see the butte in the upper right," you write a link that makes the image zoom to it.
+This is the heart of Entreluma's interactive storytelling: your prose guides the reader visually. Instead of writing "see the butte in the upper right," you write a link that makes the image zoom to it.
 
 ## The Syntax
 
@@ -93,7 +93,7 @@ The link text is used as the region label by default. To show a different label,
 ```
 {: .nolineno }
 
-You normally don't work out region values by hand — the image viewer's selection tool generates them for you. See the [Image Viewer guide](storykit-image-viewer) for details.
+You normally don't work out region values by hand — the image viewer's selection tool generates them for you. See the [Image Viewer guide](entreluma-image-viewer) for details.
 
 ### Map Viewer — `flyto`
 
@@ -116,7 +116,7 @@ Clicking the **same** fly-to link a second time returns the map to where it was 
 | `play` | optional `start` time | `[Resume the video](vid1/play)` |
 | `pause` | none | `[Pause here](vid1/pause)` |
 
-`playat` opens the expanded viewer and plays from `start`, stopping at `end` if given. See the [YouTube Viewer guide](storykit-youtube-viewer) for time format details.
+`playat` opens the expanded viewer and plays from `start`, stopping at `end` if given. See the [YouTube Viewer guide](entreluma-youtube-viewer) for time format details.
 
 ### Viewers Without Actions
 
@@ -142,4 +142,4 @@ Zoom to [Merrick Butte](demo/zoomto/pct:67.68,34.23,23.22,27), or to the [people
 4. Are the arguments in the right format — commas in the right places, no stray spaces?
 5. Is the viewer on the same page as the link?
 
-More help: [Troubleshooting Guide](storykit-troubleshooting).
+More help: [Troubleshooting Guide](entreluma-troubleshooting).

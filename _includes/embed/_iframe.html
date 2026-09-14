@@ -1,5 +1,5 @@
 {%- comment -%}
-Shared iframe emitter for all StoryKit embed includes.
+Shared iframe emitter for all Entreluma embed includes.
 
 Each embed/*.html include builds its own query string (values escaped with
 cgi_escape) and delegates the <iframe> emission here so that id, class,
@@ -10,9 +10,9 @@ Parameters:
   base_class  (required) viewer base class, e.g. "embed-map"
   title       (required) accessible title for the iframe
   id          viewer id — required for action-link targeting. When absent
-              a data-storykit-warn attribute is emitted instead so the
+              a data-entreluma-warn attribute is emitted instead so the
               missing id is discoverable in the inspector and by
-              storykit.js diagnostics.
+              entreluma.js diagnostics.
   class       extra author-supplied classes (size/position words)
   aspect      aspect ratio for the frame (caller resolves its default)
   extra_style additional inline style, e.g. "width: 100%;"
@@ -21,7 +21,7 @@ Parameters:
 {%- endcomment -%}
 <iframe
   {%- if include.id and include.id != "" %} id="{{ include.id }}"
-  {%- else %} data-storykit-warn="no-id"
+  {%- else %} data-entreluma-warn="no-id"
   {%- endif %}
   class="{{ include.base_class }}{% if include.class %} {{ include.class }}{% endif %}"
   loading="lazy" title="{{ include.title }}" allow="clipboard-write" allowfullscreen

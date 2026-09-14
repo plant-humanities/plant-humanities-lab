@@ -83,10 +83,10 @@ script_includes:
     display: none !important;
   }
 
-  {% if page.storykit.post_navigation == false %}
+  {% if page.entreluma.post_navigation == false %}
     .post-navigation { display: none !important; }
   {% else %}
-    {% if site.storykit.post_navigation == false %}
+    {% if site.entreluma.post_navigation == false %}
       .post-navigation { display: none !important; }
     {% endif %}
   {% endif %}
@@ -97,35 +97,35 @@ script_includes:
 
 {% include toc-status.html %}
 
-{% if page.storykit != false %}
-  <link rel="stylesheet" href="{{ '/assets/css/storykit.css' | relative_url }}">
+{% if page.entreluma != false %}
+  <link rel="stylesheet" href="{{ '/assets/css/entreluma.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css">
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace.js"></script>
 {% endif %}
 
 <article class="px-1" data-toc="{{ enable_toc }}">
   
-  {% if page.storykit != false %}
+  {% if page.entreluma != false %}
 
-    {%- if page.storykit.toolbar == nil -%}
-      {%- if site.storykit.toolbar == nil -%}{%- assign toolbar_enabled = true -%}
-      {% else %}{%- assign toolbar_enabled = site.storykit.toolbar -%}{%- endif -%}
-    {%- else -%}{%- assign toolbar_enabled = page.storykit.toolbar -%}{%- endif -%}
+    {%- if page.entreluma.toolbar == nil -%}
+      {%- if site.entreluma.toolbar == nil -%}{%- assign toolbar_enabled = true -%}
+      {% else %}{%- assign toolbar_enabled = site.entreluma.toolbar -%}{%- endif -%}
+    {%- else -%}{%- assign toolbar_enabled = page.entreluma.toolbar -%}{%- endif -%}
 
-    {%- if page.storykit.mode_toggle == nil -%}
-      {%- if site.storykit.mode_toggle == nil -%}{%- assign mode_toggle_enabled = true -%}
-      {% else %}{%- assign mode_toggle_enabled = site.storykit.mode_toggle -%}{%- endif -%}
-    {%- else -%}{%- assign mode_toggle_enabled = page.storykit.mode_toggle -%}{%- endif -%}
+    {%- if page.entreluma.mode_toggle == nil -%}
+      {%- if site.entreluma.mode_toggle == nil -%}{%- assign mode_toggle_enabled = true -%}
+      {% else %}{%- assign mode_toggle_enabled = site.entreluma.mode_toggle -%}{%- endif -%}
+    {%- else -%}{%- assign mode_toggle_enabled = page.entreluma.mode_toggle -%}{%- endif -%}
 
-    {%- if page.storykit.cite == nil -%}
-      {%- if site.storykit.cite == nil -%}{%- assign cite_enabled = true -%}
-      {% else %}{%- assign cite_enabled = site.storykit.cite -%}{%- endif -%}
-    {%- else -%}{%- assign cite_enabled = page.storykit.cite -%}{%- endif -%}
+    {%- if page.entreluma.cite == nil -%}
+      {%- if site.entreluma.cite == nil -%}{%- assign cite_enabled = true -%}
+      {% else %}{%- assign cite_enabled = site.entreluma.cite -%}{%- endif -%}
+    {%- else -%}{%- assign cite_enabled = page.entreluma.cite -%}{%- endif -%}
 
-    {%- if page.storykit.pdf == nil -%}
-      {%- if site.storykit.pdf == nil -%}{%- assign pdf_download_enabled = true -%}
-      {% else %}{%- assign pdf_download_enabled = site.storykit.pdf -%}{%- endif -%}
-    {%- else -%}{%- assign pdf_download_enabled = page.storykit.pdf -%}{%- endif -%}
+    {%- if page.entreluma.pdf == nil -%}
+      {%- if site.entreluma.pdf == nil -%}{%- assign pdf_download_enabled = true -%}
+      {% else %}{%- assign pdf_download_enabled = site.entreluma.pdf -%}{%- endif -%}
+    {%- else -%}{%- assign pdf_download_enabled = page.entreluma.pdf -%}{%- endif -%}
 
     <!-- toolbar_enabled={{toolbar_enabled}} mode_toggle_enabled={{mode_toggle_enabled}} cite_enabled={{cite_enabled}} pdf_download_enabled={{pdf_download_enabled}} -->
     {% if toolbar_enabled %}
@@ -222,7 +222,7 @@ script_includes:
         {% capture src %}src="{{ src }}"{% endcapture %}
 
         {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
-        {%- comment -%} data-sk-alt tells storykit.js the FRONT-MATTER truth:
+        {%- comment -%} data-sk-alt tells entreluma.js the FRONT-MATTER truth:
             Chirpy's alt fallback ("Preview Image") + Liquid's default filter
             make absent and empty alt indistinguishable in the DOM. absent →
             auto-caption from Commons metadata; empty → author's opt-out.
@@ -249,7 +249,7 @@ script_includes:
             <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
           {%- endif -%}
           {%- comment -%} Manual attribution (front matter image.attribution);
-              Commons-hosted headers get an automatic line from storykit.js's
+              Commons-hosted headers get an automatic line from entreluma.js's
               headerAttribution() when this is absent. {%- endcomment -%}
           {%- if page.image.attribution -%}
             <small class="sk-header-attribution text-center d-block">{{ page.image.attribution }}</small>
@@ -282,8 +282,10 @@ script_includes:
                 {%- endif %}
                 {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
               {% endfor %}
+            {% elsif site.social.links.size > 0 %}
+              <a href="{{ site.social.links[0] }}">{{ site.social.name | default: site.title | escape }}</a>
             {% else %}
-              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+              {{ site.social.name | default: site.title | escape }}
             {% endif %}
           </em>
         </span>
@@ -395,10 +397,10 @@ script_includes:
   <!-- div.post-tail-wrapper -->
 </article>
 
-{% if page.storykit != false %}
+{% if page.entreluma != false %}
   <script type="module">
 
-    import { initStoryKit } from "{{ '/assets/js/storykit.js' | relative_url }}";
+    import { initEntreluma } from "{{ '/assets/js/entreluma.js' | relative_url }}";
 
     function moveToolbarIntoTopbar() {
       const toolbar = document.getElementById("toolbar");
@@ -425,19 +427,19 @@ script_includes:
     }
 
     /* All display-mode and feature initialization is delegated to
-       initStoryKit / setViewMode in storykit.js — the single mode controller.
+       initEntreluma / setViewMode in entreluma.js — the single mode controller.
        (The toggle button in col2-toggle.html calls setViewMode too.)
 
        NOTE: use block comments only in inline scripts. In production the
        compress.html layout (compress_html.ignore.envs: [development]) strips
        newlines, so a `//` comment swallows the rest of the script. */
-    initStoryKit({
-      pageMode: '{{ page.storykit.mode }}',
-      siteMode: '{{ site.storykit.mode }}',
-      modeToggle: ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true',
-      autoFloat: ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true',
-      groupEmbeds: ('{{ page.storykit.group_embeds }}' || '{{ site.storykit.group_embeds }}' || 'true').toLowerCase() === 'true',
-      wikidataInfoPopups: ('{{ page.storykit.wikidata_info_popups }}' || '{{ site.storykit.wikidata_info_popups }}' || 'true').toLowerCase() === 'true',
+    initEntreluma({
+      pageMode: '{{ page.entreluma.mode }}',
+      siteMode: '{{ site.entreluma.mode }}',
+      modeToggle: ('{{ page.entreluma.mode_toggle }}' || '{{ site.entreluma.mode_toggle }}' || 'true').toLowerCase() === 'true',
+      autoFloat: ('{{ page.entreluma.auto_float }}' || '{{ site.entreluma.auto_float }}' || 'true').toLowerCase() === 'true',
+      groupEmbeds: ('{{ page.entreluma.group_embeds }}' || '{{ site.entreluma.group_embeds }}' || 'true').toLowerCase() === 'true',
+      wikidataInfoPopups: ('{{ page.entreluma.wikidata_info_popups }}' || '{{ site.entreluma.wikidata_info_popups }}' || 'true').toLowerCase() === 'true',
     });
 
     document.addEventListener("DOMContentLoaded", moveToolbarIntoTopbar);

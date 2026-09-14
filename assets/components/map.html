@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Map Component</title>
@@ -221,8 +222,8 @@
     </figure>
   </main>
 
-  <!-- StoryKit component runtime (postMessage protocol) -->
-  <script src="../js/storykit-component.js"></script>
+  <!-- Entreluma component runtime (postMessage protocol) -->
+  <script src="../js/entreluma-component.js"></script>
 
   <!-- Leaflet core + plugins (global) -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -240,12 +241,55 @@
     import "https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js";
 
     // ------------------------------- constants -------------------------------
+    import { receiveLocalResource } from '../js/entreluma-local-image.js';
+    const localParams = new URLSearchParams(location.search);
+    const localJSON = new Map();
+    function localData(url) {
+      const resourceId = url.slice('sk-local:'.length);
+      let ids;
+      try {ids = JSON.parse(localParams.get('sk_resources'));} catch {ids = [];}
+      if (!Array.isArray(ids) || !ids.includes(resourceId)) throw new Error('Unassigned local map resource.');
+      if (!localJSON.has(resourceId)) localJSON.set(resourceId, receiveLocalResource({resourceId,
+        generation: localParams.get('sk_generation'), types: new Set(['application/json','application/geo+json'])
+      }).then(resource => {resource.revoke();return JSON.parse(new TextDecoder().decode(resource.bytes));}));
+      return localJSON.get(resourceId);
+    }
     const IMAGE_SERVICE_URL = "https://d1co2zgwaj21sl.cloudfront.net/image";
     const ALLMAPS_BASE = "https://annotations.allmaps.org";
     const WIKIDATA_SPARQL = "https://query.wikidata.org/sparql";
 
+    // Only the editor opts into this bridge. Published maps request tiles
+    // directly using the public site's origin-only referrer policy.
+    const tileBridge = localParams.get('entreluma_tile_bridge') === '1' && top !== window;
+    const bridgeTiles = new Map();
+    if (tileBridge) addEventListener('message', event => {
+      if (event.source !== top || event.data?.kind !== 'entreluma-osm-tile-result') return;
+      const entry = bridgeTiles.get(event.data.id);
+      if (!entry) return;
+      bridgeTiles.delete(event.data.id); clearTimeout(entry.timer);
+      if (!(event.data.blob instanceof Blob)) {entry.done(new Error('Map tile unavailable.'), entry.tile); return;}
+      const url = URL.createObjectURL(event.data.blob);
+      entry.tile.onload = () => {URL.revokeObjectURL(url); entry.done(null, entry.tile);};
+      entry.tile.onerror = () => {URL.revokeObjectURL(url); entry.done(new Error('Map tile unavailable.'), entry.tile);};
+      entry.tile.src = url;
+    });
+    const PreviewTileLayer = L.TileLayer.extend({
+      createTile(coords, done) {
+        const tile = document.createElement('img'); tile.alt = ''; tile.setAttribute('role', 'presentation');
+        const id = crypto.randomUUID();
+        const timer = setTimeout(() => {bridgeTiles.delete(id); done(new Error('Map tile timed out.'), tile);}, 20000);
+        bridgeTiles.set(id, {tile, done, timer});
+        top.postMessage({kind:'entreluma-osm-tile', id, z:coords.z, x:coords.x, y:coords.y}, '*');
+        return tile;
+      }
+    });
+    const tileLayer = (url, options) => tileBridge && url.startsWith('https://tile.openstreetmap.org/')
+      ? new PreviewTileLayer(url, options) : L.tileLayer(url, options);
+
     const baseMapsConfigs = {
-      OpenStreetMap: ["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      OpenStreetMap: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        // Identify the site to OSM without exposing story paths or query parameters.
+        referrerPolicy: "strict-origin",
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }],
@@ -294,7 +338,7 @@
         e.preventDefault();
         e.stopPropagation();
         const sep = location.search ? "&" : "?";
-        StoryKit.showDialog(`${location.href}${sep}max`, 1.0);
+        Entreluma.showDialog(`${location.href}${sep}max`, 1.0);
       });
     }
 
@@ -398,6 +442,7 @@
     }
 
     async function fetchJson(url, { timeoutMs = 12000, accept = "application/json" } = {}) {
+      if (url.startsWith('sk-local:')) return localData(url);
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), timeoutMs);
       try {
@@ -924,7 +969,7 @@
       let prior = null;
       let lastTargetKey = null;
 
-      StoryKit.onAction(async ({ action, args }) => {
+      Entreluma.onAction(async ({ action, args }) => {
         if (action !== "flyto") return;
 
         const locZoom = String(args[0] ?? "").trim();
@@ -981,7 +1026,8 @@
         markers: null,
         popupOnHover: false,
         zoom: 8,
-        ...queryObj
+        ...queryObj,
+        fitGeoJSON: !queryObj.center && !queryObj.zoom
       };
 
       if (props.caption) setCaption(props.caption);
@@ -1026,11 +1072,11 @@
         const cfg = baseMapsConfigs[name];
         if (!cfg) continue;
         const [url, options] = cfg;
-        basemapLayers.push([name.replace(/_/g, " "), L.tileLayer(url, options)]);
+        basemapLayers.push([name.replace(/_/g, " "), tileLayer(url, options)]);
       }
       if (!basemapLayers.length) {
         const [url, opts] = baseMapsConfigs.OpenStreetMap;
-        basemapLayers.push(["OpenStreetMap", L.tileLayer(url, opts)]);
+        basemapLayers.push(["OpenStreetMap", tileLayer(url, opts)]);
       }
 
       // Create map
@@ -1153,6 +1199,7 @@
       }
 
       // GeoJSON overlays
+      const geoBounds = L.latLngBounds();
       const geojsonTasks = geoJsonOverlays.map(async (def) => {
         try {
           const url = def.url;
@@ -1167,11 +1214,18 @@
 
           addOverlayToControl(map, layerControlRef, layer, def.layerName || def.label || defaultName);
           map.addLayer(layer);
+          if (layer.getBounds().isValid()) geoBounds.extend(layer.getBounds());
         } catch (err) {
           console.error("GeoJSON load failed:", def, err);
+          if (def.url?.startsWith('sk-local:')) {
+            const notice = document.createElement('p');notice.setAttribute('role','status');
+            notice.textContent = 'Local map data could not be displayed: ' + err.message;
+            document.body.append(notice);
+          }
         }
       });
       await Promise.allSettled(geojsonTasks);
+      if (props.fitGeoJSON && geoBounds.isValid()) map.fitBounds(geoBounds, {padding: [20, 20], maxZoom: 12});
 
       // Warped maps
       if (warpedMapLayers.length) {

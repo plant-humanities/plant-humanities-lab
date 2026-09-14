@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet"
@@ -13,8 +14,8 @@
   <script src="https://cdn.jsdelivr.net/npm/openseadragon@5.0.1/build/openseadragon/openseadragon.min.js"
     integrity="sha384-Vh4b5HGyvDGMp6lVeYZe1zCqqyhS8oLTUC4SKIWmOuYH7nEuWiGIpSACopwLu9UD" crossorigin="anonymous"></script>
 
-  <!-- StoryKit component runtime (postMessage protocol) -->
-  <script src="../js/storykit-component.js"></script>
+  <!-- Entreluma component runtime (postMessage protocol) -->
+  <script src="../js/entreluma-component.js"></script>
 
   <style>
     html,
@@ -79,12 +80,13 @@
     /* Right-side expand button */
     .caption-action {
       position: absolute;
+      z-index: 51; /* Above the aspect-ratio hotspot. */
       right: 6px;
       top: 12px;
       transform: translateY(-50%);
 
       /* big, easy hit target */
-      /* width: 32px; */
+      width: 32px;
       height: 32px;
       padding: 0;
       border: 0;
@@ -272,7 +274,7 @@
 
       <button id="caption-expand" type="button" class="caption-action" aria-label="Open fullscreen"
         title="Open fullscreen">
-        <!-- <i class="fa-solid fa-expand" aria-hidden="true"></i> -->
+        <i class="fa-solid fa-expand" aria-hidden="true"></i>
       </button>
     </figcaption>
   </figure>
@@ -280,6 +282,7 @@
   <script type="module">
     import 'https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js';
     import { marked } from "https://cdn.jsdelivr.net/npm/marked@18.0.5/lib/marked.esm.js";
+    import { receiveLocalImage } from '../js/entreluma-local-image.js';
 
 
     // =========================================================================
@@ -324,7 +327,22 @@
       max: ['', 'true', '1'].includes(params.get("max")),
     };
 
-    console.log(cfg);
+    // A local assignment takes precedence over every remote source, including
+    // a stale src/manifest. Wait before OSD or transformation code can fetch it.
+    const localResource = params.get('sk_resource');
+    if (localResource !== null) {
+      cfg.src = null;
+      cfg.manifest = null;
+      try {
+        const resource = await receiveLocalImage({ resourceId: localResource,
+          generation: params.get('sk_generation') });
+        cfg.src = resource.url;
+      } catch (error) {
+        els.msg.textContent = error.message;
+        els.msg.style.display = 'block';
+        throw error;
+      }
+    }
 
     if (!cfg.src && !cfg.manifest) {
       showMsg(`Missing <code>?src=</code> or <code>?manifest=</code> parameter.`);
@@ -691,7 +709,7 @@
     }
 
     // Process Wikimedia or Cloudinary URLs for fallback
-    if (fallbackImageUrl) {
+    if (fallbackImageUrl && localResource === null) {
       if (looksLikeWikimedia(fallbackImageUrl)) {
         fallbackImageUrl = mwImage(fallbackImageUrl, cfg.max ? -1 : 1280);
         let wcTitle = wcTitleFromUrl(fallbackImageUrl);
@@ -804,6 +822,8 @@
           if (iframe) {
             if (!iframe.style.width) iframe.style.width = '100%';
             iframe.style.height = `${containerHeight}px`;
+          } else {
+            Entreluma.reportHeight(containerHeight);
           }
         }
       }
@@ -1101,7 +1121,7 @@
       }, 60);
     }
 
-    if (window.frameElement) new ResizeObserver(entries => {
+    new ResizeObserver(entries => {
       const image = viewer?.world.getItemAt(0);
       if (!image) return;
       const imageSize = image.getContentSize();
@@ -1110,12 +1130,12 @@
         const region = parseRegionString(cfg.region, false);
         imageAspectRatio = region.w / region.h;
       }
-      //if (!cfg.max) setContainerHeight(imageAspectRatio);
+      if (!cfg.max) setContainerHeight(imageAspectRatio);
       viewer.viewport.goHome(false);
       setTimeout(() => viewer.viewport.goHome(false), 50);
-    }).observe(window.frameElement);
+    }).observe(document.documentElement);
 
-    StoryKit.onAction(({ action, args, label }) => {
+    Entreluma.onAction(({ action, args, label }) => {
       if (action === 'zoomto' && args[0]) {
         zoomto(String(args[0]), label);
       }
@@ -1357,7 +1377,7 @@
             hp = clamp(hp, 0, 100 - yp);
 
             const regionPct = `pct:${xp.toFixed(2)},${yp.toFixed(2)},${wp.toFixed(2)},${hp.toFixed(2)}`;
-            const copied = await StoryKit.copyText(regionPct);
+            const copied = await Entreluma.copyText(regionPct);
             if (!copied) {
               // Both clipboard paths refused (no delegation AND execCommand
               // blocked) — show the value so the author can copy manually.
@@ -1390,16 +1410,9 @@
 
       setTimeout(() => {
         viewer.viewport.goHome(true);
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-
-            // 3. Fade in the entire figure
-            els.wrap.classList.add("is-visible");
-
-            // 4. Notify parent of final height
-            // schedulePostHeight();
-          });
-        });
+        // A nested/offscreen frame can have animation frames suspended by
+        // the host layout. Reveal after decoding without waiting for a paint.
+        els.wrap.classList.add("is-visible");
       }, 100);
 
 
@@ -1445,14 +1458,15 @@
     if (cfg.max) {
       document.getElementById('osd').classList.add('max');
     } else {
-      // els.captionExpand.addEventListener("click", (e) => {
-      document.getElementById('osd').addEventListener("click", (e) => {
+      const openExpanded = (e) => {
         e.preventDefault();
         e.stopPropagation();
 
         // Same behavior you already use in static mode:
-        StoryKit.showDialog(`${location.href}&max`, 1.0);
-      });
+        Entreluma.showDialog(`${location.href}&max`, 1.0);
+      };
+      document.getElementById('osd').addEventListener('click', openExpanded);
+      els.captionExpand.addEventListener('click', openExpanded);
       enableModifierWheelZoom(viewer);
     }
     if (cfg.max) els.captionExpand.style.display = "none";

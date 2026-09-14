@@ -1,11 +1,11 @@
 ---
-title: "StoryKit: Troubleshooting"
+title: "Entreluma: Troubleshooting"
 description: Fixes for the most common problems authors hit — blank viewers, action links that do nothing, images that won't update, and popups that never load.
-permalink: /admin/storykit-troubleshooting
+permalink: /admin/entreluma-troubleshooting
 date: 2026-02-15
 toc: true
 order: 40
-storykit:
+entreluma:
     mode: flat
     toolbar: false
 ---
@@ -16,7 +16,7 @@ This guide covers the problems authors actually run into, roughly in order of ho
 
 **Symptom:** You click a link like `[West Butte](img1/zoomto/pct:10,20,30,40)` and nothing happens.
 
-This is the most common StoryKit problem, and it is almost always an `id` mismatch:
+This is the most common Entreluma problem, and it is almost always an `id` mismatch:
 
 1. **The viewer has no `id`.** Action links find their viewer through the `id` attribute in the include tag. Check that the tag includes one:
 
@@ -29,7 +29,7 @@ This is the most common StoryKit problem, and it is almost always an `id` mismat
 
 2. **The link's first segment doesn't match the `id`.** The match is exact and case-sensitive: a link starting `img1/` will not find a viewer with `id="Img1"` or `id="image1"`.
 
-3. **The action name is wrong for that viewer.** Each viewer supports specific actions — `zoomto` is an image action, `flyto` is a map action, `playat` is a YouTube action. See the [Action Links reference](storykit-action-links) for the full table.
+3. **The action name is wrong for that viewer.** Each viewer supports specific actions — `zoomto` is an image action, `flyto` is a map action, `playat` is a YouTube action. See the [Action Links reference](entreluma-action-links) for the full table.
 
 4. **The arguments are malformed.** Check for missing commas, extra spaces, or a missing `pct:` prefix where percentages were intended.
 
@@ -61,13 +61,13 @@ Nearly always a path problem:
 - **The build failed.** If the Actions tab shows a red ✗, the build hit an error (often a Liquid syntax problem in the newest edit) and the site was never updated. Open the failed run to see the message.
 - **`published: false` is still set.** Drafts don't appear on the live site until you change it to `true`.
 
-## The Preview Tool Shows Something Different from the Live Site
+## The Editor Preview Shows Something Different from the Live Site
 
 **Symptom:** The post looks right in the live preview but different after publishing (or vice versa).
 
-The preview tool renders your post with a lightweight simulation of the site build, so tiny differences are expected in edge cases (unusual Markdown constructs, some theme features). The published site is always the authority. If a discrepancy matters, commit and check the deployed page before investigating further. See [Preview Setup](storykit-preview-setup) for what the preview can and can't show.
+The Entreluma Editor renders a publication-style preview, so small differences remain possible in unusual Markdown constructs and site-wide theme features. The published site is always authoritative. If a discrepancy matters, commit and check the deployed page before investigating further. See [Editor and Preview Setup](entreluma-preview-setup) for preview boundaries.
 
-Also check the basics: the preview renders the **committed** version of the file — uncommitted editor changes won't appear until you commit and reload.
+Use **Refresh publication preview** if repository context or published runtime assets have changed. Ordinary text and viewer edits update from the current editor buffer without a commit.
 
 ## An Entity Popup Never Loads
 
@@ -81,7 +81,7 @@ Also check the basics: the preview renders the **committed** version of the file
 
 **Symptom:** The right-hand viewer panel is empty, shows the wrong viewer, or the layout breaks.
 
-- **Viewer order drives the pairing.** The right panel shows the most recent viewer declared *before* the text currently in view. If the wrong viewer appears, check the order of paragraphs and includes in your Markdown — see [Display Modes](storykit-display-modes).
+- **Viewer order drives the pairing.** The right panel shows the most recent viewer declared *before* the text currently in view. If the wrong viewer appears, check the order of paragraphs and includes in your Markdown — see [Display Modes](entreluma-display-modes).
 - **On phones, two-column mode is disabled by design.** Small screens always show the flat layout; that's expected behavior, not a bug.
 - **Toggling modes acts oddly?** Reload the page in the mode you want to check. If you can reproduce a problem after a fresh reload, report it.
 
@@ -92,7 +92,7 @@ Also check the basics: the preview renders the **committed** version of the file
 That's the `group_embeds` feature, which combines directly adjacent viewers into tabs. If you want them stacked separately, either separate them with a paragraph of text, or turn the feature off for the post:
 
 ```yaml
-storykit:
+entreluma:
     group_embeds: false
 ```
 
