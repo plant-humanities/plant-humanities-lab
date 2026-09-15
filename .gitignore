@@ -8,6 +8,9 @@ bin/
 .bundle/
 vendor/bundle/
 
+# Node
+node_modules/
+
 # Local tooling
 __pycache__/
 *.pyc
