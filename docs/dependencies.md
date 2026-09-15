@@ -20,6 +20,12 @@ Shoelace loads an internal lazy module graph, so it is pinned but not SRI'd.
 | js-md5 | 0.8.3 | `assets/js/entreluma.js`, `assets/components/image.html` (import) | no (import) |
 | Font Awesome | 6.5.x | `_includes/sidebar.html` etc. (via Chirpy), `assets/components/map.html` (6.5.0) | no |
 
+## Build-time dependencies
+
+| Dependency | Version | Referenced in | Purpose |
+|---|---|---|---|
+| Pagefind | 1.5.2 | `.github/workflows/pages-deploy.yml`, `docs/search.md` | Generates the static production search index after Jekyll builds |
+
 ## Components (iframe viewers)
 
 | Dependency | Version | Referenced in | SRI |
@@ -31,10 +37,11 @@ Shoelace loads an internal lazy module graph, so it is pinned but not SRI'd.
 | leaflet-gesture-handling | 1.2.2 | `assets/components/map.html` (js + css) | yes |
 | @allmaps/leaflet | 1.0.0-beta.44 | `assets/components/map.html` | yes |
 | exif-js | 2.3.0 | `assets/components/map.html` | yes |
-| marked | 18.0.5 | `assets/components/{image,map,youtube,vis-network}.html` (import) | no (import) |
+| marked | 18.0.5 | `assets/components/{image,map,youtube,vimeo,vis-network}.html` (import) | no (import) |
 | vis (vis-network) | 4.21.0 | `assets/components/vis-network.html` (cdnjs) | yes (pre-existing) |
 | papaparse | 5.4.1 | `assets/components/vis-network.html` | yes |
 | YouTube IFrame API | (unversioned by design) | `assets/components/youtube.html` | no — Google requires loading the live API |
+| Vimeo Player SDK | (unversioned by design) | `assets/components/vimeo.html` | no — Vimeo requires loading the live API |
 
 > **@allmaps/leaflet is pinned to 1.0.0-beta.44 deliberately**: it is the
 > newest release that still ships `dist/bundled/allmaps-leaflet-1.9.umd.js`.
@@ -50,6 +57,7 @@ Shoelace loads an internal lazy module graph, so it is pinned but not SRI'd.
 | upload.wikimedia.org / Commons API | image viewer (`wc:` shorthand) | n/a (media host) |
 | annotations.allmaps.org | map warped layers | non-fatal |
 | youtube.com oembed + IFrame API | youtube viewer | caption falls back to blank |
+| vimeo.com oEmbed + Player SDK | vimeo viewer | caption/poster fall back to blank; expanded player reports an error |
 
 
 Editor and client-side rendering dependencies are maintained in `rsnyder/entreluma-editor`.
