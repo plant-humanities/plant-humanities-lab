@@ -269,13 +269,18 @@
       const maxres = `https://img.youtube.com/vi/${props.vid}/maxresdefault.jpg`;
       const hq = `https://img.youtube.com/vi/${props.vid}/hqdefault.jpg`;
 
-      poster.src = maxres;
       poster.alt = 'Video poster image';
 
-      // Fallback if maxres isn't available for the video
-      poster.addEventListener('error', () => {
-        if (poster.src !== hq) poster.src = hq;
+      // Fallback if maxres isn't available for the video. YouTube answers a
+      // missing maxres with a 404 whose body is a 120x90 placeholder JPEG, and
+      // browsers fire load (not error) for it, so check the size on load too.
+      const fallback = () => { if (poster.src !== hq) poster.src = hq; };
+      poster.addEventListener('error', fallback, { once: true });
+      poster.addEventListener('load', () => {
+        if (poster.naturalWidth <= 120) fallback();
       }, { once: true });
+
+      poster.src = maxres;
     }
 
     const captionUrl = document.getElementById('caption-print-url');
