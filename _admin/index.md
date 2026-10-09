@@ -28,6 +28,7 @@ The guides are organized in the order most authors need them:
 | [Authors Guide](entreluma-authors-guide) | Creating, previewing, and publishing a post step by step |
 | [Preview Setup](entreluma-preview-setup) | Editor setup, GitHub connection, bookmarklet, and preview boundaries |
 | [Formatting Tips](entreluma-formatting-tips) | Controlling viewer size, position, and text wrapping |
+| [Dedicated Homepage and Examples Index](entreluma-dedicated-homepage) | Separating project introduction from the standard post collection |
 
 ### Tools
 
