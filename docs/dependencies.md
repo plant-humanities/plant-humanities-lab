@@ -24,7 +24,8 @@ Shoelace loads an internal lazy module graph, so it is pinned but not SRI'd.
 
 | Dependency | Version | Referenced in | Purpose |
 |---|---|---|---|
-| Pagefind | 1.5.2 | `.github/workflows/pages-deploy.yml`, `docs/search.md` | Generates the static production search index after Jekyll builds |
+| Pagefind | 1.5.2 | `package.json`, `.github/workflows/pages-deploy.yml`, `docs/search.md` | Generates the static production search index after Jekyll builds |
+| sharp | 0.35.4 | `package.json`, `tools/optimize_deployment_images.mjs` | Resizes and recompresses the generated `_site` copies of post images to keep the Pages artifact small |
 
 ## Components (iframe viewers)
 
