@@ -78,7 +78,7 @@ The plant’s abundance on grazing land was especially problematic due to its to
 
 To counter these issues, in 1944, the U.S. government imported two species of beetle that feed on St. John’s wort. Beginning with nine sites in California, tens of thousands of these insects were released, successfully reducing the presence of St. John’s wort in the state to one percent of its previous spread.[^24] Humboldt County — which includes about 60 miles of the Klamath River and was the site of the largest release of beetles — dedicated a monument to the “Klamath weed beetle” in 1958.[^25] Now, St. John’s wort is successfully contained to localized patches.
 
-{% include embed/iframe.html src="25192302.pdf" caption="The Little Beetle that KO’d Klamath Weed, University of California Agricultural Extension Service, Rohner Park, Fortuna, California, July 12, 1958." %}
+{% include embed/iframe.html src="166755.pdf" caption="The Little Beetle that KO’d Klamath Weed, University of California Agricultural Extension Service, Rohner Park, Fortuna, California, July 12, 1958." %}
 
 # From Petals to Prescriptions
 
