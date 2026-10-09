@@ -1,5 +1,5 @@
 {
-  "name": "plant-humanities-lab-build",
+  "name": "entreluma-build",
   "private": true,
   "engines": {
     "node": "22.x"
