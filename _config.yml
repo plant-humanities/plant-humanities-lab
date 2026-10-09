@@ -252,5 +252,6 @@ entreluma:
   wikidata_info_popups: true  # show Wikidata-style info popups for links to Wikidata entities
   toolbar: true               # show the post toolbar
   cite: true                  # show the cite button in the toolbar
-  pdf: true                   # show the pdf download button in the toolbar
+  downloads: true             # show local PDF and Word downloads in the toolbar
+  pdf: true                   # legacy alias used when downloads is not configured
   post_navigation: false      # show the post navigation links at the end of posts

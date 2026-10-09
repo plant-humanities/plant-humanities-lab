@@ -55,6 +55,7 @@ Viewers are the interactive elements you add to a post with a simple include tag
 |---|---|
 | [Action Links](entreluma-action-links) | The complete reference for making text trigger viewer actions |
 | [Display Modes](entreluma-display-modes) | Flat pages vs. the two-column scrollytelling layout |
+| [Article Downloads](entreluma-article-downloads) | Saving articles as local, print-quality PDF or editable Word files |
 
 ### When Something Goes Wrong
 

@@ -800,7 +800,7 @@
     }
 
     function parseMarkerDef(markerStr) {
-      const parts = markerStr.split("~");
+      const parts = markerStr.split("~").map(part => part.trim());
       if (!parts.length) return null;
 
       if (isQid(parts[0])) {
