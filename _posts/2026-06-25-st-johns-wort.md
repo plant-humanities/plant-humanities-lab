@@ -62,7 +62,7 @@ Dark thoughts, and causing to spring up within
 The heart distress’d, a glow of gladdening hope,
 And rainbow visions of kind destiny.”[^17]
 
-{% include embed/iframe.html src="https://archive.org/details/b28121338_0001/page/n225/mode/1up" %}
+{% include embed/iframe.html src="https://archive.org/details/b28121338_0001/page/n225/mode/1up?view=theater" aspect="0.7" %}
 
 # Taking Root Across America
 
@@ -112,7 +112,7 @@ One reason the supplement gained so much momentum was its perceived absence of s
 
 As a result, St. John’s wort became not only a treatment for diagnosed depression, but rather a supplement for anything that ranged from the death of a loved one to a stressful situation at work.[^45] As one of the plant’s most vocal advocates, Norman Rosenthal, put it, “if, after reflection, you feel that you are not clinically depressed, but simply overstressed or mildly down in the dumps, you may also benefit from a trial of St. John’s wort.”[^46]
 
-{% include embed/iframe.html src="https://ars.els-cdn.com/content/image/1-s2.0-S0022395619307381-gr2.jpg" caption="Rise is cases of depression, by socio-demographic index regions, from 1990 to 2017. From 'Changes in the global burden of depression from 1990 to 2017: Findings from the Global Burden of Disease study' by Qingqing Liu et al. Retrieved from https://www.sciencedirect.com/science/article/pii/S0022395619307381?via%3Dihub." %}
+{% include embed/image.html src="https://ars.els-cdn.com/content/image/1-s2.0-S0022395619307381-gr2.jpg" caption="Rise is cases of depression, by socio-demographic index regions, from 1990 to 2017. From 'Changes in the global burden of depression from 1990 to 2017: Findings from the Global Burden of Disease study' by Qingqing Liu et al. Retrieved from https://www.sciencedirect.com/science/article/pii/S0022395619307381?via%3Dihub." %}
 
 Rather than remaining a purely medical cure, St. John’s wort became an attractive choice for proponents of an alternative lifestyle, resonating with a “natural health” movement that swept the American middle-class. Organic foods, yoga, and connection to nature were fashionable, and alternative medicines were increasingly seen as a way of opposing the greed of pharmaceutical companies.[^47] “Natural health” treatments found their champions on cable television programs, billboards, and even daytime talk shows. Herbal remedies were suddenly back in vogue, and St. John’s wort stood to benefit. “Now, for the first time, the worlds of conventional medicine and alternative healing have at last come together to embrace St. John’s wort’s exceptional powers,” wrote Rosenthal in 1996.[^48] The plant’s enthusiasts were confident that owing to its natural healing qualities, it “beats Prozac hands down.”[^49]
 
