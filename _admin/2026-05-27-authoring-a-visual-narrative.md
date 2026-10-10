@@ -1,16 +1,16 @@
 ---
-title: "StoryKit: Authoring a Visual Narrative"
-description: A start-to-finish guide for participants creating interactive visual narratives on the Plant Humanities Lab platform. Covers what StoryKit is and where it came from, the GitHub workflow you'll use to draft and publish, the Markdown you'll write, and every StoryKit viewer the platform offers.
+title: "Entreluma: Authoring a Visual Narrative"
+description: A start-to-finish guide for participants creating interactive visual narratives on the Plant Humanities Lab platform. Covers what Entreluma is and where it came from, the GitHub workflow you'll use to draft and publish, the Markdown you'll write, and every Entreluma viewer the platform offers.
 permalink: /admin/authoring-a-visual-narrative
 date: 2026-05-27
 toc: true
 mermaid: true
 order: 5
-storykit:
+entreluma:
     mode: flat
     toolbar: false
-media_subpath: /assets/posts/storykit
-image: StoryKit.png
+media_subpath: /assets/posts/image-compare
+image: /assets/img/PH-Banner_WithText.jpg
 ---
 
 <style>
@@ -131,19 +131,19 @@ No prior experience with [GitHub](https://github.com/), [Jekyll](https://jekyllr
 
 # Part 1 — What You Are Doing
 
-## What Is StoryKit?
+## What Is Entreluma?
 
-**StoryKit** is the name used on this site for a simplified version of **[Juncture](https://labs.jstor.org/projects/juncture/)**, a visual narrative authoring and display framework. Juncture grew out of a 2018 digital humanities collaboration between **[JSTOR Labs](https://labs.jstor.org)** and **[Dumbarton Oaks](https://www.doaks.org/)**, with one straightforward goal:
+**Entreluma** is the name used on this site for a simplified version of **[Juncture](https://labs.jstor.org/projects/juncture/)**, a visual narrative authoring and display framework. Juncture grew out of a 2018 digital humanities collaboration between **[JSTOR Labs](https://labs.jstor.org)** and **[Dumbarton Oaks](https://www.doaks.org/)**, with one straightforward goal:
 
 > Enable students and scholars to create interactive visual narratives using Markdown — without requiring coding skills.
 
-Juncture was created to make it easier to build web-based visual narratives that combine prose with rich visual and interactive content. StoryKit keeps that same core idea but in a simpler form tailored for this site, built directly on Jekyll instead of relying on heavy custom infrastructure.
+Juncture was created to make it easier to build web-based visual narratives that combine prose with rich visual and interactive content. Entreluma keeps that same core idea but in a simpler form tailored for this site, built directly on Jekyll instead of relying on heavy custom infrastructure.
 
-For authors, the important point is that StoryKit lets you write mostly in regular Markdown and add special instructions wherever you want interactive viewers to appear: images, maps, videos, timelines, and more. You do not need to understand the technical details. You just need to know how to edit a Markdown file, add the appropriate viewer instructions, preview your work, and submit it for review.
+For authors, the important point is that Entreluma lets you write mostly in regular Markdown and add special instructions wherever you want interactive viewers to appear: images, maps, videos, timelines, and more. You do not need to understand the technical details. You just need to know how to edit a Markdown file, add the appropriate viewer instructions, preview your work, and submit it for review.
 
 ## What You Are Creating
 
-A **visual narrative** is a web page that combines written text with interactive media. A StoryKit visual narrative may include:
+A **visual narrative** is a web page that combines written text with interactive media. A Entreluma visual narrative may include:
 
 * Text written in Markdown
 * Plain images and high-resolution zoom-and-pan viewers
@@ -154,7 +154,7 @@ A **visual narrative** is a web page that combines written text with interactive
 * Mathematical equations rendered by MathJax
 * Flow charts, sequence diagrams, and other diagrams drawn with Mermaid
 
-You write the narrative in a plain text file using Markdown, with StoryKit instructions added where interactive viewers should appear. When the site is published, GitHub Pages and Jekyll convert that file into a finished web page.
+You write the narrative in a plain text file using Markdown, with Entreluma instructions added where interactive viewers should appear. When the site is published, GitHub Pages and Jekyll convert that file into a finished web page.
 
 ## A Few Terms You Should Know
 
@@ -166,13 +166,13 @@ You don't need to be a GitHub or Jekyll expert, but a few terms come up througho
 
 **Commit.** GitHub's version of a save. When you commit, you save your changes to your branch. Each commit can include a short comment ("commit message") describing what changed, such as *Add introduction section* or *Fix typo in caption*.
 
-**Jekyll.** The tool that turns the source files into finished web pages. You will never run Jekyll yourself. GitHub Pages runs Jekyll automatically when the site is published, and the preview tool imitates the same process so you can check your work in advance.
+**Jekyll.** The tool that turns the source files into finished web pages. You will never run Jekyll yourself. GitHub Pages runs Jekyll automatically when the site is published, and the Entreluma Editor provides a publication-style preview so you can check your work in advance.
 
 **Markdown.** A simple way to write formatted text using plain text. Headings, lists, links, and emphasis all have lightweight equivalents in Markdown that are much easier to type than HTML.
 
-**StoryKit viewer.** An interactive element you can insert into a visual narrative: an image viewer, a map, a YouTube video, and so on. Viewers are added with **Liquid include tags**. Liquid is the templating language used by Jekyll; an *include* tag is a short instruction that tells Jekyll to insert a pre-built component at that point in the page. For a StoryKit viewer the tag looks like `{% raw %}{% include embed/image.html src="..." %}{% endraw %}`. You supply the attribute values, and Jekyll handles the rest.
+**Entreluma viewer.** An interactive element you can insert into a visual narrative: an image viewer, a map, a YouTube video, and so on. Viewers are added with **Liquid include tags**. Liquid is the templating language used by Jekyll; an *include* tag is a short instruction that tells Jekyll to insert a pre-built component at that point in the page. For an Entreluma viewer the tag looks like `{% raw %}{% include embed/image.html src="..." %}{% endraw %}`. You supply the attribute values, and Jekyll handles the rest.
 
-**Preview tool.** A small utility that lets you see how your visual narrative will look on the live site, without waiting for GitHub Pages to rebuild. It renders the page the same way the live site does.
+**Entreluma Editor preview.** A live view of the current editing buffer that lets you inspect your narrative without waiting for GitHub Pages to rebuild. The published PHL site remains authoritative for deployment-only and site-wide behavior.
 
 **Pull request.** How you ask for your completed changes to be reviewed and possibly published. When your narrative is ready, you open a pull request from your working branch into `main`. An administrator reviews the changes and decides whether to merge them.
 
@@ -241,65 +241,26 @@ Most of your authoring time will be spent editing files you have already created
 
 Your changes are saved to your branch and are immediately available to preview.
 
-<blockquote class="prompt-tip"><p><strong>The GitHub editor has a Preview tab</strong> (at the top of the editing area) that shows basic Markdown formatting: headings, bold, italics, and lists. It is handy for checking paragraph structure. However, it does <strong>not</strong> render StoryKit viewers; those show as raw code in GitHub's preview. Use the bookmarklet preview tool to see viewers rendered correctly.</p></blockquote>
+<blockquote class="prompt-tip"><p><strong>The GitHub editor has a Preview tab</strong> (at the top of the editing area) that shows basic Markdown formatting: headings, bold, italics, and lists. It is handy for checking paragraph structure. However, it does <strong>not</strong> render Entreluma viewers; those show as raw code in GitHub's preview. Use the bookmarklet editor preview to see viewers rendered correctly.</p></blockquote>
 
-## Using the Preview Tool
+## Using the Entreluma Editor
 
-When you commit a change on GitHub, the live site does not update immediately. GitHub Pages must rebuild the entire site, which takes one to five minutes. During that wait you cannot see your edits.
-
-The **StoryKit preview tool** sidesteps that wait by rendering a single file directly from your branch, usually in under five seconds.
+The [Entreluma Editor](https://editor.entreluma.org) lets you edit a PHL narrative and see a publication-style preview without waiting for a GitHub Pages deployment.
 
 ### One-time setup
 
-You install the preview tool by dragging a bookmarklet into your browser's bookmarks bar. You only do this once per browser.
+1. Open the Entreluma Editor.
+2. Select **GitHub**, then **Sign in with GitHub**.
+3. Choose the **plant-humanities/sandbox** repository and your working branch.
+4. Optionally drag the **Edit in Entreluma** bookmarklet from the GitHub panel to your bookmarks bar.
 
-1. Make sure your bookmarks bar is visible:
-   * Chrome / Edge: <kbd>⌘⇧B</kbd> on macOS, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> on Windows
-   * Firefox: View menu → Toolbars → Bookmarks Toolbar
-   * Safari: View menu → Show Favorites Bar
-2. **Drag** the button below into your bookmarks bar. Do not click it — drag it.
-
-<div class="guide-drag-zone">
-  <a id="guide-bookmarklet-link" href="#" title="Drag me to your bookmarks bar">🔖 Preview on GitHub</a>
-  <p>Drag the button above to your bookmarks bar</p>
-</div>
-
-<script>
-(function () {
-  var serviceUrl = 'https://storykit-preview.netlify.app';
-  var code = '(function(){' +
-    'var m=location.href.match(/github\\.com\\/([^/]+)\\/([^/]+)\\/blob\\/([^/]+)\\/(.+\\.md)/);' +
-    'if(!m)return alert(\'Navigate to a .md file in GitHub first\');' +
-    'window.open(\'' + serviceUrl + '/\'+m[1]+\'/\'+m[2]+\'/\'+m[4]+\'?branch=\'+encodeURIComponent(m[3]),\'_blank\');' +
-    '})();';
-  var link = document.getElementById('guide-bookmarklet-link');
-  if (link) {
-    link.href = 'javascript:' + code;
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert('Drag this button to your bookmarks bar — do not click it.');
-    });
-  }
-})();
-</script>
-
-3. Confirm that a new bookmark labelled *Preview on GitHub* now appears in your bookmarks bar.
-
-The bookmarklet reads the current GitHub page address and builds the preview URL for you, so you don't have to construct it by hand.
+Open your narrative with **Open…**, by dragging its GitHub file link into the document list, or with the bookmarklet while viewing the file on GitHub.
 
 ### Day-to-day use
 
-Once the bookmarklet is installed:
+Keep the editor and preview panes visible together. The preview updates from the current buffer. Use **Audit** to check the narrative, then **Sync with GitHub** to commit it to your branch. Export important drafts or story packages as an additional backup.
 
-1. Open [github.com/plant-humanities/sandbox](https://github.com/plant-humanities/sandbox) and navigate to your `.md` file in the `_posts` folder.
-2. Click **Preview on GitHub** in your bookmarks bar.
-3. A new tab opens with the file rendered the same way the live site would render it.
-
-<blockquote class="prompt-tip"><p><strong>Work with two browser windows side by side.</strong> Keep GitHub open in one window and the preview in the other. After each commit, switch to the preview window and reload. This edit-commit-reload cycle makes it easy to catch problems before they pile up.</p></blockquote>
-
-<blockquote class="prompt-warning"><p><strong>If the preview fails to open</strong>, check that you launched the bookmarklet while looking at a <code>.md</code> file (not a folder or another file type). The bookmarklet only works on <code>.md</code> pages inside a repository.</p></blockquote>
-
----
+The [Editor and Preview Setup guide](entreluma-preview-setup) explains browser-local drafts and preview boundaries in more detail.
 
 # Part 3 — Markdown Basics
 
@@ -346,12 +307,12 @@ Each front matter field plays a role:
 | `tags` | Any number of keyword tags for filtering and search — e.g. `[mango, tropical-fruits]` |
 | `published` | Set to `false` while drafting; change to `true` when you submit the pull request |
 | `featured` | Set to `true` to highlight the article on the home page; leave `false` unless asked by an administrator |
-| `storykit` | StoryKit extensions are **enabled by default** — you do not need this field. Add `storykit: false` only if you want to disable all viewers on a specific page |
+| `entreluma` | Entreluma extensions are **enabled by default** — you do not need this field. Add `entreluma: false` only if you want to disable all viewers on a specific page |
 | `media_subpath` | The folder where your uploaded images live. Must match the folder name in `assets/posts/` exactly (see §3.1) |
 | `image.path` | The header image shown on the article card and at the top of the page. Use a `wc:` shorthand for a Wikimedia Commons file (e.g. `wc:Mangifera_indica.jpg`) or a local filename. Aim for an image that looks good at roughly 16:9 landscape proportions |
 | `image.alt` | A brief text description of the header image, used for screen readers and accessibility |
 
-<blockquote class="prompt-tip"><p>StoryKit extensions are enabled by default — you do not need a <code>storykit:</code> line in your front matter. The only time you would add it is <code>storykit: false</code> to explicitly disable all viewers on a specific page.</p></blockquote>
+<blockquote class="prompt-tip"><p>Entreluma extensions are enabled by default — you do not need a <code>entreluma:</code> line in your front matter. The only time you would add it is <code>entreluma: false</code> to explicitly disable all viewers on a specific page.</p></blockquote>
 
 The file `_posts/.template.md` in the repository is a starter you can copy when creating a new narrative.
 
@@ -1013,7 +974,7 @@ The result follows from $$ E = mc^2 $$ directly.
 
 ## When Your Narrative Is Ready
 
-When your visual narrative looks the way you want it to in the preview tool, you're ready to submit it for review. Set `published: true` in the front matter, commit, and then open a **pull request**.
+When your visual narrative looks the way you want it to in the Entreluma Editor preview, you're ready to submit it for review. Set `published: true` in the front matter, commit, and then open a **pull request**.
 
 A pull request says, in effect:
 
@@ -1048,7 +1009,7 @@ This workflow protects the live website while still letting authors work indepen
 
 * Authors can safely draft and revise content
 * The live website isn't changed until work has been reviewed
-* The preview tool lets authors see a realistic version of the final page
+* The Entreluma Editor preview lets authors see a realistic version of the final page
 * Administrators retain control over what gets published
 * Mistakes can be caught before they appear on the public site
 
@@ -1064,7 +1025,7 @@ It's better to make several small commits than one very large commit. Small chan
 
 ## Preview After Every Viewer You Add
 
-Don't wait until the whole narrative is finished before using the preview tool. Commit and preview after adding each new StoryKit viewer. That way, if something breaks you know exactly which change caused it. Waiting until the end to preview makes problems much harder to trace.
+Don't wait until the whole narrative is finished before using the Entreluma Editor preview. Commit and preview after adding each new Entreluma viewer. That way, if something breaks you know exactly which change caused it. Waiting until the end to preview makes problems much harder to trace.
 
 ## Use Clear File Names
 
@@ -1111,7 +1072,7 @@ Before opening a pull request, verify:
 
 * `published: true` is in the narrative's front matter
 * The `media_subpath` matches the folder where you uploaded images
-* Every StoryKit viewer renders correctly in the preview when you scroll the whole article
+* Every Entreluma viewer renders correctly in the preview when you scroll the whole article
 * All Wikidata Q-identifiers in popover links point to the right entity
 * All footnotes resolve to a definition at the bottom of the file
 * Captions and attribution on local images are correct
@@ -1122,14 +1083,14 @@ Before opening a pull request, verify:
 
 If something isn't behaving the way you expect, work through this list in order.
 
-* **A viewer is showing as a broken image or a placeholder.** Check that the narrative's front matter does not contain `storykit: false`, which disables all viewers.
+* **A viewer is showing as a broken image or a placeholder.** Check that the narrative's front matter does not contain `entreluma: false`, which disables all viewers.
 * **A local image isn't loading.** Check that `media_subpath` in the front matter exactly matches the folder name in `assets/posts/`. Capitalisation and dashes matter.
 * **An action link does nothing when clicked.** Check that the viewer has an `id` attribute and that the link's URL begins with exactly that `id`.
 * **Quotes around an attribute value cause errors.** Use straight double quotes `"..."`, not curly ones `"…"`. Curly quotes often appear when text is pasted from word processors.
 * **An image is not rotating.** Use `rotate="90"` (or `"180"`, `"270"`). Some older narratives in the repository use `rotation=`, which is not supported and has no effect; rename it to `rotate=`.
 * **Footnotes aren't rendering.** Make sure there is a blank line before the first `[^x]:` definition.
 * **Your changes aren't showing up on the public site.** Confirm that `published: true` is in the front matter, the pull request has been merged into `main`, and that one to five minutes have passed for the rebuild.
-* **The preview tool isn't opening.** Make sure you launched the bookmarklet while looking at a `.md` file on GitHub, not a folder.
+* **The Entreluma Editor preview isn't opening.** Make sure you opened a valid Markdown file and selected the intended repository and branch.
 
 ## Where to Go from Here
 

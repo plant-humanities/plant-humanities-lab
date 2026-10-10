@@ -84,4 +84,21 @@ description: Explore the cultural histories of plants and their influence on hum
 
 {% include featured_posts.html %}
 
+<script>
+    /* The shared post-index toggle only drives #post-index; keep the featured
+       essays grid/list view in step with it. */
+    document.addEventListener("DOMContentLoaded", () => {
+        const postIndex = document.querySelector("#post-index");
+        const featured = document.querySelector("#featured-essays");
+        if (!postIndex || !featured) return;
+        const sync = () => {
+            const isGrid = postIndex.classList.contains("view-grid");
+            featured.classList.toggle("view-grid", isGrid);
+            featured.classList.toggle("view-list", !isGrid);
+        };
+        new MutationObserver(sync).observe(postIndex, { attributes: true, attributeFilter: ["class"] });
+        sync();
+    });
+</script>
+
 {% endif %}

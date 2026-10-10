@@ -11,10 +11,10 @@
     {{- '©' }}
     <time>{{ 'now' | date: '%Y' }}</time>
 
-    {% if site.social.links %}
-      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% if site.social.links.size > 0 %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name | default: site.title | escape }}</a>.
     {% else %}
-      <em class="fst-normal">{{ site.social.name }}</em>.
+      <em class="fst-normal">{{ site.social.name | default: site.title | escape }}</em>.
     {% endif %}
 
     {% if site.data.locales[include.lang].copyright.brief %}
@@ -44,5 +44,6 @@
       >Chirpy</a>
     {%- endcapture -%}
 
+    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
   </p>
 </footer>

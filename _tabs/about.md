@@ -20,7 +20,7 @@ into the past and illuminate burning issues of today, including legacies of colo
 displacement. Climate change, habitat loss, and accelerated species extinctions add to the
 urgency of acknowledging the vital importance of plants.
 
-With a rolling publication cycle, he Lab features peer-reviewed narratives that reflect the multiple characters and significance of plants to humans. The visual essays are created using Juncture, an
+With a rolling publication cycle, the Lab features peer-reviewed narratives that reflect the multiple characters and significance of plants to humans. The visual essays are created using Juncture, an
 open-source tool developed by JSTOR Labs and led by Ron Snyder. The narratives integrate a
 wide variety of primary sources, from herbarium specimens and early modern herbals to
 horticultural treatises and botanical illustrations. They are enhanced by digital elements such as

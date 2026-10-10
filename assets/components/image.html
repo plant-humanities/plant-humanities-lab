@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Image Viewer</title>
 
   <!-- OpenSeadragon -->
-  <script src="https://cdn.jsdelivr.net/npm/openseadragon@5.0.1/build/openseadragon/openseadragon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/openseadragon@5.0.1/build/openseadragon/openseadragon.min.js"
+    integrity="sha384-Vh4b5HGyvDGMp6lVeYZe1zCqqyhS8oLTUC4SKIWmOuYH7nEuWiGIpSACopwLu9UD" crossorigin="anonymous"></script>
+
+  <!-- Entreluma component runtime (postMessage protocol) -->
+  <script src="../js/entreluma-component.js"></script>
 
   <style>
     html,
@@ -70,35 +74,6 @@
       overflow: hidden;
       text-overflow: ellipsis;
       */
-    }
-
-    /* Right-side expand button */
-    .caption-action {
-      position: absolute;
-      right: 6px;
-      top: 12px;
-      transform: translateY(-50%);
-
-      /* big, easy hit target */
-      /* width: 32px; */
-      height: 32px;
-      padding: 0;
-      border: 0;
-      border-radius: 999px;
-
-      background: transparent;
-      color: inherit;
-      cursor: pointer;
-      opacity: 0.75;
-    }
-
-    .caption-action:hover {
-      opacity: 1;
-    }
-
-    .caption-action:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 2px;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -265,17 +240,20 @@
 
     <figcaption id="caption" aria-live="polite">
       <span id="caption-text"></span>
-
-      <button id="caption-expand" type="button" class="caption-action" aria-label="Open fullscreen"
-        title="Open fullscreen">
-        <!-- <i class="fa-solid fa-expand" aria-hidden="true"></i> -->
-      </button>
     </figcaption>
   </figure>
 
   <script type="module">
     import 'https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js';
-    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+    import { marked } from "https://cdn.jsdelivr.net/npm/marked@18.0.5/lib/marked.esm.js";
+    import { receiveLocalImage } from '../js/entreluma-local-image.js';
+    import {
+      extractManifestAttribution,
+      getImageServiceId,
+      isIIIFImageInfo,
+      looksLikeIIIFInfoJsonUrl,
+      normalizeInfoJsonUrl,
+    } from '../js/entreluma-iiif.mjs';
 
 
     // =========================================================================
@@ -288,7 +266,6 @@
       overlay: document.getElementById("drawing-overlay"),
       caption: document.getElementById("caption"),
       captionText: document.getElementById("caption-text"),
-      captionExpand: document.getElementById("caption-expand"),
       arTip: document.getElementById("ar-tip"),
     };
 
@@ -310,6 +287,7 @@
     const params = new URLSearchParams(location.search);
     const cfg = {
       src: params.get("src"),
+      iiif: params.get("iiif"),
       manifest: params.get("manifest"),
       seq: params.get("seq") || "0",
       caption: params.get("caption"),
@@ -320,11 +298,27 @@
       max: ['', 'true', '1'].includes(params.get("max")),
     };
 
-    console.log(cfg);
+    // A local assignment takes precedence over every remote source, including
+    // a stale src/manifest. Wait before OSD or transformation code can fetch it.
+    const localResource = params.get('sk_resource');
+    if (localResource !== null) {
+      cfg.src = null;
+      cfg.iiif = null;
+      cfg.manifest = null;
+      try {
+        const resource = await receiveLocalImage({ resourceId: localResource,
+          generation: params.get('sk_generation') });
+        cfg.src = resource.url;
+      } catch (error) {
+        els.msg.textContent = error.message;
+        els.msg.style.display = 'block';
+        throw error;
+      }
+    }
 
-    if (!cfg.src && !cfg.manifest) {
-      showMsg(`Missing <code>?src=</code> or <code>?manifest=</code> parameter.`);
-      throw new Error("Missing src or manifest");
+    if (!cfg.src && !cfg.iiif && !cfg.manifest) {
+      showMsg(`Missing <code>?src=</code>, <code>?iiif=</code>, or <code>?manifest=</code> parameter.`);
+      throw new Error("Missing src, iiif, or manifest");
     }
 
     // =========================================================================
@@ -341,76 +335,9 @@
       }
     }
 
-    function getInfoJsonFromManifest(manifest, seqIndex = 0) {
-      const idx = parseInt(seqIndex, 10) || 0;
-
-      // Detect IIIF version
-      const context = manifest['@context'];
-      const isV3 = context && (
-        context.includes('http://iiif.io/api/presentation/3/context.json') ||
-        context === 'http://iiif.io/api/presentation/3/context.json'
-      );
-
-      if (isV3) {
-        // IIIF Presentation API 3.0
-        const items = manifest.items || [];
-        if (idx >= items.length) {
-          console.warn(`Sequence index ${idx} out of range, using 0`);
-          return items[0]?.items?.[0]?.items?.[0]?.body?.service?.[0]?.id ||
-            items[0]?.items?.[0]?.items?.[0]?.body?.service?.[0]?.['@id'];
-        }
-
-        const canvas = items[idx];
-        const annoPage = canvas?.items?.[0];
-        const anno = annoPage?.items?.[0];
-        const body = anno?.body;
-        const service = body?.service?.[0];
-
-        return service?.id || service?.['@id'];
-      } else {
-        // IIIF Presentation API 2.x
-        const sequences = manifest.sequences || [];
-        const sequence = sequences[0];
-        const canvases = sequence?.canvases || [];
-
-        if (idx >= canvases.length) {
-          console.warn(`Sequence index ${idx} out of range, using 0`);
-          return canvases[0]?.images?.[0]?.resource?.service?.['@id'];
-        }
-
-        const canvas = canvases[idx];
-        const image = canvas?.images?.[0];
-        const resource = image?.resource;
-        const service = resource?.service;
-
-        return service?.['@id'] || service?.id;
-      }
-    }
-
-    function normalizeInfoJsonUrl(serviceId) {
-      if (!serviceId) return null;
-
-      // Remove trailing slash if present
-      let url = serviceId.replace(/\/$/, '');
-
-      // Add /info.json if not already present
-      if (!url.endsWith('/info.json')) {
-        url += '/info.json';
-      }
-
-      return url;
-    }
-
     // =========================================================================
     // Small utilities
     // =========================================================================
-    function safeParseMessageData(data) {
-      if (!data) return null;
-      if (typeof data === "object") return data;
-      if (typeof data !== "string") return null;
-      try { return JSON.parse(data); } catch { return null; }
-    }
-
     function hexToRgba(hex, alpha) {
       let h = String(hex).replace('#', '');
       if (h.length === 3) h = h.split('').map(c => c + c).join('');
@@ -652,16 +579,56 @@
       return url.startsWith('wc:') || url.includes('wikimedia.org') || url.includes('wikipedia.org');
     }
 
+    function shouldProbeIIIFService(url) {
+      if (!/^https?:\/\//i.test(String(url || '')) || looksLikeWikimedia(url)) return false;
+      try {
+        const parsed = new URL(url);
+        if (['localhost', '127.0.0.1'].includes(parsed.hostname)) return false;
+        const leaf = parsed.pathname.replace(/\/+$/, '').split('/').pop() || '';
+        return leaf.length > 0 && !/\.[a-z0-9]{1,8}$/i.test(leaf);
+      } catch (_) {
+        return false;
+      }
+    }
+
+    async function probeIIIFService(serviceUrl) {
+      const infoJsonUrl = normalizeInfoJsonUrl(serviceUrl);
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 4000);
+      try {
+        const response = await fetch(infoJsonUrl, {
+          signal: controller.signal,
+          headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) return null;
+        const info = await response.json();
+        return isIIIFImageInfo(info) ? infoJsonUrl : null;
+      } catch (error) {
+        if (error.name !== 'AbortError') console.debug('IIIF service probe failed:', error);
+        return null;
+      } finally {
+        clearTimeout(timeout);
+      }
+    }
+
     // =========================================================================
     // Process source/manifest
     // =========================================================================
     let tileSource = null;
     let fallbackImageUrl = null;
+    let manifestAttribution = null;
+
+    const preferredLanguages = [
+      document.documentElement.lang,
+      ...(navigator.languages || []),
+      navigator.language,
+    ].filter(Boolean);
 
     if (cfg.manifest) {
       try {
         const manifest = await fetchIIIFManifest(cfg.manifest);
-        const infoJsonServiceId = getInfoJsonFromManifest(manifest, cfg.seq);
+        manifestAttribution = extractManifestAttribution(manifest, preferredLanguages);
+        const infoJsonServiceId = getImageServiceId(manifest, cfg.seq);
 
         if (infoJsonServiceId) {
           const infoJsonUrl = normalizeInfoJsonUrl(infoJsonServiceId);
@@ -688,13 +655,21 @@
           throw err;
         }
       }
+    } else if (cfg.iiif) {
+      tileSource = normalizeInfoJsonUrl(cfg.iiif);
+      fallbackImageUrl = cfg.src;
+    } else if (looksLikeIIIFInfoJsonUrl(cfg.src)) {
+      tileSource = cfg.src;
+    } else if (shouldProbeIIIFService(cfg.src)) {
+      tileSource = await probeIIIFService(cfg.src);
+      if (!tileSource) fallbackImageUrl = cfg.src;
     } else {
-      // No manifest, use src directly
+      // No IIIF source, use src directly.
       fallbackImageUrl = cfg.src;
     }
 
     // Process Wikimedia or Cloudinary URLs for fallback
-    if (fallbackImageUrl) {
+    if (fallbackImageUrl && localResource === null) {
       if (looksLikeWikimedia(fallbackImageUrl)) {
         fallbackImageUrl = mwImage(fallbackImageUrl, cfg.max ? -1 : 1280);
         let wcTitle = wcTitleFromUrl(fallbackImageUrl);
@@ -807,6 +782,8 @@
           if (iframe) {
             if (!iframe.style.width) iframe.style.width = '100%';
             iframe.style.height = `${containerHeight}px`;
+          } else {
+            Entreluma.reportHeight(containerHeight);
           }
         }
       }
@@ -843,10 +820,71 @@
       return txt.value;
     }
 
+    function escapeHtml(value) {
+      const span = document.createElement('span');
+      span.textContent = String(value || '');
+      return span.innerHTML;
+    }
+
+    // Presentation API 2 permits limited HTML in attribution. Keep only
+    // formatting and links, discard executable elements and unsafe URLs.
+    function sanitizeAttributionHtml(value) {
+      const template = document.createElement('template');
+      template.innerHTML = String(value || '');
+      const allowed = new Set(['A', 'B', 'BR', 'EM', 'I', 'SMALL', 'SPAN', 'STRONG']);
+      const discard = new Set(['IFRAME', 'OBJECT', 'SCRIPT', 'STYLE', 'SVG', 'MATH']);
+
+      for (const element of [...template.content.querySelectorAll('*')]) {
+        if (discard.has(element.tagName)) {
+          element.remove();
+          continue;
+        }
+        if (!allowed.has(element.tagName)) {
+          element.replaceWith(...element.childNodes);
+          continue;
+        }
+
+        for (const attribute of [...element.attributes]) {
+          if (element.tagName !== 'A' || !['href', 'title'].includes(attribute.name.toLowerCase())) {
+            element.removeAttribute(attribute.name);
+          }
+        }
+
+        if (element.tagName === 'A' && element.hasAttribute('href')) {
+          try {
+            const target = new URL(element.getAttribute('href'), cfg.manifest || location.href);
+            if (!['http:', 'https:', 'mailto:'].includes(target.protocol)) throw new Error('unsafe URL');
+            element.href = target.href;
+            element.target = '_blank';
+            element.rel = 'noopener noreferrer';
+          } catch (_) {
+            element.removeAttribute('href');
+          }
+        }
+      }
+      for (const link of [...template.content.querySelectorAll('a')]) {
+        if (!link.textContent.trim() && link.children.length === 0) link.remove();
+      }
+      return template.innerHTML;
+    }
+
+    function attributionToHtml(statement) {
+      if (!statement?.values?.length) return '';
+      const label = statement.label ? `<strong>${escapeHtml(statement.label)}:</strong> ` : '';
+      const values = statement.values
+        .map((value) => sanitizeAttributionHtml(value))
+        .filter(Boolean)
+        .join('<br>');
+      return values ? `<small>${label}${values}</small>` : '';
+    }
+
     // Caption init
-    if (cfg.caption) {
-      els.captionText.innerHTML = decodeHtml(mdToHtml(decodeURIComponent(String(cfg.caption)).replace(/_/g, " ")));
-      if (cfg.attribution) els.captionText.innerHTML += `<br><small>${cfg.attribution}</small>`
+    const attributionHtml = attributionToHtml(cfg.attribution
+      ? { label: '', values: [cfg.attribution] }
+      : manifestAttribution);
+    const captionHtml = cfg.caption ? decodeHtml(mdToHtml(cfg.caption)) : '';
+    if (captionHtml || attributionHtml) {
+      els.captionText.innerHTML = [captionHtml, attributionHtml].filter(Boolean).join('<br>');
       els.caption.style.display = "block";
       updateIframeAspectTip(); // caption affects wrap height
     }
@@ -1104,7 +1142,7 @@
       }, 60);
     }
 
-    if (window.frameElement) new ResizeObserver(entries => {
+    new ResizeObserver(entries => {
       const image = viewer?.world.getItemAt(0);
       if (!image) return;
       const imageSize = image.getContentSize();
@@ -1113,18 +1151,14 @@
         const region = parseRegionString(cfg.region, false);
         imageAspectRatio = region.w / region.h;
       }
-      //if (!cfg.max) setContainerHeight(imageAspectRatio);
+      if (!cfg.max) setContainerHeight(imageAspectRatio);
       viewer.viewport.goHome(false);
       setTimeout(() => viewer.viewport.goHome(false), 50);
-    }).observe(window.frameElement);
+    }).observe(document.documentElement);
 
-    window.addEventListener('message', (event) => {
-      const data = safeParseMessageData(event.data);
-      if (!data) return;
-
-      const action = String(data.action || '').toLowerCase();
-      if (action === 'zoomto' && Array.isArray(data.args) && data.args[0]) {
-        zoomto(String(data.args[0]), data.text);
+    Entreluma.onAction(({ action, args, label }) => {
+      if (action === 'zoomto' && args[0]) {
+        zoomto(String(args[0]), label);
       }
     });
 
@@ -1364,10 +1398,14 @@
             hp = clamp(hp, 0, 100 - yp);
 
             const regionPct = `pct:${xp.toFixed(2)},${yp.toFixed(2)},${wp.toFixed(2)},${hp.toFixed(2)}`;
-            await navigator.clipboard.writeText(regionPct);
+            const copied = await Entreluma.copyText(regionPct);
+            if (!copied) {
+              // Both clipboard paths refused (no delegation AND execCommand
+              // blocked) — show the value so the author can copy manually.
+              window.prompt('Copy the region manually:', regionPct);
+            }
           } catch (err) {
             console.error('Copy failed:', err);
-            alert('Copy failed. Your browser may block clipboard without focus/user gesture.');
           }
         });
       }
@@ -1393,16 +1431,9 @@
 
       setTimeout(() => {
         viewer.viewport.goHome(true);
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-
-            // 3. Fade in the entire figure
-            els.wrap.classList.add("is-visible");
-
-            // 4. Notify parent of final height
-            // schedulePostHeight();
-          });
-        });
+        // A nested/offscreen frame can have animation frames suspended by
+        // the host layout. Reveal after decoding without waiting for a paint.
+        els.wrap.classList.add("is-visible");
       }, 100);
 
 
@@ -1448,20 +1479,22 @@
     if (cfg.max) {
       document.getElementById('osd').classList.add('max');
     } else {
-      // els.captionExpand.addEventListener("click", (e) => {
-      document.getElementById('osd').addEventListener("click", (e) => {
+      const imageArea = document.getElementById('osd');
+      const openExpanded = (e) => {
         e.preventDefault();
         e.stopPropagation();
 
-        // Same behavior you already use in static mode:
-        window.parent.postMessage(
-          { type: "showDialog", aspect: 1.0, src: `${location.href}&max` },
-          "*"
-        );
+        Entreluma.showDialog(`${location.href}&max`, 1.0);
+      };
+      imageArea.setAttribute('role', 'button');
+      imageArea.setAttribute('tabindex', '0');
+      imageArea.setAttribute('aria-label', 'Open image fullscreen');
+      imageArea.addEventListener('click', openExpanded);
+      imageArea.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') openExpanded(e);
       });
       enableModifierWheelZoom(viewer);
     }
-    if (cfg.max) els.captionExpand.style.display = "none";
 
     // Tooltip updates
     window.addEventListener("resize", updateIframeAspectTip);
