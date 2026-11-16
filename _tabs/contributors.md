@@ -177,6 +177,10 @@ She holds a Masters in Landscape Architecture and Masters in Design Studies from
 Ashley Thuthao Keng Dam (Ph.D. - they/them) is a medical anthropologist, ethnobotanist, and food writer living in the Netherlands. Thao is a multimodial mixed methods researcher who loves all things food, plants, and medicine.   
 They completed the Plant Humanities Summer School Programme in 2021. Thao received their Ph.D. in Ecogastronomy, Education, and Society in 2022 from Università degli Studi di Scienze Gastronomiche (Pollenzo, Italy). They received their anthropological training from the University of Oxford (M.Sc., 2018, UK) and St. Mary's College of Maryland (B.A. Hons., 2016, USA). Currently, Thao works as a lecturer in Global Health in the Department of Health, Ethics, and Society (HES) at Maastricht University and is an Explorer for the National Geographic Society.
 
+## Maddie Dowd
+
+A student in Philosophy, with a secondary in Human Evolutionary Biology at Harvard University, Maddie Dowd was awarded the 2025 Hoopes Prize for her senior thesis, entitled “Imagining Other Minds: A Smithian Empathy for Animal Ethics,” supervised and nominated by Professor Samantha Matherne. Her intellectual interests include animal ethics, philosophy of mind, and philosophy of biology.
+
 ## Christina Emery
 
 ![Christina Emery](Emery.jpg)
@@ -254,6 +258,13 @@ Rachel Hirsch is a PhD candidate in history of art and architecture at Harvard U
 Christina Hourigan is a historical geography PhD candidate at Royal Holloway, University of London, in collaboration with the Royal Botanic Gardens, Kew. Her research on the history and value of the living collections and landscape of Kew's arboretum in the long nineteenth century is based in the plant humanities.  
 She has a Masters in Garden History and a BSc in Plant Ecology, is the author of several books on trees and botanical history (as Christina Harrison), and was previously editor of RBG Kew's magazine for ten years. Her research interests include plant history, mobility and agency. She was part of the Dumbarton Oaks Plant Humanities Summer Programme in 2021 and has recently co-curated a new exhibition at RBG Kew (Uprooted) on archival stories of forest change with fellow DO alumnus Heather Craddock.
 
+## Emily Hughes
+{: .img-top }
+
+![Emily Hughes](Hughes.jpeg)
+
+Emily Hughes is a PhD candidate in Information Studies at University College London, working in partnership with Kew Gardens. Her research is about information, administration and the archive at Kew Gardens as an instrument and tool of colonialism for the British Empire.
+
 ## Yao Jiang
 
 ![Yao Jiang](Jiang.jpg)
@@ -275,6 +286,12 @@ Edyth Jostol is a designer based in Seattle.  She received her Masters in Land
 
 Kalinoski’s research examines plant-life exhibition work through the lens of performance to investigate theories of time, extinction, and the natural world. Her research is grounded on what we as humans can learn from plants and how they shape humans’ positions in the world.  
 Taking from disciplines such as performance studies, anthropology, museum studies, environmental studies, and philosophy, Kalinoski’s work imagines a new form of politics around the lessons learned from nature. Kalinoski is a master candidate at New York University’s Tisch School of the Arts Performance Studies program and a theater practitioner. Her work is centered on plant studies and theories extinction through the lens of performance and exploring new notions of time in the Anthropocene. She has been awarded the Artist and Scholar Award for her research and has presented her work across the United States.
+
+## Sophia Kamps
+
+![Sophia Kamps](Kamps.JPG)
+
+Sophia Kamps is a Ph.D. student at the Royal Botanic Gardens, Kew and Royal Holloway, University of London. She holds an M.A. in Art History from Queen’s University, Canada and a B.A. Joint Honors in Art History and Political Science from McGill University. Her doctoral research focuses on Victorian natural history publishing and illustration, particularly the work of working-class designers and women artists and their agency in producing botanical knowledge. Sophia was previously the Tiffany & Co. Foundation Intern in American Decorative Arts at the Metropolitan Museum of Art and led the pilot year of the NEH-supported Woodlawn Stained Glass Survey, supervised by the Met. Sophia also recently completed a research placement at the Victoria & Albert Museum. Sophia’s research is supported by the AHRC and Canada’s SSHRC.
 
 ## Kate Kaufman
 
@@ -311,6 +328,24 @@ Grounded theoretically in critical plant studies, Lawrence is interested in the 
 
 Mertehikian’s research offers a new lens on how to look at Latin American identity and its cultural and political relation with the United States with a focus on collecting efforts carried out by American scientists, diplomats, and scholars from the 1840s to the 1970s. Specifically, he analyzes three collections as case studies: Harvard University’s Latin American botanical collection, Dumbarton Oaks’s Pre-Columbian art collection, and Princeton University’s Latin American literary manuscripts collection.  
 His current work examines how American botanist Asa Gray first took an interest in Latin American nature in the nineteenth century and the political implications that informed his collection of Latin American specimens. Mertehikian is a PhD candidate in Romance languages and literature at Harvard University. He holds a licenciatura in literature from the Universidad de Buenos Aires and a master’s in Latin American Studies from the Universidad Nacional de Tres de Febrero, both in Argentina. In 2018, he cocurated the exhibition Passports: Lives in Transit at Houghton Library, which was featured in the Boston Globe, the Harvard Gazette, and the Armenian Spectator, among other publications.
+
+## Elizabeth Mirabal
+
+![Elizabeth Mirabal](Mirabal.JPG)
+
+Elizabeth Mirabal is a Ph.D. Candidate in the Department of Spanish, Italian, and Portuguese at the University of Virginia and a P.E.O. Scholar. She holds an M.A. in Spanish from UVA and a B.A. in Journalism from the University of Havana. As a participant in the 2025 Plant Humanities Summer Program, her research examined the relationships nineteenth-century writers in the Americas forged with plants through private texts such as diaries and letters. Her interest in the poetic dimensions of herbariums has deepened since the publication of her poetry collection Herbarium (2021), later translated into English by Valparaíso Editions USA (2024). Her article, “Flores dispersas, hojas secas: El herbarium poeticus epistolar y exílico de Dolores Rodríguez de Tió,” received the Best Article Award from the Nineteenth Century Section of the Latin American Studies Association (LASA). She has published in journals in Spain, Argentina, the United States, Mexico, and Cuba, including _Hispania_, _Revista Hispánica Moderna_, _Poéticas_, _República de las Letras_, _Recial_, _Cuban Studies_, _Intervenxions_, _Iowa Literaria_, and _NACLA_, among others. Her work has been supported by several recognitions and fellowships, among them the Tibor Wlassics Dante Prize, the Frederick W. Beinecke Fellowship, and the Goizueta Graduate Research Fellowship.
+
+## Moira Newman
+
+![Moira Newman](Newman.jpeg)
+
+Moira Newman is a PhD candidate in Botany at Trinity College Dublin. Her research is based on plant trait ecology and her dissertation, Traits in Flux, looks at how above and below ground traits in the Irish agricultural landscape change over space and time in response to increased greenhouse gas concentrations.
+
+## Lois Nguyen
+
+![Lois Nguyen](Nguyen.jpg)
+
+Lois Nguyen is a PhD candidate in Science and Technology Studies at Virginia Tech. Her dissertation, Plants at Work: The Technological Transformation of Poplars, examines how poplar trees became an environmental technology and enrolled in projects of environmental repair.
 
 ## Victoria Pickering
 

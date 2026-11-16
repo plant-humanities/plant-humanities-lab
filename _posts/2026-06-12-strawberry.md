@@ -1,0 +1,261 @@
+---
+title: 'Strawberry: The Paradoxical Delights of the Devil’s Fruit'
+description: Originating from wild strains with robust flavors, strawberries underwent a 
+  dramatic transformation into the uniform supermarket variants we know today. Intersecting 
+  with this history of globalization and hybridization, strawberries possess a duality of 
+  meanings; they symbolize innocence and desire, plenitude and peril, kinship and defiance.
+author: Elizabeth Mirabal, Madeleine Dowd, and Sophia Kamps
+date: 2026-11-16
+permalink: /strawberry
+tags: fruit food temperate
+published: true
+featured: true
+media_subpath: /assets/posts/strawberry
+image:
+  path: wc:Fragaria_vesca_fruit_-_Keila.jpg
+storykit: true
+categories: ["Food & Sustenance", "Spice & Flavor"]
+---
+
+In the popular imagination, strawberries seldom conjure associations with the devil. But the “Devil’s Fruit” (la fruta del diablo) seems an apt name coined by the Mexican farm laborers working in California who, to harvest it, must stoop over beds of the fruit inhaling toxic fumigants between 10 and 12 hours a day.[^1] Since strawberry plants grow low to the ground, typically reaching a height of only four to five inches, picking them also means spending most of one’s waking hours enduring the strain of physically taxing work,[^2] which can lead to a condition known as foot drop, or Strawberry Pickers’ Palsy. The unnatural, year-round availability of the fruit in the market comes at a significant cost: their pickers often pay with their physical health.
+
+{% include embed/image.html src="wc:StrawberryPickersNearPonchatoulaFSA.jpeg" aspect="0.9" %}
+
+The strawberry plant contradicts itself often; the contrast between our notion of it as a fruit of pleasure, beauty, and sensuality and the suffering strawberry pickers endure is just one example. As scholars Yota Batsaki and Philip Grant observe, “Plants have many personalities depending on their specific environmental and cultural contexts.”[^3] In this narrative, we explore the strawberry as a location of paradox in two senses: we examine moments when the strawberry as an organism has challenged its symbolic and cultural representations, and we explore moments when those symbolic representations contradict one another in different global contexts. In the first section, we explore the horticultural development of the modern strawberry, tracking its change from small wild strawberry to supermarket behemoth. Next, we chart the strawberry as a symbolic object in art and literary traditions, demonstrating how its meaning changed across time and space. Finally, we explore the strawberry’s significance in American Indigenous cultures.
+
+{% include embed/image.html src="wc:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg" aspect="1" caption="
+The Garden of Earthly Delights in the Museo del Prado in Madrid, c. 1495–1505, attributed to Hieronymus Bosch." %}
+
+# A Cultivation Story
+
+It is tempting to think of plants as static, passive things, the “mute, immobile furniture” in the background of human history.[^4] But we need only to look at the story of the strawberry—and its radical transformation as a biotic agent and an object of cultural import—to get a sense of the plant as a dynamic and lively entity. The modern supermarket strawberry, *Fragaria x ananassa*, resulted from the complex interaction of [*fragaria*](Q745) biology, the desires of human cultivators, and the chance meeting of certain plants at the right place and time. Because of this, the strawberry most of us encounter today looks, tastes, smells, and feels very different from its wild forerunners, the *F. vesca*, *F. moschata*, *F. virginiana*, and *F. chiloensis*.
+
+{% include embed/image.html src="wc:1932_Catalog_Rayner_Bros._-_selected_varieties_of_strawberry_plants_(1932)_(16668617532).jpg" caption="1932 Catalog Rayner Bros. : selected varieties of strawberry plants." aspect="0.8" %}
+
+*F. vesca* are the small, ruby-like fruits that have jeweled Europe and Western Asia—both in wild and cultivated forms—since at least Roman times.[^5] These strawberries are small in stature but pack an intense flavor, variously described as “bubble gum,”[^6] “rose,” “pineapple,” and “vanilla.”[^7]
+
+{% include embed/image.html src="wc:Fragaria_vesca_fruit_-_Keila.jpg" caption="*Fragaria vesca*" aspect="0.8" %}
+
+*F. moschata*, also called musk strawberries, are the *F. vesca*’s slightly larger, funkier cousin. With a native range stretching from France to Central Siberia,[^8] *F. moschata* made a name for themselves with their unusually powerful fragrance. With a scent so strong that “a few ripe berries can perfume a room,” the musk strawberry was considered a delicacy due to its flavor notes of honey, musk, wine, raspberry, and clove.[^9] So revered was this rare strawberry that it was immortalized in Jane Austen’s *Emma* when a party guest declared the hautboy (the English name for the *F. moschata*), as compared to other strawberries, “infinitely superior—no comparison—the others hardly eatable.”[^10]
+
+{% include embed/image.html src="wc:Fragaria_moschata_detail.JPG" caption="*Fragaria moschata*" aspect="0.8" %}
+
+The Americas, too, were abundant with strawberries, wild and cultivated. The *F. virginiana* is the American wild strawberry, abundant and small but powerfully sweet. It grows in a variety of conditions, including full shade, prairies, meadows, woods, and hillsides, making them suitable for the variable North American climate.[^11] For many Indigenous American groups, the *F. virginiana* plays a special celebratory role as one of the first fruits of the summer to ripen.[^12]
+
+{% include embed/image.html src="wc:Fragaria_virginiana_15-p.bot-fraga.virgin-01.jpg" caption="*Fragaria virginia*" aspect=".8"%}
+
+The *F. chiloensis* lined the Western coast of North and South America as well as present day Argentina and Bolivia.[^13] Often referred to as simply “the chili,” by the Europeans who first encountered it in Chile, it is reported to have a mild, sweet flavor like a white peach.[^14] At least three Indigenous groups in what is now Chile began domesticating the *F. chiloensis*: the [Mapuche](Q178484), [Huilliche](Q569237), and [Picunche](Q955728) peoples ate the strawberries fresh and dried, and used them for medicine.[^15]
+
+{% include embed/image.html src="drs_42968518.jpg" caption="George Brookshaw. “The strawberry”, Pomona Britannica. 1817. [Oak Spring Garden Library, Upperville, VA.]" aspect=".8" %}
+
+That these Indigenous people had been cultivating *F. chiloensis* long before European involvement in Chile is evidenced by the Mapuche having different words for wild (*llahuen*) and cultivated (*quellghen*) strawberries.[^16] Therefore, some artificial selection for larger cultivated strawberries had transpired by the time the French engineer Amédée François Frézier encountered *F. chiloensis* on a 1712 visit to Chile. Compared to the European *F. moschata* and *F. vesca*, the largesse of the *F. chiloensis* was something to behold; [Frézier](Q2736087)’s expedition returned to France with strawberry plants in tow, five of which survived the journey back to Marseille.[^17]
+
+{% include embed/iframe.html src="https://archive.org/details/voyagetosouthsea00frzi/page/n86/mode/1up?view=theater" aspect=".65" caption="A. Frézier (1717), *A voyage to the South Seas and along the coasts of Chile and Peru in the years 1712, 1713, and 1714*, Plate VIII. " %}
+
+With the global transport of plant specimens, Europe was now home to a multitude of strawberry species from New and Old Worlds alike. But propagating them was not as simple as European horticulturalists hoped. Most species of strawberries are dioecious, requiring a mix of male and female plants to fruit. This posed a problem both because botanists of the time lacked today’s knowledge of dioecious plants, and because, in some cases, they also lacked the requisite male specimens. For instance, because Frézier brought only actively fruiting *F. chiloensis* plants to France, the set was all female.[^18] The difficulties in getting strawberry plants to reproduce were described by the British botanist [Thomas Knight](Q940986), who declared: “If nature, in any instance, permits the existence of vegetable mules—but this I am not inclined to believe—these plants seem to be beings of that kind.”[^19]
+
+{% include embed/image.html src="wc:103_Fragaria_vesca_L.jpg" caption="Amédée Masclef, 'Fragaria vesca L.' in *Atlas des plantes*." aspect=".8" %}
+
+If challenges in cultivating strawberries vexed horticulturalists like Knight, they also served as a boon to strawberry diversity; growers, desperate to create a strawberry that could fruit reliably, experimented extensively in hybridization. In France, led particularly by Antoine [Nicolas Duchesne](Q586815), just about every conceivable varietal was concocted by planting two species next to each other and seeing what happened. Though Duchesne was not the first to cross *F. chiloensis* with *F. virginiana*, he replicated and popularized the hybrid that would become known as the *Fragaria x ananassa*, the basis of the large-fruited strawberries commercially available today.[^20] The exact story of Duchesne’s creation of the *F. x ananassa* has been mythologized to the point of confusion—tales oscillate between describing the hybridization as a lucky accident and a deliberate, careful cross—but it is clear that by the mid-1760s, the *F. x ananassa*, which had the larger body of the *F. chiloensis* and the sweet, eponymous pineapple-y flavor of the F. virginiana, was taking hold in France.
+
+{% include embed/image.html src="wc:Antoine_Nicolas_Duchesne.jpg" caption="*Antoine Nicolas Duchesne.* Copper engraving by J.D. Nargeot. (Ch. Le Blanc 3:91 1856-1888. Paris). Acknowledgements to the Bibliothèque Nordique (department of the Bibliothèque Sainte-Geneviève)." aspect="1" %}
+
+The strawberry’s story by no means ends with the creation of the *Fragaria x ananassa* species. For one thing, it was bred to be easier to grow and ship, often sacrificing taste for these more directly commercial properties. The first hermaphroditic—and therefore self-fertilizing—strawberry emerged in the U.S. in 1852 in the form of the Wilson variety of *F. x ananass* developed by the horticulturalist James Wilson, putting an end to European growers’ strife about the fussiness of strawberry sex.[^21] Cultivators also bred strawberries to yield fruit year-round, a far more profitable schedule than its June-bearing predecessors. In addition, the *F. x ananassa* was cultivated for looks (conical, red) and firmness. In the trade-off between flavor and durability, the latter won, which is perhaps why most modern supermarket strawberries lack both the enticing fragrance and flavor of wild strawberries. If the *F. moschata* tastes of honey, wine, and clove, our *F. x ananassa* is, at best, vaguely sweet and tart.
+
+{% include embed/image.html src="wc:Garden_strawberry_(Fragaria_×_ananassa)_single2.jpg" aspect="1" %}
+
+Perhaps the biggest change in the story of the strawberry over the last century is the introduction of soil fumigants to the growing process, which treat the soil for pests and diseases like wilt. Chloropicrin combined with methyl bromide became the strawberry-growing cocktail of choice for California strawberry growers, increasing crop yield by twenty- or thirty-fold in some cases. So widespread did these chemicals become that banks would not always make loans to growers who did not fumigate.[^22]
+
+{% include embed/image.html src="wc:Growing_Strawberries_in_Kent_-_geograph.org.uk_-_331348.jpg" aspect=".8" %}
+
+Unsurprisingly, fumigation comes with many adverse effects to farmers and people living around strawberry plantations; cancer, damage to lungs, liver, kidneys, nervous system, lower birth weight and smaller baby head circumference are just a few of the observed effects. Yet many strawberry growers are trapped in a cycle of use; without the increased yield occasioned by fumigants, they can’t turn a large enough profit to stay in business.[^23]
+
+{% include embed/image.html src="wc:Miaoli_Dahu_Strawberry_Farm_1.jpg" aspect=".8" %}
+
+# Sensuality, Purity, and Evil: The Strawberry in Art and Literature
+
+Throughout the history of literature and art, strawberries have inspired sensual connotations as well as associations with evil characteristics. *F. vesca*, the European wild strawberry, was sometimes associated with youth or innocence, seen as miraculous because it springs up without tilling, is hardy enough to survive in the wild, and is freely provided by nature, a sense that is at odd with the dangerous chemicals and hard labor required to grow and harvest our modern strawberry.[^24] Through the lenses of vegetal textuality and visual analysis, this section explores the different meanings and associations that the strawberry plant holds in artistic and literary traditions.[^25] While aware that vegetal textuality and artistic symbolism are an extrinsic languages often imposed on plants, this approach uncovers the intriguing paradoxes that have shaped the presence of strawberry plants in art and literature.
+
+{% include embed/image.html src="Frezes.jpg" caption="Rozes de buisson ; Frezes. [color illustration], in *Collection of seventy-eight watercolor plates of plants.* [18th century?], Dumbarton Oaks Research Library, Washington, D.C." aspect=".8" %}
+
+Classical writers have conflicting interpretations of the strawberry plant, ranging from a symbol of danger to one of prosperity. In [Virgil](Q1398)’s *Third Eclogue* from 39 BCE, strawberry plants are portrayed as perilous. Because the plant grows close to the ground, it was seen to nest, even hide, deadly threats, like vipers.[^26] Such an interpretation resonates with pre-Linnaean botanical classification: a vertical hierarchy of humans, animals, and plants that assumed that plants growing near the soil were vulgar, unhealthy, even dangerous.[^27] This negative view takes a notable turn in the Roman poet [Ovid](Q7198)’s *Metamorphoses*, where he depicts a Golden Age of strawberries, one of such abundance that cultivation was unnecessary: “Golden was that first age ... The earth herself, without compulsion, untouched by hoe or plowshare, of herself gave all things needful. And men, content with food which came with no one’s seeking, gathered the arbute fruit, strawberries from the mountain-sides ...”[^28]
+
+{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vS9cdojbiwfFGJ145oUB0KBQZwYlRfKLChzBwMjqHZbCp_dw4uAwa9nMTKKxkkN0S0hS-9QjNJsXuVL&font=Default&lang=en&initial_zoom=2&width=100%25&height=650" class="full" aspect="1" %}
+
+*F. vesca* appears frequently in the borders of illuminated manuscripts beginning in the early fifteenth century.[^29] Colorful, round, and conveniently located on trailing green vines, the visual form of the strawberry is well suited for this decorative function. [Strawberries](img1/zoomto/pct:11.70,32.26,8.05,7.17) grow among [birds](img2/zoomto/pct:50.76,79.17,21.75,10.49), [beasts](img2/zoomto/pct:23.41,76.34,22.01,14.04), and [flowers](img3/zoomto/pct:66.54,15.70,18.82,22.35) in the decorative borders of books of hours and medieval prayer books. Interestingly, both the visual appeal and the symbolic value of the strawberry in the illuminated manuscript come not just from the red fruit, but from its delicate white flowers.
+
+{% include embed/image.html id="img1" src="Master_isabella.jpg" caption="Alexander Benning, *Hours of Queen Isabella the Catholic*, Queen of Spain, 1495, Fol. 102v, Cleveland Museum of Art" aspect="1" %}
+{% include embed/image.html src="nypl.jpg" id="img2" caption="*Book of Hours*, 1400-1499, French, NYPL MA 156, fol. 13r" aspect="1" %}
+{% include embed/image.html src="Morgan m278.110r.jpg" id="img3" caption="*Book of Hours*, 1480-1490, Flemish, Morgan Library, New York M.278, fol. 110r" aspect="1" %}
+
+Further evidence of the religious significance of the strawberry comes in depictions of two Biblical gardens. The wild European *F. vesca* is often included in depictions of the [Garden of Eden](Q19014) before the fall of Adam and Eve. Strawberries appear below the feet of Adam and Eve as they flee Eden in [Giovanni di Paolo](Q946420)’s *The Creation of the World and the Expulsion from Paradise* (1445), though in this case without their white flowers. In conjunction with the lilies and roses, the fruit is intended to represent the perfect righteousness of Christ’s followers as well as the fruitful results of their worship.[^30]
+
+{% include embed/image.html src="di_paolo.jpg" caption="Giovanni di Paolo, *The Creation of the World and the Expulsion from Paradise*, 1445, The Metropolitan Museum of Art" aspect="1" %}
+{% include embed/image.html src="di_paolo_detail.png" caption="Detail of Giovanni di Paolo, *The Creation of the World and the Expulsion from Paradise*, 1445, The Metropolitan Museum of Art" aspect="1" %}
+
+The wild European strawberry is also a common inhabitant of the [hortus conclusus](Q1630273), the enclosed garden around the Virgin Mary that evokes the purity and impenetrability of Mary's virginity, signifying Mary herself as an enclosed garden.[^31] Strawberries are frequently found among its flowers, accompanying roses and violets. Their presence can be partly explained by their decorative beauty but also suggests a strong symbolic connection to the Virgin.
+
+{% include embed/image.html src="upper_rhenish_master_Large.jpeg" caption="Upper Rhenish Master, *The Little Garden of Paradise*, ca. 1410–1420, Städel Museum, Frankfurt am Main." aspect="1" %}
+{% include embed/image.html src="upper_rhenish_master_detail.png" caption="Detail of Upper Rhenish Master, *The Little Garden of Paradise*, ca. 1410–1420, Städel Museum, Frankfurt am Main." aspect="1" %}
+
+In numerous paintings from the late fifteenth and sixteenth centuries, strawberries move from the cultivated garden of the hortus conclusus and closer to the body of the Virgin. Notably, in the now-lost painting *Madonna of the Strawberries*, attributed to [Martin Schongauer](Q155575), Mary wears a crown of the trifoliate strawberry leaves.[^32] In the work of [Lorenzo d’Alessandro da Sanseverino](Q1158989), Mary wears a cloak embroidered with gold strawberry plants and in a sixteenth-century painting by Bronzino, the child Saint John the Baptist hands her a strawberry plant. 
+
+{% include embed/image.html src="sanseverino.jpg" caption="Lorenzo d’Alessandro da Sanseverino, *The Marriage of Saint Catherine of Siena*, ca. 1481–1500, National Gallery, London NG249." aspect="1" %}
+{% include embed/image.html src="schongauer.png" caption="Attributed to Martin Schongauer. Madonna of the Strawberries, late fifteenth century, oil on panel, formerly in the Musées de Strasbourg." aspect="1" %}
+{% include embed/image.html src="bronzino.jpg" caption="Bronzino, The Madonna and Child with Saint John the Baptist and Saint Elizabeth, probably about 1540, National Gallery, London NG5280." aspect="1" %}
+
+Despite the repeated visual association, strawberry is not included in any medieval lists of the symbols of the Virgin. It is not until the 1630s, in an English Catholic emblem book, that it is referenced among the symbols of the Virgin, comparing the strawberry and the violet, which is also associated with the Virgin’s humility and frequently appears alongside the strawberry in the *hortus conclusus*.[^33] The passage points out the way the strawberry grows, keeping low to the ground, “Hiding what she can, her beautie in her leaves,” and perhaps, like the violet, appearing to be a humble ground cover until one stumbles upon its sweet, red berry.[^34] The text also mentions the scent of the violet, another aspect that could be applied to the *F. vesca*, which is quite fragrant.
+
+{% include embed/iframe.html src="https://archive.org/details/partheneiasacrao00hawk/page/10/mode/1up?view=theater" aspect=".85" caption="Henry Hawkins, *Partheneia sacra, or, The mysterious and delicious garden of the sacred Parthenes : symbolically set forth and enriched with pious devises and emblemes for the entertainment of deuout soules, contriued al to the honour of the incomparable Virgin Marie, Mother of God, for the pleasure and deuotion especially of the parthenian sodalitie of her Immaculate Conception* (Rouen: John Cousterier, 1633), 10." %}
+
+Numerous explanations are given for the religious symbolism of the strawberry. Some are grounded in the plant’s colors: the white flowers signify the purity of the Virgin and the red fruit Christ’s blood; in another view the white flowers represented faith, the green leaves hope, and the red fruit love.[^35] The three-part leaf of the plant was seen as a symbol of the holy trinity, embodying the father, the son, and the holy spirit in its morphological structure.[^36] The sweet fruit might be seen as embodying a kind of perfection because it doesn’t have a pit or seed at the center, nor does it have a peel.[^37]
+
+{% include embed/image-compare.html before="wc:Jacques_Le_Moyne_de_Morgues._Strawberry_and_Emperor_Moth.jpg" after="upper_rhenish_master_detail.png" caption="left: detail of Upper Rhenish Master, _The Little Garden of Paradise_, ca. 1410–1420, Städel Museum, Frankfurt am Main; right: Fragaria vesca, attributed to Jacques Lemoyne de Morgues (1533-88)." %}
+
+The dangerous and deceitful connotations of the strawberry suggested by Virgil were also carried forward in art and literature. Perhaps most famously, the central panel of [Bosch](Q130531)’s *Garden of Earthly Delights* shows numerous scenes of revelers frolicking and eating strawberries—the strawberry is no longer a straightforward representation of the purity of the Virgin. Perhaps Bosch references the strawberry as an erotic symbol, a symbol of the ephemerality, and the ultimate emptiness of lust, as suggested by its presence in this scene of “deceptive paradise,”[^38] while subverting its association with purity.[^39] The idea of danger, deceit, and lust is also grounded in the physical form of the *F. vesca* through its red color and its heart-like shape. One particular irony of Bosch’s strawberries is that he is depicting at an enormous scale the F. vesca, the small European wild strawberry.[^40] Another example of negative meanings, in the literary tradition, is *The Tragedy of Othello, the Moor of Venice*, where [Shakespeare](Q692) used [Desdemona](Q3272719)’s white, strawberry-embroidered handkerchief as a powerful allegory of infidelity.
+
+{% include embed/image.html src="wc:Garden_delights.jpg" caption="
+The Garden of Earthly Delights in the Museo del Prado in Madrid, c. 1495–1505, attributed to Hieronymus Bosch." aspect="1" %}
+{% include embed/image.html src="wc:Bosch,_Hieronymus_-_The_Garden_of_Earthly_Delights,_central_panel_-_Detail_Strawberry.jpg" aspect="1" %}
+{% include embed/image.html src="wc:Bosch,_Hieronymus_-_The_Garden_of_Earthly_Delights,_central_panel_-_Detai_Man_eating_a_strawberry,_Man_eating_a_cherry,_and_a_man_bending_over_a_fictional_fruit.jpg" aspect="1" %}
+
+By the end of the sixteenth century, the strawberry fades from religious art but continues to appear in still lifes, as an ornamental element in decorative arts, and as an element of portraiture, as in the work of [Joshua Johnson](Q958068). Johnson was the earliest documented professional African American painter.[^41] Based in Baltimore, Maryland, he painted upperclass Americans in the late eighteenth and early nineteenth centuries. Several of his portraits have his sitters holding strawberry plants or baskets of strawberries, likely the local *F. Virginiana*. Perhaps most dramatically, his portrait of Emma Van Name places the young girl beside an enormous wineglass of strawberries as she holds a strawberry in her hand, perhaps on the verge of consuming it. Her pink dress and small size seem to parallel her with the strawberries beside her, perhaps contrasting her youth with the “innocence or ripeness for death” suggested by the strawberries.[^42] This strawberry, completely different from the depiction of *F. vesca* in medieval paintings, is divorced from its natural habitat, contained in a glass, and existing in abundance.
+
+{% include embed/image.html src="wc:Emma_Van_Name_by_Joshua_Johnson.jpg" caption="Joshua Johnson, Emma Van Name, ca. 1805, Metropolitan Museum of Art." aspect="0.6" %}
+{% include embed/image.html src="wc:Grace_Allison_McCurdy_and_Her_Daughters,_Mary_Jane_and_Letitia_Grace_by_Joshua_Johnson_-_Stierch.jpg" caption="Joshua Johnson, Grace Allison McCurdy (Mrs. Hugh McCurdy) and Her Daughters, Mary Jane and Letitia Grace, c. 1806, National Gallery, DC." aspect="0.6" %}
+
+The strawberry plant maintained its original Ovidian significance among American transcendental writers such as [Henry David Thoreau](Q131149);; however other American writers, often female, did not retain heavily mythologized interpretations. [Emily Dickinson](Q4441), for example, considered strawberries a symbol of freedom. In her poem, “Over the Fence,” strawberry plants grow over the fence of a garden that resembles a *hortus conclusus* —“I could climb —if I tried, I know—/Berries are nice!”[^43]— but she also plays with the idea of a transfiguration that would shield her from the social condemnation associated with trespassing.
+
+{% include embed/image.html src="wc:Emily_Dickinson.jpg" caption="Daguerreotype of the poet Emily Dickinson, ca. 1848. The poet is holding violet flowers." aspect=".8" %}
+
+Dickinson’s fascination with the strawberry plant blossomed into a vibrant herbarium she nurtured during her time at Amherst Academy, and continued for seven years. The lower left corner of sheet 52 of the herbarium features a specimen of [*F. virginiana*](img5/zoomto/pct:7.98,64.46,26.96,27.70), where she notes the five-petaled flower, displayed both in full bloom and still in bud, as well as the serrated edges of the leaves.
+
+{% include embed/image.html id="img5" src="Emily.jpg" caption="Fragaria virginiana in Herbarium, Emily Dickinson, ca. 1839-1846. Houghton Library © President and Fellows of Harvard College. MS Am 1118.11 Page 52, Houghton Library, Harvard University." aspect="1" %}
+
+American painter [Winslow Homer](Q344838) depicted a different aspect of the strawberry in his 1868 engraving, *The Strawberry Bed: the labor of harvesting the fruit*. Based on the date and location, the pickers in his engraving might be harvesting the hybrid *F. x ananasa*, bred for size and ease of transportation. This illustration of the hard labor of harvesting the cultivated strawberry contrasts with the earlier conceptions of the wild European *F. vesca* as springing from the ground ready to eat. The engraving was published in the illustrated magazine *Our Young Folks*, accompanying a poem by [John Townsend Trowbridge](Q6261093). In the poem, Trowbridge takes the point of view of the berries, asking young children to pick them so that they will not be sold and eaten by strangers, writing “O dear ! If you only knew how it shocks/ Nice berries like us to be sold by the box,/ And eaten by strangers, and paid for with pelf,/ You could surely take pity, and eat us yourself!”[^44] This playful characterization of strawberries idealizes a personal relationship between the consumer and the strawberry—picking it oneself rather than buying it off the shelf.
+
+{% include embed/image.html src="wc:Winslow_Homer_-_The_Strawberry_Bed_-_1942.1425_-_Cleveland_Museum_of_Art.jpg" caption="Winslow Homer, *The Strawberry Bed*, 1868, wood engraving." aspect="0.7" %}
+
+The strawberry was the subject of British designer and artist [William Morris](Q182589)’s wallpaper and textile design *Strawberry Thief* (1883). Morris (a member of the Arts and Crafts movement) looked back to medieval art for inspiration, so the stylized strawberry that repeats in his block print is likely the *F. vesca* that decorated the fifteenth-century manuscripts and the wild strawberry found in his native Britain. Morris situates the strawberry in a multispecies relationship waiting to be plucked by the strawberry thief—the thrush. Morris’ strawberry is not a symbolic attribute of the Virgin Mary or the subject of lustful revelry in a false Eden, but rather a plant in a complex ecosystem of birds, flowers, and vines in print.
+
+{% include embed/image.html manifest="https://api.artic.edu/api/v1/artworks/149052/manifest.json" caption="Both wild and cultivated *F. vesca* grew in the gardens at Kelmscott Manor, William Morris’s country house. As illustrated in Strawberry Thief (1883), these strawberries existed, not for human cultivation and consumption, but for the birds. William Morris, *Strawberry Thief*, 1883, Art Institute Chicago." aspect="0.75" %}
+
+# Metropolitan Perspectives versus Indigenous Interpretations of Strawberries
+
+In addition to having an intricate role to play in European and Anglophone cultural imagination, strawberries also have a significant history and cultural meaning in the Americas. Exploring pre-Columbian interpretations of strawberries presents challenges. While some knowledge and uses of the Chilean strawberry *F. chiloensis* among Indigenous populations can be found in scattered documentary sources, information has become decontextualized or hypermediated through metropolitan accounts. This has provoked a history of translation and mediation in which we can only access the reconstruction of their knowledge through European and creole sources. As the Spanish soldier [Alonso González de Nájera](Q3612902) recalled in his reminiscences, Indigenous Chilean populations used strawberry fields as a part of their resistance strategies against foreign invaders. González de Nájera, who lived in Chile from 1601 to 1607, detailed that they planted the “frutilla” on hillsides, mountains, and landscapes to attract the conquistadors to the fields and then attack them by surprise as they ate the strawberries.[^45]
+
+{% include embed/youtube.html vid="CsyligH85mU" start="21" end="39" caption="Video *The Origins of Frutilla Blanca: A One-Of-A-Kind Strawberry From Chile* by Richard Bernard and Ligia Parisi, YouTube.com." %}
+
+An extractive spirit permeates the first Iberian and creole descriptions of the strawberry, which differs from the Indigenous affective relationships with the plant. In what may be one of the earliest European textual images of *F. chiloensis*, González de Nájera noted that the fruit was attractive, delicious, fragrant, and healthy. With a keen descriptive eye, he concluded by accentuating its pleasant melting quality in the mouth, mentioning that Indigenous people made wine from the plants and dried them in the sun to create raisins that were enjoyable to eat.[^46] A second reference to *F. chiloensis* expands the first allusions in González de Nájera’s memoirs. The Chilean-born historian and priest [Alonso de Ovalle](Q2839275) remarked that the fruits can grow “as large as pears” and that while they are usually red, there were also white and yellow varieties found on [Concepción Island](Q5158415).[^47]
+
+{% include embed/iframe.html src="https://archive.org/details/desengaoyreparo00njgoog/page/54/mode/1up?view=theater" aspect=".7" caption="Alonso González de Nájera, *Desengaño y reparo de la guerra del reino de Chile*, 1886" %}
+
+Although *F. chiloensis* was unfamiliar to Europeans, historical evidence indicates that it was known across a broad region of southern America. It is likely that the Chilean Picunche people had contact with the northern agrarian Inca and may have been the first to bring strawberry plants from the wild into their home gardens.[^48] In Chapter XI of *Comentarios reales* (1609), “De las frutas de árboles mayores,” [Inca Garcilaso de la Vega](Q334711) refers to a fruit that he calls “chili” that arrived in [Cuzco](Q5582862) in 1557: “it is very tasty and very attractive; it grows on low plants, almost lying on the ground; it has a ridge at the top, like the ‘madroño’ tree, and is the same size, not round but somewhat elongated in the shape of a heart.”[^49] This confirms that pre-Columbian populations had a robust association with *F. chiloensis* long before Spanish explorers celebrated it in their writings or French naval officer Captain Amédée François Frézier encountered it in the eighteenth century.
+
+{% include embed/image-compare.html
+    before="https://storykit-preview.netlify.app/api/raw/plant-humanities/plant-humanities-lab/strawberry/assets/posts/strawberry/Rozier_Francois.jpeg&bx=0.5&by=-4&bs=0.56"
+    after="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Fragaria_chiloensis_kz01.jpg/1280px-Fragaria_chiloensis_kz01.jpg&ax=12.5&ay=39&as=1.09"
+    caption="left: François Rozier, *Cours d’agriculture*, tome 5, planche 4, figure 1,1784 -- right: *Fragaria chiloensis*, in the Botanischer Garten, Berlin-Dahlem"
+    aspect="1"
+    position="50"
+%}
+
+Frézier’s story has been retold many times with overtones that border on fiction and obscure the prior knowledge of the fruit by Indigenous peoples. Fascinated by how much larger *F. chiloensis* was than *F. vesca*, in his travel memoirs, *Relation du voyage de la mer du Sud aux côtes du Chili et du Pérou fait pendant les années 1712, 1713, et 1714*, like the Spaniards, Frézier compared it in size to walnuts or hens’ eggs.[^50] The only disagreement he had with his Iberian and creole predecessors’ was that he thought the fruit of the New World was “somewhat less delicious in taste than our wood strawberries.”[^51]
+
+{% include embed/image.html src="wc:Planche_XI.jpg" caption="*Fragaria chiloensis*, in Amédée François Frézier, *Relation du voyage de la mer du Sud aux côtes du Chili et du Pérou fait pendant les années 1712, 1713, et 1714*, 1716." aspect="1" %}
+
+The Western gaze was also forced on the visual world of the *F. chiloensis*. Even when created by Creole artists, these works often catered to foreign commissions. For instance, at least three of the six 1783 paintings by the Ecuadorian artist [Vicente Albán](Q21618016), who was commissioned by [José Celestino Mutis](Q731937), director of the New Granada expedition, feature strawberries. In *Yndio principal de Quito en trage [sic] de gala*, the central figure is holding a tray overflowing with strawberries as he reaches for one to eat. Eternalized in this gesture before the degustation of the strawberry, the figure becomes part of a catalog of the richness of the New World and its generative sense of plenitude. Meanwhile, in *Yndia en trage [sic] de gala*, Albán offers the female counterpart to *Yndio principal de Quito*, still reiterating the existence of strawberries, this time accompanied by other American fruits in a large basket that emulates Demeter’s cornucopia.
+
+{% include embed/image-compare.html before="wc:Indio_Principal_de_Quito_con_traje_de_gala.jpg" after="wc:India_en_traje_de_gala.jpg" caption="Left. Yndio principal de Quito con trage de gala, Vicente Albán, 1783. Oil on canvas, 80 cm x 109 cm. Museo de América, Madrid, Spain ; Right. Yndia en trage de gala, Vicente Albán, 1783). Oil on canvas, 80 cm x 109 cm. Museo de América, Madrid, Spain." %}
+
+Only in the third painting, *Yapanga de Quito con el trage [sic] que usan esta clase de mugeres [sic] que tratan de agradar*, does Albán depict the strawberry plant growing on the ground. He identifies the plant with the letter “G” and describes it as “A small tree that produces strawberries, resembling those from Spain but much thicker and sweeter.”[^52] As [Daniela Bleichmar](Q112524405), professor of art history and history at the University of Southern California, has elucidated, the description indicates that the audience for these works was one unversed in the American products and that Mutis probably commissioned them as a patronage gift for a colonial Iberian institution such as the [Natural History Cabinet](Q62274185).[^53]
+
+{% include embed/image.html src="wc:Yapanga_de_Quito_con_traje_que_usa_esta_clase_de_mujeres_que_tratan_de_agradar_01.jpg" caption="Yapanga de Quito con trage que usa esta clase de mugeres que tratan de agradar, Vicente Albán, 1783, Museo de América, Spain." aspect="1" %}
+
+The common representation of *F. chiloensis*, which primarily focuses on its exotic appeal and commercial value, as seen in books and paintings created or commissioned by Europeans, diverges from the lyrical interpretations offered by Chilean poet [Gabriela Mistral](Q80871), who often sought to reestablish a connection with the Andean and Indigenous ancestry of her country. In the poem “La fresa,” she invites the reader-lover to show reverence before the strawberry plant: “Do not bruise the earth,/do not squeeze the fragrant one./For her love, lower yourself,/smell her and give her your mouth.”[^54] Mistral embraces the evocative sensualism of the strawberry, a fruit shaped like a human heart and typically red. Nevertheless, she also demands a vision of the strawberry not as a mere commodity but as a living plant that requires us to bend down and surrender ourselves to its power. In doing so, she accentuates the strawberry plant’s capacity to seduce, along with its sense of opacity.
+
+{% include embed/image.html src="20250708_140039_OS.jpg" caption="*Fragaria chiloensis* in Duhamel du Monceau, *Traité des arbres fruitiers*, 1778, Oak Spring Library." aspect=".9" %}
+
+# Stories of Kinship: Fragaria virginiana in Indigenous North American Cosmology
+
+As we have been observing, before the arrival of European colonizers in South America, Indigenous populations had an extensive knowledge of and relationship with the strawberry plant. In a similar vein, Indigenous peoples in New England had woven strawberries into their ontology preceding the arrival of English settlers in North America. For the Iroquois, for example, strawberries are connected to the original creation and are considered a gift from [Sky Woman](Q4812650), the mother goddess, alongside the [three sisters](Q1478954) of traditional agriculture: corn, beans, and squash. They are the first fruits of spring and are celebrated annually at the strawberry festival.[^55] The deep link this community has with the plant is palpable not only in their mythology and oral traditions but also in their handicrafts.
+
+{% include embed/youtube.html  vid="RSi39qSrVYI" end="1:02" caption="*The Indigenous story of the strawberry*, YouTube.com, City News." %}
+
+The elaborate and delicate Iroquois handbag that you can see here showcases tiny colored beads that depict both the flower and fruit of the strawberry plant. The design illustrates the interaction between the plant and hummingbirds, stressing the sweetness of the strawberry and its handiwork validates the diffusion of botanical and ecological knowledge across diverse types of cultural artifacts. The bag is an aesthetic object that becomes a form of writing and inscription of strawberry plants in the world.
+
+{% include embed/image.html src="193068001.jpg" aspect="0.75" caption="Iroquois handbag, Samuel L. Thomas, 2001, Niagara Falls, United States.The British Museum © The Trustees of the British Museum. Shared under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence](http://creativecommons.org/licenses/by-nc-sa/4.0/)." %}
+
+The Cherokee Connecticut River Powwow Society hosts their annual Strawberry Moon Powwow in late June in Somers, Connecticut, during which they prepare Strawberry Moon Tea with frozen and fresh strawberries and sassafras and serve it chilled or hot.[^56] Cherokees believe that strawberries have properties that can help mend lovers’ disagreements.[^57]
+
+{% include embed/youtube.html vid="o4g9av0v3pY" caption="Cherokee Storytelling: Origin of the Strawberry, Visit Cherokee Nation, Youtube.com" %}
+
+Strawberries evoke relationships rooted in kinship, affection, and emotional connections among North American Indigenous people. Potawatomi writer Robin Wall Kimmerer beautifully expresses this sentiment: “In a way, I was raised by strawberries, fields of them.”[^58] In her reflection, Kimmerer imbues strawberry plants with a maternal, protective, and formative role. She further illustrates this connection by recounting the mythic origin story, in which Sky Woman ascends back to the firmament, leaving behind the plants as teachers for her people.[^59] This myth allows us to fully appreciate the writer’s intimate relationship with strawberry plants, which she understands as sources of knowledge, as well as spiritual comfort and safety.
+
+{% include embed/image.html src="wc:INconversation_with_Robin_Wall_Kimmerer_(53043186169).jpg" aspect="1" %}
+
+# A Dialogue between Plant and Community
+
+The *Fragaria x. ananassa* sits in an uncanny valley within the history of the strawberry, at once faintly echoing the shape and flavor of its wild predecessors while also occasioning a very different sensorial experience for the eater. Big, firm, and tart, *F. x ananassa* is not the inevitable endpoint in an evolutionary trajectory, but rather the contingent result of a long and twisted history of globalization and experimentation. The strawberry that is available today in most supermarkets is the outlier of the family, representing a highly commodified turn within a much longer and larger history of strawberries as objects of art, culture, reverence, beauty, and pleasure. *F. x ananassa* in a sense contradicts its wild relatives, each of which diverge from one another in their own right; for instance, the strawberry depicted in Bosch’s *The Garden of Earthly Delights* represents a different plant species with a different “personality” than we see in Gabriela Mistral’s poetry. Like all living entities, the strawberry is dynamic, self-contradictory, and complex; it cannot be summarized by examining one specimen or one society’s beliefs around it, because it does not have a fixed essence. Its identity and spirit are deeply intertwined with the historical and cultural narratives surrounding its cultivation, knowledge, and consumption. Initially depicted as a symbol of abundance in colonial paintings of the New World, the strawberry’s representation in the nineteenth century became an ideal for simpler lifeways, a site for multispecies encounter, and an allegory of female freedom. For Chile’s indigenous populations, the strawberry has begun to transcend mere agricultural importance; it has become a potent symbol of resistance against foreign oppression. The strawberry evokes reverence through its associations with both romantic and mystical allure, while exhibiting the qualities of nurturing, guidance, and protection. It’s cultural history is a shared testament to the dialogue between plant and community, where each has been shaped and transformed by the other.
+
+{% include embed/image.html src="wc:HK_樂富_Lok_Fu_Place_Plaza_橫頭磡_Wang_Tau_Hom_mall_shop_百佳_Fusion_Supermarket_December_2021_SS2_red_strawberry.jpg" aspect="0.78" %}
+
+[^1]: Dvera I. Saxton, *The Devil's Fruit: Farmworkers, Health, and Environmental Justice* (New Brunswick, N.J.: Rutgers University Press, 2021).
+[^2]: "La Fruta del Diablo. Battle for Justice in California Strawberry Fields," *Revolutionary Worker*, May 4, 1997. https://revcom.us/a/v19/905-09/905/farm.htm
+[^3]: Yota Batsaki and Philip Gant, “The Secret Life of Kudzu,” _Scientific American_, August 1, 2019. https://www.scientificamerican.com/blog/observations/the-secret-life-of-kudzu/.
+[^4]: Michael Pollan, “The Intelligent Plant,” *The New Yorker*, December 23 and 30, 2013. https://www.newyorker.com/magazine/2013/12/23/the-intelligent-plant.
+[^5]: Noel Kingsbury, *Hybrid: The History and Science of Plant Breeding* (Chicago: University of Chicago Press, 2009), 83.
+[^6]: Jeremy Bartlett, “Wild Strawberry, Fragaria vesca,” *Let It Grow* (blog), June 8, 2019, accessed August 8, 2025. https://www.jeremybartlett.co.uk/2019/06/08/wild-strawberry-fragaria-vesca/.
+[^7]: Alan Carter (author username “Gardener”), “Alpine Strawberry,” *A Food Forest in Your Garden* (blog), September 18, 2013, accessed August 8, 2025. https://www.foodforest.garden/2013/09/18/alpine-strawberry/.
+[^8]: “Fragaria Moschata Subsp. Moschata: Plants of the World Online: Kew Science.” *Plants of the World Online*, powo.science.kew.org/taxon/urn:lsid:ipni.org:names:3297345-4. Accessed January 29, 2026.
+[^9]: David Karp, “Berried Treasure: Why Is Horticulturalist Harry Jan Swartz So Determined to Grow an Exotic Strawberry Beloved by Jane Austen?,” *Smithsonian Magazine*, July 2006, accessed August 8, 2025. https://www.smithsonianmag.com/science-nature/berried-treasure-120534521/.
+[^10]: Jane Austen, Emma (London: Penguin Classics, 2003), 282.
+[^11]: “Fragaria virginiana Wild Strawberry,” *Prairie Moon Nursery* (product page), accessed August 8, 2025. https://www.prairiemoon.com/fragaria-virginiana-wild-strawberry.
+[^12]: Robin Wall Kimmerer, *Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge, and the Teachings of Plants* (Minneapolis: Milkweed Editions, 2013), 93.
+[^13]: “Fragaria Chiloensis (L.) Mill.: Plants of the World Online: Kew Science.” *Plants of the World Online*, powo.science.kew.org/taxon/urn:lsid:ipni.org:names:724988-1. Accessed January 29, 2026.
+[^14]: Michelle Johnson, “Frutilla Blanca: A One-Of-A-Kind Strawberry from Chile,” *Baker Creek Heirloom Seeds* (blog), updated April 30, 2024, accessed August 8, 2025. https://www.rareseeds.com/blog/post/frutilla-blanca-white-strawberry-history?.
+[^15]: Chad E. Finn, et. al., “The Chilean Strawberry (Fragaria chiloensis): Over 1,000 Years of Domestication,” *HortScience* 48, no. 4 (April 1, 2013): 418–421. https://doi.org/10.21273/HORTSCI.48.4.418.
+[^16]: Mary Katherine Newman, “The Story of the Strawberry,” *History Workshop Eating the Past* (blog), April 5, 2023, accessed August 8, 2025. https://www.historyworkshop.org.uk/food/the-story-of-the-strawberry/.
+[^17]: Noel Kingsbury, *Hybrid: The History and Science of Plant Breeding* (Chicago and London: University of Chicago Press, 2009), 83–87.
+[^18]: Noel Kingsbury, 84.
+[^19]: Quoted in David Karp, “Berried Treasure: Why Is Horticulturalist Harry Jan Swartz So Determined to Grow an Exotic Strawberry Beloved by Jane Austen?,” *Smithsonian Magazine*, July 2006, accessed August 8, 2025. https://www.smithsonianmag.com/science-nature/berried-treasure-120534521/.
+[^20]: Noel Kingsbury, 84–86.
+[^21]: Noel Kingsbury, 136.
+[^22]: C. Graber and N. Twilley (2019, August 27). *Running on fumes: Strawberry’s dirty secret* [Podcast episode]. Gastropod. https://gastropod.com/running-on-fumes-strawberrys-dirty-secret/.
+[^23]: C. Graber and N. Twilley (2019, August 27). *Running on fumes: Strawberry’s dirty secret* [Podcast episode]. Gastropod. https://gastropod.com/running-on-fumes-strawberrys-dirty-secret/.
+[^24]: Victoria Dickenson, *Berries* (Islington, London.: Reaktion Books, 2020), 46.
+[^25]: There is a long-standing Indigenous and Western tradition of “botanically curious” authors who generated what plant studies scholarship defines as vegetal textuality, that is, texts with plant-based themes. To learn more about this concept, see Monica Gagliano, John C. Ryan, and Patrícia I. Vieira, *The Language of Plants: Science, Philosophy, Literature* (Minneapolis: University of Minnesota Press, 2017), xvi.
+[^26]: Dickenson, 47.
+[^27]: Allen J. Grieco, “The Social Politics of Pre-Linnaean Botanical Classification,” *Tatti Studies in the Italian Renaissance* 4 (1991), 141.
+[^28]: Ovid quoted by Dickenson, *Berries*, 44–45.
+[^29]: Celia Fisher, *The Medieval Flower Book* (London: British Library, 2007), 114.
+[^30]: Elizabeth Haig, *The Floral Symbolism of the Great Masters* (London: Kegan Paul, Trench, Trubner & Co, 1913), 30.
+[^31]: Dickenson, 47.
+[^32]: Schongauer’s painting was among the works destroyed in the 1947 fire at the Musée des Beaux Arts de Strasbourg. See Lawrence J. Ross, “The Meaning of Strawberries in Shakespeare,” *Studies in the Renaissance*, 7 (1960), 234.
+[^33]: Ross, 234.
+[^34]: Henry Hawkins, *Partheneia sacra, or, The mysterious and delicious garden of the sacred Parthenes : symbolically set forth and enriched with pious devises and emblemes for the entertainment of deuout soules, contriued al to the honour of the incomparable Virgin Marie, Mother of God, for the pleasure and deuotion especially of the parthenian sodalitie of her Immaculate Conception* (Rouen: John Cousterier, 1633), 10.
+[^35]: Celia Fisher and J. Paul Getty Museum, *Flowers of the Renaissance* (Los Angeles: J. Paul Getty Museum, 2011), 149.
+[^36]: Fisher, 114.
+[^37]: Fisher.
+[^38]: Margaret A. Sullivan, “The timely art of Hieronymus Bosch: the left panel of "The Garden of Earthly Delights," *Oud Holland* 127, no. 4 (2014), 176.
+[^39]: Walter S. Gibson, “The Strawberries of Hieronymus Bosch,” *Cleveland Studies in the History of Art* 8 (2003), 27. 
+[^40]: Fisher, 114.
+[^41]: “Joshua Johnson,” *Smithsonian American Art Museum*. https://americanart.si.edu/artist/joshua-johnson-2479. 
+[^42]: Elizabeth A. Petrino, *Emily Dickinson and Her Contemporaries: Women's Verse in America, 1820–1885* (University Press of New England, 1998), 63.
+[^43]: Emily Dickinson, *The Complete Poems of Emily Dickinson* (New York: Back Bay Books, 1976), 115.
+[^44]: John Townsend Trowbridge, “Strawberries,” *Our Young Folks* 4 (July 1868): 398–399.
+[^45]: Alonso González de Nájera, *Desengaño y reparo de la guerra del reino de Chile* (Madrid: Imprenta de la viuda de Calero, 1866), 168. Translation by Elizabeth Mirabal. 
+[^46]: González de Nájera, 55. 
+[^47]: Alonso de Ovalle, *Histórica relación del Reyno de Chile* (Roma: Francisco Cauallo, 1646), 8. Translation by Elizabeth Mirabal.
+[^48]: J. F. Hancock, A. Lavín, and J.B. Retamales, “Our Southern Strawberry Heritage: Fragaria chiloensis of Chile,” *HortScience*, 34 (1999), 814.
+[^49]: Garcilaso De la Vega, *Comentarios reales* (Lisboa: Pedro Crasbeeck, 1609), 420. Translation by Elizabeth Mirabal.
+[^50]: Pablo Neruda, as documented by Lesley Wylie, had several books on Chilean plants in his personal library, including the 1716 French edition of Frézier’s work. See Leslie Wylie, *The Poetics of Plants in Spanish American Literature*. (Pittsburgh: University of Pittsburgh Press, 2024), 175.
+[^51]: Amédée François Frézier, *A Voyage to the South-Sea, and along the Coasts of Chili and Peru* (London: Jonah Bowyer, 1717), 76.
+[^52]: Translation by Elizabeth Mirabal. Each fruit is labeled with a letter and accompanied by a brief description within the painting itself.
+[^53]: Daniela Bleichmar, *Visual Voyages. Images of Latin American Nature from Columbus to Darwin* (New Haven: Yale University Press, 2017), 150.
+[^54]: Gabriela Mistral, “La fresa” in *Ternura* (México, D.F.: Espasa-Calpe Mexicana, 1989), 118. Translation by Elizabeth Mirabal.
+[^55]: Dickenson, 59. A fuller explanation of the Potawatomi understanding of Sky Woman will be presented later in this plant narrative.
+[^56]: E. Barrie Kavasch, *Enduring Harvests: Native American Foods and Festivals for Every Season* (Old Saybrook, Connecticut: Globe Pequot Press, 1995), 266.
+[^57]: Dickenson.
+[^58]: Robin Wall Kimmerer, *Braiding Sweetgrass for Young Adults: Indigenous Wisdom, Scientific Knowledge, and the Teachings of Plants* (Minneapolis: Zest Books, 2022), 32.
+[^59]: Robin Wall Kimmerer, “Ancient Green: Moss, Climate and Deep Time,” *Emergence Magazine*, April 20, 2022. https://emergencemagazine.org/essay/ancient-green/.
