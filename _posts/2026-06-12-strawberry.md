@@ -5,7 +5,7 @@ description: Originating from wild strains with robust flavors, strawberries und
   with this history of globalization and hybridization, strawberries possess a duality of 
   meanings; they symbolize innocence and desire, plenitude and peril, kinship and defiance.
 author: Elizabeth Mirabal, Madeleine Dowd, and Sophia Kamps
-date: 2026-11-12
+date: 2026-11-16
 permalink: /strawberry
 tags: fruit food temperate
 published: true
