@@ -79,6 +79,6 @@ For more on herbaria, Maura Flannery has a blog [Herbarium World](https://herbar
 
 [^6]: Milliken, William. 2017. “Mobilising Richard Spruce's 19th Century Amazon Legacy.” Kew Blogs. [https://www.kew.org/read-and-watch/mobilising-richard-spruce-legacy](https://www.kew.org/read-and-watch/mobilising-richard-spruce-legacy).
 
-[^7]: Kress, W. John Kress and Yota Batsaki. 2022. "Heliconia: Evolution at Work." Plant Humanities Lab. [https://lab.plant-humanities.org/heliconia/](https://lab.plant-humanities.org/heliconia/)
+[^7]: Kress, W. John Kress and Yota Batsaki. 2022. "Heliconia: Evolution at Work." Plant Humanities Lab. [https://lab.plant-humanities.org/heliconia](/heliconia)
 
 [^8]: Park, Daniel S., Xiao Feng, Shinobu Akiyama, Marlina Ardiyani, Neida Avendaño, Zoltan Barina, Blandine Bärtschi, et al. 2023. “The Colonial Legacy of Herbaria.” *Nature Human Behaviour*, 7: 1–10. [https://doi.org/10.1038/s41562-023-01616-7](https://doi.org/10.1038/s41562-023-01616-7).

@@ -1,0 +1,14 @@
+# Explicit aliases for the 404 page's client-side redirect (_includes/redirect-404.html).
+#
+# Keys are normalized paths: lowercase, no trailing slash, no .html, underscores
+# written as hyphens. Only add paths that normalization and the pattern rules
+# cannot resolve on their own (capitalized, trailing-slash and underscore forms
+# of current addresses are already handled).
+#
+# Normalized old path: canonical new path
+/black-eyed-peas: /black-eyed-pea
+/agave-a-plant-with-an-intoxicating-history: /agave
+# Proposed targets, awaiting confirmation (see the Nov 2026 site-fixes spec):
+/educational/five-specimens: /how-to-read-an-herbarium-specimen
+/admin/getting-started: /admin/entreluma-authors-guide
+/admin/write-a-new-post: /admin/entreluma-authoring-a-visual-narrative

@@ -1,4 +1,5 @@
 ---
+description: The scholars, students and editors who have written and illustrated essays for the Plant Humanities Lab.
 # the default layout is 'page'
 icon: fa-solid fa-people-group
 order: 2

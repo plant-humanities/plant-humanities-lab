@@ -63,7 +63,14 @@ main() {
   # test
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
+    --no-enforce-https \
+    --ignore-files "/assets\/components\//" \
     --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+  # Built-HTML assertions and unit tests (same as the Pages workflow)
+  bundle exec ruby tools/check_built_html.rb "$SITE_DIR$_baseurl"
+  ruby tools/test_author_list.rb
+  SITE_DIR="$SITE_DIR$_baseurl" node --test tools/test_redirect_404.mjs
 }
 
 while (($#)); do

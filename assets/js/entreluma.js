@@ -488,8 +488,23 @@ function objectFromLink(linkEl, attrs) {
  * - or URL path that contains .../<iframeId>/<action>/<args...>
  */
 function parseActionLink(a) {
-    const linkAttrs = objectFromLink(a, ["action", "label", "target", "args"]);
     const href = a.getAttribute("href") || a.getAttribute("data-href") || "";
+
+    // Build-time form (_plugins/entreluma-link-rewrite.rb): href="#" plus
+    // data-entreluma-target/action/args. Args keep their path segments.
+    if (a.hasAttribute("data-entreluma-action")) {
+        return {
+            href,
+            target: a.getAttribute("data-entreluma-target") || null,
+            action: a.getAttribute("data-entreluma-action") || null,
+            label: a.textContent || "",
+            explicitArgs: (a.getAttribute("data-entreluma-args") || "").split("/").filter(Boolean),
+            pathParts: []
+        };
+    }
+
+    // Older/raw form (editor preview): explicit attributes or a relative path.
+    const linkAttrs = objectFromLink(a, ["action", "label", "target", "args"]);
 
     // If explicit args provided, accept them as a simple split (comma or space are common).
     // If you need to support JSON-in-attr, do it here.
@@ -865,6 +880,7 @@ async function makeEntityPopups({ root = document.body, language = "en" } = {}) 
 
         const dd = document.createElement("sl-dropdown");
         dd.className = "entity-popup";
+        dd.dataset.qid = qid;
         dd.setAttribute("placement", "top");
         dd.setAttribute("distance", "12");
 

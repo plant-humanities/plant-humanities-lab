@@ -169,7 +169,15 @@ jobs:
             --no-enforce-https \
             --swap-urls "^${{ steps.pages.outputs.base_path }}/:/" \
             --ignore-files "/assets\/components\//" \
-            --ignore-urls "/^Q[0-9]+$/,/\/(zoomto|flyto|playat|play|pause)\//,/^http:\/\/127\.0\.0\.1/,/^http:\/\/0\.0\.0\.0/,/^http:\/\/localhost/"
+            --ignore-urls "/^http:\/\/127\.0\.0\.1/,/^http:\/\/0\.0\.0\.0/,/^http:\/\/localhost/"
+
+      - name: Check built HTML (shorthand links, metadata, sitemap, robots.txt)
+        run: bundle exec ruby tools/check_built_html.rb "_site${{ steps.pages.outputs.base_path }}"
+
+      - name: Unit tests (author list, 404 redirect)
+        run: |
+          ruby tools/test_author_list.rb
+          SITE_DIR="_site${{ steps.pages.outputs.base_path }}" node --test tools/test_redirect_404.mjs
 
       - name: Enforce deployment size budget
         run: ruby tools/check_deployment_size.rb "_site${{ steps.pages.outputs.base_path }}" 900000000

@@ -1,4 +1,5 @@
 ---
+description: About the Plant Humanities Lab, a Dumbarton Oaks project publishing illustrated essays on the cultural histories of plants.
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 1

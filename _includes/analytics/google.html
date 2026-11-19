@@ -1,0 +1,17 @@
+<!--
+  Site-owned override of the theme's Google Analytics include (not in the
+  Entreluma sync manifest). Differences from the theme:
+  - gtag is global, so assets/js/phl-analytics.js can send events;
+  - no page view is configured when the 404 page is redirecting the reader
+    (_includes/redirect-404.html), so recovered visits are not counted as 404s.
+-->
+<script defer src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+  if (!(window.entreluma404 && window.entreluma404.redirecting)) {
+    gtag('js', new Date());
+    gtag('config', '{{ site.analytics.google.id }}');
+  }
+</script>
+<script defer src="{{ '/assets/js/phl-analytics.js' | relative_url }}"></script>
