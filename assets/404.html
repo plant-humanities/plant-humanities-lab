@@ -1,0 +1,85 @@
+---
+layout: page
+title: "404: Page not found"
+permalink: /404.html
+---
+
+{% include lang.html %}
+
+<p class="lead" id="not-found-statement">{{ site.data.locales[lang].not_found.statement }}</p>
+
+{% comment %}
+  GitHub Pages cannot do server-side redirects, so this page recovers near-miss
+  addresses in the browser: wrong case (/Cryptomeria/), trailing slash (/agave/),
+  a .html suffix, the legacy /posts/<slug>/ form, stray whitespace or zero-width
+  characters, and single-character typos. Redirects are only made to addresses
+  that exist in this build.
+{% endcomment %}
+<script>
+(function () {
+  // Canonical (correctly-cased) URL for each lower-cased known path.
+  var canonical = {
+    {%- for doc in site.posts -%}"{{ doc.url | downcase }}": "{{ doc.url }}",{%- endfor -%}
+    {%- for doc in site.tabs -%}"{{ doc.url | downcase }}": "{{ doc.url }}",{%- endfor -%}
+    {%- for pg in site.pages -%}
+      {%- unless pg.url contains "." -%}"{{ pg.url | downcase }}": "{{ pg.url }}",{%- endunless -%}
+    {%- endfor -%}
+    "/": "/"
+  };
+
+  function clean(path) {
+    try { path = decodeURIComponent(path); } catch (e) {}
+    return path
+      .replace(/[\u200b-\u200d\u2060\ufeff]/g, '')   // zero-width characters
+      .replace(/\s+/g, '')                            // stray whitespace
+      .toLowerCase()
+      .replace(/\/index(\.html)?$/, '/')
+      .replace(/\.html?$/, '')
+      .replace(/\/+$/, '') || '/';
+  }
+
+  function lookup(key) {
+    return canonical[key] || canonical[key + '/'] || null;
+  }
+
+  function editDistanceAtMostOne(a, b) {
+    if (Math.abs(a.length - b.length) > 1) return false;
+    var i = 0, j = 0, edits = 0;
+    while (i < a.length && j < b.length) {
+      if (a[i] === b[j]) { i++; j++; continue; }
+      if (++edits > 1) return false;
+      if (a.length > b.length) i++;
+      else if (a.length < b.length) j++;
+      else { i++; j++; }
+    }
+    return edits + (a.length - i) + (b.length - j) <= 1;
+  }
+
+  function resolve(path) {
+    var key = clean(path);
+    var hit = lookup(key);
+    if (hit) return hit;
+    // legacy /posts/<slug>/ addresses
+    var bare = key.replace(/^\/posts(?=\/)/, '');
+    if (bare !== key && (hit = lookup(bare))) return hit;
+    // single-character typo, only when exactly one address is that close
+    var slug = bare.replace(/^\//, '');
+    if (slug.length >= 4 && slug.indexOf('/') === -1) {
+      var matches = [];
+      Object.keys(canonical).forEach(function (k) {
+        var candidate = k.replace(/^\/posts\//, '/').replace(/\/$/, '').replace(/^\//, '');
+        if (candidate && candidate.indexOf('/') === -1 && editDistanceAtMostOne(slug, candidate)) {
+          if (matches.indexOf(canonical[k]) === -1) matches.push(canonical[k]);
+        }
+      });
+      if (matches.length === 1) return matches[0];
+    }
+    return null;
+  }
+
+  var target = resolve(location.pathname);
+  if (target && target !== location.pathname) {
+    location.replace(target + location.search + location.hash);
+  }
+})();
+</script>
