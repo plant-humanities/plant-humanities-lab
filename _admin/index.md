@@ -20,9 +20,6 @@ The guides are organized in the order most authors need them:
 
 | Guide | What it covers |
 |---|---|
-{% for guide in site.data.entreluma_admin_guides %}
-| [{{ guide.title }}]({{ guide.url }}) | {{ guide.description }} |
-{% endfor %}
 | [Authoring a Visual Narrative](entreluma-authoring-a-visual-narrative) | A start-to-finish tutorial for first-time authors — no GitHub, Jekyll, or Markdown experience assumed |
 | [Entreluma Overview](entreluma-overview) | What Entreluma is, what it adds, and how it is enabled |
 | [Authors Guide](entreluma-authors-guide) | Creating, previewing, and publishing a post step by step |

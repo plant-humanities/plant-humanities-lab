@@ -16,7 +16,8 @@
 
   {%- assign p3 = url | slice: 0, 3 -%}
   {%- assign is_wc = false -%}
-  {%- if p3 == "wc:" or url contains "commons.wikimedia.org" -%}
+  {%- assign url_base = url | split: "?" | first -%}
+  {%- if p3 == "wc:" or url_base contains "commons.wikimedia.org" -%}
     {%- assign is_wc = true -%}
   {%- endif -%}
 
@@ -103,7 +104,10 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/{{ _md5 | slice: 0, 1 }}/{{
     
     {% endunless %}
 
-    {% if is_dev == false and is_cloudinary_cdn == true and is_image == true %}
+    {%- comment -%} Wikimedia rejects (429) Cloudinary fetches, so its URLs go direct. {%- endcomment -%}
+    {%- assign is_wm_direct = false -%}
+    {%- if url contains 'upload.wikimedia.org' -%}{%- assign is_wm_direct = true -%}{%- endif -%}
+    {% if is_dev == false and is_cloudinary_cdn == true and is_image == true and is_wm_direct == false %}
       {%- assign url = site.cdn | append: '/' | append: url -%}
     {% endif %}
   

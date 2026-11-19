@@ -254,8 +254,20 @@
 
     const params = new URLSearchParams(location.search)
 
+    /**
+     * Normalizes an authored video ID. Tolerates a pasted watch/youtu.be/embed
+     * URL or stray trailing characters (e.g. "abc123DEF45&"), which would
+     * otherwise break the poster image URL and the player.
+     */
+    const cleanVideoId = raw => {
+      if (!raw) return raw
+      const m = String(raw).match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/) ||
+                String(raw).match(/^\s*([\w-]{11})(?![\w-])/)
+      return m ? m[1] : String(raw).trim().replace(/[^\w-]/g, '')
+    }
+
     const props = {
-      vid: params.get('vid'),                      // YouTube video ID (required)
+      vid: cleanVideoId(params.get('vid')),                      // YouTube video ID (required)
       max: boolParam(params, 'max'),               // true when loaded inside the expanded dialog
       autoplay: boolParam(params, 'autoplay'),          // auto-start playback in max mode
       caption: params.get('caption') || null,          // override caption; falls back to YouTube title
