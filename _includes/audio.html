@@ -1,0 +1,15 @@
+{%- comment -%}
+Compatibility alias for sites that adopted the audio viewer before it moved
+upstream as embed/audio.html; new posts should include embed/audio.html.
+{%- endcomment -%}
+{%- include embed/audio.html
+      src=include.src
+      title=include.title
+      caption=include.caption
+      autoplay=include.autoplay
+      loop=include.loop
+      start=include.start
+      end=include.end
+      id=include.id
+      class=include.class
+-%}

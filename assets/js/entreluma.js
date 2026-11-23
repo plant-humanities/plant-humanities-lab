@@ -297,11 +297,22 @@ addMessageHandler();
  * Wrap adjacent embeds as Shoelace tabs
  * ------------------------------------------- */
 
+// Audio reaches a tab run either as a native <audio> player or as the
+// generic iframe embed pointed at an audio file; both need their own icon
+// rather than the iframe "page" icon or the generic fallback.
+const AUDIO_EXT_RE = /\.(mp3|m4a|aac|wav|ogg|oga|opus|flac|weba)(?:[?#]|$)/i;
+function isAudioEmbed(node) {
+    if (node.classList.contains('embed-audio') || node.querySelector('audio, .embed-audio')) return true;
+    const frame = node.tagName === 'IFRAME' ? node : node.querySelector('iframe');
+    return !!(frame && AUDIO_EXT_RE.test(frame.getAttribute('src') || ''));
+}
+
 function wrapAdjacentEmbedsAsTabs({
     root = document.body,
     minRunLength = 2,
     wrapperClass = "embed-tabs",
     iconFor = (node) => {
+        if (isAudioEmbed(node)) return "fa-solid fa-headphones";
         if (node.classList.contains('embed-image')) return "fa-regular fa-image";
         if (node.classList.contains('embed-map')) return "fa-solid fa-map-pin";
         if (node.classList.contains('embed-image-compare')) return "fa-regular fa-images";
@@ -311,6 +322,7 @@ function wrapAdjacentEmbedsAsTabs({
         return "fa-solid fa-square";
     },
     labelFor = (node, idx) => {
+        if (isAudioEmbed(node)) return `Audio ${idx + 1}`;
         if (node.tagName === "IFRAME") return `Map ${idx + 1}`;
         if (node.tagName === "P" && node.querySelector("img")) return `Image ${idx + 1}`;
         return `Item ${idx + 1}`;
@@ -528,6 +540,8 @@ function parseActionLink(a) {
     };
 }
 
+const ARGLESS_ACTIONS = new Set(["play", "pause"]);
+
 function addActionLinks({ root = document.body } = {}) {
     const iframes = Array.from(root.querySelectorAll("iframe")).filter((i) => i.id);
 
@@ -572,7 +586,10 @@ function addActionLinks({ root = document.body } = {}) {
             }
         }
 
-        if (!target || !action || !args?.length) continue;
+        // play/pause take an optional argument (vid1/pause, audio1/play).
+        const argsOptional = ARGLESS_ACTIONS.has(String(action || "").toLowerCase());
+        if (!target || !action || (!args?.length && !argsOptional)) continue;
+        args = args || [];
 
         const iframe = iframeById.get(target);
         if (!iframe) {

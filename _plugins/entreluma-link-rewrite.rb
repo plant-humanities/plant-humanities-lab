@@ -20,11 +20,17 @@ module Entreluma
     QID = /\A(Q\d+)\z/.freeze
     ACTIONS = %w[zoomto flyto playat].freeze
     ACTION = %r{\A(?:\./)?([\w-]+)/(#{ACTIONS.join("|")})/(.+)\z}.freeze
+    # Media actions whose argument is optional: vid1/pause, audio1/play,
+    # audio1/play/1:30. (Kept apart so a bare img1/zoomto is not rewritten.)
+    MEDIA_ACTIONS = %w[play pause].freeze
+    MEDIA_ACTION = %r{\A(?:\./)?([\w-]+)/(#{MEDIA_ACTIONS.join("|")})(?:/(.+))?\z}.freeze
 
     module_function
 
     def rewrite(html)
-      return html unless html.include?("href=\"Q") || ACTIONS.any? { |a| html.include?("/#{a}/") }
+      return html unless html.include?("href=\"Q") ||
+                         ACTIONS.any? { |a| html.include?("/#{a}/") } ||
+                         MEDIA_ACTIONS.any? { |a| html.include?("/#{a}") }
 
       doc = Nokogiri::HTML5(html, max_tree_depth: -1)
       changed = false
@@ -36,11 +42,11 @@ module Entreluma
           a["qid"] ||= m[1]
           a["rel"] = [a["rel"], "noopener"].compact.join(" ").strip
           changed = true
-        elsif (m = ACTION.match(href))
+        elsif (m = ACTION.match(href) || MEDIA_ACTION.match(href))
           a["href"] = "#"
           a["data-entreluma-target"] = m[1]
           a["data-entreluma-action"] = m[2]
-          a["data-entreluma-args"] = m[3]
+          a["data-entreluma-args"] = m[3].to_s
           changed = true
         end
       end
